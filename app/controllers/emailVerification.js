@@ -59,7 +59,7 @@ module.exports = {
       service: "gmail",
       auth: {
         user: "backendproject010101@gmail.com",
-        pass: "projectbackend010101",
+        pass: "oimfcuzgcumgmfln",
       },
     });
 

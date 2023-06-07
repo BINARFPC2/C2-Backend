@@ -133,11 +133,6 @@ module.exports = {
   async deleteUser(req, res) {
     try {
       const idUser = req.params.id;
-      // const deleteUser = async (id) => {
-      //   return await user.destroy({
-      //     where: { id: idUser },
-      //   });
-      // };
       user
         .destroy({
           where: { id: idUser },
