@@ -64,7 +64,6 @@ module.exports = {
         email: email,
         phone: phone,
         verified: "false",
-        role: "user",
         // gender: gender,
         profile_image:
           "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png",
@@ -108,7 +107,6 @@ module.exports = {
     const token = createToken({
       id: userLogin.id,
       email: userLogin.email,
-      role: userLogin.role,
       createdAt: userLogin.createdAt,
       updatedAt: userLogin.updatedAt,
     });
