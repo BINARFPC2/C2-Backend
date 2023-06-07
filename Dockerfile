@@ -12,9 +12,9 @@ RUN npm install
 
 # RUN npm start
 
-RUN npm db:migrate
+RUN db:migrate
 
-RUN npm db:seed
+RUN db:seed
 
 
 
