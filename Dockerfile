@@ -1,18 +1,19 @@
-FROM node:16
+# Menggunakan base image Node.js
+FROM node:latest
 
-# Create app directory
-WORKDIR /app/
+# Mengatur direktori kerja di dalam container
+WORKDIR /app
 
-# Install app dependencies
-# A wildcard is used to ensure both package.json AND package-lock.json are copied
-# where available (npm@5+)
+# Menyalin package.json dan package-lock.json ke direktori kerja
 COPY package*.json ./
 
-RUN npm start
+# Menginstal dependensi proyek
+RUN npm install
 
-RUN npm db:migrate && npm db:seed
-# If you are building your code for production
-# RUN npm ci --omit=dev
 
-# Bundle app source
+
+# Menyalin kode aplikasi ke direktori kerja
 COPY . .
+
+# Menjalankan perintah db:migrate saat container dijalankan
+CMD ["npm", "run", "start", "db:migrate","db:seed"]
