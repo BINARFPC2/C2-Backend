@@ -8,9 +8,9 @@ WORKDIR /app/
 # where available (npm@5+)
 COPY package*.json ./
 
-RUN start
+RUN npm start
 
-RUN db:migrate && db:seed
+RUN npm db:migrate && npm db:seed
 # If you are building your code for production
 # RUN npm ci --omit=dev
 
