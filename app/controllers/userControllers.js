@@ -99,8 +99,7 @@ module.exports = {
       .then(() => {
         res.status(200).json({
           status: "Success",
-          message: "Get Data User Successfully",
-          data: dataUsersId,
+          message: "Update Data User Successfully",
         });
       })
       .catch((err) => {
