@@ -16,4 +16,4 @@ RUN npm install
 COPY . .
 
 # Menjalankan perintah db:migrate saat container dijalankan
-CMD ["npm", "run", "start", "db:migrate","db:seed"]
+CMD ["npm", "run", "db:migrate"]
