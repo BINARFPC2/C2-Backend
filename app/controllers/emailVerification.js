@@ -143,7 +143,7 @@ module.exports = {
             .then((res) => {
               res.render("emailVerified.ejs");
             })
-            .catch((res) => {
+            .catch((err) => {
               res.status(500).json({
                 status: "error",
                 message: "Internal server error",
