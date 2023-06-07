@@ -1,4 +1,5 @@
 const { user } = require("../models");
+const bcrypt = require("bcrypt");
 const nodemailer = require("nodemailer");
 
 const checkEmail = async (email) => {
@@ -56,7 +57,7 @@ module.exports = {
       host: "smtp.gmail.com",
       port: 465,
       secure: true,
-      service: "gmail",
+      // service: "gmail",
       auth: {
         user: "backendproject010101@gmail.com",
         pass: "oimfcuzgcumgmfln",
@@ -64,40 +65,6 @@ module.exports = {
     });
 
     // email display
-    const mailOptions = {
-      from: "backendproject010101@gmail.com",
-      to: email,
-      subject: "Email Verification",
-      html: `   <center> 
-            <h1>Email Verification</h1>
-            <p>Click this link to verify your email</p>
-            <button 
-                style=
-                "
-                border: none;
-                transition-duration: 0.4s;
-                cursor: pointer;
-                background-color: #76b5c3;
-                border-radius: 12px;
-                "
-                type="button"
-            > 
-                <a 
-                style=
-                "
-                text-decoration: none;
-                text-align: center;
-                text-decoration: none;
-                display: inline-block;
-                font-size: 16px;
-                margin: 4px 2px;color: white;
-                padding: 16px 32px;
-                transition-duration: 0.4s;" 
-                href='https://c2-backend.up.railway.app/api/v1/verify-email/${email}'>Verify Email</a>
-            </button>
-            <center>
-                    `,
-    };
 
     transporter.sendMail(mailOptions, (err, info) => {
       if (err) {
@@ -159,5 +126,19 @@ module.exports = {
           data: err,
         });
       });
+  },
+
+  async sendOTPverificationEmail({ _id, email }, res) {
+    try {
+      const otp = `${Math.floor(1000 + Math.random() * 9000)}`;
+      const mailOptions = {
+        from: "backendproject010101@gmail.com",
+        to: email,
+        subject: "Email Verification",
+        html: `<p>Enter ${otp}</p>`,
+      };
+      const saltRounds = 10;
+      const hashedOTP = await bcrypt.hash(otp, saltRounds);
+    } catch (error) {}
   },
 };
