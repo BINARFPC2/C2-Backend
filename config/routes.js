@@ -51,4 +51,9 @@ router.post("/api/v1/send-email", sendEmailverification);
 
 router.get("/api/v1/verify-email/:email", verifyEmail);
 
+// email verified view (just check if it works)
+router.get("/email-verified", function (req, res) {
+  res.render("emailVerified.ejs");
+});
+
 module.exports = router;
