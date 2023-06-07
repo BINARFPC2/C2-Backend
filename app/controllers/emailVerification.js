@@ -1,8 +1,8 @@
 const { user } = require("../models");
 const nodemailer = require("nodemailer");
 
-const checkEmail = (email) => {
-  return user.findOne({
+const checkEmail = async (email) => {
+  return await user.findOne({
     where: {
       email,
     },
@@ -38,6 +38,7 @@ module.exports = {
           res.status(400).json({
             status: "error",
             message: "Email not found",
+            data: {},
           });
           return;
         }
@@ -64,7 +65,7 @@ module.exports = {
 
     // email display
     const mailOptions = {
-      from: "backendproject010101@gmail.com",
+      from: "mataringan@gmail.com",
       to: email,
       subject: "Email Verification",
       html: `   <center> 
@@ -103,7 +104,7 @@ module.exports = {
         res.status(500).json({
           status: "error",
           message: "Email not sent",
-          data: {},
+          data: err,
         });
         return;
       } else {
