@@ -12,6 +12,8 @@ RUN npm install
 
 # RUN npm start
 
+RUN start
+
 RUN db:migrate
 
 RUN db:seed
