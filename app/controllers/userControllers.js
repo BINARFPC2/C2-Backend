@@ -133,15 +133,24 @@ module.exports = {
   async deleteUser(req, res) {
     try {
       const idUser = req.params.id;
-      const deleteUser = async () => {
-        return await user.destroy({
+      // const deleteUser = async (id) => {
+      //   return await user.destroy({
+      //     where: { id: idUser },
+      //   });
+      // };
+      user
+        .destroy({
           where: { id: idUser },
+        })
+        .then(() => {
+          res.status(200).json({
+            status: "Success",
+            message: "User Data deleted successfully",
+          });
+        })
+        .catch((err) => {
+          res.status(422).json(err);
         });
-      };
-      res.status(200).json({
-        status: "Success",
-        message: "User Data deleted successfully",
-      });
     } catch (error) {
       res.status(500).json({
         status: "Error",
