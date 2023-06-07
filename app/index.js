@@ -14,6 +14,9 @@ app.use(cors());
 app.use(morgan("dev"));
 app.use(cookieParser());
 
+/** set the view engine to ejs */
+app.set("view engine", "ejs");
+
 // method override
 app.use(methodOverride("_method"));
 app.use(router);

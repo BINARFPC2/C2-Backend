@@ -93,7 +93,7 @@ module.exports = {
                 margin: 4px 2px;color: white;
                 padding: 16px 32px;
                 transition-duration: 0.4s;" 
-                href='https://binair-backend-production.up.railway.app/api/v1/verify-email/${email}'>Verify Email</a>
+                href='https://c2-backend.up.railway.app/api/v1/verify-email/${email}'>Verify Email</a>
             </button>
             <center>
                     `,
@@ -141,6 +141,9 @@ module.exports = {
               }
             )
             .then((res) => {
+              res.render("emailVerified.ejs");
+            })
+            .catch((res) => {
               res.status(500).json({
                 status: "error",
                 message: "Internal server error",
