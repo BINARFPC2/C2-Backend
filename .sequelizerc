@@ -4,8 +4,8 @@ const configDir = path.join(__dirname, "config");
 const dbDir = path.join(__dirname, "db");
 
 module.exports = {
-  'config': path.join(configDir, 'database.js'),
-  'models-path': path.join(appDir, "models"),
-  'migrations-path': path.join(dbDir, "migrations"),
-  'seeders-path': path.join(dbDir, "seeders"),
-}
+  config: path.join(configDir, "database.js"),
+  "models-path": path.join(appDir, "models"),
+  "migrations-path": path.join(dbDir, "migrations"),
+  "seeders-path": path.join(dbDir, "seeders"),
+};
