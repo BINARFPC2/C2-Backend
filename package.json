@@ -5,7 +5,15 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon dotenv/config bin/www -V"
+    "start": "nodemon dotenv/config bin/www -V",
+    "develop": "cross-env NODE_ENV=test nodemon -r dotenv/config bin/www",
+    "pretest": "cross-env NODE_ENV=test yarn db:reset",
+    "db:create:test": "cross-env NODE_ENV=test sequelize db:create",
+    "db:create": "sequelize db:create",
+    "db:drop": "sequelize db:drop",
+    "db:migrate": "sequelize db:migrate",
+    "db:seed": "sequelize db:seed:undo:all && sequelize db:seed:all",
+    "db:reset": "yarn db:drop && yarn db:create && yarn db:migrate && yarn db:seed"
   },
   "keywords": [],
   "author": "",
