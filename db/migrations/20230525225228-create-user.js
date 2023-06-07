@@ -28,10 +28,6 @@ module.exports = {
       phone: {
         type: Sequelize.STRING,
       },
-      role: {
-        allowNull: false,
-        type: Sequelize.STRING,
-      },
       profile_image: {
         type: Sequelize.STRING,
       },
