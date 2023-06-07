@@ -65,7 +65,7 @@ module.exports = {
 
     // email display
     const mailOptions = {
-      from: "mataringan@gmail.com",
+      from: "backendproject010101@gmail.com",
       to: email,
       subject: "Email Verification",
       html: `   <center> 
