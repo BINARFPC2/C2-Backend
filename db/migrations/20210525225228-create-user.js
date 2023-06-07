@@ -40,10 +40,9 @@ module.exports = {
         type: Sequelize.DATE,
       },
     });
-
-    return queryInterface.removeColumn("users", "role");
   },
   async down(queryInterface, Sequelize) {
     await queryInterface.dropTable("users");
+    await queryInterface.removeColumn("users", "role");
   },
 };
