@@ -10,7 +10,7 @@ COPY package*.json ./
 # Menginstal dependensi proyek
 RUN npm install
 
-RUN npm start
+# RUN npm start
 
 RUN npm db:migrate
 
