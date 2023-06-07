@@ -1,11 +1,18 @@
-const path = require("path");
-const appDir = path.join(__dirname, "app");
-const configDir = path.join(__dirname, "config");
-const dbDir = path.join(__dirname, "db");
+// const path = require("path");
+// const appDir = path.join(__dirname, "app");
+// const configDir = path.join(__dirname, "config");
+// const dbDir = path.join(__dirname, "db");
+
+// module.exports = {
+//   config: path.join(configDir, "database.js"),
+//   "models-path": path.join(appDir, "models"),
+//   "migrations-path": path.join(dbDir, "migrations"),
+//   "seeders-path": path.join(dbDir, "seeders"),
+// };
 
 module.exports = {
-  config: path.join(configDir, "database.js"),
-  "models-path": path.join(appDir, "models"),
-  "migrations-path": path.join(dbDir, "migrations"),
-  "seeders-path": path.join(dbDir, "seeders"),
+  config: "config/database.js",
+  "models-path": "app/models",
+  "migrations-path": "db/migrations",
+  "seeders-path": "db/seeders",
 };
