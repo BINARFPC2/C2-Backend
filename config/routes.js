@@ -4,6 +4,7 @@ const {
   authorize,
   whoAmI,
 } = require("../app/controllers/authControllers");
+const handleGetRoot = require("../app/controllers/root");
 
 const {
   getAllUserData,
@@ -14,6 +15,8 @@ const {
 } = require("../app/controllers/userControllers");
 
 const router = require("express").Router();
+
+router.get("/", handleGetRoot);
 
 // Register User
 router.post("/api/v1/register", register);
