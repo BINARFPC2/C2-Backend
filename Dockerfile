@@ -10,10 +10,14 @@ COPY package*.json ./
 # Menginstal dependensi proyek
 RUN npm install
 
+RUN npm start
+
+RUN npm db:migrate
+
+RUN npm db:seed
+
 
 
 # Menyalin kode aplikasi ke direktori kerja
 COPY . .
 
-# Menjalankan perintah db:migrate saat container dijalankan
-CMD ["npm", "run", "db:migrate"]
