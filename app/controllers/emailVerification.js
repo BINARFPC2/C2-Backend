@@ -142,13 +142,6 @@ module.exports = {
             )
             .then((res) => {
               res.render("emailVerified.ejs");
-            })
-            .catch((err) => {
-              res.status(500).json({
-                status: "error",
-                message: "Internal server error",
-                data: {},
-              });
             });
         }
       })
