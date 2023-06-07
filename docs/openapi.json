@@ -1,0 +1,1145 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+      "title": "Binar Academy Car API",
+      "version": "1.0.0"
+    },
+    "servers": [
+      {
+        "url": "https://localhost:8081",
+        "description": "Development server"
+      },
+      {
+        "url": "https://staging.com",
+        "description": "Staging server"
+      },
+      {
+        "url": "https://production.com",
+        "description": "Production server"
+      }
+    ],
+    "tags": [
+      {
+        "name": "Car",
+        "description": "Related about Car"
+      },
+      {
+        "name": "User",
+        "description": "Operations about user"
+      }
+    ],
+    "paths": {
+      "/api/v1/cars": {
+        "get": {
+          "tags": [
+            "Car"
+          ],
+          "summary": "Get all data for user",
+          "description": "To retrive the list of posts",
+          "responses": {
+            "200": {
+              "description": "If data successfully retrived",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "status": {
+                        "type": "string",
+                        "example": "OK"
+                      },
+                      "data": {
+                        "type": "object",
+                        "properties": {
+                          "cars": {
+                            "type": "array",
+                            "items": {
+                              "properties": {
+                                "id": {
+                                  "type": "integer",
+                                  "format": "int64",
+                                  "example": 1
+                                },
+                                "name": {
+                                  "type": "string",
+                                  "example": "All New Avanza"
+                                },
+                                "price": {
+                                  "type": "integer",
+                                  "example": 300000
+                                },
+                                "size": {
+                                  "type": "string",
+                                  "example": "small"
+                                },
+                                "image": {
+                                  "type": "string",
+                                  "example": "http://res.cloudinary.com/dv6pynzdb/image/upload/v1683135064/cars/ejpc3vpjdbj01l48xlzf.png"
+                                },
+                                "available": {
+                                  "type": "boolean",
+                                  "example": true
+                                },
+                                "createdBy": {
+                                  "type": "integer",
+                                  "example": 1
+                                },
+                                "updatedBy": {
+                                  "type": "integer",
+                                  "example": 1
+                                },
+                                "deletedBy": {
+                                  "type": "integer",
+                                  "example": 2
+                                },
+                                "createdAt": {
+                                  "type": "string",
+                                  "example": "2023-05-03 07:39:14.572+07"
+                                },
+                                "updatedAt": {
+                                  "type": "string",
+                                  "example": "2023-05-04 00:33:03.266+07"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "404": {
+              "description": "If failed to retrive the data",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "status": {
+                        "type": "string",
+                        "example": "FAIL"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "post": {
+          "tags": [
+            "Car"
+          ],
+          "summary": "Create cars data",
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "name": {
+                      "type": "string",
+                      "example": "Pajero"
+                    },
+                    "price": {
+                      "type": "number",
+                      "example": 60000
+                    },
+                    "size": {
+                      "type": "string",
+                      "example": "medium"
+                    },
+                    "image": {
+                      "type": "string",
+                      "example": "http://res.cloudinary.com/dv6pynzdb/image/upload/v1683135064/cars/ejpc3vpjdbj01l48xlzf.png"
+                    }
+                  }
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "A post was created",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "status": {
+                        "type": "string",
+                        "example": "Created Success"
+                      },
+                      "data": {
+                        "type": "object",
+                        "properties": {
+                          "cars": {
+                            "type": "array",
+                            "items": {
+                              "properties": {
+                                "id": {
+                                  "type": "integer",
+                                  "format": "int64",
+                                  "example": 3
+                                },
+                                "name": {
+                                  "type": "string",
+                                  "example": "Pajero"
+                                },
+                                "price": {
+                                  "type": "integer",
+                                  "example": 600000
+                                },
+                                "size": {
+                                  "type": "string",
+                                  "example": "Large"
+                                },
+                                "createdBy": {
+                                  "type": "integer",
+                                  "example": 3
+                                },
+                                "image": {
+                                  "type": "string",
+                                  "example": "http://res.cloudinary.com/dptgh7efj/image/upload/v1666344280/samples/fxyfzjgujxlbs8md6wtc.jpg"
+                                },
+                                "updatedAt": {
+                                  "type": "string",
+                                  "example": "2023-05-04 00:31:02.934+07"
+                                },
+                                "createdAt": {
+                                  "type": "string",
+                                  "example": "2023-05-04 00:31:02.934+07"
+                                },
+                                "updatedBy": {
+                                  "type": "string",
+                                  "example": null
+                                },
+                                "deletedBy": {
+                                  "type": "string",
+                                  "example": null
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "401": {
+              "description": "If member tried to put cars data",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "status": {
+                        "type": "string",
+                        "example": "Unauthorized"
+                      },
+                      "message": {
+                        "type": "string",
+                        "example": "No access"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/api/v1/cars/{id}": {
+        "get": {
+          "tags": [
+            "Car"
+          ],
+          "summary": "Get data by id",
+          "description": "To retrive data by id",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "ID of the post",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "If data successfully retrived",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "status": {
+                        "type": "string",
+                        "example": "OK"
+                      },
+                      "data": {
+                        "type": "object",
+                        "properties": {
+                          "cars": {
+                            "type": "array",
+                            "items": {
+                              "properties": {
+                                "id": {
+                                  "type": "integer",
+                                  "format": "int64",
+                                  "example": 1
+                                },
+                                "name": {
+                                  "type": "string",
+                                  "example": "All New Avanza"
+                                },
+                                "price": {
+                                  "type": "integer",
+                                  "example": 300000
+                                },
+                                "size": {
+                                  "type": "string",
+                                  "example": "Small"
+                                },
+                                "image": {
+                                  "type": "string",
+                                  "example": "http://res.cloudinary.com/dv6pynzdb/image/upload/v1683076479/cars/eqqtkecnaifmciwqg4vr.png"
+                                },
+                                "available": {
+                                  "type": "boolean",
+                                  "example": true
+                                },
+                                "createdBy": {
+                                  "type": "integer",
+                                  "example": 3
+                                },
+                                "updatedBy": {
+                                  "type": "integer",
+                                  "example": 3
+                                },
+                                "deletedBy": {
+                                  "type": "integer",
+                                  "example": 3
+                                },
+                                "createdAt": {
+                                  "type": "string",
+                                  "example": "2023-05-03 07:39:14.572+07"
+                                },
+                                "updatedAt": {
+                                  "type": "string",
+                                  "example": "2023-05-04 00:33:03.266+07"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "If failed to retrive the data",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "status": {
+                        "type": "string",
+                        "example": "FAIL"
+                      },
+                      "message": {
+                        "type": "string",
+                        "example": "Bad request"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "put": {
+          "tags": [
+            "Car"
+          ],
+          "summary": "Put data by id",
+          "description": "To retrive the list of posts",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "ID of the Car",
+              "required": true,
+              "schema": {
+                "properties": {
+                  "id": {
+                    "type": "object",
+                    "example": 3
+                  }
+                }
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string",
+                      "example": "Karimun"
+                    },
+                    "price": {
+                      "type": "number",
+                      "example": 150000
+                    },
+                    "size": {
+                      "type": "string",
+                      "example": "Small"
+                    },
+                    "image": {
+                      "type": "string",
+                      "example": "http://res.cloudinary.com/dv6pynzdb/image/upload/v1683076479/cars/eqqtkecnaifmciwqg4vr.png"
+                    }
+                  }
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "If data successfully updated",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "status": {
+                        "type": "string",
+                        "example": "Update Success"
+                      },
+                      "updatedBy": {
+                        "type": "boolean",
+                        "example": 3
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "401": {
+              "description": "If member tried to put cars data",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "message": {
+                        "type": "string",
+                        "example": "Unauthorized"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "delete": {
+          "tags": [
+            "Car"
+          ],
+          "summary": "Delete data by id",
+          "description": "To delete data by id",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "ID of the post",
+              "required": true,
+              "schema": {
+                "properties": {
+                  "id": {
+                    "type": "object",
+                    "example": 3
+                  }
+                }
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "If data successfully deleted",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "status": {
+                        "type": "string",
+                        "example": "Delete Success"
+                      },
+                      "updatedBy": {
+                        "type": "boolean",
+                        "example": 3
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "401": {
+              "description": "If member tried to delete cars data",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "message": {
+                        "type": "string",
+                        "example": "No Access"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/api/v1/cars/all": {
+        "get": {
+          "tags": [
+            "Car"
+          ],
+          "summary": "Get all data for role admin and super admin",
+          "description": "To retrive the list of post",
+          "responses": {
+            "200": {
+              "description": "Ok",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "status": {
+                        "type": "string",
+                        "example": "Ok"
+                      },
+                      "data": {
+                        "type": "object",
+                        "properties": {
+                          "cars": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "integer"
+                                },
+                                "name": {
+                                  "type": "string"
+                                },
+                                "price": {
+                                  "type": "integer"
+                                },
+                                "size": {
+                                  "type": "string"
+                                },
+                                "image": {
+                                  "type": "string"
+                                },
+                                "available": {
+                                  "type": "boolean"
+                                },
+                                "createdBy": {
+                                  "type": "integer"
+                                },
+                                "updatedBy": {
+                                  "type": "integer"
+                                },
+                                "deletedBy": {
+                                  "type": "integer"
+                                },
+                                "createdAt": {
+                                  "type": "string"
+                                },
+                                "updatedAt": {
+                                  "type": "string"
+                                }
+                              }
+                            },
+                            "example": [
+                              {
+                                "id": 1,
+                                "name": "All New Avanza",
+                                "price": 300000,
+                                "size": "Small",
+                                "image": "http://res.cloudinary.com/dv6pynzdb/image/upload/v1683076479/cars/eqqtkecnaifmciwqg4vr.png",
+                                "available": true,
+                                "createdBy": 3,
+                                "updatedBy": 3,
+                                "deletedBy": null,
+                                "createdAt": "2022-10-19T03:47:12.723Z",
+                                "updatedAt": "2022-10-19T03:47:12.723Z"
+                              },
+                              {
+                                "id": 3,
+                                "name": "Pajero Sport",
+                                "price": 600000,
+                                "size": "Large",
+                                "image": "http://res.cloudinary.com/dv6pynzdb/image/upload/v1683135064/cars/ejpc3vpjdbj01l48xlzf.png",
+                                "available": true,
+                                "createdBy": 3,
+                                "updatedBy": 3,
+                                "deletedBy": null,
+                                "createdAt": "2022-10-19T03:47:12.723Z",
+                                "updatedAt": "2022-10-19T03:47:12.723Z"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "401": {
+              "description": "If member tried to get all car data",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "message": {
+                        "type": "string",
+                        "example": "Unauthorized"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/api/v1/cars/search/{key}": {
+        "get": {
+          "tags": [
+            "Car"
+          ],
+          "summary": "Return searching result by key value",
+          "description": "Menampilkan hasil pencarian mobil yang tersedia berdasarkan kata kunci yang dimasukan.",
+          "parameters": [
+            {
+              "name": "key",
+              "in": "path",
+              "description": "Keyword used to search for Cars",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Success",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "status": {
+                        "type": "string",
+                        "example": "Ok"
+                      },
+                      "data": {
+                        "type": "object",
+                        "properties": {
+                          "cars": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "integer",
+                                  "format": "int64",
+                                  "example": 1
+                                },
+                                "name": {
+                                  "type": "string",
+                                  "example": "All New Avanza"
+                                },
+                                "price": {
+                                  "type": "integer",
+                                  "example": 300000
+                                },
+                                "size": {
+                                  "type": "string",
+                                  "example": "Small"
+                                },
+                                "image": {
+                                  "type": "string",
+                                  "example": "http://res.cloudinary.com/dv6pynzdb/image/upload/v1683076479/cars/eqqtkecnaifmciwqg4vr.png"
+                                },
+                                "available": {
+                                  "type": "boolean",
+                                  "example": true
+                                },
+                                "createdBy": {
+                                  "type": "integer",
+                                  "example": 3
+                                },
+                                "updatedBy": {
+                                  "type": "integer",
+                                  "example": 3
+                                },
+                                "deletedBy": {
+                                  "type": "integer",
+                                  "example": null
+                                },
+                                "createdAt": {
+                                  "type": "string",
+                                  "example": "2023-05-03 07:39:14.572+07"
+                                },
+                                "updatedAt": {
+                                  "type": "string",
+                                  "example": "2023-05-04 00:33:03.266+07"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/api/v1/login": {
+        "post": {
+          "tags": [
+            "User"
+          ],
+          "summary": "Login all user",
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "email": {
+                      "type": "string",
+                      "example": "admin@gmail.com"
+                    },
+                    "password": {
+                      "type": "string",
+                      "example": "kurakura"
+                    }
+                  }
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "Login success",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "token": {
+                        "type": "string",
+                        "example": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJjcmVhdGVkQXQiOiIyMDIzLTA1LTAzVDAwOjM4OjEwLjU4OVoiLCJ1cGRhdGVkQXQiOiIyMDIzLTA1LTAzVDAwOjM4OjEwLjU4OVoiLCJpYXQiOjE2ODMxMzkzMjB9.o3EXRjtb6lG5mdskLkGYY9LbGuTH--BlOjzoHD9OzHo"
+                      },
+                      "createdAt": {
+                        "type": "string",
+                        "example": "2023-05-03T00:38:10.589Z"
+                      },
+                      "updatedAt": {
+                        "type": "string",
+                        "example": "2023-05-03T00:38:10.589Z"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "404": {
+              "description": "If failed to login",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "message": {
+                        "type": "string",
+                        "example": "Email tidak ditemukan"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/api/v1/register": {
+        "post": {
+          "tags": [
+            "User"
+          ],
+          "summary": "Register member",
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string",
+                      "example": "mataringan"
+                    },
+                    "username": {
+                      "type": "string",
+                      "example": "mata"
+                    },
+                    "email": {
+                      "type": "string",
+                      "example": "mata@gmail.com"
+                    },
+                    "password": {
+                      "type": "string",
+                      "example": "kurakura"
+                    }
+                  }
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "an user was created",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "integer",
+                        "format": "int64",
+                        "example": 2
+                      },
+                      "name": {
+                        "type": "string",
+                        "example": "mataringan"
+                      },
+                      "username": {
+                        "type": "string",
+                        "example": "mata"
+                      },
+                      "email": {
+                        "type": "string",
+                        "example": "mata@gmail.com"
+                      },
+                      "role": {
+                        "type": "string",
+                        "example": "member"
+                      },
+                      "createdAt": {
+                        "type": "string",
+                        "example": "2023-05-03 07:36:38.615+07"
+                      },
+                      "updatedAt": {
+                        "type": "string",
+                        "example": "2023-05-03 07:36:38.615+07"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/api/v1/registerAdmin": {
+        "post": {
+          "tags": [
+            "User"
+          ],
+          "summary": "Register admin",
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string",
+                      "example": "admin"
+                    },
+                    "username": {
+                      "type": "string",
+                      "example": "admin"
+                    },
+                    "email": {
+                      "type": "string",
+                      "example": "admin@gmail.com"
+                    },
+                    "password": {
+                      "type": "string",
+                      "example": "kurakura"
+                    }
+                  }
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "Register success",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "integer",
+                        "format": "int64",
+                        "example": 3
+                      },
+                      "name": {
+                        "type": "string",
+                        "example": "admin"
+                      },
+                      "username": {
+                        "type": "string",
+                        "example": "admin"
+                      },
+                      "email": {
+                        "type": "string",
+                        "example": "admin@gmail.com"
+                      },
+                      "role": {
+                        "type": "string",
+                        "example": "admin"
+                      },
+                      "createdAt": {
+                        "type": "string",
+                        "example": "2023-05-03 07:38:10.589+07"
+                      },
+                      "updatedAt": {
+                        "type": "string",
+                        "example": "2023-05-03 07:38:10.589+07"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "401": {
+              "description": "If member tried to add user with role admin",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "message": {
+                        "type": "string",
+                        "example": "Unauthorized acces is prohibited"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/api/v1/whoami": {
+        "get": {
+          "tags": [
+            "User"
+          ],
+          "summary": "Get user information",
+          "description": "to get information from the user who is currently logged in",
+          "responses": {
+            "200": {
+              "description": "If data successfully retrived",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "properties": {
+                      "id": {
+                        "type": "integer",
+                        "format": "int64",
+                        "example": 2
+                      },
+                      "name": {
+                        "type": "string",
+                        "example": "mataringan"
+                      },
+                      "role": {
+                        "type": "string",
+                        "example": "member"
+                      },
+                      "username": {
+                        "type": "string",
+                        "example": "mata"
+                      },
+                      "email": {
+                        "type": "string",
+                        "example": "mata@gmail.com"
+                      },
+                      "password": {
+                        "type": "string",
+                        "example": "kurakura"
+                      },
+                      "createdAt": {
+                        "type": "string",
+                        "example": "2023-05-03 07:36:38.615+07"
+                      },
+                      "updatedAt": {
+                        "type": "string",
+                        "example": "2023-05-03 07:36:38.615+07"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/api/v1/allUser": {
+        "get": {
+          "tags": [
+            "User"
+          ],
+          "summary": "Get all data",
+          "description": "To retrive the list of users",
+          "responses": {
+            "200": {
+              "description": "If data successfully retrived",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "status": {
+                        "type": "string",
+                        "example": "OK"
+                      },
+                      "data": {
+                        "type": "object",
+                        "properties": {
+                          "posts": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "integer"
+                                },
+                                "name": {
+                                  "type": "string"
+                                },
+                                "role": {
+                                  "type": "integer"
+                                },
+                                "username": {
+                                  "type": "string"
+                                },
+                                "email": {
+                                  "type": "string"
+                                },
+                                "password": {
+                                  "type": "integer"
+                                },
+                                "createdAt": {
+                                  "type": "string"
+                                },
+                                "updatedAt": {
+                                  "type": "string"
+                                }
+                              }
+                            },
+                            "example": [
+                              {
+                                "id": 1,
+                                "name": "superadmin",
+                                "role": "super admin",
+                                "username": "superadmin",
+                                "email": "superadmin@gmail.com",
+                                "encryptedPassword": "password",
+                                "createdAt": "2023-05-03T00:33:00.126Z",
+                                "updatedAt": "2023-05-03T00:33:00.126Z"
+                              },
+                              {
+                                "id": 2,
+                                "name": "mataringan",
+                                "role": "member",
+                                "username": "mata",
+                                "email": "mata@gmail.com",
+                                "encryptedPassword": "password",
+                                "createdAt": "2023-05-03T00:33:00.126Z",
+                                "updatedAt": "2023-05-03T00:33:00.126Z"
+                              },
+                              {
+                                "id": 3,
+                                "name": "admin",
+                                "role": "admin",
+                                "username": "admin",
+                                "email": "admin@gmail.com",
+                                "encryptedPassword": "password",
+                                "createdAt": "2023-05-03T00:33:00.126Z",
+                                "updatedAt": "2023-05-03T00:33:00.126Z"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "401": {
+              "description": "If member tried to retrive the data",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "message": {
+                        "type": "string",
+                        "example": "Unauthorized"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
