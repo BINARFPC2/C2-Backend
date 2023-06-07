@@ -6,15 +6,9 @@
   "scripts": {
     "start": "node -r dotenv/config bin/www",
     "develop": "nodemon -r dotenv/config bin/www",
-    "db:create:test": "cross-env NODE_ENV=test sequelize db:create",
-    "pretest": "cross-env NODE_ENV=test npm db:reset",
-    "test": "cross-env NODE_ENV=test jest --testTimeout=10000 --coverage --colors --verbose --detectOpenHandles --forceExit",
-    "db:create": "sequelize db:create",
-    "db:drop": "sequelize db:drop",
-    "db:migrate": "sequelize db:migrate",
-    "db:migrate:undo:all": "sequelize db:migrate:undo:all",
-    "db:seed": "sequelize db:seed:undo:all && sequelize db:seed:all",
-    "db:reset": "npm db:drop && npm db:create && npm db:migrate && npm db:seed"
+    "create": "sequelize-cli db:create",
+    "migrate": "sequelize-cli db:migrate",
+    "seed": "sequelize-cli db:seed:all"
   },
   "keywords": [],
   "author": "",
