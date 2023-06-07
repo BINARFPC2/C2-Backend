@@ -4,6 +4,10 @@ const {
   authorize,
   whoAmI,
 } = require("../app/controllers/authControllers");
+const {
+  sendEmailverification,
+  verifyEmail,
+} = require("../app/controllers/emailVerification");
 const handleGetRoot = require("../app/controllers/root");
 
 const {
@@ -41,5 +45,10 @@ router.put("/api/v1/resetpw/:id", updatedPassword);
 
 // Delete User
 router.delete("/api/v1/users/:id", deleteUser);
+
+// email verification
+router.post("/api/v1/send-email", sendEmailverification);
+
+router.get("/api/v1/verify-email/:email", verifyEmail);
 
 module.exports = router;
