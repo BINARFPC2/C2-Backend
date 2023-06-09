@@ -6,6 +6,15 @@ const cors = require("cors");
 const cookieParser = require("cookie-parser");
 const morgan = require("morgan");
 
+const yaml = require('js-yaml');
+const fs = require('fs');
+const swaggerUI = require('swagger-ui-express');
+
+const swaggerDocument = yaml.load(fs.readFileSync('docs/openapi.yml', 'utf8'))
+
+//route api-document swagger
+app.use('/api/v1/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerDocument))
+
 // Install JSON Request Parser
 app.use(cors());
 app.use(express.json());

@@ -1,0 +1,207 @@
+openapi: 3.0.0
+info:
+  title: Api Documentation Backend
+  description: 
+  contact:
+    email: hapizdasari@gmail.com
+  version: '1.0'
+servers:
+  - url: http://localhost:8000/api/v1
+    variables: {}
+paths:
+  /register:
+    post:
+      tags:
+        - Users
+      parameters: []
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            encoding: {}
+            schema:
+              required:
+                - name
+                - email
+                - password
+                - phone
+              type: object
+              properties:
+                name:
+                  type: string
+                  example: "Hapizd"
+                email:
+                  type: string
+                  example: "hapizdasari@gmail.com"
+                password:
+                  type: string
+                  example: "12345"
+                phone:
+                  type: number
+                  example: "0821111111"
+        required: false
+      responses:
+        '200':
+          description: an user was created
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    format: int64
+                    example: 1
+                  name:
+                    type: string
+                    example: Hapizd
+                  email:
+                    type: string
+                    example: hapizdasari@gmail.com
+                  password:
+                    type: string
+                    example: 12345
+                  phone:
+                    type: number
+                    example: 0821111111
+                  createdAt:
+                    type: string
+                    example: '2023-06-07T16:07:14.259Z'
+                  updatedAt:
+                    type: string
+                    example: '2023-06-07T16:07:14.259Z'
+      deprecated: false
+  /login:
+    post:
+      tags:
+        - Users
+      parameters: []
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            encoding: {}
+            schema:
+              required:
+                - email
+                - password
+              type: object
+              properties:
+                email:
+                  type: string
+                  example: "hapizdasari@gmail.com"
+                password:
+                  type: string
+                  example: "12345"
+        required: false
+      responses:
+        '200':
+          description: Login success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  token:
+                    type: string
+                    example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjA0MmM1OTEzLWJhMmItNDY0NS05ZTBjLTRjNWVmNmNiMTQ2NSIsImVtYWlsIjoiaGFwaXpkYXNhcmlAZ21haWwuY29tIiwiY3JlYXRlZEF0IjoiMjAyMy0wNi0wN1QxNjowNzoxNC4yNTlaIiwidXBkYXRlZEF0IjoiMjAyMy0wNi0wN1QxNjowNzoxNC4yNTlaIiwiaWF0IjoxNjg2MTU0MzA5fQ.bbmJePbn5QHoaCIJAB7l0j5PIQvoIYEBEkfES6vh67g
+                  name:
+                    type: string
+                    example: Hapizd
+                  createdAt:
+                    type: string
+                    example: '2023-06-07T16:07:14.259Z'
+                  updatedAt:
+                    type: string
+                    example: '2023-06-07T16:07:14.259Z'
+        '404':
+          description: If failed to login
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Email tidak ditemukan
+      deprecated: false
+  /users:
+    get:
+      tags:
+        - Users
+      parameters: []
+      responses:
+        '200':
+          description: If data successfully retrived
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: OK
+                  data:
+                    type: object
+                    properties:
+                      posts:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                            name:
+                              type: string
+                            email:
+                              type: string
+                            password:
+                              type: string
+                            phone:
+                              type: number
+                            verified:
+                              type: string
+                            image_profile:
+                              type: string
+                            createdAt:
+                              type: string
+                            updatedAt:
+                              type: string
+                        example:
+                          - id: 1
+                            name: Hapizd 
+                            email: hapizdasari@gmail.com
+                            password: "12345"
+                            phone: "0821111111"
+                            verified: false
+                            image_profile: https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png
+                            createdAt: '2023-06-07T16:16:46.530Z'
+                            updatedAt: '2023-06-07T16:16:46.530Z'
+                          - id: 2
+                            name: Teuku
+                            email: teukudr@gmail.com
+                            password: "12345"
+                            phone: "08200000"
+                            verified: false
+                            image_profile: https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png
+                            createdAt: '2023-06-07T16:16:46.530Z'
+                            updatedAt: '2023-06-07T16:16:46.530Z'
+                          - id: 3
+                            name: Taofik
+                            email: taofik@gmail.com
+                            password: "12345"
+                            phone: "082777777"
+                            verified: false
+                            image_profile: https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png
+                            createdAt: '2023-06-07T16:23:42.079Z'
+                            updatedAt: '2023-06-07T16:23:42.079Z'
+        '401':
+          description: If member tried to retrive the data
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Unauthorized
+      deprecated: false
+  
