@@ -5,12 +5,11 @@ const methodOverride = require("method-override");
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
 const morgan = require("morgan");
-const path = require("path");
 
 // Install JSON Request Parser
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cors());
 app.use(morgan("dev"));
 app.use(cookieParser());
 
