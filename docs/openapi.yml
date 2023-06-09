@@ -6,7 +6,7 @@ info:
     email: hapizdasari@gmail.com
   version: "1.0"
 servers:
-  - url: https://c2-backend.up.railway.app//api/v1
+  - url: https://c2-backend.up.railway.app/api/v1
     variables: {}
 paths:
   /register:
