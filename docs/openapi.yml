@@ -1,12 +1,12 @@
 openapi: 3.0.0
 info:
   title: Api Documentation Backend
-  description: 
+  description:
   contact:
     email: hapizdasari@gmail.com
-  version: '1.0'
+  version: "1.0"
 servers:
-  - url: http://localhost:8000/api/v1
+  - url: https://c2-backend.up.railway.app//api/v1
     variables: {}
 paths:
   /register:
@@ -40,7 +40,7 @@ paths:
                   example: "0821111111"
         required: false
       responses:
-        '200':
+        "200":
           description: an user was created
           content:
             application/json:
@@ -65,10 +65,10 @@ paths:
                     example: 0821111111
                   createdAt:
                     type: string
-                    example: '2023-06-07T16:07:14.259Z'
+                    example: "2023-06-07T16:07:14.259Z"
                   updatedAt:
                     type: string
-                    example: '2023-06-07T16:07:14.259Z'
+                    example: "2023-06-07T16:07:14.259Z"
       deprecated: false
   /login:
     post:
@@ -93,7 +93,7 @@ paths:
                   example: "12345"
         required: false
       responses:
-        '200':
+        "200":
           description: Login success
           content:
             application/json:
@@ -108,11 +108,11 @@ paths:
                     example: Hapizd
                   createdAt:
                     type: string
-                    example: '2023-06-07T16:07:14.259Z'
+                    example: "2023-06-07T16:07:14.259Z"
                   updatedAt:
                     type: string
-                    example: '2023-06-07T16:07:14.259Z'
-        '404':
+                    example: "2023-06-07T16:07:14.259Z"
+        "404":
           description: If failed to login
           content:
             application/json:
@@ -129,7 +129,7 @@ paths:
         - Users
       parameters: []
       responses:
-        '200':
+        "200":
           description: If data successfully retrived
           content:
             application/json:
@@ -167,14 +167,14 @@ paths:
                               type: string
                         example:
                           - id: 1
-                            name: Hapizd 
+                            name: Hapizd
                             email: hapizdasari@gmail.com
                             password: "12345"
                             phone: "0821111111"
                             verified: false
                             image_profile: https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png
-                            createdAt: '2023-06-07T16:16:46.530Z'
-                            updatedAt: '2023-06-07T16:16:46.530Z'
+                            createdAt: "2023-06-07T16:16:46.530Z"
+                            updatedAt: "2023-06-07T16:16:46.530Z"
                           - id: 2
                             name: Teuku
                             email: teukudr@gmail.com
@@ -182,8 +182,8 @@ paths:
                             phone: "08200000"
                             verified: false
                             image_profile: https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png
-                            createdAt: '2023-06-07T16:16:46.530Z'
-                            updatedAt: '2023-06-07T16:16:46.530Z'
+                            createdAt: "2023-06-07T16:16:46.530Z"
+                            updatedAt: "2023-06-07T16:16:46.530Z"
                           - id: 3
                             name: Taofik
                             email: taofik@gmail.com
@@ -191,9 +191,9 @@ paths:
                             phone: "082777777"
                             verified: false
                             image_profile: https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png
-                            createdAt: '2023-06-07T16:23:42.079Z'
-                            updatedAt: '2023-06-07T16:23:42.079Z'
-        '401':
+                            createdAt: "2023-06-07T16:23:42.079Z"
+                            updatedAt: "2023-06-07T16:23:42.079Z"
+        "401":
           description: If member tried to retrive the data
           content:
             application/json:
@@ -204,4 +204,3 @@ paths:
                     type: string
                     example: Unauthorized
       deprecated: false
-  
