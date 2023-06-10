@@ -65,12 +65,8 @@ module.exports = {
           city_to: {
             [Op.iLike]: `%${city_to}`,
           },
-          date_start: {
-            [Op.iLike]: `%${date_start}`,
-          },
-          date_end: {
-            [Op.iLike]: `%${date_end}`,
-          },
+          date_start: date_start,
+          date_end: date_end,
           type_seat: {
             [Op.iLike]: `%${type_seat}`,
           },
