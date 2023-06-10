@@ -15,6 +15,8 @@ module.exports = {
         type_seat: "Business",
         price: 994000,
         available: true,
+        createdAt: new Date(),
+        updatedAt: new Date(),
       },
     ]);
   },
