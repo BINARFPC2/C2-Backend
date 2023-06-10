@@ -1,5 +1,6 @@
 const { Ticket } = require("../models");
 const { v4: uuid } = require("uuid");
+const { Op } = require("sequelize");
 
 module.exports = {
   async createTicket(req, res) {
@@ -46,26 +47,8 @@ module.exports = {
   },
 
   async getAllTickets(req, res) {
-    const findAll = (
-      city_from,
-      city_to,
-      airport_from,
-      airport_to,
-      dateDeparture,
-      dateArrival,
-      type_seat,
-      available
-    ) => {
-      return Ticket.findAll(
-        city_from,
-        city_to,
-        airport_from,
-        airport_to,
-        dateDeparture,
-        dateArrival,
-        type_seat,
-        available
-      );
+    const findAll = () => {
+      return Ticket.findAll();
     };
 
     const city_from = req.query.city_from ? req.query.city_from : "";
@@ -79,16 +62,11 @@ module.exports = {
     const type_seat = req.query.type_seat ? req.query.type_seat : "";
     const available = req.query.available ? req.query.available : "";
 
-    const tickets = await findAll(
-      city_from,
-      city_to,
-      airport_from,
-      airport_to,
-      dateDeparture,
-      dateArrival,
-      type_seat,
-      available
-    );
+    const tickets = await findAll({
+      where: {
+        [Op.like]: `%${city_from}`,
+      },
+    });
     res.status(200).json({
       status: "Success",
       message: "Get All Data Ticket Success",
