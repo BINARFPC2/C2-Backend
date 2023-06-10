@@ -56,22 +56,26 @@ module.exports = {
     const type_seat = req.query.type_seat ? req.query.type_seat : "";
     const available = req.query.available ? req.query.available : "";
 
-    const tickets = await Ticket.findAll({
-      where: {
-        [Op.and]: {
-          city_from: {
-            [Op.iLike]: `%${city_from}`,
-          },
-          city_to: {
-            [Op.iLike]: `%${city_to}`,
-          },
-          // date_start: date_start,
-          // date_end: date_end,
-          type_seat: {
-            [Op.iLike]: `%${type_seat}`,
-          },
-        },
+    const querySearch = {
+      city_from: {
+        [Op.iLike]: `%${city_from}`,
       },
+      city_to: {
+        [Op.iLike]: `%${city_to}`,
+      },
+      type_seat: {
+        [Op.iLike]: `%${type_seat}`,
+      },
+    };
+
+    if (date_start && date_end) {
+      whereClause.releaseDate = {
+        [Op.between]: [new Date(date_start), new Date(date_end)],
+      };
+    }
+
+    const tickets = await Ticket.findAll({
+      where: querySearch,
     });
     res.status(200).json({
       status: "Success",
