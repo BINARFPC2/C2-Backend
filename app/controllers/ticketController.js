@@ -69,7 +69,7 @@ module.exports = {
     };
 
     if (date_start && date_end) {
-      whereClause.releaseDate = {
+      querySearch.releaseDate = {
         [Op.between]: [new Date(date_start), new Date(date_end)],
       };
     }
