@@ -30,6 +30,14 @@ module.exports = {
       dateArrival: {
         type: Sequelize.STRING,
       },
+      date_start: {
+        allowNull: false,
+        type: Sequelize.DATEONLY,
+      },
+      date_end: {
+        allowNull: true,
+        type: Sequelize.DATEONLY,
+      },
       type_seat: {
         type: Sequelize.STRING,
       },
