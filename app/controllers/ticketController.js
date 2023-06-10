@@ -66,6 +66,15 @@ module.exports = {
         city_to: {
           [Op.iLike]: `%${city_to}`,
         },
+        dateDeparture: {
+          [Op.iLike]: `%${dateDeparture}`,
+        },
+        dateArrival: {
+          [Op.iLike]: `%${dateArrival}`,
+        },
+        type_seat: {
+          [Op.iLike]: `%${type_seat}`,
+        },
       },
     });
     res.status(200).json({
