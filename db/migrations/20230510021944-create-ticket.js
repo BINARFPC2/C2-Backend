@@ -8,6 +8,7 @@ module.exports = {
         allowNull: false,
         primaryKey: true,
         type: Sequelize.UUID,
+        unique: true,
       },
       city_from: {
         type: Sequelize.STRING,
