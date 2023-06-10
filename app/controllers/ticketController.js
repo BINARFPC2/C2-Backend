@@ -7,6 +7,7 @@ module.exports = {
       const {
         city_from,
         city_to,
+        airlines,
         airport_from,
         airport_to,
         dateDeparture,
@@ -20,6 +21,7 @@ module.exports = {
         id: uuid(),
         city_from: city_from,
         city_to: city_to,
+        airlines: airlines,
         airport_from: airport_from,
         airport_to: airport_to,
         dateDeparture: dateDeparture,
