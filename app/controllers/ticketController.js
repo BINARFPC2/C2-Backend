@@ -60,20 +60,22 @@ module.exports = {
 
     const tickets = await Ticket.findAll({
       where: {
-        city_from: {
-          [Op.iLike]: `%${city_from}`,
-        },
-        city_to: {
-          [Op.iLike]: `%${city_to}`,
-        },
-        dateDeparture: {
-          [Op.iLike]: `%${dateDeparture}`,
-        },
-        dateArrival: {
-          [Op.iLike]: `%${dateArrival}`,
-        },
-        type_seat: {
-          [Op.iLike]: `%${type_seat}`,
+        [Op.and]: {
+          city_from: {
+            [Op.iLike]: `%${city_from}`,
+          },
+          city_to: {
+            [Op.iLike]: `%${city_to}`,
+          },
+          dateDeparture: {
+            [Op.iLike]: `%${dateDeparture}`,
+          },
+          dateArrival: {
+            [Op.iLike]: `%${dateArrival}`,
+          },
+          type_seat: {
+            [Op.iLike]: `%${type_seat}`,
+          },
         },
       },
     });
