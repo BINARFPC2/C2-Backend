@@ -6,8 +6,8 @@ module.exports = {
     await queryInterface.bulkInsert("Tickets", [
       {
         id: uuid(),
-        city_from: "Jakarta (JKTA)",
-        city_to: "Singapore (SINA)",
+        city_from: "Jakarta",
+        city_to: "Singapore",
         airlines: "Lion Air",
         airport_from: "Soekarno-Hatta International",
         airport_to: "Singapore Changi",
@@ -21,8 +21,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_from: "Yogyakarta (JOG)",
-        city_to: "Jakarta (JKTA)",
+        city_from: "Yogyakarta",
+        city_to: "Jakarta",
         airlines: "Garuda",
         airport_from: "Yogyakarta International Airport",
         airport_to: "Soekarno-Hatta International",
@@ -36,8 +36,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_from: "Jakarta (JKTA)",
-        city_to: "Bali (DPS)",
+        city_from: "Jakarta",
+        city_to: "Bali",
         airlines: "Super Air Jet",
         airport_from: "Soekarno-Hatta International",
         airport_to: "I Gusti Ngurah Rai International",
