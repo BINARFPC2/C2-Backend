@@ -46,8 +46,26 @@ module.exports = {
   },
 
   async getAllTickets(req, res) {
-    const findAll = () => {
-      return Ticket.findAll();
+    const findAll = (
+      city_from,
+      city_to,
+      airport_from,
+      airport_to,
+      dateDeparture,
+      dateArrival,
+      type_seat,
+      available
+    ) => {
+      return Ticket.findAll(
+        city_from,
+        city_to,
+        airport_from,
+        airport_to,
+        dateDeparture,
+        dateArrival,
+        type_seat,
+        available
+      );
     };
 
     const city_from = req.query.city_from ? req.query.city_from : "";
