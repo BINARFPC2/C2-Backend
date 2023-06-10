@@ -9,6 +9,7 @@ const {
   verifyEmail,
 } = require("../app/controllers/emailVerification");
 const handleGetRoot = require("../app/controllers/root");
+const { getAllTickets } = require("../app/controllers/ticketController");
 
 const {
   getAllUserData,
@@ -45,5 +46,8 @@ router.put("/api/v1/resetpw/:id", updatedPassword);
 
 // Delete User
 router.delete("/api/v1/users/:id", deleteUser);
+
+// Get Ticket
+router.get("/api/v1/tickets", getAllTickets);
 
 module.exports = router;

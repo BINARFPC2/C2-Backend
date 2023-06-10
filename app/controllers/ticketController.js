@@ -44,4 +44,37 @@ module.exports = {
       });
     }
   },
+
+  async getAllTickets(req, res) {
+    const findAll = () => {
+      return Ticket.findAll();
+    };
+
+    const city_from = req.query.city_from ? req.query.city_from : "";
+    const city_to = req.query.city_to ? req.query.city_to : "";
+    const airport_from = req.query.airport_from ? req.query.airport_from : "";
+    const airport_to = req.query.airport_to ? req.query.airport_to : "";
+    const dateDeparture = req.query.dateDeparture
+      ? req.query.dateDeparture
+      : "";
+    const dateArrival = req.query.dateArrival ? req.query.dateArrival : "";
+    const type_seat = req.query.type_seat ? req.query.type_seat : "";
+    const available = req.query.available ? req.query.available : "";
+
+    const tickets = await findAll(
+      city_from,
+      city_to,
+      airport_from,
+      airport_to,
+      dateDeparture,
+      dateArrival,
+      type_seat,
+      available
+    );
+    res.status(200).json({
+      status: "Success",
+      message: "Get All Data Ticket Success",
+      data: tickets,
+    });
+  },
 };
