@@ -51,10 +51,8 @@ module.exports = {
     const city_to = req.query.city_to ? req.query.city_to : "";
     const airport_from = req.query.airport_from ? req.query.airport_from : "";
     const airport_to = req.query.airport_to ? req.query.airport_to : "";
-    const dateDeparture = req.query.dateDeparture
-      ? req.query.dateDeparture
-      : "";
-    const dateArrival = req.query.dateArrival ? req.query.dateArrival : "";
+    const date_start = req.query.date_start ? req.query.date_start : "";
+    const date_end = req.query.date_end ? req.query.date_end : "";
     const type_seat = req.query.type_seat ? req.query.type_seat : "";
     const available = req.query.available ? req.query.available : "";
 
@@ -67,11 +65,11 @@ module.exports = {
           city_to: {
             [Op.iLike]: `%${city_to}`,
           },
-          dateDeparture: {
-            [Op.iLike]: `%${dateDeparture}`,
+          date_start: {
+            [Op.iLike]: `%${date_start}`,
           },
-          dateArrival: {
-            [Op.iLike]: `%${dateArrival}`,
+          date_end: {
+            [Op.iLike]: `%${date_end}`,
           },
           type_seat: {
             [Op.iLike]: `%${type_seat}`,
