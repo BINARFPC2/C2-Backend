@@ -60,7 +60,9 @@ module.exports = {
 
     const tickets = await Ticket.findAll({
       where: {
-        [Op.iLike]: `%${city_from}`,
+        city_from: {
+          [Op.iLike]: `%${city_from}`,
+        },
       },
     });
     res.status(200).json({
