@@ -34,6 +34,21 @@ module.exports = {
         createdAt: new Date(),
         updatedAt: new Date(),
       },
+      {
+        id: uuid(),
+        city_from: "Jakarta (JKTA)",
+        city_to: "Bali (DPS)",
+        airlines: "Super Air Jet",
+        airport_from: "Soekarno-Hatta International",
+        airport_to: "I Gusti Ngurah Rai International",
+        dateDeparture: "2023-06-03T07:55:00+00:00",
+        dateArrival: "2023-06-03T09:15:00+00:00",
+        type_seat: "Economy",
+        price: 592600,
+        available: true,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
     ]);
   },
 
