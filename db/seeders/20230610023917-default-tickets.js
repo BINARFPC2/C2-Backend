@@ -13,7 +13,6 @@ module.exports = {
         dateDeparture: "2023-06-03T07:55:00+00:00",
         dateArrival: "2023-06-03T10:45:00+00:00",
         type_seat: "Business",
-        total_passenger,
         price: 994000,
         available: true,
       },
