@@ -47,10 +47,6 @@ module.exports = {
   },
 
   async getAllTickets(req, res) {
-    const findAll = () => {
-      return Ticket.findAll();
-    };
-
     const city_from = req.query.city_from ? req.query.city_from : "";
     const city_to = req.query.city_to ? req.query.city_to : "";
     const airport_from = req.query.airport_from ? req.query.airport_from : "";
@@ -62,7 +58,7 @@ module.exports = {
     const type_seat = req.query.type_seat ? req.query.type_seat : "";
     const available = req.query.available ? req.query.available : "";
 
-    const tickets = await findAll({
+    const tickets = await Ticket.findAll({
       where: {
         [Op.like]: `%${city_from}`,
       },
