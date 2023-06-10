@@ -63,6 +63,9 @@ module.exports = {
         city_from: {
           [Op.iLike]: `%${city_from}`,
         },
+        city_to: {
+          [Op.iLike]: `%${city_to}`,
+        },
       },
     });
     res.status(200).json({
