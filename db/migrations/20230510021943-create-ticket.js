@@ -16,6 +16,9 @@ module.exports = {
       city_to: {
         type: Sequelize.STRING,
       },
+      airlines: {
+        type: Sequelize.STRING,
+      },
       airport_from: {
         type: Sequelize.STRING,
       },
