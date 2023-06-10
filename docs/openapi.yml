@@ -121,7 +121,7 @@ paths:
                 properties:
                   message:
                     type: string
-                    example: Email tidak ditemukan
+                    example: Email Not Found
       deprecated: false
   /users:
     get:
@@ -205,66 +205,194 @@ paths:
                     example: Unauthorized
       deprecated: false
 
-/users/:id:
-  get:
-    tags:
-      - Users
-    parameters: []
-    responses:
-      "200":
-        description: If data successfully retrived
+  /users/:id:
+    get:
+      tags:
+        - Users
+      parameters: []
+      responses:
+        "200":
+          description: If data successfully retrived
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: OK
+                  data:
+                    type: object
+                    properties:
+                      posts:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            id:
+                              type: uuid
+                            name:
+                              type: string
+                            email:
+                              type: string
+                            password:
+                              type: string
+                            phone:
+                              type: number
+                            verified:
+                              type: string
+                            image_profile:
+                              type: string
+                            createdAt:
+                              type: string
+                            updatedAt:
+                              type: string
+                        example:
+                          - id: 1
+                            name: Hapizd
+                            email: hapizdasari@gmail.com
+                            password: "12345"
+                            phone: "0821111111"
+                            verified: false
+                            image_profile: https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png
+                            createdAt: "2023-06-07T16:16:46.530Z"
+                            updatedAt: "2023-06-07T16:16:46.530Z"
+        "404":
+          description: failed
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: User not found
+      deprecated: false
+    put:
+      tags:
+        - Users
+      parameters:
+        - name: id_user
+          in: path
+          schema:
+      requestBody:
         content:
-          application/json:
+          application/x-www-form-urlencoded:
+            encoding: {}
             schema:
+              required:
+                - name
+                - phone
+                - email
               type: object
               properties:
-                status:
+                name:
                   type: string
-                  example: OK
-                data:
-                  type: object
-                  properties:
-                    posts:
-                      type: array
-                      items:
-                        type: object
-                        properties:
-                          id:
-                            type: integer
-                          name:
-                            type: string
-                          email:
-                            type: string
-                          password:
-                            type: string
-                          phone:
-                            type: number
-                          verified:
-                            type: string
-                          image_profile:
-                            type: string
-                          createdAt:
-                            type: string
-                          updatedAt:
-                            type: string
-                      example:
-                        - id: 1
-                          name: Hapizd
-                          email: hapizdasari@gmail.com
-                          password: "12345"
-                          phone: "0821111111"
-                          verified: false
-                          image_profile: https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png
-                          createdAt: "2023-06-07T16:16:46.530Z"
-                          updatedAt: "2023-06-07T16:16:46.530Z"
-      "404":
-        description: failed
+                  example: Hapizd
+                phone:
+                  type: number
+                  example: 08222222222
+                email:
+                  type: string
+                  example: "hapizdasari@gmail.com"
+        required: false
+      responses:
+        "200":
+          description: Update Successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: Success
+                  message:
+                    type: string
+                    example: Update Password Success
+          headers: {}
+      deprecated: false
+    delete:
+      tags:
+        - Users
+      parameters:
+        - name: id_user
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Delete Successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: Success
+                  message:
+                    type: string
+                    example: User Data deleted successfully
+          headers: {}
+        '500':
+          description: Server Error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: Error
+                  message:
+                    type: string
+                    example: ID Not Found
+          headers: {}
+      deprecated: false
+
+  /resetpw/{:id}:
+    put:
+      tags:
+        - Users
+      parameters:
+        - name: id
+          in: path
+          require: true
+          schema:
+            type: string
+      requestBody:
         content:
-          application/json:
+          application/x-www-form-urlencoded:
+            encoding: {}
             schema:
+              required:
+                - password
               type: object
               properties:
-                message:
+                name:
                   type: string
-                  example: User not found
-    deprecated: false
+                  example: update
+        required: false
+      responses:
+        "200":
+          description: Resets Password Successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: Success
+                  message:
+                    type: string
+                    example: Update Password Success
+          headers: {}
+        '500':
+          description: Server error
+          headers: {}
+      deprecated: false
+  
+    
