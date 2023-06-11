@@ -64,7 +64,7 @@ router.post("/api/v1/destfavorite", createdesfav);
 router.get("/api/v1/destfavorite", getAllDestFavData);
 
 // Get Destinasi Favorite by Id
-router.get("/api/v1/destfavorite/:id", getDestinasiByContinent);
+router.get("/api/v1/destfavorite/:continent", getDestinasiByContinent);
 
 // Delete Destinasi Favorite
 router.delete("/api/v1/destfavorite/:id", deleteDestFav);
