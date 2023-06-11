@@ -1,6 +1,9 @@
 "use strict";
 const { v4: uuid } = require("uuid");
 /** @type {import('sequelize-cli').Migration} */
+const currentDate = new Date();
+const nextDay = new Date(currentDate);
+nextDay.setDate(currentDate.getDate() + 1);
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.bulkInsert("Tickets", [
@@ -13,8 +16,8 @@ module.exports = {
         airport_to: "Singapore Changi",
         dateDeparture: "07:55",
         dateArrival: "10:45",
-        date_start: "2023-06-03",
-        date_end: "2023-06-03",
+        date_start: currentDate,
+        date_end: nextDay,
         type_seat: "Economy",
         price: 994000,
         available: true,
