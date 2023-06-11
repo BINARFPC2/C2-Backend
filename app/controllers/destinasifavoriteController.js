@@ -1,5 +1,6 @@
 const { destinasifavorite } = require("../models");
 const { v4: uuid } = require("uuid");
+const { Op } = require("sequelize");
 
 module.exports = {
   async createdesfav(req, res) {
@@ -40,8 +41,17 @@ module.exports = {
   },
 
   async getAllDestFavData(req, res) {
+    const continent = req.query.continent ? req.query.continent : "";
+
+    const querySearch = {
+      continent: {
+        [Op.iLike]: `%${continent}`,
+      },
+    };
     const findAll = () => {
-      return destinasifavorite.findAll();
+      return destinasifavorite.findAll({
+        where: querySearch,
+      });
     };
     try {
       const dataDestFav = await findAll();
@@ -66,12 +76,12 @@ module.exports = {
     }
   },
 
-  async getDestinasiByContinent(req, res) {
+  async getDestinasiById(req, res) {
     try {
-      const continentDestFav = req.params.continent;
+      const idDestFav = req.params.id;
       const findDestFavId = () => {
         return destinasifavorite.findOne({
-          where: { continent: continentDestFav },
+          where: { id: idDestFav },
         });
       };
 
