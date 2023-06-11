@@ -41,7 +41,7 @@ module.exports = {
   },
 
   async getAllDestFavData(req, res) {
-    const continent = req.query.continent ? req.query.continent : "";
+    const continent = req.query.benua ? req.query.benua : "";
 
     const querySearch = {
       continent: {
