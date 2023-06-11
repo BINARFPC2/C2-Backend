@@ -336,7 +336,7 @@ paths:
                     type: string
                     example: User Data deleted successfully
           headers: {}
-        '500':
+        "500":
           description: Server Error
           content:
             application/json:
@@ -390,7 +390,7 @@ paths:
                     type: string
                     example: Update Password Success
           headers: {}
-        '500':
+        "500":
           description: Server error
           headers: {}
       deprecated: false
@@ -655,7 +655,7 @@ paths:
                     type: string
                     example: User Data deleted successfully
           headers: {}
-        '500':
+        "500":
           description: Server Error
           content:
             application/json:
@@ -670,5 +670,3 @@ paths:
                     example: ID Not Found
           headers: {}
       deprecated: false
-  
-    
