@@ -49,8 +49,8 @@ module.exports = {
   async getAllTickets(req, res) {
     const city_from = req.query.city_from ? req.query.city_from : "";
     const city_to = req.query.city_to ? req.query.city_to : "";
-    const airport_from = req.query.airport_from ? req.query.airport_from : "";
-    const airport_to = req.query.airport_to ? req.query.airport_to : "";
+    // const airport_from = req.query.airport_from ? req.query.airport_from : "";
+    // const airport_to = req.query.airport_to ? req.query.airport_to : "";
     const date_start = req.query.date_start ? req.query.date_start : "";
     const date_end = req.query.date_end ? req.query.date_end : "";
     const type_seat = req.query.type_seat ? req.query.type_seat : "";
