@@ -19,6 +19,13 @@ const {
   updatedPassword,
 } = require("../app/controllers/userControllers");
 
+const {
+  createdesfav,
+  getAllDestFavData,
+  getDestinasiById,
+  deleteDestFav,
+}= require("../app/controllers/destinasifavoriteController");
+
 const router = require("express").Router();
 
 router.get("/", handleGetRoot);
@@ -49,5 +56,17 @@ router.delete("/api/v1/users/:id", deleteUser);
 
 // Get Ticket
 router.get("/api/v1/tickets", getAllTickets);
+
+// Add Destinasi Favorite
+router.post("/api/v1/destfavorite", createdesfav);
+
+// Get Destinasi Favorite
+router.get("/api/v1/destfavorite", getAllDestFavData);
+
+// Get Destinasi Favorite by Id
+router.get("/api/v1/destfavorite/:id", getDestinasiById);
+
+// Delete Destinasi Favorite
+router.delete("/api/v1/destfavorite/:id", deleteDestFav);
 
 module.exports = router;
