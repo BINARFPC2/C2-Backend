@@ -6,14 +6,15 @@ module.exports = {
     await queryInterface.bulkInsert("destinasifavorites", [
       {
         id: uuid(),
-        image_destinasi: "",
-        info: "",
-        continent: "",
-        city_from: "",
-        city_to: "",
-        airlines: "",
-        date: "",
-        price: "",
+        image_destinasi:
+          "https://fullsuitcase.com/wp-content/uploads/2022/06/Best-areas-to-stay-in-Bangkok-neighborhood-guide.jpg.webp",
+        info: "Limited!",
+        continent: "Asia",
+        city_from: "Jakarta",
+        city_to: "Bangkok",
+        airlines: "AirAsia",
+        date: "01 - 30 Juli",
+        price: 950000,
       },
     ]);
   },
