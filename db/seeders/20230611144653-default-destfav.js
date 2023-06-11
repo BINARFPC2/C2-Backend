@@ -15,6 +15,8 @@ module.exports = {
         airlines: "AirAsia",
         date: "01 - 30 Juli",
         price: 950000,
+        createdAt: new Date(),
+        updatedAt: new Date(),
       },
     ]);
   },
