@@ -22,9 +22,9 @@ const {
 const {
   createdesfav,
   getAllDestFavData,
-  getDestinasiById,
+  getDestinasiByContinent,
   deleteDestFav,
-}= require("../app/controllers/destinasifavoriteController");
+} = require("../app/controllers/destinasifavoriteController");
 
 const router = require("express").Router();
 
@@ -64,7 +64,7 @@ router.post("/api/v1/destfavorite", createdesfav);
 router.get("/api/v1/destfavorite", getAllDestFavData);
 
 // Get Destinasi Favorite by Id
-router.get("/api/v1/destfavorite/:id", getDestinasiById);
+router.get("/api/v1/destfavorite/:id", getDestinasiByContinent);
 
 // Delete Destinasi Favorite
 router.delete("/api/v1/destfavorite/:id", deleteDestFav);
