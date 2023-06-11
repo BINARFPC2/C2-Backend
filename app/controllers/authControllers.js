@@ -58,7 +58,7 @@ module.exports = {
         });
       }
       const userForm = await user.create({
-        id: uuid(),
+        id:uuid(),
         name: name,
         password: password,
         email: email,
