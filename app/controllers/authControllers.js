@@ -44,7 +44,6 @@ module.exports = {
         return res.status(400).json({
           status: "error",
           message: "Email and password is required",
-          data: {},
         });
       }
 
@@ -54,7 +53,6 @@ module.exports = {
         return res.status(400).json({
           status: "error",
           message: "Email format is invalid",
-          data: {},
         });
       }
 
@@ -87,7 +85,6 @@ module.exports = {
       res.status(400).json({
         status: "Failed",
         message: error.message,
-        data: {},
       });
     }
   },
@@ -137,7 +134,6 @@ module.exports = {
         status: "error",
         message: "Login Failed",
         error: error.message,
-        data: {},
       });
     }
   },
