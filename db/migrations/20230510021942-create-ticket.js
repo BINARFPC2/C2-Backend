@@ -18,6 +18,9 @@ module.exports = {
       airlines: {
         type: Sequelize.STRING,
       },
+      information: {
+        type: Sequelize.STRING,
+      },
       airport_from: {
         type: Sequelize.STRING,
       },
@@ -41,12 +44,16 @@ module.exports = {
       type_seat: {
         type: Sequelize.STRING,
       },
+      booking_code: {
+        type: Sequelize.STRING,
+      },
       total_passenger: {
         type: Sequelize.INTEGER,
       },
       price: {
         type: Sequelize.INTEGER,
       },
+
       available: {
         type: Sequelize.BOOLEAN,
       },
