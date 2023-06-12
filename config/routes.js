@@ -22,7 +22,10 @@ const {
   deleteDestFav,
 } = require("../app/controllers/destinasifavoriteController");
 
-const { createCheckout } = require("../app/controllers/checkoutController");
+const {
+  createCheckout,
+  getAllCheckoutData,
+} = require("../app/controllers/checkoutController");
 
 const router = require("express").Router();
 
@@ -69,5 +72,8 @@ router.delete("/api/v1/destfavorite/:id", deleteDestFav);
 
 // Post Checkout
 router.post("/api/v1/checkout", createCheckout);
+
+// Get All Data Checkout
+router.get("/api/v1/checkout", getAllCheckoutData);
 
 module.exports = router;
