@@ -4,10 +4,6 @@ const {
   authorize,
   whoAmI,
 } = require("../app/controllers/authControllers");
-const {
-  sendEmailverification,
-  verifyEmail,
-} = require("../app/controllers/emailVerification");
 const handleGetRoot = require("../app/controllers/root");
 const { getAllTickets } = require("../app/controllers/ticketController");
 
@@ -25,6 +21,8 @@ const {
   getDestinasiById,
   deleteDestFav,
 } = require("../app/controllers/destinasifavoriteController");
+
+const { createCheckout } = require("../app/controllers/checkoutController");
 
 const router = require("express").Router();
 
@@ -68,5 +66,8 @@ router.get("/api/v1/destfavorite/:id", getDestinasiById);
 
 // Delete Destinasi Favorite
 router.delete("/api/v1/destfavorite/:id", deleteDestFav);
+
+// Post Checkout
+router.post("/api/v1/checkout", createCheckout);
 
 module.exports = router;

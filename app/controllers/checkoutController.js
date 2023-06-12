@@ -17,10 +17,30 @@ module.exports = {
         expirationdatepass,
       } = req.body;
 
-      // create checkout
-      //   const userCheckout = await Checkout.create({
-      //     id:
-      //   })
-    } catch (error) {}
+      //   create checkout
+      const userCheckout = await Checkout.create({
+        id: uuid(),
+        name: name,
+        email: email,
+        phone: phone,
+        familyName: familyName,
+        title: title,
+        dateofbirth: dateofbirth,
+        citizenship: citizenship,
+        ktppaspor: ktppaspor,
+        issuingcountry: issuingcountry,
+        expirationdatepass: expirationdatepass,
+      });
+      res.status(201).json({
+        status: "Success",
+        message: "Checkout Success",
+        data: userCheckout,
+      });
+    } catch (error) {
+      res.status(400).json({
+        status: "Failed",
+        message: error.message,
+      });
+    }
   },
 };
