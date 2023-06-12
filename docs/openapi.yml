@@ -399,7 +399,7 @@ paths:
     get:
       tags:
         - Destination Favotite
-      parameters: []
+      query: [continent]
       responses:
         "200":
           description: If data successfully retrived
@@ -450,24 +450,6 @@ paths:
                             image_profile: https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png
                             createdAt: "2023-06-10T16:50:02.127Z"
                             updatedAt: "2023-06-10T16:50:02.127Z"
-                          - id: 2
-                            name: Teuku
-                            email: teukudr@gmail.com
-                            password: "12345"
-                            phone: "08200000"
-                            verified: false
-                            image_profile: https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png
-                            createdAt: "2023-06-07T16:16:46.530Z"
-                            updatedAt: "2023-06-07T16:16:46.530Z"
-                          - id: 3
-                            name: Taofik
-                            email: taofik@gmail.com
-                            password: "12345"
-                            phone: "082777777"
-                            verified: false
-                            image_profile: https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png
-                            createdAt: "2023-06-07T16:23:42.079Z"
-                            updatedAt: "2023-06-07T16:23:42.079Z"
         "401":
           description: If member tried to retrive the data
           content:
@@ -479,92 +461,6 @@ paths:
                     type: string
                     example: Unauthorized
       deprecated: false
-    post:
-      tags:
-        - Destination Favotite
-      parameters: []
-      requestBody:
-        content:
-          application/x-www-form-urlencoded:
-            encoding: {}
-            schema:
-              required:
-                - image
-                - continent
-                - city_from
-                - city_to
-                - airlines
-                - date
-                - price
-              type: object
-              properties:
-                image:
-                  type: string
-                continent:
-                  type: string
-                city_from:
-                  type: string
-                city_to:
-                  type: string
-                airlines:
-                  type: string
-                date:
-                  type: string
-                price:
-                  type: integer
-        required: false
-      responses:
-        "200":
-          description: If data successfully retrived
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  status:
-                    type: string
-                    example: OK
-                  data:
-                    type: object
-                    properties:
-                      posts:
-                        type: array
-                        items:
-                          type: object
-                          properties:
-                            id:
-                              type: uuid
-                            image:
-                              type: string
-                            continent:
-                              type: string
-                            city_from:
-                              type: string
-                            city_to:
-                              type: string
-                            airlines:
-                              type: string
-                            date:
-                              type: string
-                            price:
-                              type: integer
-                            createdAt:
-                              type: string
-                            updatedAt:
-                              type: string
-                        example:
-                          - id: 1
-                            continent: Asia
-                            city_from: Sydney
-                            city_to: "Tokyo"
-                            airlines: "Jet Air"
-                            date: 27 - 30 Agustus 2023
-                            price: 400000
-                            image_profile: https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png
-                            createdAt: "2023-06-10T16:50:02.127Z"
-                            updatedAt: "2023-06-10T16:50:02.127Z"
-      deprecated: false
-
   /destfavorite/:id:
     get:
       tags:
@@ -630,43 +526,4 @@ paths:
                   message:
                     type: string
                     example: User not found
-      deprecated: false
-    delete:
-      tags:
-        - Destination Favotite
-      parameters:
-        - name: id_user
-          in: path
-          required: true
-          schema:
-            type: string
-      responses:
-        "200":
-          description: Delete Successfully
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  status:
-                    type: string
-                    example: Success
-                  message:
-                    type: string
-                    example: User Data deleted successfully
-          headers: {}
-        "500":
-          description: Server Error
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  status:
-                    type: string
-                    example: Error
-                  message:
-                    type: string
-                    example: ID Not Found
-          headers: {}
       deprecated: false
