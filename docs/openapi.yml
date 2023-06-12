@@ -399,7 +399,7 @@ paths:
     get:
       tags:
         - Destination Favotite
-      query: [continent]
+      parameters: []
       responses:
         "200":
           description: If data successfully retrived
@@ -510,6 +510,72 @@ paths:
                             continent: Asia
                             city_from: Sydney
                             city_to: "Tokyo"
+                            airlines: "Jet Air"
+                            date: 27 - 30 Agustus 2023
+                            price: 400000
+                            image_profile: https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png
+                            createdAt: "2023-06-10T16:50:02.127Z"
+                            updatedAt: "2023-06-10T16:50:02.127Z"
+        "404":
+          description: failed
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: User not found
+      deprecated: false
+  /destfavorite?continent=eropa:
+    get:
+      tags:
+        - Destination Favotite
+      parameters: []
+      responses:
+        "200":
+          description: If data successfully retrived
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: OK
+                  data:
+                    type: object
+                    properties:
+                      posts:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            id:
+                              type: uuid
+                            image:
+                              type: string
+                            continent:
+                              type: string
+                            city_from:
+                              type: string
+                            city_to:
+                              type: string
+                            airlines:
+                              type: string
+                            date:
+                              type: string
+                            price:
+                              type: integer
+                            createdAt:
+                              type: string
+                            updatedAt:
+                              type: string
+                        example:
+                          - id: 1
+                            continent: Eropa
+                            city_from: Jakarta
+                            city_to: Paris
                             airlines: "Jet Air"
                             date: 27 - 30 Agustus 2023
                             price: 400000
