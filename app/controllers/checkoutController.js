@@ -67,4 +67,36 @@ module.exports = {
       });
     }
   },
+
+  async getDataCheckoutById(req, res) {
+    try {
+      const idCheckout = req.params.id;
+      const findDataCheckoutId = () => {
+        return Checkout.findOne({
+          where: {
+            id: idCheckout,
+          },
+        });
+      };
+
+      const dataCheckoutId = await findDataCheckoutId();
+
+      if (!dataCheckoutId) {
+        res.status(404).json({
+          status: "Failed",
+          message: "Data not found",
+        });
+      }
+      res.status(200).json({
+        status: "Success",
+        message: "Get Checkout Data By Id Successfully",
+        data: dataCheckoutId,
+      });
+    } catch (error) {
+      res.status(500).json({
+        status: "Error",
+        message: error.message,
+      });
+    }
+  },
 };

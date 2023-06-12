@@ -25,6 +25,7 @@ const {
 const {
   createCheckout,
   getAllCheckoutData,
+  getDataCheckoutById,
 } = require("../app/controllers/checkoutController");
 
 const router = require("express").Router();
@@ -75,5 +76,8 @@ router.post("/api/v1/checkout", createCheckout);
 
 // Get All Data Checkout
 router.get("/api/v1/checkout", getAllCheckoutData);
+
+// Get Data Checkout By Id
+router.get("/api/v1/checkout/:id", getDataCheckoutById);
 
 module.exports = router;
