@@ -102,7 +102,10 @@ module.exports = {
       });
 
       if (!userLogin) {
-        res.status(404).json({ message: "Email tidak ditemukan" });
+        return res.status(400).json({
+          status: "error",
+          message: "Email tidak ditemukan",
+        });
       }
 
       const isPasswordCorrect = await checkPassword(
