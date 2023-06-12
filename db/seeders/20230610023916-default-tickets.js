@@ -14,8 +14,7 @@ module.exports = {
         airlines: "Lion Air",
         airport_from: "Soekarno-Hatta International",
         airport_to: "Singapore Changi",
-        information:
-          "Baggage 20 kg Cabin, baggage 7 kg, In Flight Entertainment",
+        information: "Baggage 20 kg Cabin baggage 7 kg In Flight Entertainment",
         dateDeparture: "07:55",
         dateArrival: "10:45",
         date_start: new Date(),
@@ -34,8 +33,7 @@ module.exports = {
         airlines: "Super Air Jet",
         airport_from: "Soekarno-Hatta International",
         airport_to: "Singapore Changi",
-        information:
-          "Baggage 20 kg Cabin, baggage 7 kg, In Flight Entertainment",
+        information: "Baggage 20 kg Cabin baggage 7 kg In Flight Entertainment",
         dateDeparture: "07:55",
         dateArrival: "10:45",
         date_start: new Date(),
@@ -54,8 +52,7 @@ module.exports = {
         airlines: "Lion Air",
         airport_from: "Soekarno-Hatta International",
         airport_to: "Singapore Changi",
-        information:
-          "Baggage 20 kg Cabin, baggage 7 kg, In Flight Entertainment",
+        information: "Baggage 20 kg Cabin baggage 7 kg In Flight Entertainment",
         dateDeparture: "07:55",
         dateArrival: "11:45",
         date_start: new Date(),
@@ -74,8 +71,7 @@ module.exports = {
         airlines: "Garuda Indonesia",
         airport_from: "Yogyakarta International Airport",
         airport_to: "Soekarno-Hatta International",
-        information:
-          "Baggage 20 kg Cabin, baggage 7 kg, In Flight Entertainment",
+        information: "Baggage 20 kg Cabin baggage 7 kg In Flight Entertainment",
         dateDeparture: "07:55",
         dateArrival: "10:45",
         date_start: new Date(),
@@ -94,8 +90,7 @@ module.exports = {
         airlines: "Lion Air",
         airport_from: "Yogyakarta International Airport",
         airport_to: "Soekarno-Hatta International",
-        information:
-          "Baggage 20 kg Cabin, baggage 7 kg, In Flight Entertainment",
+        information: "Baggage 20 kg Cabin baggage 7 kg In Flight Entertainment",
         dateDeparture: "07:55",
         dateArrival: "11:45",
         date_start: new Date(),
@@ -114,8 +109,7 @@ module.exports = {
         airlines: "Super Air Jet",
         airport_from: "Yogyakarta International Airport",
         airport_to: "Soekarno-Hatta International",
-        information:
-          "Baggage 20 kg Cabin, baggage 7 kg, In Flight Entertainment",
+        information: "Baggage 20 kg Cabin baggage 7 kg In Flight Entertainment",
         dateDeparture: "07:55",
         dateArrival: "11:45",
         date_start: new Date(),
@@ -134,8 +128,7 @@ module.exports = {
         airlines: "Super Air Jet",
         airport_from: "Soekarno-Hatta International",
         airport_to: "I Gusti Ngurah Rai International",
-        information:
-          "Baggage 20 kg Cabin, baggage 7 kg, In Flight Entertainment",
+        information: "Baggage 20 kg Cabin baggage 7 kg In Flight Entertainment",
         dateDeparture: "07:55",
         dateArrival: "10:45",
         date_start: new Date(),
@@ -154,8 +147,7 @@ module.exports = {
         airlines: "Garuda Indonesia",
         airport_from: "Soekarno-Hatta International",
         airport_to: "I Gusti Ngurah Rai International",
-        information:
-          "Baggage 20 kg Cabin, baggage 7 kg, In Flight Entertainment",
+        information: "Baggage 20 kg Cabin baggage 7 kg In Flight Entertainment",
         dateDeparture: "07:55",
         dateArrival: "10:45",
         date_start: new Date(),
@@ -174,8 +166,7 @@ module.exports = {
         airlines: "Lion Air",
         airport_from: "Juanda International Airport",
         airport_to: "Bandar Udara Internasional Tokyo",
-        information:
-          "Baggage 20 kg Cabin, baggage 7 kg, In Flight Entertainment",
+        information: "Baggage 20 kg Cabin baggage 7 kg In Flight Entertainment",
         dateDeparture: "08:30",
         dateArrival: "22:35",
         date_start: new Date(),
@@ -194,8 +185,7 @@ module.exports = {
         airlines: "Super Air Jet",
         airport_from: "Bandar Udara Internasional Kualanamu",
         airport_to: "Soekarno-Hatta International",
-        information:
-          "Baggage 20 kg Cabin, baggage 7 kg, In Flight Entertainment",
+        information: "Baggage 20 kg Cabin baggage 7 kg In Flight Entertainment",
         dateDeparture: "06:45",
         dateArrival: "09:05",
         date_start: new Date(),
@@ -214,8 +204,7 @@ module.exports = {
         airlines: "Garuda Indonesia",
         airport_from: "Bandar Udara Internasional Kualanamu",
         airport_to: "Soekarno-Hatta International",
-        information:
-          "Baggage 20 kg Cabin, baggage 7 kg, In Flight Entertainment",
+        information: "Baggage 20 kg Cabin baggage 7 kg In Flight Entertainment",
         dateDeparture: "06:45",
         dateArrival: "09:05",
         date_start: new Date(),
@@ -234,8 +223,7 @@ module.exports = {
         airlines: "Garuda Indonesia",
         airport_from: "Bandar Udara Internasional Kualanamu",
         airport_to: "Soekarno-Hatta International",
-        information:
-          "Baggage 20 kg Cabin, baggage 7 kg, In Flight Entertainment",
+        information: "Baggage 20 kg Cabin baggage 7 kg In Flight Entertainment",
         dateDeparture: "12.00",
         dateArrival: "17.20",
         date_start: new Date(),
