@@ -48,6 +48,16 @@ module.exports = {
         });
       }
 
+      // validator email format using regex
+      const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+      if (!emailRegex.test(email)) {
+        return res.status(400).json({
+          status: "error",
+          message: "Email format is invalid",
+          data: {},
+        });
+      }
+
       // check if email already exist
       const emailUser = await findEmail(email);
       if (emailUser) {
@@ -58,7 +68,7 @@ module.exports = {
         });
       }
       const userForm = await user.create({
-        id:uuid(),
+        id: uuid(),
         name: name,
         password: password,
         email: email,
@@ -83,38 +93,53 @@ module.exports = {
   },
 
   async login(req, res) {
-    const email = req.body.email;
-    const password = req.body.password;
+    try {
+      const email = req.body.email;
+      const password = req.body.password;
 
-    const userLogin = await user.findOne({
-      where: { email },
-    });
-
-    if (!user) {
-      res.status(404).json({ message: "Email / Phone tidak ditemukan" });
-    }
-
-    const isPasswordCorrect = await checkPassword(userLogin.password, password);
-
-    if (!isPasswordCorrect) {
-      res.status(401).json({
-        message: "Pasword salah!",
+      const userLogin = await user.findOne({
+        where: { email },
       });
-      return;
-    }
 
-    const token = createToken({
-      id: userLogin.id,
-      email: userLogin.email,
-      createdAt: userLogin.createdAt,
-      updatedAt: userLogin.updatedAt,
-    });
-    res.status(201).json({
-      token: token,
-      name: userLogin.name,
-      createdAt: userLogin.createdAt,
-      updatedAt: userLogin.updatedAt,
-    });
+      if (!userLogin) {
+        return res.status(400).json({
+          status: "error",
+          message: "Email tidak ditemukan",
+        });
+      }
+
+      const isPasswordCorrect = await checkPassword(
+        userLogin.password,
+        password
+      );
+
+      if (!isPasswordCorrect) {
+        return res.status(401).json({
+          status: "error",
+          message: "Pasword salah!",
+        });
+      }
+
+      const token = createToken({
+        id: userLogin.id,
+        email: userLogin.email,
+        createdAt: userLogin.createdAt,
+        updatedAt: userLogin.updatedAt,
+      });
+      res.status(201).json({
+        token: token,
+        name: userLogin.name,
+        createdAt: userLogin.createdAt,
+        updatedAt: userLogin.updatedAt,
+      });
+    } catch (error) {
+      res.status(500).json({
+        status: "error",
+        message: "Login Failed",
+        error: error.message,
+        data: {},
+      });
+    }
   },
 
   async whoAmI(req, res) {
