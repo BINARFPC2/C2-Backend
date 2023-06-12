@@ -593,3 +593,8 @@ paths:
                     type: string
                     example: User not found
       deprecated: false
+
+    /tickets/:
+    /tickets?city_form=jakarta:
+    /tickets?date=2023-06-03:
+    /tickets?type_seat=economy:
