@@ -58,7 +58,7 @@ module.exports = {
         });
       }
       const userForm = await user.create({
-        id:uuid(),
+        id: uuid(),
         name: name,
         password: password,
         email: email,
@@ -90,7 +90,7 @@ module.exports = {
       where: { email },
     });
 
-    if (!user) {
+    if (!userLogin) {
       res.status(404).json({ message: "Email / Phone tidak ditemukan" });
     }
 
