@@ -91,7 +91,7 @@ module.exports = {
     });
 
     if (!userLogin) {
-      res.status(404).json({ message: "Email / Phone tidak ditemukan" });
+      res.status(404).json({ message: "Email tidak ditemukan" });
     }
 
     const isPasswordCorrect = await checkPassword(userLogin.password, password);
