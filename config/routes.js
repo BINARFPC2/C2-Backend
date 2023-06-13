@@ -28,6 +28,12 @@ const {
   getDataCheckoutById,
 } = require("../app/controllers/checkoutController");
 
+const {
+  createPayment,
+  getAllPaymentData,
+  getPaymentById,
+}= require("../app/controllers/paymentController");
+
 const router = require("express").Router();
 
 router.get("/", handleGetRoot);
@@ -79,5 +85,14 @@ router.get("/api/v1/checkout", getAllCheckoutData);
 
 // Get Data Checkout By Id
 router.get("/api/v1/checkout/:id", getDataCheckoutById);
+
+// Add Payment
+router.post("/api/v1/payment", createPayment);
+
+// Get Payment
+router.get("/api/v1/payment", getAllPaymentData);
+
+// Get PAyment by Id
+router.get("/api/v1/payment/:id", getPaymentById);
 
 module.exports = router;
