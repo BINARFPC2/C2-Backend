@@ -44,7 +44,6 @@ module.exports = {
         return res.status(400).json({
           status: "error",
           message: "Email and password is required",
-          data: {},
         });
       }
 
@@ -54,9 +53,9 @@ module.exports = {
         return res.status(400).json({
           status: "error",
           message: "Email format is invalid",
-          data: {},
         });
       }
+
 
       // check if email already exist
       const emailUser = await findEmail(email);
@@ -87,7 +86,6 @@ module.exports = {
       res.status(400).json({
         status: "Failed",
         message: error.message,
-        data: {},
       });
     }
   },
@@ -137,7 +135,10 @@ module.exports = {
         status: "error",
         message: "Login Failed",
         error: error.message,
+// <<<<<<< HEAD
         data: {},
+// =======
+// >>>>>>> 9a7d5c261571b1ae7d3d4607ed6e4c7ba0d506c6
       });
     }
   },

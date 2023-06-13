@@ -1194,7 +1194,7 @@ paths:
                 properties:
                   message:
                     type: string
-                    example: Get All Data Payment Success
+                    example: Get All Data Destinasi Favorit Success
                   data:
                     type: object
                     properties:
@@ -1205,32 +1205,35 @@ paths:
                           properties:
                             id:
                               type: uuid
-                            cardNumber:
+                            image:
                               type: string
-                            cardHolderName:
+                            continent:
                               type: string
-                            cvc:
-                              type: number
-                            expiration:
-                              type: number
-                            country:
+                            city_from:
                               type: string
-                            status:
-                              type: boolean
+                            city_to:
+                              type: string
+                            airlines:
+                              type: string
+                            date:
+                              type: string
+                            price:
+                              type: integer
                             createdAt:
                               type: string
                             updatedAt:
                               type: string
                         example:
                           - id: 1
-                            cardNumber: "874872872942"	
-                            cardHolderName: "Hapizd"
-                            cvc: 345
-                            expiration: 911
-                            country: "Indonesia"
-                            status: true,
-                            updatedAt: "2023-06-12T14:12:07.601Z"
-                            createdAt: "2023-06-12T14:12:07.601Z"
+                            continent: Asia
+                            city_from: Sydney
+                            city_to: "Tokyo"
+                            airlines: "Jet Air"
+                            date: 27 - 30 Agustus 2023
+                            price: 400000
+                            image_profile: https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png
+                            createdAt: "2023-06-10T16:50:02.127Z"
+                            updatedAt: "2023-06-10T16:50:02.127Z"
         "404":
           description: If Data Not Found
           content:
@@ -1267,7 +1270,7 @@ paths:
                 properties:
                   status:
                     type: string
-                    example: Get Data Payment Successfully
+                    example: Get Data Destinasi Successfully
                   data:
                     type: object
                     properties:
@@ -1296,13 +1299,13 @@ paths:
                               type: string
                         example:
                           - id: 1
-                            cardNumber: "874872872942"	
-                            cardHolderName: "Hapizd"
-                            cvc: 345
-                            expiration: 911
-                            country: "Indonesia"
-                            status: true,
-                            updatedAt: "2023-06-12T14:12:07.601Z"
+                            cardNumber: "874872872942", string	
+                            cardHolderName: "Hapizd", string
+                            cvc: 345, number
+                            expiration: 911, number
+                            country: "Indonesia", string
+                            status: true, boolean
+                            updatedAt: "2023-06-12T14:12:07.601Z",
                             createdAt: "2023-06-12T14:12:07.601Z"
         "404":
           description: If Data Not Found

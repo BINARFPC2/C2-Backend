@@ -25,7 +25,6 @@ module.exports = {
         res.status(404).json({
           status: "Failed",
           message: "Data not found",
-          data: {},
         });
       }
       res.status(200).json({
@@ -37,7 +36,6 @@ module.exports = {
       res.status(500).json({
         status: "Error",
         message: error.message,
-        data: {},
       });
     }
   },
@@ -57,7 +55,6 @@ module.exports = {
         res.status(404).json({
           status: "Failed",
           message: "User not found",
-          data: {},
         });
       }
       res.status(200).json({
@@ -69,7 +66,6 @@ module.exports = {
       res.status(500).json({
         status: "Error",
         message: error.message,
-        data: {},
       });
     }
   },
