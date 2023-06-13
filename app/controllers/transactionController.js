@@ -1,5 +1,5 @@
 // transactionController.js
-const Ticket = require("../models");
+const Ticket = require("../models/ticket.js");
 const Transaction = require("../models");
 
 module.exports = {
