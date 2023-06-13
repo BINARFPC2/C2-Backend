@@ -15,6 +15,7 @@ module.exports = {
       },
       ticketsId: {
         type: Sequelize.UUID,
+        allowNull: false,
       },
       checkoutsId: {
         type: Sequelize.UUID,
