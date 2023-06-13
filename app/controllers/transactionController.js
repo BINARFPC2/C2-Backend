@@ -1,4 +1,5 @@
 const { Transaction } = require("../models");
+const { user } = require("../models");
 module.exports = {
   async findTransById(req, res) {
     const { id } = req.user;
