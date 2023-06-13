@@ -1,5 +1,5 @@
 // transactionController.js
-const Ticket = require("../models");
+const Ticket = require("../models/ticket");
 const Transaction = require("../models");
 
 async function createTransaction(req, res) {
