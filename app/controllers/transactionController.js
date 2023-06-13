@@ -18,11 +18,9 @@ module.exports = {
         } else {
           await Transaction.create({
             ticketsId: dataTicket.id,
-            status: "Success",
           });
         }
       }
-
       res.status(200).json({
         status: "Ok",
       });
