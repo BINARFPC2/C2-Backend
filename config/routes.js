@@ -26,7 +26,15 @@ const {
   createCheckout,
   getAllCheckoutData,
   getDataCheckoutById,
+  updateCheckoutData,
+  deleteCheckout,
 } = require("../app/controllers/checkoutController");
+
+const {
+  createPayment,
+  getAllPaymentData,
+  getPaymentById,
+} = require("../app/controllers/paymentController");
 
 const router = require("express").Router();
 
@@ -79,5 +87,20 @@ router.get("/api/v1/checkout", getAllCheckoutData);
 
 // Get Data Checkout By Id
 router.get("/api/v1/checkout/:id", getDataCheckoutById);
+
+// Update Data Checkout
+router.put("/api/v1/checkout/:id", updateCheckoutData);
+
+// Delete Data Checkout
+router.delete("/api/v1/checkout/:id", deleteCheckout);
+
+// Add Payment
+router.post("/api/v1/payment", createPayment);
+
+// Get Payment
+router.get("/api/v1/payment", getAllPaymentData);
+
+// Get PAyment by Id
+router.get("/api/v1/payment/:id", getPaymentById);
 
 module.exports = router;

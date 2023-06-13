@@ -518,7 +518,7 @@ paths:
                             available: true
                             createdAt: new Date()
                             updatedAt: new Date()
-  /tickets?city_form=jakarta:
+  /tickets?city_from=jakarta:
     get:
       tags:
         - Tickets
@@ -1177,7 +1177,302 @@ paths:
                   message:
                     type: string
                     example: Data not Found
+      deprecated: false  
+  /checkout:
+    get:
+      tags:
+        - Checkout
+      parameters: []
+      responses:
+        "200":
+          description: If data successfully retrived
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: Get Data Checkout Successfully
+                  data:
+                    type: object
+                    properties:
+                      posts:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                            name:
+                              type: string
+                            email:
+                              type: string
+                            phone:
+                              type: number
+                            familyName:
+                              type: string
+                            title:
+                              type: string
+                            dateofbirth:
+                              type: date
+                            citizenship:
+                              type: string
+                            ktppaspor:
+                              type: string
+                            issuingcountry:
+                              type: string
+                            expiratinondatepass:
+                              type: date
+                            createdAt:
+                              type: string
+                            updatedAt:
+                              type: string
+                        example:
+                          - id: 1
+                            name: "Jamal"
+                            email: "jamal@gmail.com"
+                            phone: 08211111111
+                            familyName: "Jamaludin"
+                            title: "Mr."
+                            dateofbirth: "2023-06-12"
+                            citizenship: "Indonesia"
+                            ktppaspor: "29292929"
+                            issuingcountry: "Indonesia"
+                            expirationdatepass: "2003-03-24"
+                            createdAt": "2023-06-12T19:03:23.439Z"
+                            updatedAt": "2023-06-12T19:03:23.439Z"
+        "404":
+          description: If Data Not Found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Data not found
+        "500":
+          description: If the server is down or full
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Server Error
       deprecated: false                        
+  /checkout/:id:
+    get:
+      tags:
+        - Checkout
+      parameters: []
+      responses:
+        "200":
+          description: If data successfully retrived
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: Get Data Checkout Successfully
+                  data:
+                    type: object
+                    properties:
+                      posts:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                            name:
+                              type: string
+                            email:
+                              type: string
+                            phone:
+                              type: number
+                            familyName:
+                              type: string
+                            title:
+                              type: string
+                            dateofbirth:
+                              type: date
+                            citizenship:
+                              type: string
+                            ktppaspor:
+                              type: string
+                            issuingcountry:
+                              type: string
+                            expiratinondatepass:
+                              type: date
+                            createdAt:
+                              type: string
+                            updatedAt:
+                              type: string
+                        example:
+                          - id: 1
+                            name: "Jamal"
+                            email: "jamal@gmail.com"
+                            phone: 08211111111
+                            familyName: "Jamaludin"
+                            title: "Mr."
+                            dateofbirth: "2023-06-12"
+                            citizenship: "Indonesia"
+                            ktppaspor: "29292929"
+                            issuingcountry: "Indonesia"
+                            expirationdatepass: "2003-03-24"
+                            createdAt": "2023-06-12T19:03:23.439Z"
+                            updatedAt": "2023-06-12T19:03:23.439Z"
+        "404":
+          description: If Data Not Found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Data not found
+        "500":
+          description: If the server is down or full
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Server Error
+      deprecated: false 
+    put:
+      tags:
+        - Checkout
+      parameters:
+        - name: id_checkout
+          in: path
+          schema:
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            encoding: {}
+            schema:
+              required:
+                - name
+                - email
+                - phone
+                - familyName
+                - title
+                - dateofbirth
+                - citizenship
+                - ktppaspor
+                - issuingcountry
+                - expirationdatepass
+              type: object
+              properties:
+                name:
+                  type: string
+                  example: Hapizd
+                email:
+                  type: string
+                  example: "hapizdasari@gmail.com"
+                phone:
+                  type: number
+                  example: 082000000
+                familyName:
+                  type: string
+                  example: "Asari"
+                title: 
+                  type: string
+                  example: "Mr."
+                dateofbirth:
+                  type: date
+                  example: "2021-01-01"
+                citizenship:
+                  type: string
+                  example: "Indonesia"               
+                ktppaspor:
+                  type: string
+                  example: "29292929"
+                issungcountry:
+                  type: date
+                  example: "2003-03-24"
+        required: false
+      responses:
+        "200":
+          description: If Update Is Successful
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: Success
+                  message:
+                    type: string
+                    example: Update Data Checkout Successfully
+        "422":
+          description: 
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: Success
+                  message:
+                    type: string
+                    example: Error
+          headers: {}
+      deprecated: false
+    # delete:
+    #   tags:
+    #     - Checkout
+    #   parameters:
+    #     - name: id_user
+    #       in: path
+    #       required: true
+    #       schema:
+    #         type: string
+    #   responses:
+    #     "200":
+    #       description: Delete Successfully
+    #       content:
+    #         application/json:
+    #           schema:
+    #             type: object
+    #             properties:
+    #               status:
+    #                 type: string
+    #                 example: Success
+    #               message:
+    #                 type: string
+    #                 example: Checkout Data Deleted successfully
+    #     "422":
+    #       description: If Data Not Found
+    #       content:
+    #         application/json:
+    #           schema:
+    #             type: object
+    #             properties:
+    #               message:
+    #                 type: string
+    #                 example: Error
+    #     "500":
+    #       description: If the server is down or full
+    #       content:
+    #         application/json:
+    #           schema:
+    #             type: object
+    #             properties:
+    #               message:
+    #                 type: string
+    #                 example: Server Error                                  
   /payment:
     get:
       tags:

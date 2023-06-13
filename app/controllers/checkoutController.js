@@ -99,4 +99,62 @@ module.exports = {
       });
     }
   },
+  async updateCheckoutData(req, res) {
+    const idCheckout = req.params.id;
+
+    const findDataCheckoutId = async () => {
+      return await Checkout.findOne({
+        where: {
+          id: idCheckout,
+        },
+      });
+    };
+
+    Checkout.update({
+      id: uuid(),
+      name: req.body.name,
+      email: req.body.email,
+      phone: req.body.phone,
+      familyName: req.body.familyName,
+      title: req.body.title,
+      dateofbirth: req.body.dateofbirth,
+      citizenship: req.body.citizenship,
+      ktppaspor: req.body.ktppaspor,
+      issuingcountry: req.body.issuingcountry,
+      expirationdatepass: req.body.expirationdatepass,
+    })
+      .then(() => {
+        res.status(200).json({
+          status: "Success",
+          message: "Update Data Checkout Successfully",
+        });
+      })
+      .catch((err) => {
+        res.status(422).json(err);
+      });
+  },
+  async deleteCheckout(req, res) {
+    try {
+      const idCheckout = req.params.id;
+      Checkout.destroy({
+        where: {
+          id: idCheckout,
+        },
+      })
+        .then(() => {
+          res.status(200).json({
+            status: "Success",
+            message: "Checkout Data Deleted successfully",
+          });
+        })
+        .catch((err) => {
+          res.status(422).json(err);
+        });
+    } catch (error) {
+      res.status(500).json({
+        status: "Error",
+        message: error.message,
+      });
+    }
+  },
 };
