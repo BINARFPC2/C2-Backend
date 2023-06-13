@@ -1,6 +1,5 @@
-// transactionController.js
-const Ticket = require("../models/ticket.js");
-const Transaction = require("../models");
+const Ticket = require("../models/Ticket");
+const Transaction = require("../models/Transaction");
 
 module.exports = {
   async createTransaction(req, res) {
@@ -9,19 +8,25 @@ module.exports = {
         where: { booking_code: req.body.booking_code },
       });
 
-      const ticketId = await Transaction.findOne({
-        where: { ticketsId: dataTicket.id },
-      });
-
-      if (ticketId) {
-        await Transaction.update({
+      if (dataTicket) {
+        const transaction = await Transaction.findOne({
           where: { ticketsId: dataTicket.id },
         });
-      } else {
-        Transaction.create({
-          ticketsId: dataTicket.id,
-        });
+
+        if (transaction) {
+          await Transaction.update(
+            {
+              /* objek nilai yang ingin diubah */
+            },
+            { where: { ticketsId: dataTicket.id } }
+          );
+        } else {
+          await Transaction.create({
+            ticketsId: dataTicket.id,
+          });
+        }
       }
+
       res.status(200).json({
         status: "Ok",
       });
