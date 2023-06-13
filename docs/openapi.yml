@@ -440,7 +440,317 @@ paths:
           description: Server error
           headers: {}
       deprecated: false
-
+  /tickets:
+    get:
+      tags:
+        - Tickets
+      parameters: []
+      responses:
+        "200":
+          description: If data successfully retrived
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: Success
+                  message:
+                    type: string
+                    example: Get All Data Ticket Success
+                  data:
+                    type: object
+                    properties:
+                      posts:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            id:
+                              type: uuid
+                            city_from:
+                              type: string
+                            city_to:
+                              type: string
+                            airlines:
+                              type: string
+                            airport_from:
+                              type: string
+                            airport_to:
+                              type: string
+                            information:
+                              type: string
+                            dateDeparture:
+                              type: string
+                            dateArrival:
+                              type: string
+                            type_seat:
+                              type: string
+                            total_passenger:
+                              type: integer
+                            price:
+                              type: integer
+                            total:
+                              type: integer
+                            available:
+                              type: boolean
+                            createdAt:
+                              type: string
+                            updatedAt:
+                              type: string
+                        example:
+                          - id: 1
+                            city_from: "Jakarta"
+                            city_to: "Singapore"
+                            airlines: "Lion Air"
+                            airport_from: "Soekarno-Hatta International"
+                            airport_to: "Singapore Changi"
+                            information: "Baggage 20 kg Cabin baggage 7 kg In Flight Entertainment"
+                            dateDeparture: "07:55"
+                            dateArrival: "10:45"
+                            date_start: new Date()
+                            date_end: new Date()
+                            type_seat: "Economy"
+                            price: 994000
+                            booking_code: "8vyb7rq8mp"
+                            available: true
+                            createdAt: new Date()
+                            updatedAt: new Date()
+  /tickets?city_form=jakarta:
+    get:
+      tags:
+        - Tickets
+      parameters: []
+      responses:
+        "200":
+          description: If data successfully retrived
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: Success
+                  message:
+                    type: string
+                    example: Get All Data Ticket Success
+                  data:
+                    type: object
+                    properties:
+                      posts:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            id:
+                              type: uuid
+                            city_from:
+                              type: string
+                            city_to:
+                              type: string
+                            airlines:
+                              type: string
+                            airport_from:
+                              type: string
+                            airport_to:
+                              type: string
+                            information:
+                              type: string
+                            dateDeparture:
+                              type: string
+                            dateArrival:
+                              type: string
+                            type_seat:
+                              type: string
+                            total_passenger:
+                              type: integer
+                            price:
+                              type: integer
+                            booking_code:
+                              type: string
+                            available:
+                              type: boolean
+                            createdAt:
+                              type: string
+                            updatedAt:
+                              type: string
+                        example:
+                          - id: 1
+                            city_from: Jakarta
+                            city_to: Singapore
+                            airlines: Lion Air
+                            airport_from: Soekarno-Hatta International
+                            airport_to: "Singapore Changi"
+                            information: "Baggage 20 kg Cabin baggage 7 kg In Flight Entertainment"
+                            dateDeparture: "07:55"
+                            dateArrival: "10:45"
+                            date_start: "2023-06-12"
+                            date_end: "2023-06-12"
+                            type_seat: "Economy"
+                            total_passenger: null,
+                            price: 994000,
+                            booking_code: "8vyb7rq8mp"
+                            available: true
+                            createdAt: "2023-06-12T14:36:42.672Z"
+                            updatedAt: "2023-06-12T14:36:42.672Z"
+  /tickets?date=2023-06-03:
+    get:
+      tags:
+        - Tickets
+      parameters: []
+      responses:
+        "200":
+          description: If data successfully retrived
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: Success
+                  message:
+                    type: string
+                    example: Get All Data Ticket Success
+                  data:
+                    type: object
+                    properties:
+                      posts:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            id:
+                              type: uuid
+                            city_from:
+                              type: string
+                            city_to:
+                              type: string
+                            airlines:
+                              type: string
+                            airport_from:
+                              type: string
+                            airport_to:
+                              type: string
+                            information:
+                              type: string
+                            dateDeparture:
+                              type: string
+                            dateArrival:
+                              type: string
+                            type_seat:
+                              type: string
+                            total_passenger:
+                              type: integer
+                            price:
+                              type: integer
+                            booking_code:
+                              type: string
+                            available:
+                              type: boolean
+                            createdAt:
+                              type: string
+                            updatedAt:
+                              type: string
+                        example:
+                          - id: 1
+                            city_from: "Jakarta"
+                            city_to: "Singapore"
+                            airlines: "Lion Air"
+                            airport_from: "Soekarno-Hatta International"
+                            airport_to: "Singapore Changi"
+                            information: "Baggage 20 kg Cabin baggage 7 kg In Flight Entertainment"
+                            dateDeparture: "07:55"
+                            dateArrival: "10:45"
+                            date_start: "2023-06-12"
+                            date_end: "2023-06-12"
+                            type_seat: "Economy"
+                            total_passenger: null
+                            price: 994000
+                            booking_code: "8vyb7rq8mp"
+                            available: true
+                            createdAt: "2023-06-12T14:36:42.672Z"
+                            updatedAt: 2023-06-12T14:36:42.672Z"
+  /tickets?type_seat=economy:
+    get:
+      tags:
+        - Tickets
+      parameters: []
+      responses:
+        "200":
+          description: If Data Successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: Success
+                  message:
+                    type: string
+                    example: Get All Data Ticket Success
+                  data:
+                    type: object
+                    properties:
+                      posts:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            id:
+                              type: uuid
+                            city_from:
+                              type: string
+                            city_to:
+                              type: string
+                            airlines:
+                              type: string
+                            airport_from:
+                              type: string
+                            airport_to:
+                              type: string
+                            information:
+                              type: string
+                            dateDeparture:
+                              type: string
+                            dateArrival:
+                              type: string
+                            type_seat:
+                              type: string
+                            total_passenger:
+                              type: integer
+                            price:
+                              type: integer
+                            booking_code:
+                              type: string
+                            available:
+                              type: boolean
+                            createdAt:
+                              type: string
+                            updatedAt:
+                              type: string
+                        example:
+                          - id: 1
+                            city_from: "Jakarta"
+                            city_to: "Singapore"
+                            airlines: "Lion Air"
+                            airport_from: "Soekarno-Hatta International"
+                            airport_to: "Singapore Changi"
+                            information: "Baggage 20 kg Cabin baggage 7 kg In Flight Entertainment"
+                            dateDeparture: "07:55"
+                            dateArrival: "10:45"
+                            date_start: "2023-06-12"
+                            date_end: "2023-06-12"
+                            type_seat: "Economy"
+                            total_passenger: null
+                            price: 994000
+                            booking_code: "8vyb7rq8mp"
+                            available: true
+                            createdAt: "2023-06-12T14:36:42.672Z"
+                            updatedAt: 2023-06-12T14:36:42.672Z"
   /destfavorite:
     get:
       tags:
@@ -867,333 +1177,22 @@ paths:
                     type: string
                     example: Data not Found
       deprecated: false
-  /tickets:
-    get:
-      tags:
-        - Tickets
-      parameters: []
-      responses:
-        "200":
-          description: If data successfully retrived
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  status:
-                    type: string
-                    example: Success
-                  message:
-                    type: string
-                    example: Get All Data Ticket Success
-                  data:
-                    type: object
-                    properties:
-                      posts:
-                        type: array
-                        items:
-                          type: object
-                          properties:
-                            id:
-                              type: uuid
-                            city_from:
-                              type: string
-                            city_to:
-                              type: string
-                            airlines:
-                              type: string
-                            airport_from:
-                              type: string
-                            airport_to:
-                              type: string
-                            information:
-                              type: string
-                            dateDeparture:
-                              type: string
-                            dateArrival:
-                              type: string
-                            type_seat:
-                              type: string
-                            total_passenger:
-                              type: integer
-                            price:
-                              type: integer
-                            total:
-                              type: integer
-                            available:
-                              type: boolean
-                            createdAt:
-                              type: string
-                            updatedAt:
-                              type: string
-                        example:
-                          - id: 1
-                            city_from: "Jakarta"
-                            city_to: "Singapore"
-                            airlines: "Lion Air"
-                            airport_from: "Soekarno-Hatta International"
-                            airport_to: "Singapore Changi"
-                            information: "Baggage 20 kg Cabin baggage 7 kg In Flight Entertainment"
-                            dateDeparture: "07:55"
-                            dateArrival: "10:45"
-                            date_start: new Date()
-                            date_end: new Date()
-                            type_seat: "Economy"
-                            price: 994000
-                            booking_code: "8vyb7rq8mp"
-                            available: true
-                            createdAt: new Date()
-                            updatedAt: new Date()
-  /tickets?city_form=jakarta:
-    get:
-      tags:
-        - Tickets
-      parameters: []
-      responses:
-        "200":
-          description: If data successfully retrived
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  status:
-                    type: string
-                    example: Success
-                  message:
-                    type: string
-                    example: Get All Data Ticket Success
-                  data:
-                    type: object
-                    properties:
-                      posts:
-                        type: array
-                        items:
-                          type: object
-                          properties:
-                            id:
-                              type: uuid
-                            city_from:
-                              type: string
-                            city_to:
-                              type: string
-                            airlines:
-                              type: string
-                            airport_from:
-                              type: string
-                            airport_to:
-                              type: string
-                            information:
-                              type: string
-                            dateDeparture:
-                              type: string
-                            dateArrival:
-                              type: string
-                            type_seat:
-                              type: string
-                            total_passenger:
-                              type: integer
-                            price:
-                              type: integer
-                            booking_code:
-                              type: string
-                            available:
-                              type: boolean
-                            createdAt:
-                              type: string
-                            updatedAt:
-                              type: string
-                        example:
-                          - id: 1
-                            city_from: Jakarta
-                            city_to: Singapore
-                            airlines: Lion Air
-                            airport_from: Soekarno-Hatta International
-                            airport_to: "Singapore Changi"
-                            information: "Baggage 20 kg Cabin baggage 7 kg In Flight Entertainment"
-                            dateDeparture: "07:55"
-                            dateArrival: "10:45"
-                            date_start: "2023-06-12"
-                            date_end: "2023-06-12"
-                            type_seat: "Economy"
-                            total_passenger: null,
-                            price: 994000,
-                            booking_code: "8vyb7rq8mp"
-                            available: true
-                            createdAt: "2023-06-12T14:36:42.672Z"
-                            updatedAt: "2023-06-12T14:36:42.672Z"
-  /tickets?date=2023-06-03:
-    get:
-      tags:
-        - Tickets
-      parameters: []
-      responses:
-        "200":
-          description: If data successfully retrived
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  status:
-                    type: string
-                    example: Success
-                  message:
-                    type: string
-                    example: Get All Data Ticket Success
-                  data:
-                    type: object
-                    properties:
-                      posts:
-                        type: array
-                        items:
-                          type: object
-                          properties:
-                            id:
-                              type: uuid
-                            city_from:
-                              type: string
-                            city_to:
-                              type: string
-                            airlines:
-                              type: string
-                            airport_from:
-                              type: string
-                            airport_to:
-                              type: string
-                            information:
-                              type: string
-                            dateDeparture:
-                              type: string
-                            dateArrival:
-                              type: string
-                            type_seat:
-                              type: string
-                            total_passenger:
-                              type: integer
-                            price:
-                              type: integer
-                            booking_code:
-                              type: string
-                            available:
-                              type: boolean
-                            createdAt:
-                              type: string
-                            updatedAt:
-                              type: string
-                        example:
-                          - id: 1
-                            city_from: "Jakarta"
-                            city_to: "Singapore"
-                            airlines: "Lion Air"
-                            airport_from: "Soekarno-Hatta International"
-                            airport_to: "Singapore Changi"
-                            information: "Baggage 20 kg Cabin baggage 7 kg In Flight Entertainment"
-                            dateDeparture: "07:55"
-                            dateArrival: "10:45"
-                            date_start: "2023-06-12"
-                            date_end: "2023-06-12"
-                            type_seat: "Economy"
-                            total_passenger: null
-                            price: 994000
-                            booking_code: "8vyb7rq8mp"
-                            available: true
-                            createdAt: "2023-06-12T14:36:42.672Z"
-                            updatedAt: 2023-06-12T14:36:42.672Z"
-  /tickets?type_seat=economy:
-    get:
-      tags:
-        - Tickets
-      parameters: []
-      responses:
-        "200":
-          description: If Data Successfully
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  status:
-                    type: string
-                    example: Success
-                  message:
-                    type: string
-                    example: Get All Data Ticket Success
-                  data:
-                    type: object
-                    properties:
-                      posts:
-                        type: array
-                        items:
-                          type: object
-                          properties:
-                            id:
-                              type: uuid
-                            city_from:
-                              type: string
-                            city_to:
-                              type: string
-                            airlines:
-                              type: string
-                            airport_from:
-                              type: string
-                            airport_to:
-                              type: string
-                            information:
-                              type: string
-                            dateDeparture:
-                              type: string
-                            dateArrival:
-                              type: string
-                            type_seat:
-                              type: string
-                            total_passenger:
-                              type: integer
-                            price:
-                              type: integer
-                            booking_code:
-                              type: string
-                            available:
-                              type: boolean
-                            createdAt:
-                              type: string
-                            updatedAt:
-                              type: string
-                        example:
-                          - id: 1
-                            city_from: "Jakarta"
-                            city_to: "Singapore"
-                            airlines: "Lion Air"
-                            airport_from: "Soekarno-Hatta International"
-                            airport_to: "Singapore Changi"
-                            information: "Baggage 20 kg Cabin baggage 7 kg In Flight Entertainment"
-                            dateDeparture: "07:55"
-                            dateArrival: "10:45"
-                            date_start: "2023-06-12"
-                            date_end: "2023-06-12"
-                            type_seat: "Economy"
-                            total_passenger: null
-                            price: 994000
-                            booking_code: "8vyb7rq8mp"
-                            available: true
-                            createdAt: "2023-06-12T14:36:42.672Z"
-                            updatedAt: 2023-06-12T14:36:42.672Z"
   /payment:
     get:
       tags:
         - Payment
       parameters: []
       responses:
-        "201":
+        "200":
           description: If data successfully retrived
           content:
             application/json:
               schema:
                 type: object
                 properties:
-                  message:
+                  status:
                     type: string
-                    example: Get All Data Payment Success
+                    example: Get Data Payment Successfully
                   data:
                     type: object
                     properties:
@@ -1204,35 +1203,32 @@ paths:
                           properties:
                             id:
                               type: uuid
-                            image:
+                            cardNumber:
                               type: string
-                            continent:
+                            cardHolderName:
                               type: string
-                            city_from:
+                            cvc:
+                              type: number
+                            expiration:
+                              type: number
+                            country:
                               type: string
-                            city_to:
-                              type: string
-                            airlines:
-                              type: string
-                            date:
-                              type: string
-                            price:
-                              type: integer
+                            status:
+                              type: boolean
                             createdAt:
                               type: string
                             updatedAt:
                               type: string
                         example:
                           - id: 1
-                            continent: Asia
-                            city_from: Sydney
-                            city_to: "Tokyo"
-                            airlines: "Jet Air"
-                            date: 27 - 30 Agustus 2023
-                            price: 400000
-                            image_profile: https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png
-                            createdAt: "2023-06-10T16:50:02.127Z"
-                            updatedAt: "2023-06-10T16:50:02.127Z"
+                            cardNumber: "874872872942"
+                            cardHolderName: "Hapizd"
+                            cvc: 345
+                            expiration: 911
+                            country: "Indonesia"
+                            status: true
+                            updatedAt: "2023-06-12T14:12:07.601Z"
+                            createdAt: "2023-06-12T14:12:07.601Z"
         "404":
           description: If Data Not Found
           content:
