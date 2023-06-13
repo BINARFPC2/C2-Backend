@@ -38,7 +38,10 @@ const {
   getAllPaymentData,
   getPaymentById,
 } = require("../app/controllers/paymentController");
-const { findTransById } = require("../app/controllers/transactionController");
+const {
+  findTransById,
+  createTransaction,
+} = require("../app/controllers/transactionController");
 
 const router = require("express").Router();
 
@@ -111,6 +114,6 @@ router.get("/api/v1/payment", getAllPaymentData);
 router.get("/api/v1/payment/:id", getPaymentById);
 
 // Get Transaction By Id
-router.get("/api/v1/transaction", findTransById);
+router.post("/api/v1/transaction/:id", createTransaction);
 
 module.exports = router;
