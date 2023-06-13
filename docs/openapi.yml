@@ -1299,13 +1299,13 @@ paths:
                               type: string
                         example:
                           - id: 1
-                            cardNumber: "874872872942", string	
-                            cardHolderName: "Hapizd", string
-                            cvc: 345, number
-                            expiration: 911, number
-                            country: "Indonesia", string
-                            status: true, boolean
-                            updatedAt: "2023-06-12T14:12:07.601Z",
+                            cardNumber: "874872872942"
+                            cardHolderName: "Hapizd"
+                            cvc: 345
+                            expiration: 911
+                            country: "Indonesia"
+                            status: true
+                            updatedAt: "2023-06-12T14:12:07.601Z"
                             createdAt: "2023-06-12T14:12:07.601Z"
         "404":
           description: If Data Not Found
