@@ -1,5 +1,6 @@
 const { Ticket } = require("../models");
 const { Transaction } = require("../models");
+const { v4: uuid } = require("uuid");
 
 module.exports = {
   async createTransaction(req, res) {
