@@ -27,6 +27,7 @@ const {
   getAllCheckoutData,
   getDataCheckoutById,
   updateCheckoutData,
+  deleteCheckout,
 } = require("../app/controllers/checkoutController");
 
 const {
@@ -91,7 +92,7 @@ router.get("/api/v1/checkout/:id", getDataCheckoutById);
 router.put("/api/v1/checkout/:id", updateCheckoutData);
 
 // Delete Data Checkout
-router.delete("/api/v1/checkout/:id");
+router.delete("/api/v1/checkout/:id", deleteCheckout);
 
 // Add Payment
 router.post("/api/v1/payment", createPayment);
