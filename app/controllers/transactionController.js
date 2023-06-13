@@ -17,6 +17,7 @@ module.exports = {
           await Transaction.update({ where: { ticketsId: dataTicket.id } });
         } else {
           await Transaction.create({
+            id: uuid(),
             ticketsId: dataTicket.id,
           });
         }
