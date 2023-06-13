@@ -12,12 +12,22 @@ module.exports = {
         airport_from,
         airport_to,
         dateDeparture,
-        dateArrival,
+        dateReturn,
+        dateEnd,
         type_seat,
         total_passenger,
         price,
         available,
       } = req.body;
+      if (dateDeparture && dateEnd && dateReturn) {
+        querySearch.releaseDate = {
+          [Op.between]: [
+            new Date(dateDeparture),
+            new Date(dateEnd),
+            new Date(dateReturn),
+          ],
+        };
+      }
       const addTicket = await Ticket.create({
         id: uuid(),
         city_from: city_from,
@@ -26,7 +36,8 @@ module.exports = {
         airport_from: airport_from,
         airport_to: airport_to,
         dateDeparture: dateDeparture,
-        dateArrival: dateArrival,
+        dateReturn: dateReturn,
+        dateEnd: dateEnd,
         type_seat: type_seat,
         total_passenger: total_passenger,
         price: price,
@@ -41,7 +52,6 @@ module.exports = {
       res.status(400).json({
         status: "Failed",
         message: error.message,
-        data: {},
       });
     }
   },
@@ -49,8 +59,6 @@ module.exports = {
   async getAllTickets(req, res) {
     const city_from = req.query.city_from ? req.query.city_from : "";
     const city_to = req.query.city_to ? req.query.city_to : "";
-    const date_start = req.query.date_start ? req.query.date_start : "";
-    const date_end = req.query.date_end ? req.query.date_end : "";
     const type_seat = req.query.type_seat ? req.query.type_seat : "";
 
     const querySearch = {
@@ -64,12 +72,6 @@ module.exports = {
         [Op.iLike]: `%${type_seat}`,
       },
     };
-
-    if (date_start && date_end) {
-      querySearch.releaseDate = {
-        [Op.between]: [new Date(date_start), new Date(date_end)],
-      };
-    }
 
     const tickets = await Ticket.findAll({
       where: querySearch,

@@ -27,17 +27,21 @@ module.exports = {
       airport_to: {
         type: Sequelize.STRING,
       },
+      dateTakeoff: {
+        type: Sequelize.STRING,
+      },
+      dateLanding: {
+        type: Sequelize.STRING,
+      },
       dateDeparture: {
-        type: Sequelize.STRING,
-      },
-      dateArrival: {
-        type: Sequelize.STRING,
-      },
-      date_start: {
         allowNull: false,
         type: Sequelize.DATEONLY,
       },
-      date_end: {
+      dateReturn: {
+        allowNull: true,
+        type: Sequelize.DATEONLY,
+      },
+      dateEnd: {
         allowNull: true,
         type: Sequelize.DATEONLY,
       },

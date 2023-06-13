@@ -5,7 +5,10 @@ const {
   whoAmI,
 } = require("../app/controllers/authControllers");
 const handleGetRoot = require("../app/controllers/root");
-const { getAllTickets } = require("../app/controllers/ticketController");
+const {
+  getAllTickets,
+  createTicket,
+} = require("../app/controllers/ticketController");
 
 const {
   getAllUserData,
@@ -66,6 +69,9 @@ router.delete("/api/v1/users/:id", deleteUser);
 
 // Get Ticket
 router.get("/api/v1/tickets", getAllTickets);
+
+// Create Ticket
+router.post("/api/v1/tickets", createTicket);
 
 // Add Destinasi Favorite
 router.post("/api/v1/destfavorite", createdesfav);
