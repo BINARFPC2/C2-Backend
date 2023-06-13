@@ -5,9 +5,8 @@ const Transaction = require("../models");
 async function createTransaction(req, res) {
   try {
     // Mengambil data tiket dari tabel "Ticket"
-    const tickets = () => {
-      return Ticket.findAll();
-    };
+
+    const tickets = await Ticket.findAll();
 
     // Memasukkan data tiket ke dalam tabel "Transaction"
     const transactions = await Promise.all(
