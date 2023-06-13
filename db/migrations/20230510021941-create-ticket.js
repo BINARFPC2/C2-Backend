@@ -57,7 +57,6 @@ module.exports = {
       price: {
         type: Sequelize.INTEGER,
       },
-
       available: {
         type: Sequelize.BOOLEAN,
       },
