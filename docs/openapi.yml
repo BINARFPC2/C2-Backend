@@ -1185,16 +1185,16 @@ paths:
         - Payment
       parameters: []
       responses:
-        "201":
+        "200":
           description: If data successfully retrived
           content:
             application/json:
               schema:
                 type: object
                 properties:
-                  message:
+                  status:
                     type: string
-                    example: Get All Data Payment Success
+                    example: Get Data Payment Successfully
                   data:
                     type: object
                     properties:
@@ -1205,35 +1205,32 @@ paths:
                           properties:
                             id:
                               type: uuid
-                            image:
+                            cardNumber:
                               type: string
-                            continent:
+                            cardHolderName:
                               type: string
-                            city_from:
+                            cvc:
+                              type: number
+                            expiration:
+                              type: number
+                            country:
                               type: string
-                            city_to:
-                              type: string
-                            airlines:
-                              type: string
-                            date:
-                              type: string
-                            price:
-                              type: integer
+                            status:
+                              type: boolean
                             createdAt:
                               type: string
                             updatedAt:
                               type: string
                         example:
                           - id: 1
-                            continent: Asia
-                            city_from: Sydney
-                            city_to: "Tokyo"
-                            airlines: "Jet Air"
-                            date: 27 - 30 Agustus 2023
-                            price: 400000
-                            image_profile: https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png
-                            createdAt: "2023-06-10T16:50:02.127Z"
-                            updatedAt: "2023-06-10T16:50:02.127Z"
+                            cardNumber: "874872872942"
+                            cardHolderName: "Hapizd"
+                            cvc: 345
+                            expiration: 911
+                            country: "Indonesia"
+                            status: true
+                            updatedAt: "2023-06-12T14:12:07.601Z"
+                            createdAt: "2023-06-12T14:12:07.601Z"
         "404":
           description: If Data Not Found
           content:
@@ -1254,7 +1251,7 @@ paths:
                   message:
                     type: string
                     example: Server Error
-      deprecated: false                          
+      deprecated: false                        
   /payment/:id:
     get:
       tags:
