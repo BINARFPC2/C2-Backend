@@ -481,18 +481,24 @@ paths:
                               type: string
                             information:
                               type: string
+                            dateTakeoff:
+                              type: date
+                            dateLanding:
+                              type: date
                             dateDeparture:
-                              type: string
-                            dateArrival:
-                              type: string
+                              type: date
+                            dateReturn:
+                              type: date
+                            dateEnd:
+                              type: date
                             type_seat:
                               type: string
                             total_passenger:
                               type: integer
                             price:
                               type: integer
-                            total:
-                              type: integer
+                            booking_kode:
+                              type: string
                             available:
                               type: boolean
                             createdAt:
@@ -507,17 +513,168 @@ paths:
                             airport_from: "Soekarno-Hatta International"
                             airport_to: "Singapore Changi"
                             information: "Baggage 20 kg Cabin baggage 7 kg In Flight Entertainment"
-                            dateDeparture: "07:55"
-                            dateArrival: "10:45"
-                            date_start: new Date()
-                            date_end: new Date()
+                            dateTakeoff: "07:55"
+                            dateLanding: "10:45"
+                            dateDeparture: "2023-06-13"
+                            dateReturn: "2023-06-13"
+                            dateEnd: "2023-06-13"
                             type_seat: "Economy"
                             price: 994000
                             booking_code: "8vyb7rq8mp"
                             available: true
-                            createdAt: new Date()
-                            updatedAt: new Date()
-  /tickets?city_form=jakarta:
+                            createdAt: "2023-06-13T16:13:06.899Z"
+                            updatedAt: "2023-06-13T16:13:06.899Z"
+    post:
+      tags:
+        - Tickets
+      parameters: []
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            encoding: {}
+            schema:
+              required:
+                - city_from
+                - city_to
+                - airlines
+                - airport_from
+                - airport_to
+                - information
+                - dateDeparture
+                - dateReturn
+                - dateEnd
+                - type_seat
+                - total_passenger
+                - price
+                - booking_code
+                - available
+              type: object
+              properties:
+                city_from:
+                  type: string
+                  example: Jakarta
+                city_to:
+                  type: string
+                  example: Singapore
+                airlines:
+                  type: string
+                  example: Lion Air
+                airport_from:
+                  type: string
+                  example: Soekarno-Hatta International
+                airport_to:
+                  type: string
+                  example: Singapore Changi
+                information:
+                  type: string
+                  example: Baggage 20 kg Cabin baggage 7 kg In Flight Entertainment
+                dateDeparture:
+                  type: date
+                  example: 2023-06-13
+                dateReturn:
+                  type: date
+                  example: 2023-06-13
+                dateEnd:
+                  type: date
+                  example: 2023-06-13
+                type_seat:
+                  type: string
+                  example: 2023-06-13
+                total_passenger:
+                  type: integer
+                  example: Economy
+                price:
+                  type: integer
+                  example: 994000
+                booking_code:
+                  type: string
+                  example: k1jox1lmrg
+                available:
+                  type: boolean
+                  example: true
+        required: false
+      responses:
+        "200":
+          description: If data successfully retrived
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: Created Destinasi Favorite Success
+                  data:
+                    type: object
+                    properties:
+                      posts:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            id:
+                              type: uuid
+                            city_from:
+                              type: string
+                            city_to:
+                              type: string
+                            airlines:
+                              type: string
+                            airport_from:
+                              type: string
+                            airport_to:
+                              type: string
+                            information:
+                              type: string
+                            dateDeparture:
+                              type: date
+                            dateReturn:
+                              type: date
+                            dateEnd:
+                              type: date
+                            type_seat:
+                              type: string
+                            total_passenger:
+                              type: integer
+                            price:
+                              type: integer
+                            booking_kode:
+                              type: string
+                            available:
+                              type: boolean
+                            createdAt:
+                              type: string
+                            updatedAt:
+                              type: string
+                        example:
+                          - id: 1
+                            city_from: "Jakarta"
+                            city_to: "Singapore"
+                            airlines: "Lion Air"
+                            airport_from: "Soekarno-Hatta International"
+                            airport_to: "Singapore Changi"
+                            information: "Baggage 20 kg Cabin baggage 7 kg In Flight Entertainment"
+                            dateDeparture: "2023-06-13"
+                            dateReturn: "2023-06-13"
+                            dateEnd: "2023-06-13"
+                            type_seat: "Economy"
+                            price: 994000
+                            booking_code: "8vyb7rq8mp"
+                            available: true
+                            createdAt: "2023-06-13T16:13:06.899Z"
+                            updatedAt: "2023-06-13T16:13:06.899Z"
+        "400":
+          description: If member tried to retrive the data
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Data not found
+      deprecated: false
+  /tickets?city_from=jakarta:
     get:
       tags:
         - Tickets
@@ -558,17 +715,23 @@ paths:
                               type: string
                             information:
                               type: string
+                            dateTakeoff:
+                              type: date
+                            dateLanding:
+                              type: date
                             dateDeparture:
-                              type: string
-                            dateArrival:
-                              type: string
+                              type: date
+                            dateReturn:
+                              type: date
+                            dateEnd:
+                              type: date
                             type_seat:
                               type: string
                             total_passenger:
                               type: integer
                             price:
                               type: integer
-                            booking_code:
+                            booking_kode:
                               type: string
                             available:
                               type: boolean
@@ -578,24 +741,24 @@ paths:
                               type: string
                         example:
                           - id: 1
-                            city_from: Jakarta
-                            city_to: Singapore
-                            airlines: Lion Air
-                            airport_from: Soekarno-Hatta International
+                            city_from: "Jakarta"
+                            city_to: "Singapore"
+                            airlines: "Lion Air"
+                            airport_from: "Soekarno-Hatta International"
                             airport_to: "Singapore Changi"
                             information: "Baggage 20 kg Cabin baggage 7 kg In Flight Entertainment"
-                            dateDeparture: "07:55"
-                            dateArrival: "10:45"
-                            date_start: "2023-06-12"
-                            date_end: "2023-06-12"
+                            dateTakeoff: "07:55"
+                            dateLanding: "10:45"
+                            dateDeparture: "2023-06-13"
+                            dateReturn: "2023-06-13"
+                            dateEnd: "2023-06-13"
                             type_seat: "Economy"
-                            total_passenger: null,
-                            price: 994000,
+                            price: 994000
                             booking_code: "8vyb7rq8mp"
                             available: true
-                            createdAt: "2023-06-12T14:36:42.672Z"
-                            updatedAt: "2023-06-12T14:36:42.672Z"
-  /tickets?date=2023-06-03:
+                            createdAt: "2023-06-13T16:13:06.899Z"
+                            updatedAt: "2023-06-13T16:13:06.899Z"
+  /tickets?date=2023-06-13:
     get:
       tags:
         - Tickets
@@ -636,17 +799,23 @@ paths:
                               type: string
                             information:
                               type: string
+                            dateTakeoff:
+                              type: date
+                            dateLanding:
+                              type: date
                             dateDeparture:
-                              type: string
-                            dateArrival:
-                              type: string
+                              type: date
+                            dateReturn:
+                              type: date
+                            dateEnd:
+                              type: date
                             type_seat:
                               type: string
                             total_passenger:
                               type: integer
                             price:
                               type: integer
-                            booking_code:
+                            booking_kode:
                               type: string
                             available:
                               type: boolean
@@ -662,17 +831,17 @@ paths:
                             airport_from: "Soekarno-Hatta International"
                             airport_to: "Singapore Changi"
                             information: "Baggage 20 kg Cabin baggage 7 kg In Flight Entertainment"
-                            dateDeparture: "07:55"
-                            dateArrival: "10:45"
-                            date_start: "2023-06-12"
-                            date_end: "2023-06-12"
+                            dateTakeoff: "07:55"
+                            dateLanding: "10:45"
+                            dateDeparture: "2023-06-13"
+                            dateReturn: "2023-06-13"
+                            dateEnd: "2023-06-13"
                             type_seat: "Economy"
-                            total_passenger: null
                             price: 994000
                             booking_code: "8vyb7rq8mp"
                             available: true
-                            createdAt: "2023-06-12T14:36:42.672Z"
-                            updatedAt: 2023-06-12T14:36:42.672Z"
+                            createdAt: "2023-06-13T16:13:06.899Z"
+                            updatedAt: "2023-06-13T16:13:06.899Z"
   /tickets?type_seat=economy:
     get:
       tags:
@@ -714,6 +883,10 @@ paths:
                               type: string
                             information:
                               type: string
+                            dateTakeoff:
+                              type: date
+                            dateLanding:
+                              type: date
                             dateDeparture:
                               type: string
                             dateArrival:
@@ -740,17 +913,17 @@ paths:
                             airport_from: "Soekarno-Hatta International"
                             airport_to: "Singapore Changi"
                             information: "Baggage 20 kg Cabin baggage 7 kg In Flight Entertainment"
-                            dateDeparture: "07:55"
-                            dateArrival: "10:45"
-                            date_start: "2023-06-12"
-                            date_end: "2023-06-12"
+                            dateTakeoff: "07:55"
+                            dateLanding: "10:45"
+                            dateDeparture: "2023-06-13"
+                            dateReturn: "2023-06-13"
+                            dateEnd: "2023-06-13"
                             type_seat: "Economy"
-                            total_passenger: null
                             price: 994000
                             booking_code: "8vyb7rq8mp"
                             available: true
-                            createdAt: "2023-06-12T14:36:42.672Z"
-                            updatedAt: 2023-06-12T14:36:42.672Z"
+                            createdAt: "2023-06-13T16:13:06.899Z"
+                            updatedAt: "2023-06-13T16:13:06.899Z"
   /destfavorite:
     get:
       tags:
@@ -1177,6 +1350,301 @@ paths:
                     type: string
                     example: Data not Found
       deprecated: false
+  /checkout:
+    get:
+      tags:
+        - Checkout
+      parameters: []
+      responses:
+        "200":
+          description: If data successfully retrived
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: Get Data Checkout Successfully
+                  data:
+                    type: object
+                    properties:
+                      posts:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                            name:
+                              type: string
+                            email:
+                              type: string
+                            phone:
+                              type: number
+                            familyName:
+                              type: string
+                            title:
+                              type: string
+                            dateofbirth:
+                              type: date
+                            citizenship:
+                              type: string
+                            ktppaspor:
+                              type: string
+                            issuingcountry:
+                              type: string
+                            expiratinondatepass:
+                              type: date
+                            createdAt:
+                              type: string
+                            updatedAt:
+                              type: string
+                        example:
+                          - id: 1
+                            name: "Jamal"
+                            email: "jamal@gmail.com"
+                            phone: 08211111111
+                            familyName: "Jamaludin"
+                            title: "Mr."
+                            dateofbirth: "2023-06-12"
+                            citizenship: "Indonesia"
+                            ktppaspor: "29292929"
+                            issuingcountry: "Indonesia"
+                            expirationdatepass: "2003-03-24"
+                            createdAt": "2023-06-12T19:03:23.439Z"
+                            updatedAt": "2023-06-12T19:03:23.439Z"
+        "404":
+          description: If Data Not Found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Data not found
+        "500":
+          description: If the server is down or full
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Server Error
+      deprecated: false
+  /checkout/:id:
+    get:
+      tags:
+        - Checkout
+      parameters: []
+      responses:
+        "200":
+          description: If data successfully retrived
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: Get Data Checkout Successfully
+                  data:
+                    type: object
+                    properties:
+                      posts:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                            name:
+                              type: string
+                            email:
+                              type: string
+                            phone:
+                              type: number
+                            familyName:
+                              type: string
+                            title:
+                              type: string
+                            dateofbirth:
+                              type: date
+                            citizenship:
+                              type: string
+                            ktppaspor:
+                              type: string
+                            issuingcountry:
+                              type: string
+                            expiratinondatepass:
+                              type: date
+                            createdAt:
+                              type: string
+                            updatedAt:
+                              type: string
+                        example:
+                          - id: 1
+                            name: "Jamal"
+                            email: "jamal@gmail.com"
+                            phone: 08211111111
+                            familyName: "Jamaludin"
+                            title: "Mr."
+                            dateofbirth: "2023-06-12"
+                            citizenship: "Indonesia"
+                            ktppaspor: "29292929"
+                            issuingcountry: "Indonesia"
+                            expirationdatepass: "2003-03-24"
+                            createdAt": "2023-06-12T19:03:23.439Z"
+                            updatedAt": "2023-06-12T19:03:23.439Z"
+        "404":
+          description: If Data Not Found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Data not found
+        "500":
+          description: If the server is down or full
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Server Error
+      deprecated: false
+    put:
+      tags:
+        - Checkout
+      parameters:
+        - name: id_checkout
+          in: path
+          schema:
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            encoding: {}
+            schema:
+              required:
+                - name
+                - email
+                - phone
+                - familyName
+                - title
+                - dateofbirth
+                - citizenship
+                - ktppaspor
+                - issuingcountry
+                - expirationdatepass
+              type: object
+              properties:
+                name:
+                  type: string
+                  example: Hapizd
+                email:
+                  type: string
+                  example: "hapizdasari@gmail.com"
+                phone:
+                  type: number
+                  example: 082000000
+                familyName:
+                  type: string
+                  example: "Asari"
+                title:
+                  type: string
+                  example: "Mr."
+                dateofbirth:
+                  type: date
+                  example: "2021-01-01"
+                citizenship:
+                  type: string
+                  example: "Indonesia"
+                ktppaspor:
+                  type: string
+                  example: "29292929"
+                issungcountry:
+                  type: date
+                  example: "2003-03-24"
+        required: false
+      responses:
+        "200":
+          description: If Update Is Successful
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: Success
+                  message:
+                    type: string
+                    example: Update Data Checkout Successfully
+        "422":
+          description:
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: Success
+                  message:
+                    type: string
+                    example: Error
+          headers: {}
+      deprecated: false
+    # delete:
+    #   tags:
+    #     - Checkout
+    #   parameters:
+    #     - name: id_user
+    #       in: path
+    #       required: true
+    #       schema:
+    #         type: string
+    #   responses:
+    #     "200":
+    #       description: Delete Successfully
+    #       content:
+    #         application/json:
+    #           schema:
+    #             type: object
+    #             properties:
+    #               status:
+    #                 type: string
+    #                 example: Success
+    #               message:
+    #                 type: string
+    #                 example: Checkout Data Deleted successfully
+    #     "422":
+    #       description: If Data Not Found
+    #       content:
+    #         application/json:
+    #           schema:
+    #             type: object
+    #             properties:
+    #               message:
+    #                 type: string
+    #                 example: Error
+    #     "500":
+    #       description: If the server is down or full
+    #       content:
+    #         application/json:
+    #           schema:
+    #             type: object
+    #             properties:
+    #               message:
+    #                 type: string
+    #                 example: Server Error
   /payment:
     get:
       tags:
