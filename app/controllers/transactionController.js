@@ -1,5 +1,5 @@
-const Ticket = require("../models");
-const Transaction = require("../models");
+const Ticket = require("../models").Ticket;
+const Transaction = require("../models").Transaction;
 
 module.exports = {
   async createTransaction(req, res) {
