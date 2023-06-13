@@ -14,13 +14,22 @@ module.exports = {
       });
 
       if (ticketId) {
-        await Transaction.create({
+        await Transaction.update({
+          where: { ticketsId: dataTicket.id },
+        });
+      } else {
+        Transaction.create({
           ticketsId: dataTicket.id,
         });
       }
       res.status(200).json({
         status: "Ok",
       });
-    } catch (error) {}
+    } catch (error) {
+      res.status(500).json({
+        status: "Error",
+        message: error.message,
+      });
+    }
   },
 };
