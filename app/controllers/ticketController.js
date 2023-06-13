@@ -16,6 +16,8 @@ module.exports = {
         dateEnd,
         type_seat,
         total_passenger,
+        adult_price,
+        child_price,
         price,
         available,
       } = req.body;
@@ -40,6 +42,8 @@ module.exports = {
         dateEnd: dateEnd,
         type_seat: type_seat,
         total_passenger: total_passenger,
+        adult_price: adult_price,
+        child_price: child_price,
         price: price,
         available: available,
       });

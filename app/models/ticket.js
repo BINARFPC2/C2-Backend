@@ -26,6 +26,8 @@ module.exports = (sequelize, DataTypes) => {
       dateEnd: DataTypes.DATEONLY,
       type_seat: DataTypes.STRING,
       total_passenger: DataTypes.INTEGER,
+      adult_price: DataTypes.INTEGER,
+      child_price: DataTypes.INTEGER,
       price: DataTypes.INTEGER,
       booking_code: DataTypes.STRING,
       available: DataTypes.BOOLEAN,

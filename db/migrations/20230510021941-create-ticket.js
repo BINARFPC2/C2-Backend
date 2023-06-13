@@ -54,6 +54,12 @@ module.exports = {
       total_passenger: {
         type: Sequelize.INTEGER,
       },
+      adult_price: {
+        type: Sequelize.INTEGER,
+      },
+      child_price: {
+        type: Sequelize.INTEGER,
+      },
       price: {
         type: Sequelize.INTEGER,
       },
