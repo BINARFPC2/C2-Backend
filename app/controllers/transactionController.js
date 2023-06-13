@@ -18,7 +18,7 @@ module.exports = {
   async createTransaction(req, res) {
     try {
       // Mendapatkan data tiket dari tabel "Ticket" berdasarkan ID tiket
-      const ticket = await Ticket.findByPk(req.params.ticketId);
+      const ticket = await Ticket.findByPk(req.params.id);
 
       if (!ticket) {
         return res.status(404).json({ error: "Tiket tidak ditemukan" });
