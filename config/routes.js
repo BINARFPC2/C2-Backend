@@ -109,4 +109,7 @@ router.get("/api/v1/payment", getAllPaymentData);
 // Get PAyment by Id
 router.get("/api/v1/payment/:id", getPaymentById);
 
+// Get Transaction By Id
+router.get("/api/v1/transaction");
+
 module.exports = router;
