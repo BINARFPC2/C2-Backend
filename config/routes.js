@@ -116,6 +116,6 @@ router.get("/api/v1/payment/:id", getPaymentById);
 // Get Transaction By Id
 // router.post("/api/v1/transaction/:id", createTransaction);
 
-router.get("/api/v1/transaction", createTransaction);
+router.post("/api/v1/transaction", createTransaction);
 
 module.exports = router;
