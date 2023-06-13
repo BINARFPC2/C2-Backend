@@ -5,14 +5,13 @@ const Transaction = require("../models");
 async function createTransaction(req, res) {
   try {
     // Mengambil data tiket dari tabel "Ticket"
-
     const tickets = await Ticket.findAll();
 
     // Memasukkan data tiket ke dalam tabel "Transaction"
     const transactions = await Promise.all(
       tickets.map((ticket) => {
         return Transaction.create({
-          ticketsId: ticket.id,
+          ticketId: ticket.id,
           // quantity: ticket.quantity,
         });
       })
