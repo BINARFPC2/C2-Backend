@@ -482,6 +482,10 @@ paths:
                               type: string
                             information:
                               type: string
+                            dateTakeoff:
+                              type: date
+                            dateLanding:
+                              type: date
                             dateDeparture:
                               type: date
                             dateReturn:
@@ -510,6 +514,8 @@ paths:
                             airport_from: "Soekarno-Hatta International"
                             airport_to: "Singapore Changi"
                             information: "Baggage 20 kg Cabin baggage 7 kg In Flight Entertainment"
+                            dateTakeoff: "07:55"
+                            dateLanding: "10:45"
                             dateDeparture: "2023-06-13"
                             dateReturn: "2023-06-13"
                             dateEnd: "2023-06-13"
@@ -710,6 +716,10 @@ paths:
                               type: string
                             information:
                               type: string
+                            dateTakeoff:
+                              type: date
+                            dateLanding:
+                              type: date
                             dateDeparture:
                               type: date
                             dateReturn:
@@ -738,6 +748,8 @@ paths:
                             airport_from: "Soekarno-Hatta International"
                             airport_to: "Singapore Changi"
                             information: "Baggage 20 kg Cabin baggage 7 kg In Flight Entertainment"
+                            dateTakeoff: "07:55"
+                            dateLanding: "10:45"
                             dateDeparture: "2023-06-13"
                             dateReturn: "2023-06-13"
                             dateEnd: "2023-06-13"
@@ -788,6 +800,10 @@ paths:
                               type: string
                             information:
                               type: string
+                            dateTakeoff:
+                              type: date
+                            dateLanding:
+                              type: date
                             dateDeparture:
                               type: date
                             dateReturn:
@@ -816,6 +832,8 @@ paths:
                             airport_from: "Soekarno-Hatta International"
                             airport_to: "Singapore Changi"
                             information: "Baggage 20 kg Cabin baggage 7 kg In Flight Entertainment"
+                            dateTakeoff: "07:55"
+                            dateLanding: "10:45"
                             dateDeparture: "2023-06-13"
                             dateReturn: "2023-06-13"
                             dateEnd: "2023-06-13"
@@ -866,6 +884,10 @@ paths:
                               type: string
                             information:
                               type: string
+                            dateTakeoff:
+                              type: date
+                            dateLanding:
+                              type: date
                             dateDeparture:
                               type: string
                             dateArrival:
@@ -892,6 +914,8 @@ paths:
                             airport_from: "Soekarno-Hatta International"
                             airport_to: "Singapore Changi"
                             information: "Baggage 20 kg Cabin baggage 7 kg In Flight Entertainment"
+                            dateTakeoff: "07:55"
+                            dateLanding: "10:45"
                             dateDeparture: "2023-06-13"
                             dateReturn: "2023-06-13"
                             dateEnd: "2023-06-13"
