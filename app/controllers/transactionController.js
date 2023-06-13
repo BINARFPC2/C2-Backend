@@ -14,15 +14,11 @@ module.exports = {
         });
 
         if (transaction) {
-          await Transaction.update(
-            {
-              /* objek nilai yang ingin diubah */
-            },
-            { where: { ticketsId: dataTicket.id } }
-          );
+          await Transaction.update({ where: { ticketsId: dataTicket.id } });
         } else {
           await Transaction.create({
             ticketsId: dataTicket.id,
+            status: "Success",
           });
         }
       }
