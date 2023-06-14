@@ -591,6 +591,12 @@ paths:
                 booking_code:
                   type: string
                   example: k1jox1lmrg
+                adult_price:
+                  type: integer
+                  example: 994000
+                child_price:
+                  type: integer
+                  example: 0
                 available:
                   type: boolean
                   example: true
