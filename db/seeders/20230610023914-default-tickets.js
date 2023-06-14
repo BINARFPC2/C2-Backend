@@ -1,5 +1,5 @@
 "use strict";
-const { v4: uuidv4 } = require("uuidv4");
+const { v4: uuidv4 } = require("uuid");
 /** @type {import('sequelize-cli').Migration} */
 const currentDate = new Date();
 const nextDay = new Date(currentDate);
