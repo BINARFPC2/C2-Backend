@@ -13,7 +13,7 @@ module.exports = {
       const ticket = await Ticket.findByPk(req.body.ticketId);
 
       // Menghitung total amount berdasarkan price tiket dan quantity
-
+      const amount = ticket.price * req.body.quantity;
       // Membuat transaksi baru dengan data yang diambil
       const transaction = await Transaction.create({
         id: uuid(),
