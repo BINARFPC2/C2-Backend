@@ -54,10 +54,10 @@ module.exports = {
   async createTransaction(req, res) {
     try {
       // Mengambil data user dari model User berdasarkan ID user
-      const iduser = await user.findByPk(req.body.userId);
+      const iduser = await user.findByPk(req.body.usersId);
 
       // Mengambil data tiket dari model Ticket berdasarkan ID tiket
-      const ticket = await Ticket.findByPk(req.body.ticketId);
+      const ticket = await Ticket.findByPk(req.body.ticketsId);
 
       // Membuat transaksi baru dengan data yang diambil
       const transaction = await Transaction.create({
