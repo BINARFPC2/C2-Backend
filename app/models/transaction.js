@@ -20,6 +20,7 @@ module.exports = (sequelize, DataTypes) => {
       checkoutsId: DataTypes.UUID,
       amounts: DataTypes.INTEGER,
       status: DataTypes.STRING,
+      booking_code: DataTypes.STRING,
       airlines: DataTypes.STRING,
       airport_from: DataTypes.STRING,
       airport_to: DataTypes.STRING,

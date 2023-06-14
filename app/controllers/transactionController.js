@@ -18,6 +18,7 @@ module.exports = {
 
       // const amount = ticket.price * adult_price;
 
+      const booking_code = ticket.booking_code;
       const airport_from = ticket.airport_from;
       const airport_to = ticket.airport_to;
       const dateTakeoff = ticket.dateTakeoff;
@@ -34,6 +35,7 @@ module.exports = {
         usersId: iduser.id,
         ticketsId: ticket.id,
         amounts: amount,
+        booking_code: booking_code,
         dateTakeoff: dateTakeoff,
         dateLanding: dateLanding,
         dateDeparture: dateDeparture,
