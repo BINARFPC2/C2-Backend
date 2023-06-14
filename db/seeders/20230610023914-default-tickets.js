@@ -1,5 +1,5 @@
 "use strict";
-const { v4: uuid } = require("uuid");
+const { v4: uuidv4 } = require("uuidv4");
 /** @type {import('sequelize-cli').Migration} */
 const currentDate = new Date();
 const nextDay = new Date(currentDate);
@@ -8,7 +8,7 @@ module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.bulkInsert("Tickets", [
       {
-        id: uuid(),
+        id: uuidv4(),
         city_from: "Jakarta",
         city_to: "Singapore",
         airlines: "Lion Air",
@@ -28,7 +28,7 @@ module.exports = {
         updatedAt: new Date(),
       },
       {
-        id: uuid(),
+        id: uuidv4(),
         city_from: "Jakarta",
         city_to: "Singapore",
         airlines: "Super Air Jet",
@@ -48,7 +48,7 @@ module.exports = {
         updatedAt: new Date(),
       },
       {
-        id: uuid(),
+        id: uuidv4(),
         city_from: "Jakarta",
         city_to: "Singapore",
         airlines: "Lion Air",
@@ -68,7 +68,7 @@ module.exports = {
         updatedAt: new Date(),
       },
       {
-        id: uuid(),
+        id: uuidv4(),
         city_from: "Yogyakarta",
         city_to: "Jakarta",
         airlines: "Garuda Indonesia",
@@ -88,7 +88,7 @@ module.exports = {
         updatedAt: new Date(),
       },
       {
-        id: uuid(),
+        id: uuidv4(),
         city_from: "Yogyakarta",
         city_to: "Jakarta",
         airlines: "Lion Air",
@@ -108,7 +108,7 @@ module.exports = {
         updatedAt: new Date(),
       },
       {
-        id: uuid(),
+        id: uuidv4(),
         city_from: "Yogyakarta",
         city_to: "Jakarta",
         airlines: "Super Air Jet",
@@ -128,7 +128,7 @@ module.exports = {
         updatedAt: new Date(),
       },
       {
-        id: uuid(),
+        id: uuidv4(),
         city_from: "Jakarta",
         city_to: "Bali",
         airlines: "Super Air Jet",
@@ -148,7 +148,7 @@ module.exports = {
         updatedAt: new Date(),
       },
       {
-        id: uuid(),
+        id: uuidv4(),
         city_from: "Jakarta",
         city_to: "Bali",
         airlines: "Garuda Indonesia",
@@ -168,7 +168,7 @@ module.exports = {
         updatedAt: new Date(),
       },
       {
-        id: uuid(),
+        id: uuidv4(),
         city_from: "Surabaya",
         city_to: "Tokyo",
         airlines: "Lion Air",
@@ -188,7 +188,7 @@ module.exports = {
         updatedAt: new Date(),
       },
       {
-        id: uuid(),
+        id: uuidv4(),
         city_from: "Medan",
         city_to: "Jakarta",
         airlines: "Super Air Jet",
@@ -208,7 +208,7 @@ module.exports = {
         updatedAt: new Date(),
       },
       {
-        id: uuid(),
+        id: uuidv4(),
         city_from: "Medan",
         city_to: "Jakarta",
         airlines: "Garuda Indonesia",
@@ -228,7 +228,7 @@ module.exports = {
         updatedAt: new Date(),
       },
       {
-        id: uuid(),
+        id: uuidv4(),
         city_from: "Makassar",
         city_to: "Bali",
         airlines: "Garuda Indonesia",
