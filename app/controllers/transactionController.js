@@ -21,7 +21,7 @@ module.exports = {
         usersId: iduser.id,
         ticketsId: ticket.id,
         amounts: amount,
-        date: req.body.date,
+        date: new Date(),
         status: "Success",
         // Setel nilai-nilai kolom lainnya yang diperlukan
       });

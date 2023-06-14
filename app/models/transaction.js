@@ -19,7 +19,7 @@ module.exports = (sequelize, DataTypes) => {
       ticketsId: DataTypes.UUID,
       checkoutsId: DataTypes.UUID,
       amounts: DataTypes.INTEGER,
-      date: DataTypes.DATE,
+      date: DataTypes.DATEONLY,
       status: DataTypes.STRING,
     },
     {
