@@ -137,7 +137,7 @@ module.exports = {
     }
   },
 
-  async deleteDataTrans() {
+  async deleteDataTrans(req, res) {
     try {
       const idDataTrans = req.params.id;
       Transaction.destroy({
