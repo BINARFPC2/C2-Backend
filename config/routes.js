@@ -8,6 +8,7 @@ const handleGetRoot = require("../app/controllers/root");
 const {
   getAllTickets,
   createTicket,
+  getTicketById,
 } = require("../app/controllers/ticketController");
 
 const {
@@ -74,6 +75,9 @@ router.delete("/api/v1/users/:id", deleteUser);
 // Get Ticket
 router.get("/api/v1/tickets", getAllTickets);
 
+// Get Ticket By Id
+router.get("/api/v1/tickets", getTicketById);
+
 // Create Ticket
 router.post("/api/v1/tickets", createTicket);
 
@@ -113,8 +117,7 @@ router.get("/api/v1/payment", getAllPaymentData);
 // Get PAyment by Id
 router.get("/api/v1/payment/:id", getPaymentById);
 
-// Get Transaction By Id
-// router.post("/api/v1/transaction/:id", createTransaction);
+// Post Transaction
 
 router.post("/api/v1/transaction", createTransaction);
 

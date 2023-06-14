@@ -86,4 +86,35 @@ module.exports = {
       data: tickets,
     });
   },
+
+  async getTicketById(req, res) {
+    try {
+      const idTicket = req.params.id;
+      const findTicketId = () => {
+        return Ticket.findOne({
+          where: {
+            id: idTicket,
+          },
+        });
+      };
+      const dataTicketId = await findTicketId();
+
+      if (!dataTicketId) {
+        res.status(404).json({
+          status: "Failed",
+          message: "Ticket not found",
+        });
+      }
+      res.status(200).json({
+        status: "Success",
+        message: "Get Data Ticket Successfully",
+        data: dataTicketId,
+      });
+    } catch (error) {
+      res.status(500).json({
+        status: "Failed",
+        message: error.message,
+      });
+    }
+  },
 };
