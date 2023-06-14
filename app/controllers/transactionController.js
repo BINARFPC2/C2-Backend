@@ -161,4 +161,14 @@ module.exports = {
       });
     }
   },
+
+  async deleteAllDataTrans() {
+    Transaction.destroy({ truncate: true })
+      .then(() => {
+        console.log("Data has been deleted successfully.");
+      })
+      .catch((error) => {
+        console.error("Error deleting data:", error);
+      });
+  },
 };

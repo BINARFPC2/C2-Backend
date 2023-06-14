@@ -45,6 +45,7 @@ const {
   getDataTransactionById,
   updateDataTrans,
   deleteDataTrans,
+  deleteAllDataTrans,
 } = require("../app/controllers/transactionController");
 
 const router = require("express").Router();
@@ -135,5 +136,8 @@ router.put("/api/v1/transaction/:id", updateDataTrans);
 
 // Delete Data Transaction
 router.delete("/api/v1/transaction/:id", deleteDataTrans);
+
+// Delete All Data Transaction
+router.delete("/api/v1/transaction", deleteAllDataTrans);
 
 module.exports = router;
