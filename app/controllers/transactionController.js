@@ -15,13 +15,21 @@ module.exports = {
       // Menghitung total amount berdasarkan price tiket dan quantity
       const amount = ticket.price * req.body.quantity;
 
+      // Mengambil Tanggal
+      const date = req.body.date;
+
+      if (date) {
+        querySearch.releaseDate = {
+          [Op.between]: [new Date(date)],
+        };
+      }
       // Membuat transaksi baru dengan data yang diambil
       const transaction = await Transaction.create({
         id: uuid(),
         usersId: iduser.id,
         ticketsId: ticket.id,
         amounts: amount,
-        date: new Date(),
+        date: date,
         status: "Success",
         // Setel nilai-nilai kolom lainnya yang diperlukan
       });
