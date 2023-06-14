@@ -20,14 +20,6 @@ module.exports = {
 
       // const amount = ticket.price * adult_price;
 
-      // Mengambil Tanggal
-      // const date = req.body.date;
-
-      // if (date) {
-      //   querySearch.releaseDate = {
-      //     [Op.between]: [new Date(date)],
-      //   };
-      // }
       // Membuat transaksi baru dengan data yang diambil
       const transaction = await Transaction.create({
         id: uuid(),
