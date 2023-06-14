@@ -12,11 +12,14 @@ module.exports = {
       // Mengambil data tiket dari model Ticket berdasarkan ID tiket
       const ticket = await Ticket.findByPk(req.body.ticketId);
 
+      // Menghitung total amount berdasarkan price tiket dan quantity
+
       // Membuat transaksi baru dengan data yang diambil
       const transaction = await Transaction.create({
         id: uuid(),
         usersId: iduser.id,
         ticketsId: ticket.id,
+        amounts: amount,
         // quantity: req.body.quantity,
         // Setel nilai-nilai kolom lainnya yang diperlukan
       });
