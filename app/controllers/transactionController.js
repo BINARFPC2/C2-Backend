@@ -29,7 +29,7 @@ module.exports = {
     } catch (error) {
       res.status(500).json({
         status: "Error",
-        message: error.message,
+        message: "booking_code is already in use",
       });
     }
   },
