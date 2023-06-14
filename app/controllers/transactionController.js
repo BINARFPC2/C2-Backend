@@ -38,14 +38,13 @@ module.exports = {
           });
         } else {
           await Transaction.create({
-            id: uuid(),
             checkoutsId: dataCheckout.id,
           });
         }
       }
       res.status(200).json({
         status: "Success",
-        message: "Ticket id created successfully",
+        message: "Transaciton created successfully",
       });
     } catch (error) {
       res.status(500).json({
