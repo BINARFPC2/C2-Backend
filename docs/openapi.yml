@@ -546,6 +546,8 @@ paths:
                 - type_seat
                 - total_passenger
                 - price
+                - adult_price
+                - child_price
                 - booking_code
                 - available
               type: object
