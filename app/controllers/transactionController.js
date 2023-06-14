@@ -15,6 +15,8 @@ module.exports = {
       // Menghitung total amount berdasarkan price tiket dan quantity
       const amount = ticket.price * req.body.quantity;
 
+      // const amount = ticket.price * adult_price;
+
       // Mengambil Tanggal
       const date = req.body.date;
 
