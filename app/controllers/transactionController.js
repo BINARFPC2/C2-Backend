@@ -24,7 +24,8 @@ module.exports = {
         }
       }
       res.status(200).json({
-        status: "Ok",
+        status: "Success",
+        message: "Ticket id created successfully",
       });
     } catch (error) {
       res.status(500).json({
