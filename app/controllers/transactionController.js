@@ -167,7 +167,7 @@ module.exports = {
       .then(() => {
         res.status(200).json({
           status: "Success",
-          message: "User Data deleted successfully",
+          message: "Transaction Data deleted successfully",
         });
       })
       .catch((error) => {
