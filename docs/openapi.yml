@@ -1,0 +1,1414 @@
+openapi: 3.0.0
+info:
+  title: Api Documentation Backend
+  description:
+  contact:
+    email: hapizdasari@gmail.com
+  version: "1.0"
+servers:
+  - url: https://c2-backend.up.railway.app/api/v1
+    variables: {}
+paths:
+  /register:
+    post:
+      tags:
+        - Users
+      parameters: []
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            encoding: {}
+            schema:
+              required:
+                - name
+                - email
+                - password
+                - phone
+              type: object
+              properties:
+                name:
+                  type: string
+                  example: "Hapizd"
+                email:
+                  type: string
+                  example: "hapizdasari@gmail.com"
+                password:
+                  type: string
+                  example: "12345"
+                phone:
+                  type: number
+                  example: "0821111111"
+        required: false
+      responses:
+        "200":
+          description: You have successfully created an account
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    format: int64
+                    example: 1
+                  name:
+                    type: string
+                    example: Hapizd
+                  email:
+                    type: string
+                    example: hapizdasari@gmail.com
+                  password:
+                    type: string
+                    example: 12345
+                  phone:
+                    type: number
+                    example: 0821111111
+                  createdAt:
+                    type: string
+                    example: "2023-06-07T16:07:14.259Z"
+                  updatedAt:
+                    type: string
+                    example: "2023-06-07T16:07:14.259Z"
+        "400":
+          description: Your registration failed
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Email and password is required
+                  message1:
+                    type: string
+                    example: Email format is invalid
+                  message2:
+                    type: string
+                    example: Email already Exist
+      deprecated: false
+  /login:
+    post:
+      tags:
+        - Users
+      parameters: []
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            encoding: {}
+            schema:
+              required:
+                - email
+                - password
+              type: object
+              properties:
+                email:
+                  type: string
+                  example: "hapizdasari@gmail.com"
+                password:
+                  type: string
+                  example: "12345"
+        required: false
+      responses:
+        "200":
+          description: if your login is successful then you will get a token
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  token:
+                    type: string
+                    example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjA0MmM1OTEzLWJhMmItNDY0NS05ZTBjLTRjNWVmNmNiMTQ2NSIsImVtYWlsIjoiaGFwaXpkYXNhcmlAZ21haWwuY29tIiwiY3JlYXRlZEF0IjoiMjAyMy0wNi0wN1QxNjowNzoxNC4yNTlaIiwidXBkYXRlZEF0IjoiMjAyMy0wNi0wN1QxNjowNzoxNC4yNTlaIiwiaWF0IjoxNjg2MTU0MzA5fQ.bbmJePbn5QHoaCIJAB7l0j5PIQvoIYEBEkfES6vh67g
+                  name:
+                    type: string
+                    example: Hapizd
+                  createdAt:
+                    type: string
+                    example: "2023-06-07T16:07:14.259Z"
+                  updatedAt:
+                    type: string
+                    example: "2023-06-07T16:07:14.259Z"
+        "400":
+          description: if you write wrong email that has been registered
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Email Not Found
+        "401":
+          description: If you write the wrong password registered in your email
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: wrong password!
+      deprecated: false
+  /users:
+    get:
+      tags:
+        - Users
+      parameters: []
+      responses:
+        "200":
+          description: This is the data of all users
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: Get All Data User Success
+                  data:
+                    type: object
+                    properties:
+                      posts:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                            name:
+                              type: string
+                            email:
+                              type: string
+                            password:
+                              type: string
+                            phone:
+                              type: number
+                            verified:
+                              type: string
+                            image_profile:
+                              type: string
+                            createdAt:
+                              type: string
+                            updatedAt:
+                              type: string
+                        example:
+                          - id: 1
+                            name: Hapizd
+                            email: hapizdasari@gmail.com
+                            password: "12345"
+                            phone: "0821111111"
+                            verified: false
+                            image_profile: https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png
+                            createdAt: "2023-06-07T16:16:46.530Z"
+                            updatedAt: "2023-06-07T16:16:46.530Z"
+                          - id: 2
+                            name: Teuku
+                            email: teukudr@gmail.com
+                            password: "12345"
+                            phone: "08200000"
+                            verified: false
+                            image_profile: https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png
+                            createdAt: "2023-06-07T16:16:46.530Z"
+                            updatedAt: "2023-06-07T16:16:46.530Z"
+                          - id: 3
+                            name: Taofik
+                            email: taofik@gmail.com
+                            password: "12345"
+                            phone: "082777777"
+                            verified: false
+                            image_profile: https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png
+                            createdAt: "2023-06-07T16:23:42.079Z"
+                            updatedAt: "2023-06-07T16:23:42.079Z"
+        "404":
+          description: If Data Not Found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Data not found
+        "500":
+          description: If the server is down or full
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Server error
+      deprecated: false
+
+  /users/:id:
+    get:
+      tags:
+        - Users
+      parameters: []
+      responses:
+        "200":
+          description: If data successfully retrived
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: OK
+                  data:
+                    type: object
+                    properties:
+                      posts:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            id:
+                              type: uuid
+                            name:
+                              type: string
+                            email:
+                              type: string
+                            password:
+                              type: string
+                            phone:
+                              type: number
+                            verified:
+                              type: string
+                            image_profile:
+                              type: string
+                            createdAt:
+                              type: string
+                            updatedAt:
+                              type: string
+                        example:
+                          - id: 1
+                            name: Hapizd
+                            email: hapizdasari@gmail.com
+                            password: "12345"
+                            phone: "0821111111"
+                            verified: false
+                            image_profile: https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png
+                            createdAt: "2023-06-07T16:16:46.530Z"
+                            updatedAt: "2023-06-07T16:16:46.530Z"
+        "404":
+          description: If member tried to retrive the data
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Data not found
+        "500":
+          description: If the server is down or full
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Server Error
+      deprecated: false
+    put:
+      tags:
+        - Users
+      parameters:
+        - name: id_user
+          in: path
+          schema:
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            encoding: {}
+            schema:
+              required:
+                - name
+                - phone
+                - email
+              type: object
+              properties:
+                name:
+                  type: string
+                  example: Hapizd
+                phone:
+                  type: number
+                  example: 08222222222
+                email:
+                  type: string
+                  example: "hapizdasari@gmail.com"
+        required: false
+      responses:
+        "200":
+          description: If Update Is Successful
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: Success
+                  message:
+                    type: string
+                    example: Update Password Success
+          headers: {}
+
+        "500":
+          description: Server Error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: Error
+                  message:
+                    type: string
+                    example: Login Failed
+          headers: {}
+      deprecated: false
+    # delete:
+    #   tags:
+    #     - Users
+    #   parameters:
+    #     - name: id_user
+    #       in: path
+    #       required: true
+    #       schema:
+    #         type: string
+    #   responses:
+    #     "200":
+    #       description: Delete Successfully
+    #       content:
+    #         application/json:
+    #           schema:
+    #             type: object
+    #             properties:
+    #               status:
+    #                 type: string
+    #                 example: Success
+    #               message:
+    #                 type: string
+    #                 example: User Data deleted successfully
+    # headers: {}
+
+  /resetpw/{:id}:
+    put:
+      tags:
+        - Users
+      parameters:
+        - name: id
+          in: path
+          require: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            encoding: {}
+            schema:
+              required:
+                - password
+              type: object
+              properties:
+                password:
+                  type: string
+                  example: update
+        required: false
+      responses:
+        "200":
+          description: Resets Password Successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: Success
+                  message:
+                    type: string
+                    example: Update Password Success
+          headers: {}
+        "500":
+          description: Server error
+          headers: {}
+      deprecated: false
+  /tickets:
+    get:
+      tags:
+        - Tickets
+      parameters: []
+      responses:
+        "200":
+          description: If data successfully retrived
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: Success
+                  message:
+                    type: string
+                    example: Get All Data Ticket Success
+                  data:
+                    type: object
+                    properties:
+                      posts:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            id:
+                              type: uuid
+                            city_from:
+                              type: string
+                            city_to:
+                              type: string
+                            airlines:
+                              type: string
+                            airport_from:
+                              type: string
+                            airport_to:
+                              type: string
+                            information:
+                              type: string
+                            dateDeparture:
+                              type: string
+                            dateArrival:
+                              type: string
+                            type_seat:
+                              type: string
+                            total_passenger:
+                              type: integer
+                            price:
+                              type: integer
+                            total:
+                              type: integer
+                            available:
+                              type: boolean
+                            createdAt:
+                              type: string
+                            updatedAt:
+                              type: string
+                        example:
+                          - id: 1
+                            city_from: "Jakarta"
+                            city_to: "Singapore"
+                            airlines: "Lion Air"
+                            airport_from: "Soekarno-Hatta International"
+                            airport_to: "Singapore Changi"
+                            information: "Baggage 20 kg Cabin baggage 7 kg In Flight Entertainment"
+                            dateDeparture: "07:55"
+                            dateArrival: "10:45"
+                            date_start: new Date()
+                            date_end: new Date()
+                            type_seat: "Economy"
+                            price: 994000
+                            booking_code: "8vyb7rq8mp"
+                            available: true
+                            createdAt: new Date()
+                            updatedAt: new Date()
+  /tickets?city_form=jakarta:
+    get:
+      tags:
+        - Tickets
+      parameters: []
+      responses:
+        "200":
+          description: If data successfully retrived
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: Success
+                  message:
+                    type: string
+                    example: Get All Data Ticket Success
+                  data:
+                    type: object
+                    properties:
+                      posts:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            id:
+                              type: uuid
+                            city_from:
+                              type: string
+                            city_to:
+                              type: string
+                            airlines:
+                              type: string
+                            airport_from:
+                              type: string
+                            airport_to:
+                              type: string
+                            information:
+                              type: string
+                            dateDeparture:
+                              type: string
+                            dateArrival:
+                              type: string
+                            type_seat:
+                              type: string
+                            total_passenger:
+                              type: integer
+                            price:
+                              type: integer
+                            booking_code:
+                              type: string
+                            available:
+                              type: boolean
+                            createdAt:
+                              type: string
+                            updatedAt:
+                              type: string
+                        example:
+                          - id: 1
+                            city_from: Jakarta
+                            city_to: Singapore
+                            airlines: Lion Air
+                            airport_from: Soekarno-Hatta International
+                            airport_to: "Singapore Changi"
+                            information: "Baggage 20 kg Cabin baggage 7 kg In Flight Entertainment"
+                            dateDeparture: "07:55"
+                            dateArrival: "10:45"
+                            date_start: "2023-06-12"
+                            date_end: "2023-06-12"
+                            type_seat: "Economy"
+                            total_passenger: null,
+                            price: 994000,
+                            booking_code: "8vyb7rq8mp"
+                            available: true
+                            createdAt: "2023-06-12T14:36:42.672Z"
+                            updatedAt: "2023-06-12T14:36:42.672Z"
+  /tickets?date=2023-06-03:
+    get:
+      tags:
+        - Tickets
+      parameters: []
+      responses:
+        "200":
+          description: If data successfully retrived
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: Success
+                  message:
+                    type: string
+                    example: Get All Data Ticket Success
+                  data:
+                    type: object
+                    properties:
+                      posts:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            id:
+                              type: uuid
+                            city_from:
+                              type: string
+                            city_to:
+                              type: string
+                            airlines:
+                              type: string
+                            airport_from:
+                              type: string
+                            airport_to:
+                              type: string
+                            information:
+                              type: string
+                            dateDeparture:
+                              type: string
+                            dateArrival:
+                              type: string
+                            type_seat:
+                              type: string
+                            total_passenger:
+                              type: integer
+                            price:
+                              type: integer
+                            booking_code:
+                              type: string
+                            available:
+                              type: boolean
+                            createdAt:
+                              type: string
+                            updatedAt:
+                              type: string
+                        example:
+                          - id: 1
+                            city_from: "Jakarta"
+                            city_to: "Singapore"
+                            airlines: "Lion Air"
+                            airport_from: "Soekarno-Hatta International"
+                            airport_to: "Singapore Changi"
+                            information: "Baggage 20 kg Cabin baggage 7 kg In Flight Entertainment"
+                            dateDeparture: "07:55"
+                            dateArrival: "10:45"
+                            date_start: "2023-06-12"
+                            date_end: "2023-06-12"
+                            type_seat: "Economy"
+                            total_passenger: null
+                            price: 994000
+                            booking_code: "8vyb7rq8mp"
+                            available: true
+                            createdAt: "2023-06-12T14:36:42.672Z"
+                            updatedAt: 2023-06-12T14:36:42.672Z"
+  /tickets?type_seat=economy:
+    get:
+      tags:
+        - Tickets
+      parameters: []
+      responses:
+        "200":
+          description: If Data Successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: Success
+                  message:
+                    type: string
+                    example: Get All Data Ticket Success
+                  data:
+                    type: object
+                    properties:
+                      posts:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            id:
+                              type: uuid
+                            city_from:
+                              type: string
+                            city_to:
+                              type: string
+                            airlines:
+                              type: string
+                            airport_from:
+                              type: string
+                            airport_to:
+                              type: string
+                            information:
+                              type: string
+                            dateDeparture:
+                              type: string
+                            dateArrival:
+                              type: string
+                            type_seat:
+                              type: string
+                            total_passenger:
+                              type: integer
+                            price:
+                              type: integer
+                            booking_code:
+                              type: string
+                            available:
+                              type: boolean
+                            createdAt:
+                              type: string
+                            updatedAt:
+                              type: string
+                        example:
+                          - id: 1
+                            city_from: "Jakarta"
+                            city_to: "Singapore"
+                            airlines: "Lion Air"
+                            airport_from: "Soekarno-Hatta International"
+                            airport_to: "Singapore Changi"
+                            information: "Baggage 20 kg Cabin baggage 7 kg In Flight Entertainment"
+                            dateDeparture: "07:55"
+                            dateArrival: "10:45"
+                            date_start: "2023-06-12"
+                            date_end: "2023-06-12"
+                            type_seat: "Economy"
+                            total_passenger: null
+                            price: 994000
+                            booking_code: "8vyb7rq8mp"
+                            available: true
+                            createdAt: "2023-06-12T14:36:42.672Z"
+                            updatedAt: 2023-06-12T14:36:42.672Z"
+  /destfavorite:
+    get:
+      tags:
+        - Destination Favorite
+      parameters: []
+      responses:
+        "201":
+          description: If data successfully retrived
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Get All Data Destinasi Favorit Success
+                  data:
+                    type: object
+                    properties:
+                      posts:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            id:
+                              type: uuid
+                            image:
+                              type: string
+                            continent:
+                              type: string
+                            city_from:
+                              type: string
+                            city_to:
+                              type: string
+                            airlines:
+                              type: string
+                            date:
+                              type: string
+                            price:
+                              type: integer
+                            createdAt:
+                              type: string
+                            updatedAt:
+                              type: string
+                        example:
+                          - id: 1
+                            continent: Asia
+                            city_from: Sydney
+                            city_to: "Tokyo"
+                            airlines: "Jet Air"
+                            date: 27 - 30 Agustus 2023
+                            price: 400000
+                            image_profile: https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png
+                            createdAt: "2023-06-10T16:50:02.127Z"
+                            updatedAt: "2023-06-10T16:50:02.127Z"
+        "404":
+          description: If Data Not Found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Data not found
+        "500":
+          description: If the server is down or full
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Server Error
+      deprecated: false
+    # post:
+    #   tags:
+    #     - Destination Favotite
+    #   parameters: []
+    #   requestBody:
+    #     content:
+    #       application/x-www-form-urlencoded:
+    #         encoding: {}
+    #         schema:
+    #           required:
+    #             - image
+    #             - continent
+    #             - city_from
+    #             - city_to
+    #             - airlines
+    #             - date
+    #             - price
+    #           type: object
+    #           properties:
+    #             image:
+    #               type: string
+    #             continent:
+    #               type: string
+    #             city_from:
+    #               type: string
+    #             city_to:
+    #               type: string
+    #             airlines:
+    #               type: string
+    #             date:
+    #               type: string
+    #             price:
+    #               type: integer
+    #     required: false
+    #   responses:
+    #     "200":
+    #       description: If data successfully retrived
+    #       content:
+    #         application/json:
+    #           schema:
+    #             type: object
+    #             properties:
+    #               status:
+    #                 type: string
+    #                 example: Created Destinasi Favorite Success
+    #               data:
+    #                 type: object
+    #                 properties:
+    #                   posts:
+    #                     type: array
+    #                     items:
+    #                       type: object
+    #                       properties:
+    #                         id:
+    #                           type: uuid
+    #                         image:
+    #                           type: string
+    #                         continent:
+    #                           type: string
+    #                         city_from:
+    #                           type: string
+    #                         city_to:
+    #                           type: string
+    #                         airlines:
+    #                           type: string
+    #                         date:
+    #                           type: string
+    #                         price:
+    #                           type: integer
+    #                         createdAt:
+    #                           type: string
+    #                         updatedAt:
+    #                           type: string
+    #                     example:
+    #                       - id: 1
+    #                         continent: Asia
+    #                         city_from: Sydney
+    #                         city_to: "Tokyo"
+    #                         airlines: "Jet Air"
+    #                         date: 27 - 30 Agustus 2023
+    #                         price: 400000
+    #                         image_profile: https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png
+    #                         createdAt: "2023-06-10T16:50:02.127Z"
+    #                         updatedAt: "2023-06-10T16:50:02.127Z"
+    #     "400":
+    #       description: If member tried to retrive the data
+    #       content:
+    #         application/json:
+    #           schema:
+    #             type: object
+    #             properties:
+    #               message:
+    #                 type: string
+    #                 example: Data not found
+    #   deprecated: false
+
+  /destfavorite/:id:
+    get:
+      tags:
+        - Destination Favorite
+      parameters: []
+      responses:
+        "200":
+          description: If data successfully retrived
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: Get Data Destinasi Successfully
+                  data:
+                    type: object
+                    properties:
+                      posts:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            id:
+                              type: uuid
+                            image:
+                              type: string
+                            continent:
+                              type: string
+                            city_from:
+                              type: string
+                            city_to:
+                              type: string
+                            airlines:
+                              type: string
+                            date:
+                              type: string
+                            price:
+                              type: integer
+                            createdAt:
+                              type: string
+                            updatedAt:
+                              type: string
+                        example:
+                          - id: 1
+                            continent: Asia
+                            city_from: Sydney
+                            city_to: "Tokyo"
+                            airlines: "Jet Air"
+                            date: 27 - 30 Agustus 2023
+                            price: 400000
+                            image_profile: https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png
+                            createdAt: "2023-06-10T16:50:02.127Z"
+                            updatedAt: "2023-06-10T16:50:02.127Z"
+        "404":
+          description: If Data Not Found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Data not found
+        "500":
+          description: If the server is down or full
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Server Error
+      deprecated: false
+    # delete:
+    #   tags:
+    #     - Destination Favotite
+    #   parameters:
+    #     - name: id_user
+    #       in: path
+    #       required: true
+    #       schema:
+    #         type: string
+    #   responses:
+    #     "200":
+    #       description: Delete Successfully
+    #       content:
+    #         application/json:
+    #           schema:
+    #             type: object
+    #             properties:
+    #               status:
+    #                 type: string
+    #                 example: Success
+    #               message:
+    #                 type: string
+    #                 example: Destinasi Data deleted successfully
+    #       headers: {}
+    #     "404":
+    #       description: If Data Not Found
+    #       content:
+    #         application/json:
+    #           schema:
+    #             type: object
+    #             properties:
+    #               message:
+    #                 type: string
+    #                 example: Data not found
+    #     '500':
+    #       description: If the server is down or full
+    #       content:
+    #         application/json:
+    #           schema:
+    #             type: object
+    #             properties:
+    #               message:
+    #                 type: string
+    #                 example: Server Error
+    #       headers: {}
+    #   deprecated: false
+  /destfavorite?continent=eropa:
+    get:
+      tags:
+        - Destination Favorite
+      parameters: []
+      responses:
+        "200":
+          description: If data successfully retrived
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: OK
+                  data:
+                    type: object
+                    properties:
+                      posts:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            id:
+                              type: uuid
+                            image_destinasi:
+                              type: string
+                            continent:
+                              type: string
+                            city_from:
+                              type: string
+                            city_to:
+                              type: string
+                            airlines:
+                              type: string
+                            date:
+                              type: string
+                            price:
+                              type: integer
+                            createdAt:
+                              type: string
+                            updatedAt:
+                              type: string
+                        example:
+                          - id: 1
+                            image_destinasi: https://res.klook.com/image/upload/Mobile/City/swox6wjsl5ndvkv5jvum.jpg
+                            continent: Eropa
+                            city_from: Jakarta
+                            city_to: Paris
+                            airlines: "Qatar Airways"
+                            date: 10 - 15 Agustus
+                            price: 7478200
+                            createdAt: "2023-06-12T14:36:42.689Z"
+                            updatedAt: "2023-06-12T14:36:42.689Z"
+        "404":
+          description: If Data Not Found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Data Not Found
+      deprecated: false
+  /destfavorite?continent=asia:
+    get:
+      tags:
+        - Destination Favorite
+      parameters: []
+      responses:
+        "200":
+          description: If data successfully retrived
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: OK
+                  data:
+                    type: object
+                    properties:
+                      posts:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            id:
+                              type: uuid
+                            image_destinasi:
+                              type: string
+                            continent:
+                              type: string
+                            city_from:
+                              type: string
+                            city_to:
+                              type: string
+                            airlines:
+                              type: string
+                            date:
+                              type: string
+                            price:
+                              type: integer
+                            createdAt:
+                              type: string
+                            updatedAt:
+                              type: string
+                        example:
+                          - id: 1
+                            image_profile: https://fullsuitcase.com/wp-content/uploads/2022/06/Best-areas-to-stay-in-Bangkok-neighborhood-guide.jpg.webp
+                            continent: Eropa
+                            city_from: Jakarta
+                            city_to: Bangkok
+                            airlines: "AirAsia"
+                            date: 01 - 10 Juli
+                            price: 950000
+                            createdAt: "2023-06-12T14:36:42.689Z"
+                            updatedAt: "2023-06-12T14:36:42.689Z"
+        "404":
+          description: If Data Not Found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Data not Found
+      deprecated: false
+  /payment:
+    get:
+      tags:
+        - Payment
+      parameters: []
+      responses:
+        "200":
+          description: If data successfully retrived
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: Get Data Payment Successfully
+                  data:
+                    type: object
+                    properties:
+                      posts:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            id:
+                              type: uuid
+                            cardNumber:
+                              type: string
+                            cardHolderName:
+                              type: string
+                            cvc:
+                              type: number
+                            expiration:
+                              type: number
+                            country:
+                              type: string
+                            status:
+                              type: boolean
+                            createdAt:
+                              type: string
+                            updatedAt:
+                              type: string
+                        example:
+                          - id: 1
+                            cardNumber: "874872872942"
+                            cardHolderName: "Hapizd"
+                            cvc: 345
+                            expiration: 911
+                            country: "Indonesia"
+                            status: true
+                            updatedAt: "2023-06-12T14:12:07.601Z"
+                            createdAt: "2023-06-12T14:12:07.601Z"
+        "404":
+          description: If Data Not Found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Data not found
+        "500":
+          description: If the server is down or full
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Server Error
+      deprecated: false
+  /payment/:id:
+    get:
+      tags:
+        - Payment
+      parameters: []
+      responses:
+        "200":
+          description: If data successfully retrived
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: Get Data Payment Successfully
+                  data:
+                    type: object
+                    properties:
+                      posts:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            id:
+                              type: uuid
+                            cardNumber:
+                              type: string
+                            cardHolderName:
+                              type: string
+                            cvc:
+                              type: number
+                            expiration:
+                              type: number
+                            country:
+                              type: string
+                            status:
+                              type: boolean
+                            createdAt:
+                              type: string
+                            updatedAt:
+                              type: string
+                        example:
+                          - id: 1
+                            cardNumber: "874872872942"
+                            cardHolderName: "Hapizd"
+                            cvc: 345
+                            expiration: 911
+                            country: "Indonesia"
+                            status: true
+                            updatedAt: "2023-06-12T14:12:07.601Z"
+                            createdAt: "2023-06-12T14:12:07.601Z"
+        "404":
+          description: If Data Not Found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Data not found
+        "500":
+          description: If the server is down or full
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Server Error
+      deprecated: false
+  /notification:
+    get:
+      tags:
+        - Notification
+      parameters: []
+      summary: Get all notification
+      description: Get all notification by user id
+      responses:
+        "200":
+          description: "Notification fetched"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id: 
+                      type: integer
+                      example: 100
+                    info:
+                      type: string
+                      example: "Notification for payment"
+                    date:
+                      type: string
+                      example: "2023-06-13T16:57:37.362Z"
+                    message:
+                      type: string
+                      example: "Your payment has complete"
+                    isRead:
+                      type: boolean
+                      example: false
+                    userId:
+                      type: string
+                      example: "8lol3fbd-f2b5-4ec3-84bc-f67fjax2db8f"
+                    createdAt:
+                      type: string
+                      example: "2023-06-13T16:57:37.362Z"
+                    updatedAt:
+                      type: string
+                      example: "2023-06-13T16:57:37.362Z"
+    post:
+      tags:
+        - Notification
+      summary: Create new notification
+      description: Endpoint to create new notification
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                userId:
+                  type: string
+                  example: "8lol3fbd-f2b5-4ec3-84bc-f67fjax2db8f"
+                info:
+                  type: string
+                  example: "Notification for payment"
+                message:
+                  type: string
+                  example: "Your payment is failed"
+      responses:
+        "201":
+          description: Notification created
+        "404":
+          description: User does not exists
+    patch:
+      summary: Read the notification
+      description: When user read/mark notification as readed
+      tags:
+        - Notification
+      parameters:
+        - name: userId
+          in: query
+          description: Notification owner
+          schema:
+            type: integer
+        - name: notificationId
+          in: query
+          description: Notification id that want to mark as read
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: "Notification readed"
+                
+
+
