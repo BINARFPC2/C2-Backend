@@ -1,7 +1,8 @@
-const { Ticket } = require("../models");
+const { Ticket, sequelize } = require("../models");
 const { Transaction } = require("../models");
 const { user } = require("../models");
 const { v4: uuid } = require("uuid");
+const { Op } = require(sequelize);
 
 module.exports = {
   async createTransaction(req, res) {
