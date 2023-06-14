@@ -162,13 +162,16 @@ module.exports = {
     }
   },
 
-  async deleteAllDataTrans() {
+  async deleteAllDataTrans(req, res) {
     Transaction.destroy({ truncate: true })
       .then(() => {
-        console.log("Data has been deleted successfully.");
+        res.status(200).json({
+          status: "Success",
+          message: "User Data deleted successfully",
+        });
       })
       .catch((error) => {
-        console.error("Error deleting data:", error);
+        res.status(422).json(error);
       });
   },
 };
