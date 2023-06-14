@@ -1,20 +1,26 @@
 "use strict";
 const { Model } = require("sequelize");
 module.exports = (sequelize, DataTypes) => {
-  class Ticket extends Model {
+  class Transaction extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      this.hasMany(models.Transaction, { foreignKey: "ticketsId" });
+      this.belongsTo(models.user, { foreignKey: "usersId" });
+      this.belongsTo(models.Ticket, { foreignKey: "ticketsId" });
+      this.belongsTo(models.Checkout, { foreignKey: "checkoutsId" });
     }
   }
-  Ticket.init(
+  Transaction.init(
     {
-      city_from: DataTypes.STRING,
-      city_to: DataTypes.STRING,
+      usersId: DataTypes.UUID,
+      ticketsId: DataTypes.UUID,
+      checkoutsId: DataTypes.UUID,
+      amounts: DataTypes.INTEGER,
+      status: DataTypes.STRING,
+      booking_code: DataTypes.STRING,
       airlines: DataTypes.STRING,
       airport_from: DataTypes.STRING,
       airport_to: DataTypes.STRING,
@@ -22,20 +28,13 @@ module.exports = (sequelize, DataTypes) => {
       dateTakeoff: DataTypes.STRING,
       dateLanding: DataTypes.STRING,
       dateDeparture: DataTypes.DATEONLY,
-      dateReturn: DataTypes.DATEONLY,
       dateEnd: DataTypes.DATEONLY,
       type_seat: DataTypes.STRING,
-      total_passenger: DataTypes.INTEGER,
-      adult_price: DataTypes.INTEGER,
-      child_price: DataTypes.INTEGER,
-      price: DataTypes.INTEGER,
-      booking_code: DataTypes.STRING,
-      available: DataTypes.BOOLEAN,
     },
     {
       sequelize,
-      modelName: "Ticket",
+      modelName: "Transaction",
     }
   );
-  return Ticket;
+  return Transaction;
 };

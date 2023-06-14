@@ -2,20 +2,34 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable("Tickets", {
+    await queryInterface.createTable("Transactions", {
       id: {
         defaultValue: Sequelize.UUIDV4,
         allowNull: false,
         primaryKey: true,
         type: Sequelize.UUID,
       },
-      city_from: {
-        type: Sequelize.STRING,
+      usersId: {
+        defaultValue: Sequelize.UUIDV4,
+        type: Sequelize.UUID,
       },
-      city_to: {
+      ticketsId: {
+        defaultValue: Sequelize.UUIDV4,
+        type: Sequelize.UUID,
+      },
+      checkoutsId: {
+        type: Sequelize.UUID,
+      },
+      amounts: {
+        type: Sequelize.INTEGER,
+      },
+      status: {
         type: Sequelize.STRING,
       },
       airlines: {
+        type: Sequelize.STRING,
+      },
+      booking_code: {
         type: Sequelize.STRING,
       },
       information: {
@@ -37,34 +51,12 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DATEONLY,
       },
-      dateReturn: {
-        allowNull: true,
-        type: Sequelize.DATEONLY,
-      },
       dateEnd: {
         allowNull: true,
         type: Sequelize.DATEONLY,
       },
       type_seat: {
         type: Sequelize.STRING,
-      },
-      booking_code: {
-        type: Sequelize.STRING,
-      },
-      total_passenger: {
-        type: Sequelize.INTEGER,
-      },
-      adult_price: {
-        type: Sequelize.INTEGER,
-      },
-      child_price: {
-        type: Sequelize.INTEGER,
-      },
-      price: {
-        type: Sequelize.INTEGER,
-      },
-      available: {
-        type: Sequelize.BOOLEAN,
       },
       createdAt: {
         allowNull: false,
@@ -77,6 +69,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable("Tickets");
+    await queryInterface.dropTable("Transactions");
   },
 };
