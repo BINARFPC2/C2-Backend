@@ -21,12 +21,16 @@ module.exports = {
         // Setel nilai-nilai kolom lainnya yang diperlukan
       });
 
-      res.status(201).json(transaction);
+      res.status(200).json({
+        status: "Success",
+        message: "Transaciton created successfully",
+        data: transaction,
+      });
     } catch (error) {
-      console.error("Terjadi kesalahan:", error);
-      res
-        .status(500)
-        .json({ error: "Terjadi kesalahan dalam membuat transaksi" });
+      res.status(500).json({
+        status: "Error",
+        message: error.message,
+      });
     }
   },
 };
