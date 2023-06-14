@@ -40,8 +40,11 @@ const {
   getPaymentById,
 } = require("../app/controllers/paymentController");
 const {
-  findTransById,
   createTransaction,
+  getAllTransactionData,
+  getDataTransactionById,
+  updateDataTrans,
+  deleteDataTrans,
 } = require("../app/controllers/transactionController");
 
 const router = require("express").Router();
@@ -120,5 +123,17 @@ router.get("/api/v1/payment/:id", getPaymentById);
 // Post Transaction
 
 router.post("/api/v1/transaction", createTransaction);
+
+// Get All Data Transaction
+router.get("/api/v1/transaction", getAllTransactionData);
+
+// Get Data Transaction By Id
+router.get("/api/v1/transaction/:id", getDataTransactionById);
+
+// Put Data Transaction
+router.put("/api/v1/transaction/:id", updateDataTrans);
+
+// Delete Data Transaction
+router.delete("/api/v1/transaction/:id", deleteDataTrans);
 
 module.exports = router;
