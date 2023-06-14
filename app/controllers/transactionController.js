@@ -16,9 +16,17 @@ module.exports = {
       // Menghitung total amount berdasarkan price tiket dan quantity
       const amount = ticket.price * req.body.quantity;
 
-      const date = ticket.dateDeparture;
-
       // const amount = ticket.price * adult_price;
+
+      const airport_from = ticket.airport_from;
+      const airport_to = ticket.airport_to;
+      const dateTakeoff = ticket.dateTakeoff;
+      const dateLanding = ticket.dateLanding;
+      const dateDeparture = ticket.dateDeparture;
+      const dateEnd = ticket.dateEnd;
+      const type_seat = ticket.type_seat;
+      const information = ticket.information;
+      const airlines = ticket.airlines;
 
       // Membuat transaksi baru dengan data yang diambil
       const transaction = await Transaction.create({
@@ -26,7 +34,15 @@ module.exports = {
         usersId: iduser.id,
         ticketsId: ticket.id,
         amounts: amount,
-        date: date,
+        dateTakeoff: dateTakeoff,
+        dateLanding: dateLanding,
+        dateDeparture: dateDeparture,
+        dateEnd: dateEnd,
+        airport_from: airport_from,
+        airport_to: airport_to,
+        type_seat: type_seat,
+        airlines: airlines,
+        information: information,
         status: "Success",
         // Setel nilai-nilai kolom lainnya yang diperlukan
       });
