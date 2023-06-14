@@ -14,13 +14,13 @@ module.exports = {
 
       // Menghitung total amount berdasarkan price tiket dan quantity
       const amount = ticket.price * req.body.quantity;
+
       // Membuat transaksi baru dengan data yang diambil
       const transaction = await Transaction.create({
         id: uuid(),
         usersId: iduser.id,
         ticketsId: ticket.id,
         amounts: amount,
-        // quantity: req.body.quantity,
         // Setel nilai-nilai kolom lainnya yang diperlukan
       });
 
