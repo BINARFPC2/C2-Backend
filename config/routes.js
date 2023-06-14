@@ -76,7 +76,7 @@ router.delete("/api/v1/users/:id", deleteUser);
 router.get("/api/v1/tickets", getAllTickets);
 
 // Get Ticket By Id
-router.get("/api/v1/tickets", getTicketById);
+router.get("/api/v1/tickets/:id", getTicketById);
 
 // Create Ticket
 router.post("/api/v1/tickets", createTicket);
