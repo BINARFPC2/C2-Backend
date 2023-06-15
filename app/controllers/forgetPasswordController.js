@@ -2,7 +2,6 @@ const nodemailer = require("nodemailer");
 const bcrypt = require("bcrypt");
 const SALT = 10;
 const jwt = require("jsonwebtoken");
-const { v4: uuid } = require("uuid");
 const { user } = require("../models");
 
 function encryptPassword(password) {
@@ -201,10 +200,10 @@ module.exports = {
       //     password: encryptedPassword,
       //   });
 
-      const updatePassUser = async (userId, newData) => {
+      const updatePassUser = async (id, newData) => {
         return await user.update(newData, {
           where: {
-            id: userId,
+            id: id,
           },
         });
       };
