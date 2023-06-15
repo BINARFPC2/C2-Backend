@@ -3,6 +3,7 @@ const bcrypt = require("bcrypt");
 const SALT = 10;
 const jwt = require("jsonwebtoken");
 const { v4: uuid } = require("uuid");
+const { user } = require("../models");
 
 function encryptPassword(password) {
   return new Promise((resolve, reject) => {
