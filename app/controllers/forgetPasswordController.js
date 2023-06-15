@@ -174,9 +174,9 @@ module.exports = {
         });
       };
 
-      const findUserId = async (id) => {
+      const findUserId = async () => {
         return await user.findOne({
-          where: { id: id },
+          where: { id },
         });
       };
 
