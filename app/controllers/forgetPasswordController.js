@@ -18,6 +18,10 @@ function encryptPassword(password) {
   });
 }
 
+// function createToken(payload) {
+//   return jwt.sign(payload, process.env.JWT_SIGNATURE_KEY || "Rahasia");
+// }
+
 module.exports = {
   async forgetPass(req, res) {
     try {
@@ -42,7 +46,7 @@ module.exports = {
       // create update token
       const token = jwt.sign(
         { id: userEmail.id },
-        process.env.ACCESS_TOKEN_SECRET,
+        process.env.JWT_SIGNATURE_KEY || "Rahasia",
         {
           expiresIn: "1h",
         }
@@ -117,7 +121,10 @@ module.exports = {
       const token = req.params.token;
 
       // verify token
-      const decodedUser = jwt.verify(token, process.env.ACCESS_TOKEN_SECRET);
+      const decodedUser = jwt.verify(
+        token,
+        process.env.JWT_SIGNATURE_KEY || "Rahasia"
+      );
 
       const findUserId = async (id) => {
         return await user.findOne({
