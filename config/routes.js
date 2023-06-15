@@ -47,6 +47,11 @@ const {
   deleteDataTrans,
   deleteAllDataTrans,
 } = require("../app/controllers/transactionController");
+const {
+  forgetPass,
+  resetPassView,
+  resetPass,
+} = require("../app/controllers/forgetPasswordController");
 
 const router = require("express").Router();
 
@@ -71,10 +76,15 @@ router.get("/api/v1/whoami", authorize, whoAmI);
 router.put("/api/v1/users/:id", updateUserData);
 
 // Update Password
-router.put("/api/v1/resetpw/:id", updatedPassword);
+// router.put("/api/v1/resetpw/:id", updatedPassword);
 
 // Delete User
 router.delete("/api/v1/users/:id", deleteUser);
+
+// forget password
+router.post("/api/v1/forget-password", forgetPass);
+router.get("/api/v1/reset-password/:token", resetPassView);
+router.put("/api/v1/reset-password", resetPass);
 
 // Get Ticket
 router.get("/api/v1/tickets", getAllTickets);
