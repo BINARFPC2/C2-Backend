@@ -20,13 +20,12 @@ function encryptPassword(password) {
 module.exports = {
   async forgetPass(req, res) {
     try {
+      const { email } = req.body;
       const findUserEmail = async () => {
         return await user.findOne({
-          where: { email },
+          where: { email: email },
         });
       };
-
-      const { email } = req.body;
       // check email
       const userEmail = await findUserEmail();
 
