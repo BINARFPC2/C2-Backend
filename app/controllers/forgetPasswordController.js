@@ -35,7 +35,6 @@ exports.forgetPass = async (req, res) => {
       res.status(400).send({
         status: "error",
         message: "Email not found",
-        data: {},
       });
       return;
     }
@@ -157,6 +156,14 @@ exports.resetPassView = async (req, res) => {
       // verify token
       const decodedUser = jwt.verify(token, process.env.ACCESS_TOKEN_SECRET);
 
+      const updatePassUser = async () => {
+        return await user.update({
+          where: {
+            id,
+          },
+        });
+      };
+
       const findUserId = async (id) => {
         return await user.findOne({
           where: { id: id },
@@ -188,7 +195,12 @@ exports.resetPassView = async (req, res) => {
       const encryptedPassword = await encryptPassword(password);
 
       // update user password
-      const updatedUser = await updateUser(user.id, {
+      //   const updatedUser = await updateUser(user.id, {
+      //     password: encryptedPassword,
+      //   });
+
+      //   update user password
+      const updatedUser = await updatePassUser(userData.id, {
         password: encryptedPassword,
       });
 
