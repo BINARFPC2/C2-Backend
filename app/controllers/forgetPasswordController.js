@@ -168,12 +168,12 @@ module.exports = {
 
       const findUserId = async () => {
         return await user.findOne({
-          where: { id },
+          where: { id: decodedUser },
         });
       };
 
       // get user by id
-      const userData = await findUserId(decodedUser.id);
+      const userData = await findUserId();
 
       // check user
       if (!userData) {
@@ -201,10 +201,10 @@ module.exports = {
       //     password: encryptedPassword,
       //   });
 
-      const updatePassUser = async () => {
-        return await user.update({
+      const updatePassUser = async (userId, newData) => {
+        return await user.update(newData, {
           where: {
-            id,
+            id: userId,
           },
         });
       };
