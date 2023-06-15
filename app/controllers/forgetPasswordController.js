@@ -154,7 +154,10 @@ module.exports = {
     try {
       const token = req.body.token;
       // verify token
-      const decodedUser = jwt.verify(token, process.env.ACCESS_TOKEN_SECRET);
+      const decodedUser = jwt.verify(
+        token,
+        process.env.JWT_SIGNATURE_KEY || "Rahasia"
+      );
 
       const updatePassUser = async () => {
         return await user.update({
