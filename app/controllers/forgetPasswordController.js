@@ -167,7 +167,7 @@ module.exports = {
 
       const findUserId = async () => {
         return await user.findOne({
-          where: { id: decodedUser },
+          where: { id: decodedUser.id },
         });
       };
 
@@ -200,12 +200,17 @@ module.exports = {
       //     password: encryptedPassword,
       //   });
 
-      const updatePassUser = async (id, newData) => {
-        return await user.update(newData, {
-          where: {
-            id: id,
+      const updatePassUser = async () => {
+        return await user.update(
+          {
+            password: encryptedPassword,
           },
-        });
+          {
+            where: {
+              id: userData.id,
+            },
+          }
+        );
       };
 
       //   update user password
