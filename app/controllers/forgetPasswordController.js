@@ -166,14 +166,6 @@ module.exports = {
         process.env.JWT_SIGNATURE_KEY || "Rahasia"
       );
 
-      const updatePassUser = async () => {
-        return await user.update({
-          where: {
-            id,
-          },
-        });
-      };
-
       const findUserId = async () => {
         return await user.findOne({
           where: { id },
@@ -208,6 +200,14 @@ module.exports = {
       //   const updatedUser = await updateUser(user.id, {
       //     password: encryptedPassword,
       //   });
+
+      const updatePassUser = async () => {
+        return await user.update({
+          where: {
+            id,
+          },
+        });
+      };
 
       //   update user password
       const updatedUser = await updatePassUser(userData.id, {
