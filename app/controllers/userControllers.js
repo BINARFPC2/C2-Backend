@@ -103,28 +103,28 @@ module.exports = {
       });
   },
 
-  async updatedPassword(req, res) {
-    const password = await encryptPassword(req.body.password);
-    const idUser = req.params.id;
-    user
-      .update(
-        {
-          password,
-        },
-        {
-          where: { id: idUser },
-        }
-      )
-      .then(() => {
-        res.status(200).json({
-          status: "Success",
-          message: "Update Password Success",
-        });
-      })
-      .catch((err) => {
-        res.status(422).json(err);
-      });
-  },
+  // async updatedPassword(req, res) {
+  //   const password = await encryptPassword(req.body.password);
+  //   const idUser = req.params.id;
+  //   user
+  //     .update(
+  //       {
+  //         password,
+  //       },
+  //       {
+  //         where: { id: idUser },
+  //       }
+  //     )
+  //     .then(() => {
+  //       res.status(200).json({
+  //         status: "Success",
+  //         message: "Update Password Success",
+  //       });
+  //     })
+  //     .catch((err) => {
+  //       res.status(422).json(err);
+  //     });
+  // },
 
   async deleteUser(req, res) {
     try {
