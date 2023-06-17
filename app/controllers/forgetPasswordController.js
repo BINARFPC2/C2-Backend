@@ -69,7 +69,6 @@ module.exports = {
         to: email,
         subject: "Reset Password",
         html: `   <center> 
-              <h1>Reset Password</h1>
               <p>Click this link to reset your password</p>
               <button 
                 style=
