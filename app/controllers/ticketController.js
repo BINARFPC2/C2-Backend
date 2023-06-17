@@ -1,6 +1,7 @@
 const { Ticket } = require("../models");
 const { v4: uuid } = require("uuid");
 const { Op } = require("sequelize");
+const moment = require("moment");
 
 module.exports = {
   async createTicket(req, res) {
@@ -120,12 +121,27 @@ module.exports = {
 
   async updateTicketData(req, res) {
     const idTicket = req.params.id;
+    const dateDeparture = moment(req.body.dateDeparture, "YYYY-MM-DD", true);
+    const dateReturn = moment(req.body.dateReturn, "YYYY-MM-DD", true);
+    const dateEnd = moment(req.body.dateEnd, "YYYY-MM-DD", true);
+
+    if (
+      !dateDeparture.isValid() ||
+      !dateReturn.isValid() ||
+      !dateEnd.isValid()
+    ) {
+      res.status(400).json({
+        status: "Error",
+        message: "Invalid date format",
+      });
+      return;
+    }
 
     Ticket.update(
       {
-        dateDeparture: req.body.dateDeparture,
-        dateReturn: req.body.dateReturn,
-        dateEnd: req.body.dateEnd,
+        dateDeparture,
+        dateReturn,
+        dateEnd,
         total_passenger: req.body.total_passenger,
       },
       {
