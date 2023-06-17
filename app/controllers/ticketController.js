@@ -134,7 +134,7 @@ module.exports = {
     ).then(() => {
       res.status(200).json({
         status: "Success",
-        message: "Update Data User Successfully",
+        message: "Update Data Ticket Successfully",
       });
     });
   },
