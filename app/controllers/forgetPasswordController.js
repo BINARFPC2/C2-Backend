@@ -216,10 +216,7 @@ module.exports = {
       // send response
       res
         .status(200)
-        .redirect("https://tes-deploy-production.up.railway.app/login", {
-          status: "success",
-          message: "reset password success",
-        });
+        .redirect("https://tes-deploy-production.up.railway.app/login");
     } catch (error) {
       res.status(500).send({
         status: "error",
