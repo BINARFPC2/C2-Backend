@@ -121,9 +121,21 @@ module.exports = {
 
   async updateTicketData(req, res) {
     const idTicket = req.params.id;
-    const dateDeparture = moment(req.body.dateDeparture, "MM-DD-YYYY", true);
-    const dateReturn = moment(req.body.dateReturn, "MM-DD-YYYY", true);
-    const dateEnd = moment(req.body.dateEnd, "MM-DD-YYYY", true);
+    const dateDeparture = moment(req.body.dateDeparture, "YYYY-MM-DD", true);
+    const dateReturn = moment(req.body.dateReturn, "YYYY-MM-DD", true);
+    const dateEnd = moment(req.body.dateEnd, "YYYY-MM-DD", true);
+
+    if (
+      !dateDeparture.isValid() ||
+      !dateReturn.isValid() ||
+      !dateEnd.isValid()
+    ) {
+      res.status(400).json({
+        status: "Error",
+        message: "Invalid date format",
+      });
+      return;
+    }
 
     Ticket.update(
       {
