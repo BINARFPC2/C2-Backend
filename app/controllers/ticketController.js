@@ -125,18 +125,6 @@ module.exports = {
     const dateReturn = moment(req.body.dateReturn, "MM-DD-YYYY", true);
     const dateEnd = moment(req.body.dateEnd, "MM-DD-YYYY", true);
 
-    if (
-      !dateDeparture.isValid() ||
-      !dateReturn.isValid() ||
-      !dateEnd.isValid()
-    ) {
-      res.status(400).json({
-        status: "Error",
-        message: "Invalid date format",
-      });
-      return;
-    }
-
     Ticket.update(
       {
         dateDeparture,
