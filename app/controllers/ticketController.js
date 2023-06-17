@@ -21,15 +21,15 @@ module.exports = {
         price,
         available,
       } = req.body;
-      if (dateDeparture && dateEnd && dateReturn) {
-        querySearch.releaseDate = {
-          [Op.between]: [
-            new Date(dateDeparture),
-            new Date(dateEnd),
-            new Date(dateReturn),
-          ],
-        };
-      }
+      // if (dateDeparture && dateEnd && dateReturn) {
+      //   querySearch.releaseDate = {
+      //     [Op.between]: [
+      //       new Date(dateDeparture),
+      //       new Date(dateEnd),
+      //       new Date(dateReturn),
+      //     ],
+      //   };
+      // }
       const addTicket = await Ticket.create({
         id: uuid(),
         city_from: city_from,

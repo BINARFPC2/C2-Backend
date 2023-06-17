@@ -195,11 +195,6 @@ module.exports = {
       // encrypt password
       const encryptedPassword = await encryptPassword(password);
 
-      // update user password
-      //   const updatedUser = await updateUser(user.id, {
-      //     password: encryptedPassword,
-      //   });
-
       const updatePassUser = async () => {
         return await user.update(
           {
