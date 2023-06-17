@@ -19,7 +19,6 @@ module.exports = {
         dateLanding: "10:45",
         dateDeparture: new Date(),
         dateReturn: new Date(), // req body
-        dateEnd: new Date(),
         type_seat: "Economy",
         price: 994000,
         booking_code: "8vyb7rq8mp",
@@ -39,7 +38,6 @@ module.exports = {
         dateLanding: "10:45",
         dateDeparture: new Date(),
         dateReturn: new Date(), // req body
-        dateEnd: new Date(),
         type_seat: "Economy",
         price: 994000,
         booking_code: "01igwwduht",
@@ -59,7 +57,6 @@ module.exports = {
         dateLanding: "10:45",
         dateDeparture: new Date(),
         dateReturn: new Date(), // req body
-        dateEnd: new Date(),
         type_seat: "Economy",
         price: 89000,
         booking_code: "k1jox1lmrg",
@@ -79,7 +76,6 @@ module.exports = {
         dateLanding: "10:45",
         dateDeparture: new Date(),
         dateReturn: new Date(), // req body
-        dateEnd: new Date(),
         type_seat: "Economy",
         price: 89000,
         booking_code: "avnind191w",
@@ -99,7 +95,6 @@ module.exports = {
         dateLanding: "11:45",
         dateDeparture: new Date(),
         dateReturn: new Date(), // req body
-        dateEnd: new Date(),
         type_seat: "Garuda Indonesia",
         price: 1994000,
         booking_code: "r1aqm8spdm",
@@ -119,7 +114,6 @@ module.exports = {
         dateLanding: "11:45",
         dateDeparture: new Date(),
         dateReturn: new Date(), // req body
-        dateEnd: new Date(),
         type_seat: "Garuda Indonesia",
         price: 1994000,
         booking_code: "0qib5bdz9f",
@@ -139,7 +133,6 @@ module.exports = {
         dateLanding: "10:45",
         dateDeparture: new Date(),
         dateReturn: new Date(), // req body
-        dateEnd: new Date(),
         type_seat: "Business",
         price: 1384985,
         booking_code: "p7qu8r9efy",
@@ -159,7 +152,6 @@ module.exports = {
         dateLanding: "10:45",
         dateDeparture: new Date(),
         dateReturn: new Date(), // req body
-        dateEnd: new Date(),
         type_seat: "Business",
         price: 1384985,
         booking_code: "3t83jxslfc",
@@ -179,7 +171,6 @@ module.exports = {
         dateLanding: "11:45",
         dateDeparture: new Date(),
         dateReturn: new Date(), // req body
-        dateEnd: new Date(),
         type_seat: "Economy",
         price: 692492,
         booking_code: "abro1m2sxx",
@@ -199,7 +190,6 @@ module.exports = {
         dateLanding: "11:45",
         dateDeparture: new Date(),
         dateReturn: new Date(), // req body
-        dateEnd: new Date(),
         type_seat: "Economy",
         price: 692492,
         booking_code: "zz64zx4e7m",
@@ -219,7 +209,6 @@ module.exports = {
         dateLanding: "11:45",
         dateDeparture: new Date(),
         dateReturn: new Date(), // req body
-        dateEnd: new Date(),
         type_seat: "Economy",
         price: 670492,
         booking_code: "ffokihfe7u",
@@ -239,7 +228,6 @@ module.exports = {
         dateLanding: "11:45",
         dateDeparture: new Date(),
         dateReturn: new Date(), // req body
-        dateEnd: new Date(),
         type_seat: "Economy",
         price: 670492,
         booking_code: "iq1x9j0vri",
@@ -259,7 +247,6 @@ module.exports = {
         dateLanding: "10:45",
         dateDeparture: new Date(),
         dateReturn: new Date(), // req body
-        dateEnd: new Date(),
         type_seat: "Economy",
         price: 592600,
         booking_code: "pd13o75qf5",
@@ -279,7 +266,6 @@ module.exports = {
         dateLanding: "10:45",
         dateDeparture: new Date(),
         dateReturn: new Date(), // req body
-        dateEnd: new Date(),
         type_seat: "Economy",
         price: 592600,
         booking_code: "waj7rynn88",
@@ -299,7 +285,6 @@ module.exports = {
         dateLanding: "10:45",
         dateDeparture: new Date(),
         dateReturn: new Date(), // req body
-        dateEnd: new Date(),
         type_seat: "Economy",
         price: 1292600,
         booking_code: "5p5tag7fr6",
@@ -319,7 +304,6 @@ module.exports = {
         dateLanding: "10:45",
         dateDeparture: new Date(),
         dateReturn: new Date(), // req body
-        dateEnd: new Date(),
         type_seat: "Economy",
         price: 1292600,
         booking_code: "uvc0wvxd4i",
@@ -339,7 +323,6 @@ module.exports = {
         dateLanding: "22:35",
         dateDeparture: new Date(),
         dateReturn: new Date(), // req body
-        dateEnd: new Date(),
         type_seat: "Economy",
         price: 5586630,
         booking_code: "v6zvbnap79",
@@ -359,7 +342,6 @@ module.exports = {
         dateLanding: "22:35",
         dateDeparture: new Date(),
         dateReturn: new Date(), // req body
-        dateEnd: new Date(),
         type_seat: "Economy",
         price: 5586630,
         booking_code: "5b95kfzsb3",
@@ -379,7 +361,6 @@ module.exports = {
         dateLanding: "09:05",
         dateDeparture: new Date(),
         dateReturn: new Date(), // req body
-        dateEnd: new Date(),
         type_seat: "Economy",
         price: 891800,
         booking_code: "pnidtc9dc1",
@@ -399,7 +380,6 @@ module.exports = {
         dateLanding: "09:05",
         dateDeparture: new Date(),
         dateReturn: new Date(), // req body
-        dateEnd: new Date(),
         type_seat: "Economy",
         price: 891800,
         booking_code: "hz7hf6bwlv",
@@ -419,7 +399,6 @@ module.exports = {
         dateLanding: "09:05",
         dateDeparture: new Date(),
         dateReturn: new Date(), // req body
-        dateEnd: new Date(),
         type_seat: "Bussines",
         price: 1891800,
         booking_code: "hgo8cad0yp",
@@ -439,7 +418,6 @@ module.exports = {
         dateLanding: "09:05",
         dateDeparture: new Date(),
         dateReturn: new Date(), // req body
-        dateEnd: new Date(),
         type_seat: "Bussines",
         price: 1891800,
         booking_code: "n6i0wzow6v",
@@ -459,7 +437,6 @@ module.exports = {
         dateLanding: "17.20",
         dateDeparture: new Date(),
         dateReturn: new Date(), // req body
-        dateEnd: new Date(),
         type_seat: "Bussines",
         price: 13805100,
         booking_code: "fzng31b9md",
@@ -479,7 +456,6 @@ module.exports = {
         dateLanding: "17.20",
         dateDeparture: new Date(),
         dateReturn: new Date(), // req body
-        dateEnd: new Date(),
         type_seat: "Bussines",
         price: 13805100,
         booking_code: "0gs4vv28b6",

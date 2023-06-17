@@ -41,10 +41,6 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DATEONLY,
       },
-      dateEnd: {
-        allowNull: false,
-        type: Sequelize.DATEONLY,
-      },
       type_seat: {
         type: Sequelize.STRING,
       },
