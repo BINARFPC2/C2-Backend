@@ -120,19 +120,15 @@ module.exports = {
 
   async updateTicketData(req, res) {
     const idTicket = req.params.id;
-    const findTicketId = async () => {
-      return await Ticket.findOne({
-        where: {
-          id: idTicket,
-        },
-      });
-    };
+
     Ticket.update(
       {
         dateDeparture: req.body.dateDeparture,
+        dateReturn: req.body.dateReturn,
+        dateEnd: req.body.dateEnd,
       },
       {
-        where: { id: req.params.id },
+        where: { id: idTicket },
       }
     ).then(() => {
       res.status(200).json({
