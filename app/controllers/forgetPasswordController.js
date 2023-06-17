@@ -214,7 +214,7 @@ module.exports = {
       });
 
       // send response
-      res.status(200).json({
+      res.status(200).render("resetSucces", {
         status: "success",
         message: "reset password success",
       });
