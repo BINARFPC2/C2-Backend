@@ -9,6 +9,7 @@ const {
   getAllTickets,
   createTicket,
   getTicketById,
+  updateTicketData,
 } = require("../app/controllers/ticketController");
 
 const {
@@ -94,6 +95,9 @@ router.get("/api/v1/tickets/:id", getTicketById);
 
 // Create Ticket
 router.post("/api/v1/tickets", createTicket);
+
+// Put Ticket By Id
+router.put("/api/v1/tickets/:id", updateTicketData);
 
 // Add Destinasi Favorite
 router.post("/api/v1/destfavorite", createdesfav);

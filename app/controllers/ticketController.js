@@ -117,4 +117,28 @@ module.exports = {
       });
     }
   },
+
+  async updateTicketData(req, res) {
+    const idTicket = req.params.id;
+    const findTicketId = async () => {
+      return await Ticket.findOne({
+        where: {
+          id: idTicket,
+        },
+      });
+    };
+    Ticket.update(
+      {
+        dateDeparture: req.body.dateDeparture,
+      },
+      {
+        where: { id: req.params.id },
+      }
+    ).then(() => {
+      res.status(200).json({
+        status: "Success",
+        message: "Update Data User Successfully",
+      });
+    });
+  },
 };
