@@ -126,6 +126,7 @@ module.exports = {
         dateDeparture: req.body.dateDeparture,
         dateReturn: req.body.dateReturn,
         dateEnd: req.body.dateEnd,
+        total_passenger: req.body.total_passenger,
       },
       {
         where: { id: idTicket },
