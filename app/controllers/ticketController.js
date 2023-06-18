@@ -131,33 +131,20 @@ module.exports = {
     }
 
     try {
-      const ticket = await Ticket.findByPk(idTicket); // Ambil data tiket berdasarkan idTicket
-      const originalPrice = ticket.price; // Simpan harga asli dari data tiket
+      const ticket = await Ticket.findByPk(idTicket);
+      const originalPrice = ticket.price;
 
       if (req.body.total_passenger && ticket.price) {
-        const totalPrice = req.body.total_passenger * ticket.price;
+        const totalPrice =
+          parseFloat(ticket.price) * parseInt(req.body.total_passenger);
         updateData.price = totalPrice;
       } else {
-        updateData.price = originalPrice; // Menggunakan harga asli jika total passenger tidak ada
+        updateData.price = originalPrice;
       }
 
       await Ticket.update(updateData, {
         where: { id: idTicket },
       });
-
-      // Reset harga jika total passenger berkurang
-      if (
-        req.body.total_passenger &&
-        req.body.total_passenger < ticket.total_passenger
-      ) {
-        const resetData = {
-          price: originalPrice,
-        };
-
-        await Ticket.update(resetData, {
-          where: { id: idTicket },
-        });
-      }
 
       res.status(200).json({
         status: "Success",
