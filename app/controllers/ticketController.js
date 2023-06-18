@@ -130,21 +130,33 @@ module.exports = {
       updateData.dateReturn = req.body.dateReturn;
     }
 
-    Ticket.update(updateData, {
-      where: { id: idTicket },
-    })
-      .then(() => {
+    try {
+      const ticket = await Ticket.findByPk(idTicket);
+
+      if (ticket) {
+        const totalPrice = ticket.price * req.body.total_passenger;
+        updateData.price = totalPrice;
+
+        await Ticket.update(updateData, {
+          where: { id: idTicket },
+        });
+
         res.status(200).json({
           status: "Success",
           message: "Update Data Ticket Successfully",
         });
-      })
-      .catch((error) => {
-        console.log(error);
-        res.status(500).json({
+      } else {
+        res.status(404).json({
           status: "Error",
-          message: "Failed to update ticket data",
+          message: "Ticket not found",
         });
+      }
+    } catch (error) {
+      console.log(error);
+      res.status(500).json({
+        status: "Error",
+        message: "Failed to update ticket data",
       });
+    }
   },
 };
