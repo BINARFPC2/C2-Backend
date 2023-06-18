@@ -121,20 +121,30 @@ module.exports = {
   async updateTicketData(req, res) {
     const idTicket = req.params.id;
 
-    Ticket.update(
-      {
-        dateDeparture: req.body.dateDeparture,
-        dateReturn: req.body.dateReturn || null,
-        total_passenger: req.body.total_passenger,
-      },
-      {
-        where: { id: idTicket },
-      }
-    ).then(() => {
-      res.status(200).json({
-        status: "Success",
-        message: "Update Data Ticket Successfully",
+    const updateData = {
+      dateDeparture: req.body.dateDeparture,
+      total_passenger: req.body.total_passenger,
+    };
+
+    if (req.body.dateReturn) {
+      updateData.dateReturn = req.body.dateReturn;
+    }
+
+    Ticket.update(updateData, {
+      where: { id: idTicket },
+    })
+      .then(() => {
+        res.status(200).json({
+          status: "Success",
+          message: "Update Data Ticket Successfully",
+        });
+      })
+      .catch((error) => {
+        console.log(error);
+        res.status(500).json({
+          status: "Error",
+          message: "Failed to update ticket data",
+        });
       });
-    });
   },
 };
