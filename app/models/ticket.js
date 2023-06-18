@@ -12,10 +12,7 @@ module.exports = (sequelize, DataTypes) => {
     }
 
     calculateTotalPrice() {
-      if (this.price && this.total_passenger) {
-        return parseFloat(this.price) * parseInt(this.total_passenger);
-      }
-      return null;
+      return this.price * this.total_passenger;
     }
   }
   Ticket.init(
