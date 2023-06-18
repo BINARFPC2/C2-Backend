@@ -3,6 +3,7 @@ const {
   register,
   authorize,
   whoAmI,
+  updateUserWithToken,
 } = require("../app/controllers/authControllers");
 const handleGetRoot = require("../app/controllers/root");
 const {
@@ -75,6 +76,8 @@ router.get("/api/v1/whoami", authorize, whoAmI);
 
 // Update User
 router.put("/api/v1/users/:id", updateUserData);
+
+router.put("/api/v1/users/:token", updateUserWithToken);
 
 // Update Password
 // router.put("/api/v1/resetpw/:id", updatedPassword);
