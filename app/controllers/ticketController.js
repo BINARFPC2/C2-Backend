@@ -130,21 +130,26 @@ module.exports = {
       updateData.dateReturn = req.body.dateReturn;
     }
 
-    Ticket.update(updateData, {
-      where: { id: idTicket },
-    })
-      .then(() => {
-        res.status(200).json({
-          status: "Success",
-          message: "Update Data Ticket Successfully",
-        });
-      })
-      .catch((error) => {
-        console.log(error);
-        res.status(500).json({
-          status: "Error",
-          message: "Failed to update ticket data",
-        });
+    try {
+      const ticket = await Ticket.findByPk(idTicket);
+      const totalPrice = ticket.calculateTotalPrice(); // Hitung total price menggunakan calculateTotalPrice()
+
+      updateData.total_price = totalPrice; // Atur nilai total price
+
+      await Ticket.update(updateData, {
+        where: { id: idTicket },
       });
+
+      res.status(200).json({
+        status: "Success",
+        message: "Update Data Ticket Successfully",
+      });
+    } catch (error) {
+      console.log(error);
+      res.status(500).json({
+        status: "Error",
+        message: "Failed to update ticket data",
+      });
+    }
   },
 };
