@@ -132,10 +132,11 @@ module.exports = {
 
     try {
       const ticket = await Ticket.findByPk(idTicket);
-      const totalPrice = ticket.calculateTotalPrice(); // Hitung total price menggunakan calculateTotalPrice()
+      // Hitung total price baru
+      const totalPrice = ticket.price * total_passenger;
 
-      updateData.total_price = totalPrice; // Atur nilai total price
-
+      // Update total_price di data tiket
+      ticket.total_price = totalPrice;
       await Ticket.update(updateData, {
         where: { id: idTicket },
       });
