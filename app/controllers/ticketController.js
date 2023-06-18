@@ -137,6 +137,8 @@ module.exports = {
       if (req.body.total_passenger && ticket.price) {
         const totalPrice = req.body.total_passenger * ticket.price;
         updateData.price = totalPrice;
+      } else {
+        updateData.price = originalPrice; // Menggunakan harga asli jika total passenger tidak ada
       }
 
       await Ticket.update(updateData, {
@@ -147,20 +149,6 @@ module.exports = {
         status: "Success",
         message: "Update Data Ticket Successfully",
       });
-
-      // Reset harga jika total passenger berubah
-      if (
-        req.body.total_passenger &&
-        req.body.total_passenger !== ticket.total_passenger
-      ) {
-        const resetData = {
-          price: originalPrice,
-        };
-
-        await Ticket.update(resetData, {
-          where: { id: idTicket },
-        });
-      }
     } catch (error) {
       console.log(error);
       res.status(500).json({
