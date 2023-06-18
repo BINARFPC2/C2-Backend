@@ -59,7 +59,7 @@ module.exports = {
         type: Sequelize.INTEGER,
       },
       total_price: {
-        type: Sequelize.FLOAT,
+        type: Sequelize.INTEGER,
       },
 
       available: {

@@ -31,7 +31,7 @@ module.exports = (sequelize, DataTypes) => {
       adult_price: DataTypes.INTEGER,
       child_price: DataTypes.INTEGER,
       price: DataTypes.INTEGER,
-      total_price: DataTypes.FLOAT,
+      total_price: DataTypes.INTEGER,
       booking_code: DataTypes.STRING,
       available: DataTypes.BOOLEAN,
     },
