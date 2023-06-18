@@ -124,7 +124,7 @@ module.exports = {
     Ticket.update(
       {
         dateDeparture: req.body.dateDeparture,
-        dateReturn: req.body.dateReturn,
+        dateReturn: req.body.dateReturn || null,
         total_passenger: req.body.total_passenger,
       },
       {
