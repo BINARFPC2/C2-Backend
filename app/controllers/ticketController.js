@@ -135,9 +135,10 @@ module.exports = {
       // Hitung total price baru
       const totalPrice = ticket.price * updateData.total_passenger;
       // Update total_price di data tiket
-
-      // Update total_price di data tiket
       ticket.total_price = totalPrice;
+
+      await ticket.save();
+
       await Ticket.update(updateData, {
         where: { id: idTicket },
       });
