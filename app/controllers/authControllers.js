@@ -164,7 +164,7 @@ module.exports = {
   async updateUserWithToken(req, res) {
     try {
       // mendapatkan token dari URL
-      const token = req.params.token;
+      const token = req.headers.authorization.split(" ")[1];
 
       // verifikasi token
       const decodedUser = jwt.verify(
@@ -172,16 +172,16 @@ module.exports = {
         process.env.JWT_SIGNATURE_KEY || "Rahasia"
       );
 
-      // fungsi untuk mencari user berdasarkan ID
-      const findUserById = async (id) => {
-        return await user.findOne({
-          where: { id: id },
-        });
-      };
+      // // fungsi untuk mencari user berdasarkan ID
+      // const findUserById = async (id) => {
+      //   return await user.findOne({
+      //     where: { id: id },
+      //   });
+      // };
 
       // Mendapatkan data user berdasarkan ID yang terdekripsi dari token
 
-      const userData = await findUserById(decodedUser.id);
+      const userData = await user.findByPk(decodedUser.id);
 
       // Memeriksa apakah data user ditemukan
       if (!userData) {
@@ -189,7 +189,6 @@ module.exports = {
           status: "Error",
           message: "Token not found",
         });
-        return;
       }
 
       // melakukan update pada data user

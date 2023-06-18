@@ -77,7 +77,7 @@ router.get("/api/v1/whoami", authorize, whoAmI);
 // Update User
 router.put("/api/v1/users/:id", updateUserData);
 
-router.put("/api/v1/users/:token", updateUserWithToken);
+router.put("/api/v1/users", updateUserWithToken);
 
 // Update Password
 // router.put("/api/v1/resetpw/:id", updatedPassword);
