@@ -38,7 +38,6 @@ module.exports = {
         type: Sequelize.DATEONLY,
       },
       dateReturn: {
-        allowNull: false,
         type: Sequelize.DATEONLY,
       },
       type_seat: {
