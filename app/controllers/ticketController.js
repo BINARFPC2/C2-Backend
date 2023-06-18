@@ -145,6 +145,20 @@ module.exports = {
         where: { id: idTicket },
       });
 
+      // Reset harga jika total passenger berkurang
+      if (
+        req.body.total_passenger &&
+        req.body.total_passenger < ticket.total_passenger
+      ) {
+        const resetData = {
+          price: originalPrice,
+        };
+
+        await Ticket.update(resetData, {
+          where: { id: idTicket },
+        });
+      }
+
       res.status(200).json({
         status: "Success",
         message: "Update Data Ticket Successfully",
