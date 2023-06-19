@@ -104,10 +104,10 @@ module.exports = {
       where: querySearch,
     });
 
-    if (dateDeparture && !tickets.length) {
+    if ((dateDeparture && !tickets.length) || (dateReturn && !tickets.length)) {
       res.status(404).json({
         status: "Error",
-        message: "No tickets found for the specified dateDeparture",
+        message: "No tickets found",
       });
     } else {
       res.status(200).json({
