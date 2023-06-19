@@ -13,11 +13,7 @@ module.exports = (sequelize, DataTypes) => {
   }
   Checkout.init(
     {
-      ticketsId: {
-        type: DataTypes.UUID,
-        defaultValue: DataTypes.UUIDV4,
-        primaryKey: true,
-      },
+      ticketsId: DataTypes.UUID,
       name: DataTypes.STRING,
       email: DataTypes.STRING,
       phone: DataTypes.STRING,
