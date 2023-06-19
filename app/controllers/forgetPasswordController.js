@@ -141,14 +141,12 @@ module.exports = {
         });
         return;
       }
-      res
-        .status(200)
-        .redirect("https://tes-deploy-production.up.railway.app/reset", {
-          status: "success",
-          message: "reset password view",
-          data: userData,
-          token,
-        });
+      res.status(200).json({
+        status: "success",
+        message: "reset password view",
+        data: userData,
+        token,
+      });
     } catch (error) {
       res.status(500).send({
         status: "error",
