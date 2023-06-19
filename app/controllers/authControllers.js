@@ -150,7 +150,6 @@ module.exports = {
         token,
         process.env.JWT_SIGNATURE_KEY || "Rahasia"
       );
-
       req.user = await user.findByPk(tokenPayload.id);
       next();
     } catch (error) {
