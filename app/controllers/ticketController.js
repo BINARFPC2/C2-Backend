@@ -117,7 +117,6 @@ module.exports = {
         });
       };
       const dataTicketId = await findTicketId();
-
       if (!dataTicketId) {
         res.status(404).json({
           status: "Failed",
