@@ -157,13 +157,13 @@ module.exports = {
   async resetPass(req, res) {
     const { password, confirmPassword } = req.body;
     try {
-      const token = req.body.token;
-      // verify token
+      const token = req.headers.authorization.split(" ")[1];
+
+      // verifikasi token
       const decodedUser = jwt.verify(
         token,
         process.env.JWT_SIGNATURE_KEY || "Rahasia"
       );
-
       const findUserId = async () => {
         return await user.findOne({
           where: { id: decodedUser.id },
