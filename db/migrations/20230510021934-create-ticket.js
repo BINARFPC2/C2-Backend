@@ -37,7 +37,12 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DATEONLY,
       },
+      dateEnd: {
+        allowNull: false,
+        type: Sequelize.DATEONLY,
+      },
       dateReturn: {
+        allowNull: false,
         type: Sequelize.DATEONLY,
       },
       type_seat: {
@@ -46,22 +51,9 @@ module.exports = {
       booking_code: {
         type: Sequelize.STRING,
       },
-      total_passenger: {
-        type: Sequelize.INTEGER,
-      },
-      adult_price: {
-        type: Sequelize.INTEGER,
-      },
-      child_price: {
-        type: Sequelize.INTEGER,
-      },
       price: {
         type: Sequelize.INTEGER,
       },
-      total_price: {
-        type: Sequelize.INTEGER,
-      },
-
       available: {
         type: Sequelize.BOOLEAN,
       },

@@ -10,9 +10,9 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       this.hasMany(models.Transaction, { foreignKey: "ticketsId" });
     }
-    calculateTotalPrice() {
-      return this.price * this.total_passenger;
-    }
+    // calculateTotalPrice() {
+    //   return this.price * this.total_passenger;
+    // }
   }
   Ticket.init(
     {
@@ -25,13 +25,10 @@ module.exports = (sequelize, DataTypes) => {
       dateTakeoff: DataTypes.STRING,
       dateLanding: DataTypes.STRING,
       dateDeparture: DataTypes.DATEONLY,
+      dateEnd: DataTypes.DATEONLY,
       dateReturn: DataTypes.DATEONLY,
       type_seat: DataTypes.STRING,
-      total_passenger: DataTypes.INTEGER,
-      adult_price: DataTypes.INTEGER,
-      child_price: DataTypes.INTEGER,
       price: DataTypes.INTEGER,
-      total_price: DataTypes.INTEGER,
       booking_code: DataTypes.STRING,
       available: DataTypes.BOOLEAN,
     },
@@ -41,12 +38,12 @@ module.exports = (sequelize, DataTypes) => {
     }
   );
   // Hook to automatically update total_price when price or total_passenger changes
-  Ticket.addHook("beforeSave", (ticket, options) => {
-    if (ticket.changed("price") || ticket.changed("total_passenger")) {
-      const totalPrice = ticket.calculateTotalPrice();
-      ticket.setDataValue("total_price", totalPrice);
-    }
-  });
+  // Ticket.addHook("beforeSave", (ticket, options) => {
+  //   if (ticket.changed("price") || ticket.changed("total_passenger")) {
+  //     const totalPrice = ticket.calculateTotalPrice();
+  //     ticket.setDataValue("total_price", totalPrice);
+  //   }
+  // });
 
   return Ticket;
 };
