@@ -100,14 +100,22 @@ module.exports = {
       };
     }
 
-    const tickets = await Ticket.findAll({
-      where: querySearch,
-    });
-    res.status(200).json({
-      status: "Success",
-      message: "Get All Data Ticket Success",
-      data: tickets,
-    });
+    // Check if no date criteria is provided
+    if (!dateDeparture && !dateEnd && !dateReturn) {
+      const tickets = await Ticket.findAll({
+        where: querySearch,
+      });
+      res.status(200).json({
+        status: "Success",
+        message: "Get All Data Ticket Success",
+        data: tickets,
+      });
+    } else {
+      res.status(400).json({
+        status: "Error",
+        message: "Invalid date criteria",
+      });
+    }
   },
 
   async getTicketById(req, res) {
