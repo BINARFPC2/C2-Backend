@@ -100,20 +100,20 @@ module.exports = {
       };
     }
 
-    // Check if no date criteria is provided
-    if (!dateDeparture && !dateEnd && !dateReturn) {
-      const tickets = await Ticket.findAll({
-        where: querySearch,
+    const tickets = await Ticket.findAll({
+      where: querySearch,
+    });
+
+    if (dateDeparture && !tickets.length) {
+      res.status(404).json({
+        status: "Error",
+        message: "No tickets found for the specified dateDeparture",
       });
+    } else {
       res.status(200).json({
         status: "Success",
         message: "Get All Data Ticket Success",
         data: tickets,
-      });
-    } else {
-      res.status(400).json({
-        status: "Error",
-        message: "Invalid date criteria",
       });
     }
   },
