@@ -33,7 +33,7 @@ module.exports = {
         ktppaspor: ktppaspor,
         issuingcountry: issuingcountry,
         expirationdatepass: expirationdatepass,
-        total_passenger,
+        total_passenger: total_passenger,
       });
       res.status(201).json({
         status: "Success",
