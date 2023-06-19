@@ -80,34 +80,34 @@ module.exports = {
       type_seat: {
         [Op.iLike]: `%${type_seat}`,
       },
-      dateDeparture: {
-        [Op.eq]: `%${dateDeparture}`,
-      },
-      dateEnd: {
-        [Op.eq]: `%${dateEnd}`,
-      },
-      dateReturn: {
-        [Op.eq]: `%${dateReturn}`,
-      },
     };
+
+    if (dateDeparture && Date.parse(dateDeparture)) {
+      querySearch.dateDeparture = {
+        [Op.eq]: dateDeparture,
+      };
+    }
+
+    if (dateEnd && Date.parse(dateEnd)) {
+      querySearch.dateEnd = {
+        [Op.eq]: dateEnd,
+      };
+    }
+
+    if (dateReturn && Date.parse(dateReturn)) {
+      querySearch.dateReturn = {
+        [Op.eq]: dateReturn,
+      };
+    }
 
     const tickets = await Ticket.findAll({
       where: querySearch,
     });
-
-    if (tickets.length === 0) {
-      // Data tiket tidak ditemukan
-      res.status(404).json({
-        status: "Error",
-        message: "No tickets found with the given criteria",
-      });
-    } else {
-      res.status(200).json({
-        status: "Success",
-        message: "Get All Data Ticket Success",
-        data: tickets,
-      });
-    }
+    res.status(200).json({
+      status: "Success",
+      message: "Get All Data Ticket Success",
+      data: tickets,
+    });
   },
 
   async getTicketById(req, res) {
