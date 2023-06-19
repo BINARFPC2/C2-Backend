@@ -25,7 +25,7 @@ form .input-field {
   position: relative;
   height: 55px;
   width: 100%;
-} 
+}
 .input-field input {
   height: 100%;
   width: 100%;
@@ -52,7 +52,6 @@ form .input-field {
   display: none;
 }
 
-
 .error .error-icon {
   margin-right: 6px;
   font-size: 15px;
@@ -70,10 +69,23 @@ form .input-field {
   color: #fff;
   font-size: 16px;
   font-weight: 400;
-  background-color: #7126B5;
+  background-color: #7126b5;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 .button input:hover {
-  background-color: #7126B5;
+  background-color: #7126b5;
+}
+
+.alert-success {
+  width: 273px;
+  height: 52px;
+  text-align: center;
+  background-color: #73ca5c;
+  border-radius: 12px;
+}
+
+.alert-success p {
+  color: white;
+  line-height: 52px;
 }
