@@ -99,7 +99,6 @@ module.exports = {
         [Op.eq]: dateReturn,
       };
     }
-
     const tickets = await Ticket.findAll({
       where: querySearch,
     });
