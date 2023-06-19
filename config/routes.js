@@ -88,7 +88,7 @@ router.delete("/api/v1/users/:id", deleteUser);
 // forget password
 router.post("/api/v1/forget-password", forgetPass);
 router.get("/api/v1/reset-password/:token", resetPassView);
-// router.put("/api/v1/reset-password", resetPass);
+router.put("/api/v1/reset-password", resetPass);
 
 // Get Ticket
 router.get("/api/v1/tickets", getAllTickets);

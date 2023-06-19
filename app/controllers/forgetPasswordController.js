@@ -141,14 +141,12 @@ module.exports = {
         });
         return;
       }
-      res
-        .status(200)
-        .redirect("https://tes-deploy-production.up.railway.app/reset", {
-          status: "success",
-          message: "reset password view",
-          data: userData,
-          token,
-        });
+      res.status(200).render("resetPassword", {
+        status: "success",
+        message: "reset password view",
+        data: userData,
+        token,
+      });
     } catch (error) {
       res.status(500).send({
         status: "error",
@@ -156,73 +154,71 @@ module.exports = {
       });
     }
   },
-  // async resetPass(req, res) {
-  //   const { password, confirmPassword } = req.body;
-  //   try {
-  //     const token = req.body.token;
-  //     // verify token
-  //     const decodedUser = jwt.verify(
-  //       token,
-  //       process.env.JWT_SIGNATURE_KEY || "Rahasia"
-  //     );
+  async resetPass(req, res) {
+    const { password, confirmPassword } = req.body;
+    try {
+      const token = req.body.token;
+      // verify token
+      const decodedUser = jwt.verify(
+        token,
+        process.env.JWT_SIGNATURE_KEY || "Rahasia"
+      );
 
-  //     const findUserId = async () => {
-  //       return await user.findOne({
-  //         where: { id: decodedUser.id },
-  //       });
-  //     };
+      const findUserId = async () => {
+        return await user.findOne({
+          where: { id: decodedUser.id },
+        });
+      };
 
-  //     // get user by id
-  //     const userData = await findUserId();
+      // get user by id
+      const userData = await findUserId();
 
-  //     // check user
-  //     if (!userData) {
-  //       res.status(400).send({
-  //         status: "error",
-  //         message: "Token reset password not found",
-  //       });
-  //       return;
-  //     }
+      // check user
+      if (!userData) {
+        res.status(400).send({
+          status: "error",
+          message: "Token reset password not found",
+        });
+        return;
+      }
 
-  //     // check password
-  //     if (password !== confirmPassword) {
-  //       res.status(400).send({
-  //         status: "error",
-  //         message: "Password not match",
-  //       });
-  //       return;
-  //     }
+      // check password
+      if (password !== confirmPassword) {
+        res.status(400).send({
+          status: "error",
+          message: "Password not match",
+        });
+        return;
+      }
 
-  //     // encrypt password
-  //     const encryptedPassword = await encryptPassword(password);
+      // encrypt password
+      const encryptedPassword = await encryptPassword(password);
 
-  //     const updatePassUser = async () => {
-  //       return await user.update(
-  //         {
-  //           password: encryptedPassword,
-  //         },
-  //         {
-  //           where: {
-  //             id: userData.id,
-  //           },
-  //         }
-  //       );
-  //     };
+      const updatePassUser = async () => {
+        return await user.update(
+          {
+            password: encryptedPassword,
+          },
+          {
+            where: {
+              id: userData.id,
+            },
+          }
+        );
+      };
 
-  //     //   update user password
-  //     const updatedUser = await updatePassUser(userData.id, {
-  //       password: encryptedPassword,
-  //     });
+      //   update user password
+      const updatedUser = await updatePassUser(userData.id, {
+        password: encryptedPassword,
+      });
 
-  //     // send response
-  //     res
-  //       .status(200)
-  //       .redirect("https://tes-deploy-production.up.railway.app/login");
-  //   } catch (error) {
-  //     res.status(500).send({
-  //       status: "error",
-  //       message: error.message,
-  //     });
-  //   }
-  // },
+      // send response
+      res.status(200);
+    } catch (error) {
+      res.status(500).send({
+        status: "error",
+        message: error.message,
+      });
+    }
+  },
 };
