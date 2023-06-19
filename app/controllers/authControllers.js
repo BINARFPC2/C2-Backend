@@ -135,10 +135,7 @@ module.exports = {
         status: "error",
         message: "Login Failed",
         error: error.message,
-// <<<<<<< HEAD
         data: {},
-// =======
-// >>>>>>> 9a7d5c261571b1ae7d3d4607ed6e4c7ba0d506c6
       });
     }
   },
