@@ -141,12 +141,14 @@ module.exports = {
         });
         return;
       }
-      res.status(200).render("resetPassword", {
-        status: "success",
-        message: "reset password view",
-        data: userData,
-        token,
-      });
+      res
+        .status(200)
+        .redirect("https://tes-deploy-production.up.railway.app/reset", {
+          status: "success",
+          message: "reset password view",
+          data: userData,
+          token,
+        });
     } catch (error) {
       res.status(500).send({
         status: "error",
@@ -213,7 +215,10 @@ module.exports = {
       });
 
       // send response
-      res.status(200);
+      res.status(200).json({
+        status: "Success",
+        message: "update password successfully",
+      });
     } catch (error) {
       res.status(500).send({
         status: "error",
