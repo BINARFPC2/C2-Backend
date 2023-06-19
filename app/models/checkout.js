@@ -13,6 +13,11 @@ module.exports = (sequelize, DataTypes) => {
   }
   Checkout.init(
     {
+      ticketsId: {
+        type: DataTypes.UUID,
+        defaultValue: DataTypes.UUIDV4,
+        primaryKey: true,
+      },
       name: DataTypes.STRING,
       email: DataTypes.STRING,
       phone: DataTypes.STRING,
@@ -23,6 +28,7 @@ module.exports = (sequelize, DataTypes) => {
       ktppaspor: DataTypes.STRING,
       issuingcountry: DataTypes.STRING,
       expirationdatepass: DataTypes.DATEONLY,
+      total_passenger: DataTypes.INTEGER,
     },
     {
       sequelize,

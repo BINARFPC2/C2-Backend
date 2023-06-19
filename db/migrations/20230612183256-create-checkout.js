@@ -10,6 +10,12 @@ module.exports = {
         type: Sequelize.UUID,
         unique: true,
       },
+      ticketsId: {
+        type: DataTypes.UUID,
+        defaultValue: DataTypes.UUIDV4,
+        allowNull: false,
+        primaryKey: true,
+      },
       name: {
         type: Sequelize.STRING,
       },
@@ -39,6 +45,9 @@ module.exports = {
       },
       expirationdatepass: {
         type: Sequelize.DATEONLY,
+      },
+      total_passenger: {
+        type: Sequelize.INTEGER,
       },
       createdAt: {
         allowNull: false,
