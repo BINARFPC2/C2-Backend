@@ -94,11 +94,20 @@ module.exports = {
     const tickets = await Ticket.findAll({
       where: querySearch,
     });
-    res.status(200).json({
-      status: "Success",
-      message: "Get All Data Ticket Success",
-      data: tickets,
-    });
+
+    if (tickets.length === 0) {
+      // Data tiket tidak ditemukan
+      res.status(404).json({
+        status: "Error",
+        message: "No tickets found with the given criteria",
+      });
+    } else {
+      res.status(200).json({
+        status: "Success",
+        message: "Get All Data Ticket Success",
+        data: tickets,
+      });
+    }
   },
 
   async getTicketById(req, res) {
