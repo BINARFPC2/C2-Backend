@@ -81,13 +81,13 @@ module.exports = {
         [Op.iLike]: `%${type_seat}`,
       },
       dateDeparture: {
-        [Op.iLike]: `%${dateDeparture}`,
+        [Op.eq]: `%${dateDeparture}`,
       },
       dateEnd: {
-        [Op.iLike]: `%${dateEnd}`,
+        [Op.eq]: `%${dateEnd}`,
       },
       dateReturn: {
-        [Op.iLike]: `%${dateReturn}`,
+        [Op.eq]: `%${dateReturn}`,
       },
     };
 
