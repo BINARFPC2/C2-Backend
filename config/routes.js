@@ -3,12 +3,14 @@ const {
   register,
   authorize,
   whoAmI,
+  updateUserWithToken,
 } = require("../app/controllers/authControllers");
 const handleGetRoot = require("../app/controllers/root");
 const {
   getAllTickets,
   createTicket,
   getTicketById,
+  updateTicketData,
 } = require("../app/controllers/ticketController");
 
 const {
@@ -75,6 +77,8 @@ router.get("/api/v1/whoami", authorize, whoAmI);
 // Update User
 router.put("/api/v1/users/:id", updateUserData);
 
+router.put("/api/v1/users", updateUserWithToken);
+
 // Update Password
 // router.put("/api/v1/resetpw/:id", updatedPassword);
 
@@ -94,6 +98,9 @@ router.get("/api/v1/tickets/:id", getTicketById);
 
 // Create Ticket
 router.post("/api/v1/tickets", createTicket);
+
+// Put Ticket By Id
+router.put("/api/v1/tickets/:id", updateTicketData);
 
 // Add Destinasi Favorite
 router.post("/api/v1/destfavorite", createdesfav);

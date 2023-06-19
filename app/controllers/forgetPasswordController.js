@@ -69,7 +69,6 @@ module.exports = {
         to: email,
         subject: "Reset Password",
         html: `   <center> 
-              <h1>Reset Password</h1>
               <p>Click this link to reset your password</p>
               <button 
                 style=
@@ -77,7 +76,7 @@ module.exports = {
                   border: none;
                   transition-duration: 0.4s;
                   cursor: pointer;
-                  background-color: #76b5c3;
+                  background-color: #7126B5;
                   border-radius: 12px;
                 "
                 type="button"

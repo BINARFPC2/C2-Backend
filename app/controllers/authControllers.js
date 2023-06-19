@@ -162,4 +162,53 @@ module.exports = {
       });
     }
   },
+
+  async updateUserWithToken(req, res) {
+    try {
+      // mendapatkan token dari URL
+      const token = req.headers.authorization.split(" ")[1];
+
+      // verifikasi token
+      const decodedUser = jwt.verify(
+        token,
+        process.env.JWT_SIGNATURE_KEY || "Rahasia"
+      );
+
+      // // fungsi untuk mencari user berdasarkan ID
+      // const findUserById = async (id) => {
+      //   return await user.findOne({
+      //     where: { id: id },
+      //   });
+      // };
+
+      // Mendapatkan data user berdasarkan ID yang terdekripsi dari token
+
+      const userData = await user.findByPk(decodedUser.id);
+
+      // Memeriksa apakah data user ditemukan
+      if (!userData) {
+        res.status(400).send({
+          status: "Error",
+          message: "Token not found",
+        });
+      }
+
+      // melakukan update pada data user
+      userData.name = req.body.name;
+      userData.phone = req.body.phone;
+      userData.email = req.body.email;
+
+      await userData.save();
+
+      return res.status(200).json({
+        status: "Success",
+        message: "User update successfully",
+      });
+    } catch (error) {
+      return res.status(500).json({
+        status: "error",
+        message: error.message,
+      });
+    }
+  },
 };
