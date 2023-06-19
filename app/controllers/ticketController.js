@@ -102,7 +102,6 @@ module.exports = {
     const tickets = await Ticket.findAll({
       where: querySearch,
     });
-
     if ((dateDeparture && !tickets.length) || (dateReturn && !tickets.length)) {
       res.status(404).json({
         status: "Error",
