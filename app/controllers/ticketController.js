@@ -64,6 +64,11 @@ module.exports = {
     const city_from = req.query.city_from ? req.query.city_from : "";
     const city_to = req.query.city_to ? req.query.city_to : "";
     const type_seat = req.query.type_seat ? req.query.type_seat : "";
+    const dateDeparture = req.query.dateDeparture
+      ? req.query.dateDeparture
+      : "";
+    const dateEnd = req.query.dateEnd ? req.query.dateEnd : "";
+    const dateReturn = req.query.dateReturn ? req.query.dateReturn : "";
 
     const querySearch = {
       city_from: {
@@ -74,6 +79,15 @@ module.exports = {
       },
       type_seat: {
         [Op.iLike]: `%${type_seat}`,
+      },
+      dateDeparture: {
+        [Op.iLike]: `%${dateDeparture}`,
+      },
+      dateEnd: {
+        [Op.iLike]: `%${dateEnd}`,
+      },
+      dateReturn: {
+        [Op.iLike]: `%${dateReturn}`,
       },
     };
 
