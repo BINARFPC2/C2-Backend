@@ -93,7 +93,6 @@ module.exports = {
         [Op.eq]: dateEnd,
       };
     }
-
     if (dateReturn && Date.parse(dateReturn)) {
       querySearch.dateReturn = {
         [Op.eq]: dateReturn,
