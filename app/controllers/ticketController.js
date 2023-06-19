@@ -146,6 +146,7 @@ module.exports = {
       res.status(200).json({
         status: "Success",
         message: "Update Data Ticket Successfully",
+        data: ticket,
       });
     } catch (error) {
       console.log(error);

@@ -1358,6 +1358,7 @@ paths:
                     type: string
                     example: Data not Found
       deprecated: false
+
   /checkout:
     get:
       tags:
@@ -1443,6 +1444,7 @@ paths:
                     type: string
                     example: Server Error
       deprecated: false
+
   /checkout/:id:
     get:
       tags:
