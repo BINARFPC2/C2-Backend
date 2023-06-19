@@ -5,6 +5,7 @@ module.exports = {
   async createCheckout(req, res) {
     try {
       const {
+        ticketsId,
         name,
         email,
         phone,
@@ -15,11 +16,13 @@ module.exports = {
         ktppaspor,
         issuingcountry,
         expirationdatepass,
+        total_passenger,
       } = req.body;
 
       //   create checkout
       const userCheckout = await Checkout.create({
         id: uuid(),
+        ticketsId: ticketsId,
         name: name,
         email: email,
         phone: phone,
@@ -30,6 +33,7 @@ module.exports = {
         ktppaspor: ktppaspor,
         issuingcountry: issuingcountry,
         expirationdatepass: expirationdatepass,
+        total_passenger,
       });
       res.status(201).json({
         status: "Success",
