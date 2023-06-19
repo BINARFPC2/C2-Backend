@@ -137,11 +137,9 @@ module.exports = {
       });
     }
   },
-
   async whoAmI(req, res) {
     res.status(200).json(req.user);
   },
-
   async authorize(req, res, next) {
     try {
       const bearerToken = req.headers.authorization;
