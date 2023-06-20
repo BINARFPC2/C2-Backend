@@ -100,7 +100,7 @@ router.get("/api/v1/tickets/:id", getTicketById);
 router.post("/api/v1/tickets", createTicket);
 
 // Put Ticket By Id
-router.put("/api/v1/tickets/:id", updateTicketData);
+// router.put("/api/v1/tickets/:id", updateTicketData);
 
 // Add Destinasi Favorite
 router.post("/api/v1/destfavorite", createdesfav);
