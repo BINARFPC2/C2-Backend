@@ -240,6 +240,65 @@ paths:
                     type: string
                     example: Server error
       deprecated: false
+    put:
+      tags:
+        - Users
+      parameters:
+        - name: token
+          in: path
+          schema:
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            encoding: {}
+            schema:
+              required:
+                - name
+                - phone
+                - email
+              type: object
+              properties:
+                name:
+                  type: string
+                  example: Hapizd
+                phone:
+                  type: number
+                  example: 08222222222
+                email:
+                  type: string
+                  example: "hapizdasari@gmail.com"
+        required: false
+      responses:
+        "200":
+          description: If Update Is Successful
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: Success
+                  message:
+                    type: string
+                    example: Update Password Success
+          headers: {}
+        "400":
+          description: If email not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: Error
+                  message:
+                    type: string
+                    example: Token not found
+        
+          headers: {}
+      deprecated: false  
 
   /users/:id:
     get:
@@ -314,65 +373,65 @@ paths:
                     type: string
                     example: Server Error
       deprecated: false
-    put:
-      tags:
-        - Users
-      parameters:
-        - name: id_user
-          in: path
-          schema:
-      requestBody:
-        content:
-          application/x-www-form-urlencoded:
-            encoding: {}
-            schema:
-              required:
-                - name
-                - phone
-                - email
-              type: object
-              properties:
-                name:
-                  type: string
-                  example: Hapizd
-                phone:
-                  type: number
-                  example: 08222222222
-                email:
-                  type: string
-                  example: "hapizdasari@gmail.com"
-        required: false
-      responses:
-        "200":
-          description: If Update Is Successful
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  status:
-                    type: string
-                    example: Success
-                  message:
-                    type: string
-                    example: Update Password Success
-          headers: {}
+    # put:
+    #   tags:
+    #     - Users
+    #   parameters:
+    #     - name: id_user
+    #       in: path
+    #       schema:
+    #   requestBody:
+    #     content:
+    #       application/x-www-form-urlencoded:
+    #         encoding: {}
+    #         schema:
+    #           required:
+    #             - name
+    #             - phone
+    #             - email
+    #           type: object
+    #           properties:
+    #             name:
+    #               type: string
+    #               example: Hapizd
+    #             phone:
+    #               type: number
+    #               example: 08222222222
+    #             email:
+    #               type: string
+    #               example: "hapizdasari@gmail.com"
+    #     required: false
+    #   responses:
+    #     "200":
+    #       description: If Update Is Successful
+    #       content:
+    #         application/json:
+    #           schema:
+    #             type: object
+    #             properties:
+    #               status:
+    #                 type: string
+    #                 example: Success
+    #               message:
+    #                 type: string
+    #                 example: Update Password Success
+    #       headers: {}
 
-        '500':
-          description: Server Error
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  status:
-                    type: string
-                    example: Error
-                  message:
-                    type: string
-                    example: Login Failed
-          headers: {}
-      deprecated: false
+    #     '500':
+    #       description: Server Error
+    #       content:
+    #         application/json:
+    #           schema:
+    #             type: object
+    #             properties:
+    #               status:
+    #                 type: string
+    #                 example: Error
+    #               message:
+    #                 type: string
+    #                 example: Login Failed
+    #       headers: {}
+    #   deprecated: false
     # delete:
     #   tags:
     #     - Users
@@ -399,8 +458,8 @@ paths:
           # headers: {}
         
 
-  /resetpw/{:id}:
-    put:
+  /forget-password:
+    post:
       tags:
         - Users
       parameters:
@@ -415,12 +474,12 @@ paths:
             encoding: {}
             schema:
               required:
-                - password
+                - Email
               type: object
               properties:
-                password:
+                email:
                   type: string
-                  example: update
+                  example: jamal@gmail.com
         required: false
       responses:
         "200":
@@ -437,9 +496,70 @@ paths:
                     type: string
                     example: Update Password Success
           headers: {}
-        '500':
-          description: Server error
+        "400":
+          description: If email not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Email not found
           headers: {}
+  /reset-password:
+    put:
+      tags:
+        - Users
+      parameters:
+        - name: id
+          in: path
+          require: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            encoding: {}
+            schema:
+              required:
+                - Password
+                - ConfirmPassword
+              type: object
+              properties:
+                password:
+                  type: string
+                  example: kurakura
+                confirmPassword:
+                  type: string
+                  example: kurakura
+        required: false
+      responses:
+        "200":
+          description: Resets Password Successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: Success
+                  message:
+                    type: string
+                    example: Update Password Success
+          headers: {}
+        "400":
+          description: If email not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Email not found
+          headers: {}      
       deprecated: false
   /tickets:
     get:
@@ -675,7 +795,7 @@ paths:
                     type: string
                     example: Data not found                    
       deprecated: false                        
-  /tickets?city_from=jakarta:
+  /tickets?city_from=jakarta&type_seat=economy&city_to=singapore&dateDepature=2023-06-19:
     get:
       tags:
         - Tickets
@@ -759,172 +879,172 @@ paths:
                             available: true
                             createdAt: "2023-06-13T16:13:06.899Z"
                             updatedAt: "2023-06-13T16:13:06.899Z"
-  /tickets?date=2023-06-13:
-    get:
-      tags:
-        - Tickets
-      parameters: []
-      responses:
-        "200":
-          description: If data successfully retrived
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  status:
-                    type: string
-                    example: Success
-                  message:
-                    type: string
-                    example: Get All Data Ticket Success
-                  data:
-                    type: object
-                    properties:
-                      posts:
-                        type: array
-                        items:
-                          type: object
-                          properties:
-                            id:
-                              type: uuid
-                            city_from:
-                              type: string
-                            city_to:
-                              type: string
-                            airlines:
-                              type: string
-                            airport_from:
-                              type: string
-                            airport_to:
-                              type: string
-                            information:
-                              type: string
-                            dateTakeoff:
-                              type: date
-                            dateLanding:
-                              type: date
-                            dateDeparture:
-                              type: date
-                            dateReturn:
-                              type: date
-                            dateEnd:
-                              type: date
-                            type_seat:
-                              type: string
-                            total_passenger:
-                              type: integer
-                            price:
-                              type: integer
-                            booking_kode:
-                              type: string
-                            available:
-                              type: boolean
-                            createdAt:
-                              type: string
-                            updatedAt:
-                              type: string
-                        example:
-                          - id: 1
-                            city_from: "Jakarta"
-                            city_to: "Singapore"
-                            airlines: "Lion Air"
-                            airport_from: "Soekarno-Hatta International"
-                            airport_to: "Singapore Changi"
-                            information: "Baggage 20 kg Cabin baggage 7 kg In Flight Entertainment"
-                            dateTakeoff: "07:55"
-                            dateLanding: "10:45"
-                            dateDeparture: "2023-06-13"
-                            dateReturn: "2023-06-13"
-                            dateEnd: "2023-06-13"
-                            type_seat: "Economy"
-                            price: 994000
-                            booking_code: "8vyb7rq8mp"
-                            available: true
-                            createdAt: "2023-06-13T16:13:06.899Z"
-                            updatedAt: "2023-06-13T16:13:06.899Z"
-  /tickets?type_seat=economy:
-    get:
-      tags:
-        - Tickets
-      parameters: []
-      responses:
-        "200":
-          description: If Data Successfully
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  status:
-                    type: string
-                    example: Success
-                  message:
-                    type: string
-                    example: Get All Data Ticket Success
-                  data:
-                    type: object
-                    properties:
-                      posts:
-                        type: array
-                        items:
-                          type: object
-                          properties:
-                            id:
-                              type: uuid
-                            city_from:
-                              type: string
-                            city_to:
-                              type: string
-                            airlines:
-                              type: string
-                            airport_from:
-                              type: string
-                            airport_to:
-                              type: string
-                            information:
-                              type: string
-                            dateTakeoff:
-                              type: date
-                            dateLanding:
-                              type: date
-                            dateDeparture:
-                              type: string
-                            dateArrival:
-                              type: string
-                            type_seat:
-                              type: string
-                            total_passenger:
-                              type: integer
-                            price:
-                              type: integer
-                            booking_code:
-                              type: string
-                            available:
-                              type: boolean
-                            createdAt:
-                              type: string
-                            updatedAt:
-                              type: string
-                        example:
-                          - id: 1
-                            city_from: "Jakarta"
-                            city_to: "Singapore"
-                            airlines: "Lion Air"
-                            airport_from: "Soekarno-Hatta International"
-                            airport_to: "Singapore Changi"
-                            information: "Baggage 20 kg Cabin baggage 7 kg In Flight Entertainment"
-                            dateTakeoff: "07:55"
-                            dateLanding: "10:45"
-                            dateDeparture: "2023-06-13"
-                            dateReturn: "2023-06-13"
-                            dateEnd: "2023-06-13"
-                            type_seat: "Economy"
-                            price: 994000
-                            booking_code: "8vyb7rq8mp"
-                            available: true
-                            createdAt: "2023-06-13T16:13:06.899Z"
-                            updatedAt: "2023-06-13T16:13:06.899Z"
+  # /tickets?date=2023-06-13:
+  #   get:
+  #     tags:
+  #       - Tickets
+  #     parameters: []
+  #     responses:
+  #       "200":
+  #         description: If data successfully retrived
+  #         content:
+  #           application/json:
+  #             schema:
+  #               type: object
+  #               properties:
+  #                 status:
+  #                   type: string
+  #                   example: Success
+  #                 message:
+  #                   type: string
+  #                   example: Get All Data Ticket Success
+  #                 data:
+  #                   type: object
+  #                   properties:
+  #                     posts:
+  #                       type: array
+  #                       items:
+  #                         type: object
+  #                         properties:
+  #                           id:
+  #                             type: uuid
+  #                           city_from:
+  #                             type: string
+  #                           city_to:
+  #                             type: string
+  #                           airlines:
+  #                             type: string
+  #                           airport_from:
+  #                             type: string
+  #                           airport_to:
+  #                             type: string
+  #                           information:
+  #                             type: string
+  #                           dateTakeoff:
+  #                             type: date
+  #                           dateLanding:
+  #                             type: date
+  #                           dateDeparture:
+  #                             type: date
+  #                           dateReturn:
+  #                             type: date
+  #                           dateEnd:
+  #                             type: date
+  #                           type_seat:
+  #                             type: string
+  #                           total_passenger:
+  #                             type: integer
+  #                           price:
+  #                             type: integer
+  #                           booking_kode:
+  #                             type: string
+  #                           available:
+  #                             type: boolean
+  #                           createdAt:
+  #                             type: string
+  #                           updatedAt:
+  #                             type: string
+  #                       example:
+  #                         - id: 1
+  #                           city_from: "Jakarta"
+  #                           city_to: "Singapore"
+  #                           airlines: "Lion Air"
+  #                           airport_from: "Soekarno-Hatta International"
+  #                           airport_to: "Singapore Changi"
+  #                           information: "Baggage 20 kg Cabin baggage 7 kg In Flight Entertainment"
+  #                           dateTakeoff: "07:55"
+  #                           dateLanding: "10:45"
+  #                           dateDeparture: "2023-06-13"
+  #                           dateReturn: "2023-06-13"
+  #                           dateEnd: "2023-06-13"
+  #                           type_seat: "Economy"
+  #                           price: 994000
+  #                           booking_code: "8vyb7rq8mp"
+  #                           available: true
+  #                           createdAt: "2023-06-13T16:13:06.899Z"
+  #                           updatedAt: "2023-06-13T16:13:06.899Z"
+  # /tickets?type_seat=economy:
+  #   get:
+  #     tags:
+  #       - Tickets
+  #     parameters: []
+  #     responses:
+  #       "200":
+  #         description: If Data Successfully
+  #         content:
+  #           application/json:
+  #             schema:
+  #               type: object
+  #               properties:
+  #                 status:
+  #                   type: string
+  #                   example: Success
+  #                 message:
+  #                   type: string
+  #                   example: Get All Data Ticket Success
+  #                 data:
+  #                   type: object
+  #                   properties:
+  #                     posts:
+  #                       type: array
+  #                       items:
+  #                         type: object
+  #                         properties:
+  #                           id:
+  #                             type: uuid
+  #                           city_from:
+  #                             type: string
+  #                           city_to:
+  #                             type: string
+  #                           airlines:
+  #                             type: string
+  #                           airport_from:
+  #                             type: string
+  #                           airport_to:
+  #                             type: string
+  #                           information:
+  #                             type: string
+  #                           dateTakeoff:
+  #                             type: date
+  #                           dateLanding:
+  #                             type: date
+  #                           dateDeparture:
+  #                             type: string
+  #                           dateArrival:
+  #                             type: string
+  #                           type_seat:
+  #                             type: string
+  #                           total_passenger:
+  #                             type: integer
+  #                           price:
+  #                             type: integer
+  #                           booking_code:
+  #                             type: string
+  #                           available:
+  #                             type: boolean
+  #                           createdAt:
+  #                             type: string
+  #                           updatedAt:
+  #                             type: string
+  #                       example:
+  #                         - id: 1
+  #                           city_from: "Jakarta"
+  #                           city_to: "Singapore"
+  #                           airlines: "Lion Air"
+  #                           airport_from: "Soekarno-Hatta International"
+  #                           airport_to: "Singapore Changi"
+  #                           information: "Baggage 20 kg Cabin baggage 7 kg In Flight Entertainment"
+  #                           dateTakeoff: "07:55"
+  #                           dateLanding: "10:45"
+  #                           dateDeparture: "2023-06-13"
+  #                           dateReturn: "2023-06-13"
+  #                           dateEnd: "2023-06-13"
+  #                           type_seat: "Economy"
+  #                           price: 994000
+  #                           booking_code: "8vyb7rq8mp"
+  #                           available: true
+  #                           createdAt: "2023-06-13T16:13:06.899Z"
+  #                           updatedAt: "2023-06-13T16:13:06.899Z"
   /destfavorite:
     get:
       tags:
