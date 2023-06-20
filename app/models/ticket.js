@@ -1,5 +1,5 @@
 "use strict";
-const { Checkout } = require("./checkout");
+const { Checkout } = require("./checkout.js");
 const { Model } = require("sequelize");
 module.exports = (sequelize, DataTypes) => {
   class Ticket extends Model {
