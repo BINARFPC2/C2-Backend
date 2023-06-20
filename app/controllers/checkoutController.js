@@ -55,8 +55,8 @@ module.exports = {
       // create a new checkout
       const checkout = await Checkout.create({
         id: uuid(),
-        ticketsId: ticketsId,
-        total_passenger: total_passenger,
+        ticketsId,
+        total_passenger,
       });
 
       // create passengers for the ticket
