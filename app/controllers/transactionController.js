@@ -82,33 +82,57 @@ module.exports = {
   },
 
   async getDataTransactionById(req, res) {
+    // try {
+    //   const idDataTrans = req.params.id;
+    //   const findDataTransById = () => {
+    //     return Transaction.findOne({
+    //       where: {
+    //         id: idDataTrans,
+    //       },
+    //     });
+    //   };
+    //   const dataTransId = await findDataTransById();
+    //   if (!dataTransId) {
+    //     res.status(404).json({
+    //       status: "Failed",
+    //       message: "Data Transaction not found",
+    //     });
+    //   }
+    //   res.status(200).json({
+    //     status: "Success",
+    //     message: "Get Data Transactions Successfully",
+    //     data: dataTransId,
+    //   });
+    // } catch (error) {
+    //   res.status(500).json({
+    //     status: "Error",
+    //     message: error.message,
+    //   });
+    // }
     try {
-      const idDataTrans = req.params.id;
-      const findDataTransById = () => {
-        return Transaction.findOne({
-          where: {
-            id: idDataTrans,
+      const { ticketsId } = req.body;
+      const transactions = await Transaction.findAll({
+        where: {
+          ticketsId,
+        },
+        include: [
+          {
+            model: Ticket,
+            as: "tickets",
           },
-        });
-      };
-
-      const dataTransId = await findDataTransById();
-
-      if (!dataTransId) {
-        res.status(404).json({
-          status: "Failed",
-          message: "Data Transaction not found",
-        });
-      }
+          {
+            model: Checkout,
+            as: "checkouts",
+          },
+        ],
+      });
       res.status(200).json({
-        status: "Success",
-        message: "Get Data Transactions Successfully",
-        data: dataTransId,
+        data: transactions,
       });
     } catch (error) {
+      console.error(error);
       res.status(500).json({
-        status: "Error",
-        message: error.message,
+        message: "Internal server error",
       });
     }
   },
