@@ -136,42 +136,42 @@ module.exports = {
     }
   },
 
-  async updateTicketData(req, res) {
-    const idTicket = req.params.id;
+  // async updateTicketData(req, res) {
+  //   const idTicket = req.params.id;
 
-    const updateData = {
-      dateDeparture: req.body.dateDeparture,
-      total_passenger: req.body.total_passenger,
-    };
+  //   const updateData = {
+  //     dateDeparture: req.body.dateDeparture,
+  //     total_passenger: req.body.total_passenger,
+  //   };
 
-    if (req.body.dateReturn) {
-      updateData.dateReturn = req.body.dateReturn;
-    }
+  //   if (req.body.dateReturn) {
+  //     updateData.dateReturn = req.body.dateReturn;
+  //   }
 
-    try {
-      const ticket = await Ticket.findByPk(idTicket);
-      // Hitung total price baru
-      const totalPrice = ticket.price * updateData.total_passenger;
-      // Update total_price di data tiket
-      ticket.total_price = totalPrice;
+  //   try {
+  //     const ticket = await Ticket.findByPk(idTicket);
+  //     // Hitung total price baru
+  //     const totalPrice = ticket.price * updateData.total_passenger;
+  //     // Update total_price di data tiket
+  //     ticket.total_price = totalPrice;
 
-      await ticket.save();
+  //     await ticket.save();
 
-      await Ticket.update(updateData, {
-        where: { id: idTicket },
-      });
+  //     await Ticket.update(updateData, {
+  //       where: { id: idTicket },
+  //     });
 
-      res.status(200).json({
-        status: "Success",
-        message: "Update Data Ticket Successfully",
-        data: ticket,
-      });
-    } catch (error) {
-      console.log(error);
-      res.status(500).json({
-        status: "Error",
-        message: "Failed to update ticket data",
-      });
-    }
-  },
+  //     res.status(200).json({
+  //       status: "Success",
+  //       message: "Update Data Ticket Successfully",
+  //       data: ticket,
+  //     });
+  //   } catch (error) {
+  //     console.log(error);
+  //     res.status(500).json({
+  //       status: "Error",
+  //       message: "Failed to update ticket data",
+  //     });
+  //   }
+  // },
 };
