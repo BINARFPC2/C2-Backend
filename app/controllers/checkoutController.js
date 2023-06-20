@@ -50,7 +50,7 @@ module.exports = {
   // },
   async createCheckout(req, res) {
     try {
-      const { ticketsId, total_passenger } = req.body;
+      const { ticketsId, total_passenger, passengers } = req.body;
 
       // create a new checkout
       const checkout = await Checkout.create({ ticketsId, total_passenger });

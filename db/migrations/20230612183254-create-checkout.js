@@ -5,12 +5,15 @@ module.exports = {
     await queryInterface.createTable("Checkouts", {
       id: {
         defaultValue: Sequelize.UUIDV4,
+        allowNull: false,
+        primaryKey: true,
         type: Sequelize.UUID,
         unique: true,
       },
       ticketsId: {
         type: Sequelize.UUID,
         defaultValue: Sequelize.UUIDV4,
+        allowNull: false,
       },
       total_passenger: {
         type: Sequelize.INTEGER,
