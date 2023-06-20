@@ -1,5 +1,7 @@
 "use strict";
 const { Model } = require("sequelize");
+const { Ticket } = require("./ticket");
+
 module.exports = (sequelize, DataTypes) => {
   class Checkout extends Model {
     /**
@@ -9,10 +11,6 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       this.hasMany(models.Transaction, { foreignKey: "checkoutsId" });
-      this.belongsTo(models.Ticket, {
-        foreignKey: "ticketsId",
-        as: "ticket",
-      });
     }
   }
   Checkout.init(
@@ -25,5 +23,11 @@ module.exports = (sequelize, DataTypes) => {
       modelName: "Checkout",
     }
   );
+
+  Checkout.belongsTo(Ticket, {
+    foreignKey: "ticketsId",
+    as: "ticket",
+  });
+
   return Checkout;
 };

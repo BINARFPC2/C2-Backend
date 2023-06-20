@@ -1,4 +1,5 @@
 "use strict";
+const { Checkout } = require("./checkout");
 const { Model } = require("sequelize");
 module.exports = (sequelize, DataTypes) => {
   class Ticket extends Model {
@@ -9,10 +10,6 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       this.hasMany(models.Transaction, { foreignKey: "ticketsId" });
-      this.hasMany(models.Checkouts, {
-        foreignKey: "ticketsId",
-        as: "checkouts",
-      });
     }
     // calculateTotalPrice() {
     //   return this.price * this.total_passenger;
@@ -41,6 +38,11 @@ module.exports = (sequelize, DataTypes) => {
       modelName: "Ticket",
     }
   );
+
+  Ticket.hasMany(Checkout, {
+    foreignKey: "ticketsId",
+    as: "checkouts",
+  });
   // Hook to automatically update total_price when price or total_passenger changes
   // Ticket.addHook("beforeSave", (ticket, options) => {
   //   if (ticket.changed("price") || ticket.changed("total_passenger")) {
