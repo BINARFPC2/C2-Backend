@@ -15,36 +15,6 @@ module.exports = {
         defaultValue: Sequelize.UUIDV4,
         allowNull: false,
       },
-      name: {
-        type: Sequelize.STRING,
-      },
-      email: {
-        type: Sequelize.STRING,
-      },
-      phone: {
-        type: Sequelize.STRING,
-      },
-      familyName: {
-        type: Sequelize.STRING,
-      },
-      title: {
-        type: Sequelize.STRING,
-      },
-      dateofbirth: {
-        type: Sequelize.DATEONLY,
-      },
-      citizenship: {
-        type: Sequelize.STRING,
-      },
-      ktppaspor: {
-        type: Sequelize.STRING,
-      },
-      issuingcountry: {
-        type: Sequelize.STRING,
-      },
-      expirationdatepass: {
-        type: Sequelize.DATEONLY,
-      },
       total_passenger: {
         type: Sequelize.INTEGER,
       },
