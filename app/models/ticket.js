@@ -38,10 +38,6 @@ module.exports = (sequelize, DataTypes) => {
     }
   );
 
-  Ticket.hasMany(Checkout, {
-    foreignKey: "ticketsId",
-    as: "checkouts",
-  });
   // Hook to automatically update total_price when price or total_passenger changes
   // Ticket.addHook("beforeSave", (ticket, options) => {
   //   if (ticket.changed("price") || ticket.changed("total_passenger")) {
