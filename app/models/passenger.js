@@ -13,11 +13,7 @@ module.exports = (sequelize, DataTypes) => {
   }
   Passenger.init(
     {
-      id: {
-        type: DataTypes.UUID,
-        primaryKey: true,
-        defaultValue: DataTypes.UUIDV4,
-      },
+      ticketsId: DataTypes.UUID,
       name: DataTypes.STRING,
       email: DataTypes.STRING,
       phone: DataTypes.STRING,

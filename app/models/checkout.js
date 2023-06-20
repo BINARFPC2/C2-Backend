@@ -14,11 +14,6 @@ module.exports = (sequelize, DataTypes) => {
   }
   Checkout.init(
     {
-      id: {
-        type: DataTypes.UUID,
-        primaryKey: true,
-        defaultValue: DataTypes.UUIDV4,
-      },
       ticketsId: DataTypes.UUID,
       total_passenger: DataTypes.INTEGER,
     },
