@@ -1,52 +1,87 @@
 const { Checkout } = require("../models");
+const { Passenger } = require("../models");
 const { v4: uuid } = require("uuid");
 
 module.exports = {
+  // async createCheckout(req, res) {
+  //   try {
+  //     const {
+  //       ticketsId,
+  //       name,
+  //       email,
+  //       phone,
+  //       familyName,
+  //       title,
+  //       dateofbirth,
+  //       citizenship,
+  //       ktppaspor,
+  //       issuingcountry,
+  //       expirationdatepass,
+  //       total_passenger,
+  //     } = req.body;
+
+  //     //   create checkout
+  //     const userCheckout = await Checkout.create({
+  //       id: uuid(),
+  //       ticketsId: ticketsId,
+  //       name: name,
+  //       email: email,
+  //       phone: phone,
+  //       familyName: familyName,
+  //       title: title,
+  //       dateofbirth: dateofbirth,
+  //       citizenship: citizenship,
+  //       ktppaspor: ktppaspor,
+  //       issuingcountry: issuingcountry,
+  //       expirationdatepass: expirationdatepass,
+  //       total_passenger: total_passenger,
+  //     });
+  //     res.status(201).json({
+  //       status: "Success",
+  //       message: "Checkout Success",
+  //       data: userCheckout,
+  //     });
+  //   } catch (error) {
+  //     res.status(400).json({
+  //       status: "Failed",
+  //       message: error.message,
+  //     });
+  //   }
+  // },
+
   async createCheckout(req, res) {
     try {
-      const {
-        ticketsId,
-        name,
-        email,
-        phone,
-        familyName,
-        title,
-        dateofbirth,
-        citizenship,
-        ktppaspor,
-        issuingcountry,
-        expirationdatepass,
-        total_passenger,
-      } = req.body;
+      const { ticketsId, total_passenger } = req.body;
 
-      //   create checkout
-      const userCheckout = await Checkout.create({
-        id: uuid(),
-        ticketsId: ticketsId,
-        name: name,
-        email: email,
-        phone: phone,
-        familyName: familyName,
-        title: title,
-        dateofbirth: dateofbirth,
-        citizenship: citizenship,
-        ktppaspor: ktppaspor,
-        issuingcountry: issuingcountry,
-        expirationdatepass: expirationdatepass,
-        total_passenger: total_passenger,
-      });
+      // create a new checkout
+      const checkout = await Checkout.create({ ticketsId, total_passenger });
+
+      // create passengers for the ticket
+      for (const passengerData of passengers) {
+        await Passenger.create({
+          name: passengerData.name,
+          email: passengerData.email,
+          phone: passengerData.phone,
+          familyName: passengerData.familyName,
+          title: passengerData.title,
+          dateofbirth: passengerData.dateofbirth,
+          citizenship: passengerData.citizenship,
+          ktppaspor: passengerData.ktppaspor,
+          issuingcountry: passengerData.issuingcountry,
+          expirationdatepass: passengerData.expirationdatepass,
+        });
+      }
       res.status(201).json({
-        status: "Success",
-        message: "Checkout Success",
-        data: userCheckout,
+        message: "Checkout created successfully",
       });
     } catch (error) {
-      res.status(400).json({
-        status: "Failed",
-        message: error.message,
+      console.error(error);
+      res.status(500).json({
+        message: "Internal server error",
       });
     }
   },
+
   async getAllCheckoutData(req, res) {
     const findCheckoutAll = () => {
       return Checkout.findAll();
