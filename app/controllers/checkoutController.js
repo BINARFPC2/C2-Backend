@@ -53,7 +53,11 @@ module.exports = {
       const { ticketsId, total_passenger, passengers } = req.body;
 
       // create a new checkout
-      const checkout = await Checkout.create({ ticketsId, total_passenger });
+      const checkout = await Checkout.create({
+        id: uuid(),
+        ticketsId,
+        total_passenger,
+      });
 
       // create passengers for the ticket
       for (const passengerData of passengers) {
