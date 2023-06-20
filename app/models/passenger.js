@@ -15,6 +15,7 @@ module.exports = (sequelize, DataTypes) => {
   Passenger.init(
     {
       checkoutsId: DataTypes.UUID,
+      ticketsId: DataTypes.UUID,
       name: DataTypes.STRING,
       email: DataTypes.STRING,
       phone: DataTypes.STRING,

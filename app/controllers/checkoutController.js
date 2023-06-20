@@ -63,6 +63,7 @@ module.exports = {
       for (const passengerData of passengers) {
         await Passenger.create({
           checkoutsId: checkout.id,
+          ticketsId: ticketsId,
           name: passengerData.name,
           email: passengerData.email,
           phone: passengerData.phone,
