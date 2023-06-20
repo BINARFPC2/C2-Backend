@@ -48,7 +48,6 @@ module.exports = {
   //     });
   //   }
   // },
-
   async createCheckout(req, res) {
     try {
       const { ticketsId, total_passenger } = req.body;
