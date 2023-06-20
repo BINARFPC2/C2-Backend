@@ -89,26 +89,44 @@ module.exports = {
   },
 
   async getAllCheckoutData(req, res) {
-    const findCheckoutAll = () => {
-      return Checkout.findAll();
-    };
+    // const findCheckoutAll = () => {
+    //   return Checkout.findAll();
+    // };
+    // try {
+    //   const dataCheckout = await findCheckoutAll();
+    //   if (!dataCheckout) {
+    //     res.status(404).json({
+    //       status: "failed",
+    //       message: "Data Checkout not found",
+    //     });
+    //   }
+    //   res.status(200).json({
+    //     status: "Success",
+    //     message: "Get All Data Checkout Success",
+    //     data: dataCheckout,
+    //   });
+    // } catch (error) {
+    //   res.status(500).json({
+    //     status: "Erro",
+    //     message: error.message,
+    //   });
+    // }
     try {
-      const dataCheckout = await findCheckoutAll();
-      if (!dataCheckout) {
-        res.status(404).json({
-          status: "failed",
-          message: "Data Checkout not found",
-        });
-      }
+      const checkoutData = await Checkout.findAll({
+        include: [
+          {
+            model: Passenger,
+          },
+        ],
+      });
       res.status(200).json({
-        status: "Success",
-        message: "Get All Data Checkout Success",
-        data: dataCheckout,
+        message: "Checkout data retrieved successfully",
+        data: checkoutData,
       });
     } catch (error) {
+      console.log(error);
       res.status(500).json({
-        status: "Erro",
-        message: error.message,
+        message: error,
       });
     }
   },
