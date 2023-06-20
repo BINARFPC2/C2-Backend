@@ -62,6 +62,7 @@ module.exports = {
       // create passengers for the ticket
       for (const passengerData of passengers) {
         await Passenger.create({
+          id: uuid(),
           checkoutsId: checkout.id,
           ticketsId: ticketsId,
           name: passengerData.name,
