@@ -1,5 +1,6 @@
 const { Ticket } = require("../models");
 const { Transaction } = require("../models");
+const { Checkout } = require("../models");
 const { user } = require("../models");
 const { v4: uuid } = require("uuid");
 
@@ -10,40 +11,34 @@ module.exports = {
       const iduser = await user.findByPk(req.body.userId);
 
       // Mengambil data tiket dari model Ticket berdasarkan ID tiket
-      const ticket = await Ticket.findByPk(req.body.ticketId);
+      const idTicket = await Ticket.findByPk(req.body.ticketId);
+
+      // mengambil total_passenger dari model checkouts
+      const idCheckout = await Checkout.findByPk(req.body.checkoutId);
 
       // Menghitung total amount berdasarkan price tiket dan quantity
-      const amount = ticket.price * req.body.quantity;
+      const amount = idTicket.price * idCheckout.total_passenger;
 
       // const amount = ticket.price * adult_price;
 
-      const booking_code = ticket.booking_code;
-      const airport_from = ticket.airport_from;
-      const airport_to = ticket.airport_to;
-      const dateTakeoff = ticket.dateTakeoff;
-      const dateLanding = ticket.dateLanding;
-      const dateDeparture = ticket.dateDeparture;
-      const dateEnd = ticket.dateEnd;
-      const type_seat = ticket.type_seat;
-      const information = ticket.information;
-      const airlines = ticket.airlines;
+      // const booking_code = ticket.booking_code;
+      // const airport_from = ticket.airport_from;
+      // const airport_to = ticket.airport_to;
+      // const dateTakeoff = ticket.dateTakeoff;
+      // const dateLanding = ticket.dateLanding;
+      // const dateDeparture = ticket.dateDeparture;
+      // const dateEnd = ticket.dateEnd;
+      // const type_seat = ticket.type_seat;
+      // const information = ticket.information;
+      // const airlines = ticket.airlines;
 
       // Membuat transaksi baru dengan data yang diambil
       const transaction = await Transaction.create({
         id: uuid(),
         usersId: iduser.id,
-        ticketsId: ticket.id,
+        ticketsId: idTicket.id,
         amounts: amount,
-        booking_code: booking_code,
-        dateTakeoff: dateTakeoff,
-        dateLanding: dateLanding,
-        dateDeparture: dateDeparture,
-        dateEnd: dateEnd,
-        airport_from: airport_from,
-        airport_to: airport_to,
-        type_seat: type_seat,
-        airlines: airlines,
-        information: information,
+        date: new Date(),
         status: "Success",
         // Setel nilai-nilai kolom lainnya yang diperlukan
       });

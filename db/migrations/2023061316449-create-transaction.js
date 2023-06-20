@@ -26,37 +26,8 @@ module.exports = {
       status: {
         type: Sequelize.STRING,
       },
-      airlines: {
-        type: Sequelize.STRING,
-      },
-      booking_code: {
-        type: Sequelize.STRING,
-      },
-      information: {
-        type: Sequelize.STRING,
-      },
-      airport_from: {
-        type: Sequelize.STRING,
-      },
-      airport_to: {
-        type: Sequelize.STRING,
-      },
-      dateTakeoff: {
-        type: Sequelize.STRING,
-      },
-      dateLanding: {
-        type: Sequelize.STRING,
-      },
-      dateDeparture: {
-        allowNull: false,
+      date: {
         type: Sequelize.DATEONLY,
-      },
-      dateEnd: {
-        allowNull: true,
-        type: Sequelize.DATEONLY,
-      },
-      type_seat: {
-        type: Sequelize.STRING,
       },
       createdAt: {
         allowNull: false,
