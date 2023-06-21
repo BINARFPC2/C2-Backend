@@ -122,6 +122,9 @@ module.exports = {
           {
             model: Passenger,
           },
+          {
+            model: Ticket,
+          },
         ],
       });
       res.status(200).json({
