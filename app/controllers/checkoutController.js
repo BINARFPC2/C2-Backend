@@ -2,7 +2,7 @@ const { Checkout } = require("../models");
 const { Passenger } = require("../models");
 const { Ticket } = require("../models");
 const { v4: uuid } = require("uuid");
-const { sequelize, Sequelize } = require("sequelize");
+const { Op } = require("sequelize");
 
 module.exports = {
   // async createCheckout(req, res) {
@@ -126,7 +126,7 @@ module.exports = {
           {
             model: Ticket,
             where: {
-              id: Sequelize.col("Checkout.ticketsId"),
+              id: { [Op.col]: "Checkout.ticketsId" },
             },
           },
         ],
