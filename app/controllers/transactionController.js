@@ -56,30 +56,30 @@ module.exports = {
     }
   },
 
-  async getAllTransactionData(req, res) {
-    const findAll = () => {
-      return Transaction.findAll();
-    };
-    try {
-      const dataTransaction = await findAll();
-      if (!dataTransaction) {
-        res.status(404).json({
-          status: "Failed",
-          message: "Data not found",
-        });
-      }
-      res.status(200).json({
-        status: "Success",
-        message: "Get All Data Transactions Success",
-        data: dataTransaction,
-      });
-    } catch (error) {
-      res.status(500).json({
-        status: "Error",
-        message: error.message,
-      });
-    }
-  },
+  // async getAllTransactionData(req, res) {
+  //   const findAll = () => {
+  //     return Transaction.findAll();
+  //   };
+  //   try {
+  //     const dataTransaction = await findAll();
+  //     if (!dataTransaction) {
+  //       res.status(404).json({
+  //         status: "Failed",
+  //         message: "Data not found",
+  //       });
+  //     }
+  //     res.status(200).json({
+  //       status: "Success",
+  //       message: "Get All Data Transactions Success",
+  //       data: dataTransaction,
+  //     });
+  //   } catch (error) {
+  //     res.status(500).json({
+  //       status: "Error",
+  //       message: error.message,
+  //     });
+  //   }
+  // },
 
   async getDataTransactionById(req, res) {
     // try {
