@@ -8,7 +8,7 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      this.belongsTo(models.Checkout, { foreignKey: "ticketsId" });
+      // this.belongsTo(models.Checkout, { foreignKey: "ticketsId" });
     }
     // calculateTotalPrice() {
     //   return this.price * this.total_passenger;
