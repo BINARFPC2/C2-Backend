@@ -23,7 +23,15 @@ module.exports = (sequelize, DataTypes) => {
       usersId: DataTypes.UUID,
       ticketsId: DataTypes.UUID,
       total_passenger: DataTypes.INTEGER,
-      total_price: DataTypes.INTEGER,
+      total_price: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        get() {
+          const passengersCount = this.getDataValue("total_passenger");
+          const ticketPrice = this.Ticket ? this.Ticket.price : 0;
+          return passengersCount * ticketPrice;
+        },
+      },
     },
     {
       sequelize,
