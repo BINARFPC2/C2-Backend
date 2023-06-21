@@ -112,7 +112,7 @@ module.exports = {
     try {
       const usersId = req.user.id;
 
-      const transactions = await Checkout.findOne({
+      const transactions = await Checkout.findAll({
         where: {
           usersId,
         },
