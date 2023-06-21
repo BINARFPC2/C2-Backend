@@ -1,4 +1,5 @@
 const { Checkout } = require("../models");
+const { Ticket } = require("../models");
 const { Passenger } = require("../models");
 const { v4: uuid } = require("uuid");
 
@@ -116,6 +117,9 @@ module.exports = {
         include: [
           {
             model: Passenger,
+          },
+          {
+            model: Ticket,
           },
         ],
       });
