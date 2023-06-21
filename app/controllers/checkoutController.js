@@ -143,6 +143,11 @@ module.exports = {
           where: {
             usersId: idCheckout,
           },
+          include: [
+            {
+              model: Passenger,
+            },
+          ],
         });
       };
 
