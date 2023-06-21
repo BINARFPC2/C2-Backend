@@ -110,7 +110,7 @@ module.exports = {
     //   });
     // }
     try {
-      const usersId = req.user.id; // Menggunakan ID pengguna saat ini
+      const usersId = req.user.id;
 
       const transactions = await Transaction.findAll({
         where: {
@@ -118,12 +118,8 @@ module.exports = {
         },
         include: [
           {
-            model: Ticket,
-            as: "tickets",
-          },
-          {
             model: Checkout,
-            as: "checkouts",
+            as: "checkout",
           },
         ],
       });
