@@ -1,6 +1,7 @@
 const { Checkout } = require("../models");
 const { Passenger } = require("../models");
 const { Ticket } = require("../models");
+const { sequelize } = require("sequelize");
 const { v4: uuid } = require("uuid");
 
 module.exports = {
@@ -151,7 +152,7 @@ module.exports = {
             {
               model: Ticket,
               where: {
-                id: Checkout.ticketsId,
+                id: sequelize.col("Checkout.ticketsId"),
               },
             },
           ],
