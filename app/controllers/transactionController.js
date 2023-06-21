@@ -110,10 +110,11 @@ module.exports = {
     //   });
     // }
     try {
-      const { ticketsId } = req.body;
+      const usersId = req.user.id; // Menggunakan ID pengguna saat ini
+
       const transactions = await Transaction.findAll({
         where: {
-          ticketsId,
+          usersId,
         },
         include: [
           {
@@ -126,6 +127,7 @@ module.exports = {
           },
         ],
       });
+
       res.status(200).json({
         data: transactions,
       });
