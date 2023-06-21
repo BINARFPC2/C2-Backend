@@ -154,7 +154,6 @@ module.exports = {
           ],
         });
       };
-
       const dataCheckoutId = await findDataCheckoutId();
 
       if (!dataCheckoutId) {
