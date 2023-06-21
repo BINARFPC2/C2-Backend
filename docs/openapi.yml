@@ -299,7 +299,6 @@ paths:
         
           headers: {}
       deprecated: false  
-
   /users/:id:
     get:
       tags:
