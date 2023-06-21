@@ -23,6 +23,7 @@ module.exports = (sequelize, DataTypes) => {
       usersId: DataTypes.UUID,
       ticketsId: DataTypes.UUID,
       total_passenger: DataTypes.INTEGER,
+      total_price: DataTypes.INTEGER,
     },
     {
       sequelize,

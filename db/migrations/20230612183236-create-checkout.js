@@ -24,6 +24,9 @@ module.exports = {
       total_passenger: {
         type: Sequelize.INTEGER,
       },
+      total_price: {
+        type: Sequelize.INTEGER,
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,
