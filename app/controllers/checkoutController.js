@@ -137,11 +137,11 @@ module.exports = {
 
   async getDataCheckoutById(req, res) {
     try {
-      const idUser = req.user.id;
+      const idCheckout = req.body.id;
       const findDataCheckoutId = () => {
-        return Checkout.findAll({
+        return Checkout.findOne({
           where: {
-            usersId: idUser,
+            id: idCheckout,
           },
         });
       };

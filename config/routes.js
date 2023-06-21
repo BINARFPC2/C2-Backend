@@ -122,7 +122,9 @@ router.post("/api/v1/checkout", authorize, createCheckout);
 router.get("/api/v1/checkout", getAllCheckoutData);
 
 // Get Data Checkout By Id
-router.get("/api/v1/checkout", authorize, getDataCheckoutById);
+router.get("/api/v1/checkout", getDataCheckoutById);
+
+router.post("/api/v1/checkout", getDataCheckoutById);
 
 // Update Data Checkout
 router.put("/api/v1/checkout/:id", updateCheckoutData);
