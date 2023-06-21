@@ -150,10 +150,14 @@ module.exports = {
             },
             {
               model: Ticket,
+              where: {
+                id: Checkout.ticketsId,
+              },
             },
           ],
         });
       };
+
       const dataCheckoutId = await findDataCheckoutId();
 
       if (!dataCheckoutId) {
