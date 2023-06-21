@@ -150,9 +150,6 @@ module.exports = {
             },
             {
               model: Ticket,
-              where: {
-                id: sequelize.col("Checkout.ticketsId"),
-              },
             },
           ],
         });
