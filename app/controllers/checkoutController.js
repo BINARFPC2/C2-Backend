@@ -2,8 +2,6 @@ const { Checkout } = require("../models");
 const { Passenger } = require("../models");
 const { Ticket } = require("../models");
 const { v4: uuid } = require("uuid");
-const { Sequelize } = require("sequelize");
-const { literal } = Sequelize;
 
 module.exports = {
   // async createCheckout(req, res) {
@@ -149,12 +147,6 @@ module.exports = {
           include: [
             {
               model: Passenger,
-            },
-            {
-              model: Ticket,
-              where: {
-                id: literal("Ticket.id = Checkout.ticketsId"), // Menyesuaikan dengan nama kolom yang sesuai di tabel Checkout
-              },
             },
           ],
         });
