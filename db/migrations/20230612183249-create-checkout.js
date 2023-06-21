@@ -10,6 +10,11 @@ module.exports = {
         type: Sequelize.UUID,
         unique: true,
       },
+      usersId: {
+        type: Sequelize.UUID,
+        defaultValue: Sequelize.UUIDV4,
+        allowNull: false,
+      },
       ticketsId: {
         type: Sequelize.UUID,
         defaultValue: Sequelize.UUIDV4,

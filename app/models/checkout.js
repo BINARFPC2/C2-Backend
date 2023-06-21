@@ -18,6 +18,7 @@ module.exports = (sequelize, DataTypes) => {
   }
   Checkout.init(
     {
+      usersId: DataTypes.UUID,
       ticketsId: DataTypes.UUID,
       total_passenger: DataTypes.INTEGER,
     },
