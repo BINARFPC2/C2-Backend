@@ -50,10 +50,10 @@ module.exports = {
   // },
   async createCheckout(req, res) {
     try {
-      const { ticketsId, total_passenger, passengers } = req.body;
+      const { usersId, ticketsId, total_passenger, passengers } = req.body;
 
       // Get the current authenticated user ID
-      const usersId = req.user.id; // Ganti `req.user.id` dengan cara yang sesuai untuk mengakses ID pengguna saat ini
+      // const usersId = req.user.id; // Ganti `req.user.id` dengan cara yang sesuai untuk mengakses ID pengguna saat ini
 
       // Create a new checkout
       const checkout = await Checkout.create({
