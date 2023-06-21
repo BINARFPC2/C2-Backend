@@ -147,7 +147,7 @@ router.get("/api/v1/payment/:id", getPaymentById);
 router.post("/api/v1/transaction", createTransaction);
 
 // Get All Data Transaction
-router.get("/api/v1/transaction", getAllTransactionData);
+// router.get("/api/v1/transaction", getAllTransactionData);
 
 // Get Data Transaction By Id
 // router.get("/api/v1/transaction/:id", getDataTransactionById);
