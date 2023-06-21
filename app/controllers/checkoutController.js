@@ -126,9 +126,7 @@ module.exports = {
           },
           {
             model: Ticket,
-            where: {
-              id: Sequelize.col("Checkout.ticketsId"),
-            },
+            where: Sequelize.literal("Ticket.id = Checkout.ticketsId"),
           },
         ],
       });
