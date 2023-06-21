@@ -126,7 +126,7 @@ module.exports = {
           {
             model: Ticket,
             where: {
-              id: { [Op.col]: "Checkouts.ticketsId" },
+              id: { [Op.col]: Checkout.ticketsId },
             },
           },
         ],
