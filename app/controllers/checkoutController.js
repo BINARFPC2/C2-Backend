@@ -52,14 +52,18 @@ module.exports = {
     try {
       const { ticketsId, total_passenger, passengers } = req.body;
 
-      // create a new checkout
+      // Get the current authenticated user ID
+      const usersId = req.user.id; // Ganti `req.user.id` dengan cara yang sesuai untuk mengakses ID pengguna saat ini
+
+      // Create a new checkout
       const checkout = await Checkout.create({
         id: uuid(),
         ticketsId,
         total_passenger,
+        usersId, // Tambahkan userId ke dalam pembuatan checkout
       });
 
-      // create passengers for the ticket
+      // Create passengers for the ticket
       for (const passengerData of passengers) {
         await Passenger.create({
           id: uuid(),
