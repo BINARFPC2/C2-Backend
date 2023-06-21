@@ -2,6 +2,8 @@ const { Checkout } = require("../models");
 const { Passenger } = require("../models");
 const { Ticket } = require("../models");
 const { v4: uuid } = require("uuid");
+const { Sequelize } = require("sequelize");
+const { literal } = Sequelize;
 
 module.exports = {
   // async createCheckout(req, res) {
@@ -139,9 +141,8 @@ module.exports = {
   async getDataCheckoutById(req, res) {
     try {
       const idCheckout = req.params.id;
-
-      const findDataCheckoutId = async () => {
-        const checkout = await Checkout.findOne({
+      const findDataCheckoutId = () => {
+        return Checkout.findOne({
           where: {
             usersId: idCheckout,
           },
@@ -151,23 +152,12 @@ module.exports = {
             },
             {
               model: Ticket,
-              where: `Ticket.id = Checkout.ticketsId`, // Menyesuaikan dengan nama kolom yang sesuai di tabel Checkout
+              where: {
+                id: literal("Ticket.id = Checkout.ticketsId"), // Menyesuaikan dengan nama kolom yang sesuai di tabel Checkout
+              },
             },
           ],
         });
-
-        if (checkout) {
-          const tickets = await Ticket.findAll({
-            where: {
-              id: checkout.ticketsId,
-            },
-          });
-
-          checkout.setDataValue("Tickets", tickets);
-          return checkout;
-        }
-
-        return null;
       };
 
       const dataCheckoutId = await findDataCheckoutId();
@@ -178,7 +168,6 @@ module.exports = {
           message: "Data not found",
         });
       }
-
       res.status(200).json({
         status: "Success",
         message: "Get Checkout Data By Id Successfully",
@@ -191,7 +180,6 @@ module.exports = {
       });
     }
   },
-
   async updateCheckoutData(req, res) {
     const idCheckout = req.params.id;
 
