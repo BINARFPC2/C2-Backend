@@ -11,9 +11,9 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       this.hasMany(models.Transaction, { foreignKey: "checkoutsId" });
       this.hasMany(models.Passenger, { foreignKey: "checkoutsId" });
-      this.hasMany(models.Ticket, {
-        foreignKey: "ticketsId",
-      });
+      // this.hasMany(models.Ticket, {
+      //   foreignKey: "ticketsId",
+      // });
     }
   }
   Checkout.init(
