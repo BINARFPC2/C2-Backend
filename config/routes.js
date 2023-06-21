@@ -150,7 +150,8 @@ router.post("/api/v1/transaction", createTransaction);
 router.get("/api/v1/transaction", getAllTransactionData);
 
 // Get Data Transaction By Id
-router.get("/api/v1/transaction/:id", getDataTransactionById);
+// router.get("/api/v1/transaction/:id", getDataTransactionById);
+router.get("/api/v1/transaction", getDataTransactionById);
 
 // Put Data Transaction
 router.put("/api/v1/transaction/:id", updateDataTrans);
