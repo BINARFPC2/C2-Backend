@@ -139,7 +139,7 @@ module.exports = {
     try {
       const idUser = req.user.id;
       const findDataCheckoutId = () => {
-        return Checkout.findOne({
+        return Checkout.findAll({
           where: {
             usersId: idUser,
           },
