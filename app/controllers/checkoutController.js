@@ -125,6 +125,9 @@ module.exports = {
           },
           {
             model: Ticket,
+            where: {
+              id: req.checkout.ticketsId,
+            },
           },
         ],
       });
