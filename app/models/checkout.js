@@ -26,6 +26,7 @@ module.exports = (sequelize, DataTypes) => {
       total_price: {
         type: DataTypes.INTEGER,
         allowNull: false,
+        defaultValue: 0, // Menetapkan nilai default sebagai 0 jika tidak ada perhitungan yang valid
         get() {
           const passengersCount = this.getDataValue("total_passenger");
           const ticketPrice = this.Ticket ? this.Ticket.price : 0;
