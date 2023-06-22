@@ -12,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
       this.hasMany(models.Transaction, { foreignKey: "checkoutsId" });
       this.hasMany(models.Transaction, { foreignKey: "usersId" });
       this.hasMany(models.Passenger, { foreignKey: "checkoutsId" });
-      this.hasMany(models.Ticket, { foreignKey: "id" });
+      this.belongsTo(models.Ticket, { foreignKey: "ticketsId" }); // Perbarui foreign key
       // this.hasMany(models.Ticket, {
       //   foreignKey: "ticketsId",
       // });
@@ -23,6 +23,16 @@ module.exports = (sequelize, DataTypes) => {
       usersId: DataTypes.UUID,
       ticketsId: DataTypes.UUID,
       total_passenger: DataTypes.INTEGER,
+      total_price: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        defaultValue: 0, // Menetapkan nilai default sebagai 0 jika tidak ada perhitungan yang valid
+        get() {
+          const passengersCount = this.getDataValue("total_passenger");
+          const ticketPrice = this.Ticket ? this.Ticket.price : 0;
+          return passengersCount * ticketPrice;
+        },
+      },
     },
     {
       sequelize,

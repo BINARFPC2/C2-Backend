@@ -2,7 +2,7 @@ const { Checkout } = require("../models");
 const { Passenger } = require("../models");
 const { Ticket } = require("../models");
 const { v4: uuid } = require("uuid");
-const { Sequelize, Op } = require("sequelize");
+const { Op } = require("sequelize");
 
 module.exports = {
   // async createCheckout(req, res) {
@@ -131,6 +131,7 @@ module.exports = {
           },
         ],
       });
+
       res.status(200).json({
         message: "Checkout data retrieved successfully",
         data: checkoutData,
