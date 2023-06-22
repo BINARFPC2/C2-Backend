@@ -158,9 +158,9 @@ module.exports = {
         total_passenger: checkout.total_passenger,
         createdAt: checkout.createdAt,
         updatedAt: checkout.updatedAt,
-        ticket: checkout.Ticket,
+        Ticket: checkout.Ticket,
         total_price: checkout.total_price,
-        passengers: checkout.Passenger,
+        // Passenger: checkout.Passenger,
       }));
 
       res.status(200).json({
