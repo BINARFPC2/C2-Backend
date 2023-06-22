@@ -136,8 +136,13 @@ module.exports = {
     //     message: error.message,
     //   });
     // }
+
     try {
+      const idUser = req.user.id; // Mengambil ID pengguna dari token
       const checkoutData = await Checkout.findAll({
+        where: {
+          usersId: idUser, // Menggunakan ID pengguna dalam kondisi WHERE
+        },
         include: [
           {
             model: Passenger,
