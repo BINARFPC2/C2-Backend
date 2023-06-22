@@ -151,9 +151,21 @@ module.exports = {
         ],
       });
 
+      const formattedCheckoutData = checkoutData.map((checkout) => ({
+        id: checkout.id,
+        usersId: checkout.usersId,
+        ticketsId: checkout.ticketsId,
+        total_passenger: checkout.total_passenger,
+        createdAt: checkout.createdAt,
+        updatedAt: checkout.updatedAt,
+        ticket: checkout.Ticket,
+        total_price: checkout.total_price, // Menempatkan properti total_price setelah properti Ticket
+        passengers: checkout.Passengers,
+      }));
+
       res.status(200).json({
         message: "Checkout data retrieved successfully",
-        data: checkoutData,
+        data: formattedCheckoutData,
       });
     } catch (error) {
       console.log(error);
