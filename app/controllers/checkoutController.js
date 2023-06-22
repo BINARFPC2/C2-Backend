@@ -156,6 +156,12 @@ module.exports = {
             {
               model: Passenger,
             },
+            {
+              model: Ticket,
+              where: {
+                id: { [Op.col]: "Checkout.ticketsId" },
+              },
+            },
           ],
         });
       };
