@@ -151,21 +151,9 @@ module.exports = {
         ],
       });
 
-      const formattedCheckoutData = checkoutData.map((checkout) => ({
-        id: checkout.id,
-        usersId: checkout.usersId,
-        ticketsId: checkout.ticketsId,
-        total_passenger: checkout.total_passenger,
-        createdAt: checkout.createdAt,
-        updatedAt: checkout.updatedAt,
-        Ticket: checkout.Ticket,
-        total_price: checkout.total_price,
-        // Passenger: checkout.Passenger,
-      }));
-
       res.status(200).json({
         message: "Checkout data retrieved successfully",
-        data: formattedCheckoutData,
+        data: checkoutData,
       });
     } catch (error) {
       console.log(error);
