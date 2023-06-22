@@ -296,9 +296,9 @@ paths:
                   message:
                     type: string
                     example: Token not found
-        
           headers: {}
       deprecated: false  
+
   /users/:id:
     get:
       tags:
@@ -558,6 +558,59 @@ paths:
                   message:
                     type: string
                     example: Email not found
+          headers: {}
+  /reset-password:
+    put:
+      tags:
+        - Users
+      parameters:
+        - name: id
+          in: path
+          require: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            encoding: {}
+            schema:
+              required:
+                - Password
+                - ConfirmPassword
+              type: object
+              properties:
+                password:
+                  type: string
+                  example: kurakura
+                confirmPassword:
+                  type: string
+                  example: kurakura
+        required: false
+      responses:
+        "200":
+          description: Resets Password Successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: Success
+                  message:
+                    type: string
+                    example: Update Password Success
+          headers: {}
+        "400":
+          description: If email not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Email not found
           headers: {}      
       deprecated: false
   /tickets:
@@ -666,6 +719,7 @@ paths:
                 - type_seat
                 - total_passenger
                 - price 
+                - price
                 - booking_code
                 - available
               type: object
@@ -1469,7 +1523,6 @@ paths:
                   message:
                     type: string
                     example: Data not Found
-
       deprecated: false  
   /checkout:
     get:
@@ -1684,7 +1737,10 @@ paths:
                 properties:
                   message:
                     type: string
+
                     example: Data not found  
+
+
         "500":
           description: If the server is down or full
           content:
@@ -1696,6 +1752,8 @@ paths:
                     type: string
                     example: Server Error                              
       deprecated: false                               
+
+
 
   /checkout/:id:
     get:
@@ -1911,6 +1969,7 @@ paths:
                   message:
                     type: string
                     example: Data not found  
+                    example: Data not found
         "500":
           description: If the server is down or full
           content:
@@ -1922,6 +1981,8 @@ paths:
                     type: string
                     example: Server Error                              
       deprecated: false 
+
+
     put:
       tags:
         - Checkout
@@ -2661,6 +2722,476 @@ paths:
                     type: string
                     example: Server Error  
       deprecated: false
+<<<<<<< HEAD
+=======
+  /transaction:
+    get:
+      tags:
+        - Transaction
+      parameters: []
+      responses:
+        "200":
+          description: If data successfully retrived
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: Success
+                  message:
+                    type: string
+                    example: Get All Data Transactions Success
+                  data:
+                    type: object
+                    properties:
+                      posts:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                            usersId:
+                              type: string
+                            ticketsId:
+                              type: string
+                            amounts:
+                              type: integer
+                            status:
+                              type: boolean
+                            airlines:
+                              type: string
+                            airport_from:
+                              type: string
+                            airport_to:
+                              type: string
+                            information:
+                              type: string
+                            dateTakeoff:
+                              type: date
+                            dateLanding:
+                              type: date
+                            dateDeparture:
+                              type: date
+                            dateEnd:
+                              type: date
+                            type_seat:
+                              type: string
+                            createdAt:
+                              type: string
+                            updatedAt:
+                              type: string
+                        example:
+                          - id: 1
+                            usersId: "59c414a7-e3e2-4005-afcd-7982e224e540"
+                            ticketsId: "731bb06a-f957-4093-8b7e-11fedf8caa13"
+                            amounts: 1783600
+                            status: "Success"
+                            airlines": "Super Air Jet"
+                            airport_from: "Bandar Udara Internasional Kualanamu"
+                            airport_to: "Soekarno-Hatta International"
+                            information: "Baggage 20 kg Cabin baggage 7 kg In Flight Entertainment"
+                            dateTakeoff: 06:45
+                            dateLanding: 09:05
+                            dateDeparture: "2023-06-14"
+                            dateEnd: "2023-06-14"
+                            type_seat: "Economy"
+                            createdAt: "2023-06-14T15:29:28.482Z"
+                            updatedAt: "2023-06-14T15:29:28.482Z"
+        "404":
+          description: If Data Not Found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Data not found
+        "500":
+          description: If the server is down or full
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Server Error
+      deprecated: false
+    post:
+      tags:
+        - Transaction
+      parameters: []
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            encoding: {}
+            schema:
+              required:
+                - usersId
+                - ticketsId
+                - quantity
+                # - airport_from
+                # - airport_to
+                # - information
+                # - dateTakeoff
+                # - dateLanding
+                # - dateDeparture
+                # - dateReturn
+                # - dateEnd
+                # - type_seat
+                # - booking_code
+              type: object
+              properties:
+                usersId:
+                  type: string
+                  example: 59c414a7-e3e2-4005-afcd-7982e224e540
+                ticketsId:
+                  type: string
+                  example: 731bb06a-f957-4093-8b7e-11fedf8caa13
+                quantity:
+                  type: integer
+                  example: 1
+                airport_from:
+                  type: string
+                  example: Soekarno-Hatta International
+                airport_to:
+                  type: string
+                  example: Singapore Changi
+                information:
+                  type: string
+                  example: Baggage 20 kg Cabin baggage 7 kg In Flight Entertainment
+                dateTakeoff:
+                  type: date
+                  example: 06:45
+                dateLanding:
+                  type: date
+                  example: 09:05
+                dateDeparture:
+                  type: date
+                  example: 2023-06-13
+                dateEnd:
+                  type: date
+                  example: 2023-06-13
+                type_seat:
+                  type: string
+                  example: 2023-06-13
+                total_passenger:
+                  type: integer
+                  example: Economy
+                price:
+                  type: integer
+                  example: 994000
+                booking_code:
+                  type: string
+                  example: k1jox1lmrg
+                available:
+                  type: boolean
+                  example: true
+        required: false
+      responses:
+        "200":
+          description: If data successfully retrived
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: Created Destinasi Favorite Success
+                  data:
+                    type: object
+                    properties:
+                      posts:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                            usersId:
+                              type: string
+                            ticketsId:
+                              type: string
+                            amounts:
+                              type: integer
+                            status:
+                              type: boolean
+                            # booking_code:
+                            #   type: string
+                            airlines:
+                              type: string
+                            airport_from:
+                              type: string
+                            airport_to:
+                              type: string
+                            information:
+                              type: string
+                            dateTakeoff:
+                              type: date
+                            dateLanding:
+                              type: date
+                            dateDeparture:
+                              type: date
+                            dateEnd:
+                              type: date
+                            type_seat:
+                              type: string
+                            createdAt:
+                              type: string
+                            updatedAt:
+                              type: string
+                        example:
+                          - id: 1
+                            usersId: "59c414a7-e3e2-4005-afcd-7982e224e540"
+                            ticketsId: "731bb06a-f957-4093-8b7e-11fedf8caa13"
+                            amounts: 1783600
+                            status: "Success"
+                            # booking_code: null
+                            airlines": "Super Air Jet"
+                            airport_from: "Bandar Udara Internasional Kualanamu"
+                            airport_to: "Soekarno-Hatta International"
+                            information: "Baggage 20 kg Cabin baggage 7 kg In Flight Entertainment"
+                            dateTakeoff: 06:45
+                            dateLanding: 09:05
+                            dateDeparture: "2023-06-14"
+                            dateEnd: "2023-06-14"
+                            type_seat: "Economy"
+                            createdAt: "2023-06-14T15:29:28.482Z"
+                            updatedAt: "2023-06-14T15:29:28.482Z"
+        "400":
+          description: If member tried to retrive the data
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Data not found
+        "500":
+          description: If the server is down or full
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Server Error
+      deprecated: false
+
+  /transaction/:id:
+    get:
+      tags:
+        - Transaction
+      parameters: []
+      responses:
+        "200":
+          description: If data successfully retrived
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: Success
+                  message:
+                    type: string
+                    example: Get Data Transactions Successfully
+                  data:
+                    type: object
+                    properties:
+                      posts:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                            usersId:
+                              type: string
+                            ticketsId:
+                              type: string
+                            amounts:
+                              type: integer
+                            status:
+                              type: boolean
+                            airlines:
+                              type: string
+                            airport_from:
+                              type: string
+                            airport_to:
+                              type: string
+                            information:
+                              type: string
+                            dateTakeoff:
+                              type: date
+                            dateLanding:
+                              type: date
+                            dateDeparture:
+                              type: date
+                            dateEnd:
+                              type: date
+                            type_seat:
+                              type: string
+                            createdAt:
+                              type: string
+                            updatedAt:
+                              type: string
+                        example:
+                          - id: 1
+                            usersId: "59c414a7-e3e2-4005-afcd-7982e224e540"
+                            ticketsId: "731bb06a-f957-4093-8b7e-11fedf8caa13"
+                            amounts: 1783600
+                            status: "Success"
+                            airlines": "Super Air Jet"
+                            airport_from: "Bandar Udara Internasional Kualanamu"
+                            airport_to: "Soekarno-Hatta International"
+                            information: "Baggage 20 kg Cabin baggage 7 kg In Flight Entertainment"
+                            dateTakeoff: 06:45
+                            dateLanding: 09:05
+                            dateDeparture: "2023-06-14"
+                            dateEnd: "2023-06-14"
+                            type_seat: "Economy"
+                            createdAt: "2023-06-14T15:29:28.482Z"
+                            updatedAt: "2023-06-14T15:29:28.482Z"
+        "404":
+          description: If Data Not Found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Data not found
+        "500":
+          description: If the server is down or full
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Server Error
+      deprecated: false
+    put:
+      tags:
+        - Transaction
+      parameters:
+        - name: id_transaction
+          in: path
+          schema:
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            encoding: {}
+            schema:
+              required:
+                - usersId
+                - ticketsId
+                - quantity
+                # - airport_from
+                # - airport_to
+                # - information
+                # - dateTakeoff
+                # - dateLanding
+                # - dateDeparture
+                # - dateReturn
+                # - dateEnd
+                # - type_seat
+                # - booking_code
+              type: object
+              properties:
+                usersId:
+                  type: string
+                  example: 59c414a7-e3e2-4005-afcd-7982e224e540
+                ticketsId:
+                  type: string
+                  example: 731bb06a-f957-4093-8b7e-11fedf8caa13
+                quantity:
+                  type: integer
+                  example: 1
+                airport_from:
+                  type: string
+                  example: Soekarno-Hatta International
+                airport_to:
+                  type: string
+                  example: Singapore Changi
+                information:
+                  type: string
+                  example: Baggage 20 kg Cabin baggage 7 kg In Flight Entertainment
+                dateTakeoff:
+                  type: date
+                  example: 06:45
+                dateLanding:
+                  type: date
+                  example: 09:05
+                dateDeparture:
+                  type: date
+                  example: 2023-06-13
+                dateEnd:
+                  type: date
+                  example: 2023-06-13
+                type_seat:
+                  type: string
+                  example: 2023-06-13
+                total_passenger:
+                  type: integer
+                  example: Economy
+                price:
+                  type: integer
+                  example: 994000
+                booking_code:
+                  type: string
+                  example: k1jox1lmrg
+                available:
+                  type: boolean
+                  example: true
+        required: false
+      responses:
+        "200":
+          description: If Update Is Successful
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: Success
+                  message:
+                    type: string
+                    example: Update Data Transaction Successfully
+        "404":
+          description: If Data Not Found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Data not found
+          headers: {}
+        "500":
+          description: If the server is down or full
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Server Error
+      deprecated: false
     # delete:
     #   tags:
     #     - Transaction
@@ -2704,3 +3235,5 @@ paths:
     #               message:
     #                 type: string
     #                 example: Server Error      
+    #                 example: Server Error
+

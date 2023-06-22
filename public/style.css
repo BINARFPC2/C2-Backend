@@ -77,12 +77,21 @@ form .input-field {
   background-color: #7126b5;
 }
 
+.parent-alert {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  /* background-color: beige; */
+}
+
 .alert-success {
   width: 273px;
   height: 52px;
   text-align: center;
   background-color: #73ca5c;
   border-radius: 12px;
+  margin-top: 50px;
+  margin-right: 10px;
 }
 
 .alert-success p {

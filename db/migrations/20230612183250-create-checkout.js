@@ -10,35 +10,18 @@ module.exports = {
         type: Sequelize.UUID,
         unique: true,
       },
-      name: {
-        type: Sequelize.STRING,
+      usersId: {
+        type: Sequelize.UUID,
+        defaultValue: Sequelize.UUIDV4,
+        allowNull: false,
       },
-      email: {
-        type: Sequelize.STRING,
+      ticketsId: {
+        type: Sequelize.UUID,
+        defaultValue: Sequelize.UUIDV4,
+        allowNull: false,
       },
-      phone: {
-        type: Sequelize.STRING,
-      },
-      familyName: {
-        type: Sequelize.STRING,
-      },
-      title: {
-        type: Sequelize.STRING,
-      },
-      dateofbirth: {
-        type: Sequelize.DATEONLY,
-      },
-      citizenship: {
-        type: Sequelize.STRING,
-      },
-      ktppaspor: {
-        type: Sequelize.STRING,
-      },
-      issuingcountry: {
-        type: Sequelize.STRING,
-      },
-      expirationdatepass: {
-        type: Sequelize.DATEONLY,
+      total_passenger: {
+        type: Sequelize.INTEGER,
       },
       createdAt: {
         allowNull: false,

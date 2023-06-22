@@ -92,7 +92,7 @@ module.exports = {
                 margin: 4px 2px;color: white;
                 padding: 16px 32px;
                 transition-duration: 0.4s;" 
-                href='https://c2-backend.up.railway.app/api/v1/reset-password/${token}' target="_blank" rel="reset">Reset Password</a>
+                href='http://localhost:3000/reset?token=${token}' target="_blank" rel="reset">Reset Password</a>
               </button>
             <center>
                     `,
@@ -141,7 +141,7 @@ module.exports = {
         });
         return;
       }
-      res.status(200).render("resetPassword", {
+      res.status(200).json({
         status: "success",
         message: "reset password view",
         data: userData,
@@ -157,13 +157,13 @@ module.exports = {
   async resetPass(req, res) {
     const { password, confirmPassword } = req.body;
     try {
-      const token = req.body.token;
-      // verify token
+      const token = req.headers.authorization.split(" ")[1];
+
+      // verifikasi token
       const decodedUser = jwt.verify(
         token,
         process.env.JWT_SIGNATURE_KEY || "Rahasia"
       );
-
       const findUserId = async () => {
         return await user.findOne({
           where: { id: decodedUser.id },
@@ -213,9 +213,10 @@ module.exports = {
       });
 
       // send response
-      res
-        .status(200)
-        .redirect("https://tes-deploy-production.up.railway.app/login");
+      res.status(200).json({
+        status: "Success",
+        message: "update password successfully",
+      });
     } catch (error) {
       res.status(500).send({
         status: "error",

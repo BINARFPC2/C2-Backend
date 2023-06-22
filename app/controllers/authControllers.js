@@ -139,11 +139,9 @@ module.exports = {
       });
     }
   },
-
   async whoAmI(req, res) {
     res.status(200).json(req.user);
   },
-
   async authorize(req, res, next) {
     try {
       const bearerToken = req.headers.authorization;
@@ -152,7 +150,6 @@ module.exports = {
         token,
         process.env.JWT_SIGNATURE_KEY || "Rahasia"
       );
-
       req.user = await user.findByPk(tokenPayload.id);
       next();
     } catch (error) {

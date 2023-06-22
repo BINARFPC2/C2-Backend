@@ -1,5 +1,6 @@
 "use strict";
 const { Model } = require("sequelize");
+
 module.exports = (sequelize, DataTypes) => {
   class Checkout extends Model {
     /**
@@ -9,20 +10,19 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       this.hasMany(models.Transaction, { foreignKey: "checkoutsId" });
+      this.hasMany(models.Transaction, { foreignKey: "usersId" });
+      this.hasMany(models.Passenger, { foreignKey: "checkoutsId" });
+      this.hasMany(models.Ticket, { foreignKey: "id" });
+      // this.hasMany(models.Ticket, {
+      //   foreignKey: "ticketsId",
+      // });
     }
   }
   Checkout.init(
     {
-      name: DataTypes.STRING,
-      email: DataTypes.STRING,
-      phone: DataTypes.STRING,
-      familyName: DataTypes.STRING,
-      title: DataTypes.STRING,
-      dateofbirth: DataTypes.DATEONLY,
-      citizenship: DataTypes.STRING,
-      ktppaspor: DataTypes.STRING,
-      issuingcountry: DataTypes.STRING,
-      expirationdatepass: DataTypes.DATEONLY,
+      usersId: DataTypes.UUID,
+      ticketsId: DataTypes.UUID,
+      total_passenger: DataTypes.INTEGER,
     },
     {
       sequelize,

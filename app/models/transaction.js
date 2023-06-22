@@ -8,9 +8,16 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      this.belongsTo(models.user, { foreignKey: "usersId" });
-      this.belongsTo(models.Ticket, { foreignKey: "ticketsId" });
-      this.belongsTo(models.Checkout, { foreignKey: "checkoutsId" });
+      // this.belongsTo(models.user, { foreignKey: "usersId" });
+      // this.belongsTo(models.Ticket, { foreignKey: "ticketsId", as: "tickets" });
+      // this.belongsTo(models.Checkout, {
+      //   foreignKey: "checkoutsId",
+      //   as: "checkouts",
+      // });
+      this.belongsTo(models.Checkout, {
+        foreignKey: "usersId",
+        as: "checkout",
+      });
     }
   }
   Transaction.init(
@@ -19,17 +26,8 @@ module.exports = (sequelize, DataTypes) => {
       ticketsId: DataTypes.UUID,
       checkoutsId: DataTypes.UUID,
       amounts: DataTypes.INTEGER,
+      date: DataTypes.DATEONLY,
       status: DataTypes.STRING,
-      booking_code: DataTypes.STRING,
-      airlines: DataTypes.STRING,
-      airport_from: DataTypes.STRING,
-      airport_to: DataTypes.STRING,
-      information: DataTypes.STRING,
-      dateTakeoff: DataTypes.STRING,
-      dateLanding: DataTypes.STRING,
-      dateDeparture: DataTypes.DATEONLY,
-      dateEnd: DataTypes.DATEONLY,
-      type_seat: DataTypes.STRING,
     },
     {
       sequelize,

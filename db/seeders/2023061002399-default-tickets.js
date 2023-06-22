@@ -48,7 +48,7 @@ module.exports = {
         updatedAt: new Date(),
       },
 
-{
+      {
         id: uuid(),
         city_from: "Jakarta",
         city_to: "Singapore",
@@ -58,7 +58,7 @@ module.exports = {
         information: "Baggage 20 kg Cabin baggage 7 kg In Flight Entertainment",
         dateTakeoff: "13:15",
         dateLanding: "15:50",
-       dateDeparture: "2023-06-19",
+        dateDeparture: "2023-06-19",
         dateReturn: "2023-06-20",
         dateEnd: "2023-06-19",
         type_seat: "Economy",
@@ -109,7 +109,7 @@ module.exports = {
         updatedAt: new Date(),
       },
 
-{
+      {
         id: uuid(),
         city_from: "Jakarta",
         city_to: "Singapore",
@@ -170,7 +170,7 @@ module.exports = {
         updatedAt: new Date(),
       },
 
-{
+      {
         id: uuid(),
         city_from: "Jakarta",
         city_to: "Singapore",
@@ -221,7 +221,7 @@ module.exports = {
         dateTakeoff: "12:00",
         dateLanding: "14:20",
         dateDeparture: "2023-06-22",
-        dateReturn: "2023-06-23", 
+        dateReturn: "2023-06-23",
         dateEnd: "2023-06-22",
         type_seat: "Economy",
         price: 1590587,
@@ -231,7 +231,7 @@ module.exports = {
         updatedAt: new Date(),
       },
 
-{
+      {
         id: uuid(),
         city_from: "Jakarta",
         city_to: "Singapore",
@@ -242,7 +242,7 @@ module.exports = {
         dateTakeoff: "13:15",
         dateLanding: "15:50",
         dateDeparture: "2023-06-22",
-        dateReturn: "2023-06-23", 
+        dateReturn: "2023-06-23",
         dateEnd: "2023-06-22",
         type_seat: "Economy",
         price: 1250876,
@@ -292,7 +292,7 @@ module.exports = {
         updatedAt: new Date(),
       },
 
-{
+      {
         id: uuid(),
         city_from: "Jakarta",
         city_to: "Singapore",
@@ -342,7 +342,7 @@ module.exports = {
         information: "Baggage 20 kg Cabin baggage 7 kg In Flight Entertainment",
         dateTakeoff: "12:00",
         dateLanding: "14:20",
-         dateDeparture: "2023-06-23",
+        dateDeparture: "2023-06-23",
         dateReturn: "2023-06-24", // req body
         dateEnd: "2023-06-23",
         type_seat: "Economy",
@@ -353,7 +353,7 @@ module.exports = {
         updatedAt: new Date(),
       },
 
-{
+      {
         id: uuid(),
         city_from: "Jakarta",
         city_to: "Singapore",
@@ -414,7 +414,7 @@ module.exports = {
         updatedAt: new Date(),
       },
 
-{
+      {
         id: uuid(),
         city_from: "Jakarta",
         city_to: "Singapore",
@@ -475,7 +475,7 @@ module.exports = {
         updatedAt: new Date(),
       },
 
-{
+      {
         id: uuid(),
         city_from: "Jakarta",
         city_to: "Singapore",
@@ -536,7 +536,7 @@ module.exports = {
         updatedAt: new Date(),
       },
 
-{
+      {
         id: uuid(),
         city_from: "Jakarta",
         city_to: "Singapore",
@@ -597,7 +597,7 @@ module.exports = {
         updatedAt: new Date(),
       },
 
-{
+      {
         id: uuid(),
         city_from: "Jakarta",
         city_to: "Singapore",
@@ -658,7 +658,7 @@ module.exports = {
         updatedAt: new Date(),
       },
 
-{
+      {
         id: uuid(),
         city_from: "Jakarta",
         city_to: "Singapore",
@@ -719,7 +719,7 @@ module.exports = {
         updatedAt: new Date(),
       },
 
-{
+      {
         id: uuid(),
         city_from: "Jakarta",
         city_to: "Singapore",
@@ -780,7 +780,7 @@ module.exports = {
         updatedAt: new Date(),
       },
 
-{
+      {
         id: uuid(),
         city_from: "Jakarta",
         city_to: "Singapore",
@@ -841,7 +841,7 @@ module.exports = {
         updatedAt: new Date(),
       },
 
-{
+      {
         id: uuid(),
         city_from: "Jakarta",
         city_to: "Singapore",
@@ -902,7 +902,7 @@ module.exports = {
         updatedAt: new Date(),
       },
 
-{
+      {
         id: uuid(),
         city_from: "Jakarta",
         city_to: "Singapore",
@@ -963,7 +963,7 @@ module.exports = {
         updatedAt: new Date(),
       },
 
-{
+      {
         id: uuid(),
         city_from: "Jakarta",
         city_to: "Singapore",
@@ -1024,7 +1024,7 @@ module.exports = {
         updatedAt: new Date(),
       },
 
-{
+      {
         id: uuid(),
         city_from: "Jakarta",
         city_to: "Singapore",
@@ -1085,7 +1085,7 @@ module.exports = {
         updatedAt: new Date(),
       },
 
-{
+      {
         id: uuid(),
         city_from: "Jakarta",
         city_to: "Singapore",
@@ -1146,7 +1146,7 @@ module.exports = {
         updatedAt: new Date(),
       },
 
-{
+      {
         id: uuid(),
         city_from: "Jakarta",
         city_to: "Singapore",
@@ -1207,7 +1207,7 @@ module.exports = {
         updatedAt: new Date(),
       },
 
-{
+      {
         id: uuid(),
         city_from: "Jakarta",
         city_to: "Singapore",
@@ -1268,7 +1268,7 @@ module.exports = {
         updatedAt: new Date(),
       },
 
-{
+      {
         id: uuid(),
         city_from: "Jakarta",
         city_to: "Singapore",
@@ -1318,7 +1318,7 @@ module.exports = {
         information: "Baggage 20 kg Cabin baggage 7 kg In Flight Entertainment",
         dateTakeoff: "12:00",
         dateLanding: "14:20",
-       dateDeparture: "2023-07-09",
+        dateDeparture: "2023-07-09",
         dateReturn: "2023-07-10", // req body
         dateEnd: "2023-07-09",
         type_seat: "Economy",
@@ -1329,7 +1329,7 @@ module.exports = {
         updatedAt: new Date(),
       },
 
-{
+      {
         id: uuid(),
         city_from: "Jakarta",
         city_to: "Singapore",
@@ -1339,7 +1339,7 @@ module.exports = {
         information: "Baggage 20 kg Cabin baggage 7 kg In Flight Entertainment",
         dateTakeoff: "13:15",
         dateLanding: "15:50",
-       dateDeparture: "2023-07-09",
+        dateDeparture: "2023-07-09",
         dateReturn: "2023-07-10", // req body
         dateEnd: "2023-07-09",
         type_seat: "Economy",
@@ -1390,7 +1390,7 @@ module.exports = {
         updatedAt: new Date(),
       },
 
-{
+      {
         id: uuid(),
         city_from: "Jakarta",
         city_to: "Singapore",
@@ -1411,7 +1411,7 @@ module.exports = {
         updatedAt: new Date(),
       },
       {
-      id: uuid(),
+        id: uuid(),
         city_to: "Jakarta",
         city_from: "Singapore",
         airlines: "Lion Air",
@@ -1441,8 +1441,8 @@ module.exports = {
         dateTakeoff: "12:00",
         dateLanding: "14:20",
         dateDeparture: "2023-06-19",
-	dateReturn: "2023-06-20",
-	dateEnd: "2023-06-19",
+        dateReturn: "2023-06-20",
+        dateEnd: "2023-06-19",
         type_seat: "Business",
         price: 1950777,
         booking_code: "5hw1u7jcvc",
@@ -1451,7 +1451,7 @@ module.exports = {
         updatedAt: new Date(),
       },
 
-{
+      {
         id: uuid(),
         city_from: "Jakarta",
         city_to: "Singapore",
@@ -1462,8 +1462,8 @@ module.exports = {
         dateTakeoff: "13:15",
         dateLanding: "15:50",
         dateDeparture: "2023-06-19",
-	dateReturn: "2023-06-20",
-	dateEnd: "2023-06-19",
+        dateReturn: "2023-06-20",
+        dateEnd: "2023-06-19",
         type_seat: "Business",
         price: 1570500,
         booking_code: "u56nxxnypt",
@@ -1502,8 +1502,8 @@ module.exports = {
         dateTakeoff: "12:00",
         dateLanding: "14:20",
         dateDeparture: "2023-06-20",
-	dateReturn: "2023-06-21",
-	dateEnd: "2023-06-20",
+        dateReturn: "2023-06-21",
+        dateEnd: "2023-06-20",
         type_seat: "Business",
         price: 1950777,
         booking_code: "8pzt2te64r",
@@ -1512,7 +1512,7 @@ module.exports = {
         updatedAt: new Date(),
       },
 
-{
+      {
         id: uuid(),
         city_from: "Jakarta",
         city_to: "Singapore",
@@ -1523,8 +1523,8 @@ module.exports = {
         dateTakeoff: "13:15",
         dateLanding: "15:50",
         dateDeparture: "2023-06-20",
-	dateReturn: "2023-06-21",
-	dateEnd: "2023-06-20",
+        dateReturn: "2023-06-21",
+        dateEnd: "2023-06-20",
         type_seat: "Business",
         price: 1570500,
         booking_code: "uj7yqp08jh",
@@ -1562,9 +1562,9 @@ module.exports = {
         information: "Baggage 20 kg Cabin baggage 7 kg In Flight Entertainment",
         dateTakeoff: "12:00",
         dateLanding: "14:20",
-       dateDeparture: "2023-06-21",
-	dateReturn: "2023-06-22",
-	dateEnd: "2023-06-21",
+        dateDeparture: "2023-06-21",
+        dateReturn: "2023-06-22",
+        dateEnd: "2023-06-21",
         type_seat: "Business",
         price: 1950777,
         booking_code: "nt2on9l7pi",
@@ -1573,7 +1573,7 @@ module.exports = {
         updatedAt: new Date(),
       },
 
-{
+      {
         id: uuid(),
         city_from: "Jakarta",
         city_to: "Singapore",
@@ -1583,9 +1583,9 @@ module.exports = {
         information: "Baggage 20 kg Cabin baggage 7 kg In Flight Entertainment",
         dateTakeoff: "13:15",
         dateLanding: "15:50",
-       dateDeparture: "2023-06-21",
-	dateReturn: "2023-06-22",
-	dateEnd: "2023-06-21",
+        dateDeparture: "2023-06-21",
+        dateReturn: "2023-06-22",
+        dateEnd: "2023-06-21",
         type_seat: "Business",
         price: 1570500,
         booking_code: "1eeh2el9bj",
@@ -1624,8 +1624,8 @@ module.exports = {
         dateTakeoff: "12:00",
         dateLanding: "14:20",
         dateDeparture: "2023-06-22",
-	dateReturn: "2023-06-23", 
-	dateEnd: "2023-06-22",
+        dateReturn: "2023-06-23",
+        dateEnd: "2023-06-22",
         type_seat: "Business",
         price: 1950777,
         booking_code: "5o2crqcq7s",
@@ -1634,7 +1634,7 @@ module.exports = {
         updatedAt: new Date(),
       },
 
-{
+      {
         id: uuid(),
         city_from: "Jakarta",
         city_to: "Singapore",
@@ -1645,8 +1645,8 @@ module.exports = {
         dateTakeoff: "13:15",
         dateLanding: "15:50",
         dateDeparture: "2023-06-22",
-	dateReturn: "2023-06-23", 
-	dateEnd: "2023-06-22",
+        dateReturn: "2023-06-23",
+        dateEnd: "2023-06-22",
         type_seat: "Business",
         price: 1570500,
         booking_code: "adszeoiabl",
@@ -1684,7 +1684,7 @@ module.exports = {
         information: "Baggage 20 kg Cabin baggage 7 kg In Flight Entertainment",
         dateTakeoff: "12:00",
         dateLanding: "14:20",
-       dateDeparture: "2023-06-23",
+        dateDeparture: "2023-06-23",
         dateReturn: "2023-06-24", // req body
         dateEnd: "2023-06-23",
         type_seat: "Business",
@@ -1695,7 +1695,7 @@ module.exports = {
         updatedAt: new Date(),
       },
 
-{
+      {
         id: uuid(),
         city_from: "Jakarta",
         city_to: "Singapore",
@@ -1705,7 +1705,7 @@ module.exports = {
         information: "Baggage 20 kg Cabin baggage 7 kg In Flight Entertainment",
         dateTakeoff: "13:15",
         dateLanding: "15:50",
-       dateDeparture: "2023-06-23",
+        dateDeparture: "2023-06-23",
         dateReturn: "2023-06-24", // req body
         dateEnd: "2023-06-23",
         type_seat: "Business",
@@ -1756,7 +1756,7 @@ module.exports = {
         updatedAt: new Date(),
       },
 
-{
+      {
         id: uuid(),
         city_from: "Jakarta",
         city_to: "Singapore",
@@ -1817,7 +1817,7 @@ module.exports = {
         updatedAt: new Date(),
       },
 
-{
+      {
         id: uuid(),
         city_from: "Jakarta",
         city_to: "Singapore",
@@ -1878,7 +1878,7 @@ module.exports = {
         updatedAt: new Date(),
       },
 
-{
+      {
         id: uuid(),
         city_from: "Jakarta",
         city_to: "Singapore",
@@ -1939,7 +1939,7 @@ module.exports = {
         updatedAt: new Date(),
       },
 
-{
+      {
         id: uuid(),
         city_from: "Jakarta",
         city_to: "Singapore",
@@ -2000,7 +2000,7 @@ module.exports = {
         updatedAt: new Date(),
       },
 
-{
+      {
         id: uuid(),
         city_from: "Jakarta",
         city_to: "Singapore",
@@ -2061,7 +2061,7 @@ module.exports = {
         updatedAt: new Date(),
       },
 
-{
+      {
         id: uuid(),
         city_from: "Jakarta",
         city_to: "Singapore",
@@ -2122,7 +2122,7 @@ module.exports = {
         updatedAt: new Date(),
       },
 
-{
+      {
         id: uuid(),
         city_from: "Jakarta",
         city_to: "Singapore",
@@ -2172,7 +2172,7 @@ module.exports = {
         information: "Baggage 20 kg Cabin baggage 7 kg In Flight Entertainment",
         dateTakeoff: "12:00",
         dateLanding: "14:20",
-       dateDeparture: "2023-07-01",
+        dateDeparture: "2023-07-01",
         dateReturn: "2023-07-02", // req body
         dateEnd: "2023-07-01",
         type_seat: "Business",
@@ -2183,7 +2183,7 @@ module.exports = {
         updatedAt: new Date(),
       },
 
-{
+      {
         id: uuid(),
         city_from: "Jakarta",
         city_to: "Singapore",
@@ -2193,7 +2193,7 @@ module.exports = {
         information: "Baggage 20 kg Cabin baggage 7 kg In Flight Entertainment",
         dateTakeoff: "13:15",
         dateLanding: "15:50",
-       dateDeparture: "2023-07-01",
+        dateDeparture: "2023-07-01",
         dateReturn: "2023-07-02", // req body
         dateEnd: "2023-07-01",
         type_seat: "Business",
@@ -2244,7 +2244,7 @@ module.exports = {
         updatedAt: new Date(),
       },
 
-{
+      {
         id: uuid(),
         city_from: "Jakarta",
         city_to: "Singapore",
@@ -2305,7 +2305,7 @@ module.exports = {
         updatedAt: new Date(),
       },
 
-{
+      {
         id: uuid(),
         city_from: "Jakarta",
         city_to: "Singapore",
@@ -2366,7 +2366,7 @@ module.exports = {
         updatedAt: new Date(),
       },
 
-{
+      {
         id: uuid(),
         city_from: "Jakarta",
         city_to: "Singapore",
@@ -2427,7 +2427,7 @@ module.exports = {
         updatedAt: new Date(),
       },
 
-{
+      {
         id: uuid(),
         city_from: "Jakarta",
         city_to: "Singapore",
@@ -2488,7 +2488,7 @@ module.exports = {
         updatedAt: new Date(),
       },
 
-{
+      {
         id: uuid(),
         city_from: "Jakarta",
         city_to: "Singapore",
@@ -2549,7 +2549,7 @@ module.exports = {
         updatedAt: new Date(),
       },
 
-{
+      {
         id: uuid(),
         city_from: "Jakarta",
         city_to: "Singapore",
@@ -2610,7 +2610,7 @@ module.exports = {
         updatedAt: new Date(),
       },
 
-{
+      {
         id: uuid(),
         city_from: "Jakarta",
         city_to: "Singapore",
@@ -2671,7 +2671,7 @@ module.exports = {
         updatedAt: new Date(),
       },
 
-{
+      {
         id: uuid(),
         city_from: "Jakarta",
         city_to: "Singapore",
@@ -2732,7 +2732,7 @@ module.exports = {
         updatedAt: new Date(),
       },
 
-{
+      {
         id: uuid(),
         city_from: "Jakarta",
         city_to: "Singapore",
@@ -2823,7 +2823,7 @@ module.exports = {
         dateTakeoff: "07:55",
         dateLanding: "10:45",
         dateDeparture: "2023-06-22",
-        dateReturn: "2023-06-23", 
+        dateReturn: "2023-06-23",
         dateEnd: "2023-06-22",
         type_seat: "Economy",
         price: 1384985,
@@ -3203,8 +3203,8 @@ module.exports = {
         dateTakeoff: "07:55",
         dateLanding: "10:45",
         dateDeparture: "2023-06-19",
-	      dateReturn: "2023-06-20",
-	      dateEnd: "2023-06-19",
+        dateReturn: "2023-06-20",
+        dateEnd: "2023-06-19",
         type_seat: "Business",
         price: 1384985,
         booking_code: "uwkcnubn22",
@@ -3263,7 +3263,7 @@ module.exports = {
         dateTakeoff: "07:55",
         dateLanding: "10:45",
         dateDeparture: "2023-06-22",
-        dateReturn: "2023-06-23", 
+        dateReturn: "2023-06-23",
         dateEnd: "2023-06-22",
         type_seat: "Business",
         price: 1384985,
@@ -3703,8 +3703,8 @@ module.exports = {
         dateTakeoff: "07:55",
         dateLanding: "10:45",
         dateDeparture: "2023-06-22",
-	      dateReturn: "2023-06-23", 
-	      dateEnd: "2023-06-22",
+        dateReturn: "2023-06-23",
+        dateEnd: "2023-06-22",
         type_seat: "Economy",
         price: 592600,
         booking_code: "nx7zlwhr54",
@@ -4083,8 +4083,8 @@ module.exports = {
         dateTakeoff: "07:55",
         dateLanding: "10:45",
         dateDeparture: "2023-06-19",
-	      dateReturn: "2023-06-20",
-	      dateEnd: "2023-06-19",
+        dateReturn: "2023-06-20",
+        dateEnd: "2023-06-19",
         type_seat: "Business",
         price: 592600,
         booking_code: "gfj16qh9oe",
@@ -4103,8 +4103,8 @@ module.exports = {
         dateTakeoff: "07:55",
         dateLanding: "10:45",
         dateDeparture: "2023-06-20",
-	      dateReturn: "2023-06-21",
-	      dateEnd: "2023-06-20",
+        dateReturn: "2023-06-21",
+        dateEnd: "2023-06-20",
         type_seat: "Business",
         price: 1292600,
         booking_code: "mo7tt5c5pt",
@@ -4123,8 +4123,8 @@ module.exports = {
         dateTakeoff: "07:55",
         dateLanding: "10:45",
         dateDeparture: "2023-06-21",
-	      dateReturn: "2023-06-22",
-	      dateEnd: "2023-06-21",
+        dateReturn: "2023-06-22",
+        dateEnd: "2023-06-21",
         type_seat: "Business",
         price: 1292600,
         booking_code: "kc9ldhyj9x",
@@ -4143,7 +4143,7 @@ module.exports = {
         dateTakeoff: "07:55",
         dateLanding: "10:45",
         dateDeparture: "2023-06-22",
-        dateReturn: "2023-06-23", 
+        dateReturn: "2023-06-23",
         dateEnd: "2023-06-22",
         type_seat: "Business",
         price: 1292600,
@@ -4603,7 +4603,7 @@ module.exports = {
         dateTakeoff: "08:30",
         dateLanding: "22:35",
         dateDeparture: "2023-06-22",
-        dateReturn: "2023-06-23", 
+        dateReturn: "2023-06-23",
         dateEnd: "2023-06-22",
         type_seat: "Economy",
         price: 5586630,
@@ -5063,7 +5063,7 @@ module.exports = {
         dateTakeoff: "08:30",
         dateLanding: "22:35",
         dateDeparture: "2023-06-22",
-        dateReturn: "2023-06-23", 
+        dateReturn: "2023-06-23",
         dateEnd: "2023-06-22",
         type_seat: "Business",
         price: 5586630,
@@ -5503,7 +5503,7 @@ module.exports = {
         dateTakeoff: "06:45",
         dateLanding: "09:05",
         dateDeparture: "2023-06-22",
-        dateReturn: "2023-06-23", 
+        dateReturn: "2023-06-23",
         dateEnd: "2023-06-22",
         type_seat: "Economy",
         price: 891800,
@@ -5943,7 +5943,7 @@ module.exports = {
         dateTakeoff: "06:45",
         dateLanding: "09:05",
         dateDeparture: "2023-06-22",
-        dateReturn: "2023-06-23", 
+        dateReturn: "2023-06-23",
         dateEnd: "2023-06-22",
         type_seat: "Bussines",
         price: 1891800,
@@ -6383,7 +6383,7 @@ module.exports = {
         dateTakeoff: "12.00",
         dateLanding: "17.20",
         dateDeparture: "2023-06-22",
-        dateReturn: "2023-06-23", 
+        dateReturn: "2023-06-23",
         dateEnd: "2023-06-22",
         type_seat: "Bussines",
         price: 13805100,
@@ -6823,8 +6823,8 @@ module.exports = {
         dateTakeoff: "12.00",
         dateLanding: "17.20",
         dateDeparture: "2023-06-22",
-        dateReturn: "2023-06-23", 
-        dateEnd: "2023-06-22",      
+        dateReturn: "2023-06-23",
+        dateEnd: "2023-06-22",
         type_seat: "Bussines",
         price: 13805100,
         booking_code: "i8o7kqfq38",

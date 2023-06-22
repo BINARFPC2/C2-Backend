@@ -2,61 +2,52 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable("Transactions", {
+    await queryInterface.createTable("Passengers", {
       id: {
         defaultValue: Sequelize.UUIDV4,
         allowNull: false,
         primaryKey: true,
         type: Sequelize.UUID,
       },
-      usersId: {
-        defaultValue: Sequelize.UUIDV4,
-        type: Sequelize.UUID,
-      },
-      ticketsId: {
-        defaultValue: Sequelize.UUIDV4,
-        type: Sequelize.UUID,
-      },
       checkoutsId: {
         type: Sequelize.UUID,
-      },
-      amounts: {
-        type: Sequelize.INTEGER,
-      },
-      status: {
-        type: Sequelize.STRING,
-      },
-      airlines: {
-        type: Sequelize.STRING,
-      },
-      booking_code: {
-        type: Sequelize.STRING,
-      },
-      information: {
-        type: Sequelize.STRING,
-      },
-      airport_from: {
-        type: Sequelize.STRING,
-      },
-      airport_to: {
-        type: Sequelize.STRING,
-      },
-      dateTakeoff: {
-        type: Sequelize.STRING,
-      },
-      dateLanding: {
-        type: Sequelize.STRING,
-      },
-      dateDeparture: {
+        defaultValue: Sequelize.UUIDV4,
         allowNull: false,
-        type: Sequelize.DATEONLY,
       },
-      dateEnd: {
-        allowNull: true,
-        type: Sequelize.DATEONLY,
+      ticketsId: {
+        type: Sequelize.UUID,
+        defaultValue: Sequelize.UUIDV4,
+        allowNull: false,
       },
-      type_seat: {
+      name: {
         type: Sequelize.STRING,
+      },
+      email: {
+        type: Sequelize.STRING,
+      },
+      phone: {
+        type: Sequelize.STRING,
+      },
+      familyName: {
+        type: Sequelize.STRING,
+      },
+      title: {
+        type: Sequelize.STRING,
+      },
+      dateofbirth: {
+        type: Sequelize.DATEONLY,
+      },
+      citizenship: {
+        type: Sequelize.STRING,
+      },
+      ktppaspor: {
+        type: Sequelize.STRING,
+      },
+      issuingcountry: {
+        type: Sequelize.STRING,
+      },
+      expirationdatepass: {
+        type: Sequelize.DATEONLY,
       },
       createdAt: {
         allowNull: false,
@@ -69,6 +60,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable("Transactions");
+    await queryInterface.dropTable("Passengers");
   },
 };

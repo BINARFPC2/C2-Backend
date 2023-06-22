@@ -9,6 +9,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       this.hasMany(models.Transaction, { foreignKey: "ticketsId" });
+      this.belongsTo(models.Checkout, { foreignKey: "id" });
     }
     // calculateTotalPrice() {
     //   return this.price * this.total_passenger;
@@ -37,6 +38,7 @@ module.exports = (sequelize, DataTypes) => {
       modelName: "Ticket",
     }
   );
+
   // Hook to automatically update total_price when price or total_passenger changes
   // Ticket.addHook("beforeSave", (ticket, options) => {
   //   if (ticket.changed("price") || ticket.changed("total_passenger")) {

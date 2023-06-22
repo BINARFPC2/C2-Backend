@@ -21,15 +21,7 @@ module.exports = {
         price,
         available,
       } = req.body;
-      // if (dateDeparture && dateEnd && dateReturn) {
-      //   querySearch.releaseDate = {
-      //     [Op.between]: [
-      //       new Date(dateDeparture),
-      //       new Date(dateEnd),
-      //       new Date(dateReturn),
-      //     ],
-      //   };
-      // }
+
       const addTicket = await Ticket.create({
         id: uuid(),
         city_from: city_from,
@@ -87,23 +79,19 @@ module.exports = {
         [Op.eq]: dateDeparture,
       };
     }
-
     if (dateEnd && Date.parse(dateEnd)) {
       querySearch.dateEnd = {
         [Op.eq]: dateEnd,
       };
     }
-
     if (dateReturn && Date.parse(dateReturn)) {
       querySearch.dateReturn = {
         [Op.eq]: dateReturn,
       };
     }
-
     const tickets = await Ticket.findAll({
       where: querySearch,
     });
-
     if ((dateDeparture && !tickets.length) || (dateReturn && !tickets.length)) {
       res.status(404).json({
         status: "Error",
@@ -129,7 +117,6 @@ module.exports = {
         });
       };
       const dataTicketId = await findTicketId();
-
       if (!dataTicketId) {
         res.status(404).json({
           status: "Failed",
@@ -149,42 +136,42 @@ module.exports = {
     }
   },
 
-  async updateTicketData(req, res) {
-    const idTicket = req.params.id;
+  // async updateTicketData(req, res) {
+  //   const idTicket = req.params.id;
 
-    const updateData = {
-      dateDeparture: req.body.dateDeparture,
-      total_passenger: req.body.total_passenger,
-    };
+  //   const updateData = {
+  //     dateDeparture: req.body.dateDeparture,
+  //     total_passenger: req.body.total_passenger,
+  //   };
 
-    if (req.body.dateReturn) {
-      updateData.dateReturn = req.body.dateReturn;
-    }
+  //   if (req.body.dateReturn) {
+  //     updateData.dateReturn = req.body.dateReturn;
+  //   }
 
-    try {
-      const ticket = await Ticket.findByPk(idTicket);
-      // Hitung total price baru
-      const totalPrice = ticket.price * updateData.total_passenger;
-      // Update total_price di data tiket
-      ticket.total_price = totalPrice;
+  //   try {
+  //     const ticket = await Ticket.findByPk(idTicket);
+  //     // Hitung total price baru
+  //     const totalPrice = ticket.price * updateData.total_passenger;
+  //     // Update total_price di data tiket
+  //     ticket.total_price = totalPrice;
 
-      await ticket.save();
+  //     await ticket.save();
 
-      await Ticket.update(updateData, {
-        where: { id: idTicket },
-      });
+  //     await Ticket.update(updateData, {
+  //       where: { id: idTicket },
+  //     });
 
-      res.status(200).json({
-        status: "Success",
-        message: "Update Data Ticket Successfully",
-        data: ticket,
-      });
-    } catch (error) {
-      console.log(error);
-      res.status(500).json({
-        status: "Error",
-        message: "Failed to update ticket data",
-      });
-    }
-  },
+  //     res.status(200).json({
+  //       status: "Success",
+  //       message: "Update Data Ticket Successfully",
+  //       data: ticket,
+  //     });
+  //   } catch (error) {
+  //     console.log(error);
+  //     res.status(500).json({
+  //       status: "Error",
+  //       message: "Failed to update ticket data",
+  //     });
+  //   }
+  // },
 };

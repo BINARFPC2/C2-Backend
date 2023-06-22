@@ -34,6 +34,7 @@ const {
   getDataCheckoutById,
   updateCheckoutData,
   deleteCheckout,
+  deleteAllDataCheckout,
 } = require("../app/controllers/checkoutController");
 
 const {
@@ -100,7 +101,7 @@ router.get("/api/v1/tickets/:id", getTicketById);
 router.post("/api/v1/tickets", createTicket);
 
 // Put Ticket By Id
-router.put("/api/v1/tickets/:id", updateTicketData);
+// router.put("/api/v1/tickets/:id", updateTicketData);
 
 // Add Destinasi Favorite
 router.post("/api/v1/destfavorite", createdesfav);
@@ -115,7 +116,7 @@ router.get("/api/v1/destfavorite/:id", getDestinasiById);
 router.delete("/api/v1/destfavorite/:id", deleteDestFav);
 
 // Post Checkout
-router.post("/api/v1/checkout", createCheckout);
+router.post("/api/v1/checkout", authorize, createCheckout);
 
 // Get All Data Checkout
 router.get("/api/v1/checkout", getAllCheckoutData);
@@ -128,6 +129,9 @@ router.put("/api/v1/checkout/:id", updateCheckoutData);
 
 // Delete Data Checkout
 router.delete("/api/v1/checkout/:id", deleteCheckout);
+
+// Delete All Data Transaction
+router.delete("/api/v1/checkout", deleteAllDataCheckout);
 
 // Add Payment
 router.post("/api/v1/payment", createPayment);
@@ -143,10 +147,11 @@ router.get("/api/v1/payment/:id", getPaymentById);
 router.post("/api/v1/transaction", createTransaction);
 
 // Get All Data Transaction
-router.get("/api/v1/transaction", getAllTransactionData);
+// router.get("/api/v1/transaction", getAllTransactionData);
 
 // Get Data Transaction By Id
-router.get("/api/v1/transaction/:id", getDataTransactionById);
+// router.get("/api/v1/transaction/:id", getDataTransactionById);
+router.get("/api/v1/transaction", authorize, getDataTransactionById);
 
 // Put Data Transaction
 router.put("/api/v1/transaction/:id", updateDataTrans);
