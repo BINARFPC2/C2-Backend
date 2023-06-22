@@ -151,6 +151,15 @@ module.exports = {
         ],
       });
 
+      if (!checkoutData) {
+        // jika transaction tidak ada
+        res.status(404).json({
+          message: "No transaction data found",
+          data: [],
+        });
+        return;
+      }
+
       const formattedCheckoutData = checkoutData.map((checkout) => ({
         id: checkout.id,
         usersId: checkout.usersId,
@@ -164,7 +173,7 @@ module.exports = {
       }));
 
       res.status(200).json({
-        message: "Checkout data retrieved successfully",
+        message: "Transaction data retrieved successfully",
         data: formattedCheckoutData,
       });
     } catch (error) {
