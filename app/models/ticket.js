@@ -20,6 +20,7 @@ module.exports = (sequelize, DataTypes) => {
       city_from: DataTypes.STRING,
       city_to: DataTypes.STRING,
       airlines: DataTypes.STRING,
+      code: DataTypes.STRING,
       airport_from: DataTypes.STRING,
       airport_to: DataTypes.STRING,
       information: DataTypes.STRING,

@@ -18,6 +18,9 @@ module.exports = {
       airlines: {
         type: Sequelize.STRING,
       },
+      code: {
+        type: Sequelize.STRING,
+      },
       information: {
         type: Sequelize.STRING,
       },
