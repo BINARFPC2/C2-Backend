@@ -1,8 +1,8 @@
-'use strict';
+"use strict";
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('payments', {
+    await queryInterface.createTable("Payments", {
       id: {
         defaultValue: Sequelize.UUIDV4,
         allowNull: false,
@@ -10,35 +10,37 @@ module.exports = {
         type: Sequelize.UUID,
         unique: true,
       },
+      usersId: {
+        defaultValue: Sequelize.UUIDV4,
+        allowNull: false,
+        type: Sequelize.UUID,
+      },
       cardNumber: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       cardHolderName: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       cvc: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
       },
       expiration: {
-        type: Sequelize.INTEGER
-      },
-      country: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       status: {
-        type: Sequelize.BOOLEAN
+        type: Sequelize.STRING,
       },
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
       },
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE
-      }
+        type: Sequelize.DATE,
+      },
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('payments');
-  }
+    await queryInterface.dropTable("Payments");
+  },
 };
