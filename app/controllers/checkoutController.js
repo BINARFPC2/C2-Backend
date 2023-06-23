@@ -5,51 +5,6 @@ const { v4: uuid } = require("uuid");
 const { Op } = require("sequelize");
 
 module.exports = {
-  // async createCheckout(req, res) {
-  //   try {
-  //     const {
-  //       ticketsId,
-  //       name,
-  //       email,
-  //       phone,
-  //       familyName,
-  //       title,
-  //       dateofbirth,
-  //       citizenship,
-  //       ktppaspor,
-  //       issuingcountry,
-  //       expirationdatepass,
-  //       total_passenger,
-  //     } = req.body;
-
-  //     //   create checkout
-  //     const userCheckout = await Checkout.create({
-  //       id: uuid(),
-  //       ticketsId: ticketsId,
-  //       name: name,
-  //       email: email,
-  //       phone: phone,
-  //       familyName: familyName,
-  //       title: title,
-  //       dateofbirth: dateofbirth,
-  //       citizenship: citizenship,
-  //       ktppaspor: ktppaspor,
-  //       issuingcountry: issuingcountry,
-  //       expirationdatepass: expirationdatepass,
-  //       total_passenger: total_passenger,
-  //     });
-  //     res.status(201).json({
-  //       status: "Success",
-  //       message: "Checkout Success",
-  //       data: userCheckout,
-  //     });
-  //   } catch (error) {
-  //     res.status(400).json({
-  //       status: "Failed",
-  //       message: error.message,
-  //     });
-  //   }
-  // },
   async createCheckout(req, res) {
     try {
       const { ticketsId, total_passenger, passengers } = req.body;
@@ -57,6 +12,20 @@ module.exports = {
       // Get the current authenticated user ID
       const usersId = req.user.id; // Ganti `req.user.id` dengan cara yang sesuai untuk mengakses ID pengguna saat ini
 
+      // check if the provided ticketsId exists in the Ticket Table
+      const ticket = await Ticket.findOne({
+        where: {
+          id: ticketsId,
+        },
+      });
+
+      if (!ticket) {
+        res.status(400).json({
+          status: "Failed",
+          message: "Invalid ticketsId, Ticket does not exist",
+        });
+        return;
+      }
       // Create a new checkout
       const checkout = await Checkout.create({
         id: uuid(),
@@ -93,50 +62,9 @@ module.exports = {
         message: "Internal server error",
       });
     }
-
-    // async authorize(req, res, next) {
-    //   try {
-    //     const bearerToken = req.headers.authorization;
-    //     const token = bearerToken.split("Bearer ")[1];
-    //     const tokenPayload = jwt.verify(
-    //       token,
-    //       process.env.JWT_SIGNATURE_KEY || "Rahasia"
-    //     );
-    //     req.user = await user.findByPk(tokenPayload.id);
-    //     next();
-    //   } catch (error) {
-    //     console.error(error);
-    //     res.status(401).json({
-    //       message: "Unauthorized",
-    //     });
-    //   }
-    // },
   },
 
   async getAllCheckoutData(req, res) {
-    // const findCheckoutAll = () => {
-    //   return Checkout.findAll();
-    // };
-    // try {
-    //   const dataCheckout = await findCheckoutAll();
-    //   if (!dataCheckout) {
-    //     res.status(404).json({
-    //       status: "failed",
-    //       message: "Data Checkout not found",
-    //     });
-    //   }
-    //   res.status(200).json({
-    //     status: "Success",
-    //     message: "Get All Data Checkout Success",
-    //     data: dataCheckout,
-    //   });
-    // } catch (error) {
-    //   res.status(500).json({
-    //     status: "Erro",
-    //     message: error.message,
-    //   });
-    // }
-
     try {
       const idUser = req.user.id; // Mengambil ID pengguna dari token
       const checkoutData = await Checkout.findAll({
@@ -156,8 +84,8 @@ module.exports = {
         ],
       });
 
-      if (!checkoutData) {
-        // jika transaction tidak ada
+      // jika transaction tidak ada
+      if (checkoutData.length === 0) {
         res.status(404).json({
           message: "No transaction data found",
           data: [],
