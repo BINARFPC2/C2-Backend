@@ -1470,7 +1470,7 @@ paths:
                     example: Data not Found
 
       deprecated: false
-    # /checkout:
+    /checkout:
     #   get:
     #     tags:
     #       - Checkout
@@ -2175,78 +2175,78 @@ paths:
   #                 type: string
   #                 example: Server Error
   /payment:
-    get:
-      tags:
-        - Payment
-      parameters: []
-      responses:
-        "200":
-          description: If data successfully retrived
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  status:
-                    type: string
-                    example: Get Data Payment Successfully
-                  data:
-                    type: object
-                    properties:
-                      posts:
-                        type: array
-                        items:
-                          type: object
-                          properties:
-                            id:
-                              type: uuid
-                            cardNumber:
-                              type: string
-                            cardHolderName:
-                              type: string
-                            cvc:
-                              type: number
-                            expiration:
-                              type: number
-                            country:
-                              type: string
-                            status:
-                              type: boolean
-                            createdAt:
-                              type: string
-                            updatedAt:
-                              type: string
-                        example:
-                          - id: 1
-                            cardNumber: "874872872942"
-                            cardHolderName: "Hapizd"
-                            cvc: 345
-                            expiration: 911
-                            country: "Indonesia"
-                            status: true
-                            updatedAt: "2023-06-12T14:12:07.601Z"
-                            createdAt: "2023-06-12T14:12:07.601Z"
-        "404":
-          description: If Data Not Found
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  message:
-                    type: string
-                    example: Data not found
-        "500":
-          description: If the server is down or full
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  message:
-                    type: string
-                    example: Server Error
-      deprecated: false
+    # get:
+    #   tags:
+    #     - Payment
+    #   parameters: []
+    #   responses:
+    #     "200":
+    #       description: If data successfully retrived
+    #       content:
+    #         application/json:
+    #           schema:
+    #             type: object
+    #             properties:
+    #               status:
+    #                 type: string
+    #                 example: Get Data Payment Successfully
+    #               data:
+    #                 type: object
+    #                 properties:
+    #                   posts:
+    #                     type: array
+    #                     items:
+    #                       type: object
+    #                       properties:
+    #                         id:
+    #                           type: uuid
+    #                         cardNumber:
+    #                           type: string
+    #                         cardHolderName:
+    #                           type: string
+    #                         cvc:
+    #                           type: number
+    #                         expiration:
+    #                           type: number
+    #                         country:
+    #                           type: string
+    #                         status:
+    #                           type: boolean
+    #                         createdAt:
+    #                           type: string
+    #                         updatedAt:
+    #                           type: string
+    #                     example:
+    #                       - id: 1
+    #                         cardNumber: "874872872942"
+    #                         cardHolderName: "Hapizd"
+    #                         cvc: 345
+    #                         expiration: 911
+    #                         country: "Indonesia"
+    #                         status: true
+    #                         updatedAt: "2023-06-12T14:12:07.601Z"
+    #                         createdAt: "2023-06-12T14:12:07.601Z"
+    #     "404":
+    #       description: If Data Not Found
+    #       content:
+    #         application/json:
+    #           schema:
+    #             type: object
+    #             properties:
+    #               message:
+    #                 type: string
+    #                 example: Data not found
+    #     "500":
+    #       description: If the server is down or full
+    #       content:
+    #         application/json:
+    #           schema:
+    #             type: object
+    #             properties:
+    #               message:
+    #                 type: string
+    #                 example: Server Error
+    #   deprecated: false
     post:
       tags:
         - Payment
