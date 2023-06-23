@@ -1470,91 +1470,91 @@ paths:
                     example: Data not Found
 
       deprecated: false
-  /checkout:
-    get:
-      tags:
-        - Checkout
-      parameters: []
-      responses:
-        "200":
-          description: If data successfully retrived
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  status:
-                    type: string
-                    example: Get Data Checkout Successfully
-                  data:
-                    type: object
-                    properties:
-                      posts:
-                        type: array
-                        items:
-                          type: object
-                          properties:
-                            id:
-                              type: integer
-                            name:
-                              type: string
-                            email:
-                              type: string
-                            phone:
-                              type: number
-                            familyName:
-                              type: string
-                            title:
-                              type: string
-                            dateofbirth:
-                              type: date
-                            citizenship:
-                              type: string
-                            ktppaspor:
-                              type: string
-                            issuingcountry:
-                              type: string
-                            expiratinondatepass:
-                              type: date
-                            createdAt:
-                              type: string
-                            updatedAt:
-                              type: string
-                        example:
-                          - id: 1
-                            name: "Jamal"
-                            email: "jamal@gmail.com"
-                            phone: 08211111111
-                            familyName: "Jamaludin"
-                            title: "Mr."
-                            dateofbirth: "2023-06-12"
-                            citizenship: "Indonesia"
-                            ktppaspor: "29292929"
-                            issuingcountry: "Indonesia"
-                            expirationdatepass: "2003-03-24"
-                            createdAt": "2023-06-12T19:03:23.439Z"
-                            updatedAt": "2023-06-12T19:03:23.439Z"
-        "404":
-          description: If Data Not Found
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  message:
-                    type: string
-                    example: Data not found
-        "500":
-          description: If the server is down or full
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  message:
-                    type: string
-                    example: Server Error
-      deprecated: false
+    # /checkout:
+    #   get:
+    #     tags:
+    #       - Checkout
+    #     parameters: []
+    #     responses:
+    #       "200":
+    #         description: If data successfully retrived
+    #         content:
+    #           application/json:
+    #             schema:
+    #               type: object
+    #               properties:
+    #                 status:
+    #                   type: string
+    #                   example: Get Data Checkout Successfully
+    #                 data:
+    #                   type: object
+    #                   properties:
+    #                     posts:
+    #                       type: array
+    #                       items:
+    #                         type: object
+    #                         properties:
+    #                           id:
+    #                             type: integer
+    #                           name:
+    #                             type: string
+    #                           email:
+    #                             type: string
+    #                           phone:
+    #                             type: number
+    #                           familyName:
+    #                             type: string
+    #                           title:
+    #                             type: string
+    #                           dateofbirth:
+    #                             type: date
+    #                           citizenship:
+    #                             type: string
+    #                           ktppaspor:
+    #                             type: string
+    #                           issuingcountry:
+    #                             type: string
+    #                           expiratinondatepass:
+    #                             type: date
+    #                           createdAt:
+    #                             type: string
+    #                           updatedAt:
+    #                             type: string
+    #                       example:
+    #                         - id: 1
+    #                           name: "Jamal"
+    #                           email: "jamal@gmail.com"
+    #                           phone: 08211111111
+    #                           familyName: "Jamaludin"
+    #                           title: "Mr."
+    #                           dateofbirth: "2023-06-12"
+    #                           citizenship: "Indonesia"
+    #                           ktppaspor: "29292929"
+    #                           issuingcountry: "Indonesia"
+    #                           expirationdatepass: "2003-03-24"
+    #                           createdAt": "2023-06-12T19:03:23.439Z"
+    #                           updatedAt": "2023-06-12T19:03:23.439Z"
+    #       "404":
+    #         description: If Data Not Found
+    #         content:
+    #           application/json:
+    #             schema:
+    #               type: object
+    #               properties:
+    #                 message:
+    #                   type: string
+    #                   example: Data not found
+    #       "500":
+    #         description: If the server is down or full
+    #         content:
+    #           application/json:
+    #             schema:
+    #               type: object
+    #               properties:
+    #                 message:
+    #                   type: string
+    #                   example: Server Error
+    #     deprecated: false
     # post:
     #   tags:
     #     - Checkout
@@ -1791,8 +1791,8 @@ paths:
         #                     createdAt: "2023-06-12T19:03:23.439Z"
         #                     updatedAt: "2023-06-12T19:03:23.439Z"
         #                 totalpassengers: "2"
-        "200":
-          description: This is the data of all users
+        "201":
+          description: Checkout created
           content:
             application/json:
               schema:
@@ -1803,233 +1803,9 @@ paths:
                     example: Success
                   message:
                     type: string
-                    example: Get All Data Checkout Success
-        "404":
-          description: If Data Not Found
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  message:
-                    type: string
-                    example: Data Checkout not found
-        "500":
-          description: If the server is down or full
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  message:
-                    type: string
-                    example: Server Error
-  /checkout/:id:
-    get:
-      tags:
-        - Checkout
-      parameters: []
-      responses:
-        "200":
-          description: If data successfully retrived
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  status:
-                    type: string
-                    example: Get Data Checkout Successfully
-                  data:
-                    type: object
-                    properties:
-                      posts:
-                        type: array
-                        items:
-                          type: object
-                          properties:
-                            id:
-                              type: integer
-                            name:
-                              type: string
-                            email:
-                              type: string
-                            phone:
-                              type: number
-                            familyName:
-                              type: string
-                            title:
-                              type: string
-                            dateofbirth:
-                              type: date
-                            citizenship:
-                              type: string
-                            ktppaspor:
-                              type: string
-                            issuingcountry:
-                              type: string
-                            expiratinondatepass:
-                              type: date
-                            createdAt:
-                              type: string
-                            updatedAt:
-                              type: string
-                        example:
-                          - id: 1
-                            name: "Jamal"
-                            email: "jamal@gmail.com"
-                            phone: 08211111111
-                            familyName: "Jamaludin"
-                            title: "Mr."
-                            dateofbirth: "2023-06-12"
-                            citizenship: "Indonesia"
-                            ktppaspor: "29292929"
-                            issuingcountry: "Indonesia"
-                            expirationdatepass: "2003-03-24"
-                            createdAt": "2023-06-12T19:03:23.439Z"
-                            updatedAt": "2023-06-12T19:03:23.439Z"
-        "404":
-          description: If Data Not Found
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  message:
-                    type: string
-                    example: Data not found
-        "500":
-          description: If the server is down or full
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  message:
-                    type: string
-                    example: Server Error
-      deprecated: false
-    post:
-      tags:
-        - Checkout
-      parameters: []
-      requestBody:
-        content:
-          application/x-www-form-urlencoded:
-            encoding: {}
-            schema:
-              required:
-                - ticketsId
-                - name
-                - email
-                - phone
-                - familyName
-                - title
-                - dateofbirth
-                - citizenship
-                - ktppaspor
-                - issuingcountry
-                - expirationdatepass
-              type: object
-              properties:
-                ticketsId:
-                  type: string
-                  example: d62605a4-60d2-4cc2-8170-f30bb569b2f8
-                name:
-                  type: string
-                  example: "Jamal"
-                email:
-                  type: string
-                  example: "jamal@gmail.com"
-                phone:
-                  type: number
-                  example: 080000
-                familyName:
-                  type: string
-                  example: "Jamaludin"
-                title:
-                  type: string
-                  example: "Mr."
-                dateofbirth:
-                  type: date
-                  example: "2023-06-12"
-                citizenship:
-                  type: string
-                  example: "Indonesia"
-                ktppaspor:
-                  type: number
-                  example: "29292929"
-                issuingcountry:
-                  type: string
-                  example: "Indonesia"
-                expirationdatepass:
-                  type: date
-                  example: "2003-03-24"
-        required: false
-      responses:
-        "200":
-          description: If data successfully retrived
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  status:
-                    type: string
-                    example: Created Destinasi Favorite Success
-                  data:
-                    type: object
-                    properties:
-                      posts:
-                        type: array
-                        items:
-                          type: object
-                          properties:
-                            id:
-                              type: integer
-                            ticketsId:
-                              type: string
-                            name:
-                              type: string
-                            email:
-                              type: string
-                            phone:
-                              type: number
-                            familyName:
-                              type: string
-                            title:
-                              type: string
-                            dateofbirth:
-                              type: date
-                            citizenship:
-                              type: string
-                            ktppaspor:
-                              type: number
-                            issuingcountry:
-                              type: string
-                            expirationdatepass:
-                              type: date
-                            createdAt:
-                              type: string
-                            updatedAt:
-                              type: string
-                        example:
-                          - id: 1
-                            ticketsId: "d62605a4-60d2-4cc2-8170-f30bb569b2f8"
-                            name: Jamal
-                            email: "jamal@gmail.com"
-                            phone: 080000
-                            familyName: "Jamaludin"
-                            title: "Mr."
-                            dateofbirth: "2023-06-12"
-                            citizenship: "Indonesia"
-                            ktppaspor: 29292929
-                            issuingcountry: Indonesia
-                            expirationdatepass: "2003-03-24"
-                            updatedAt: "2023-06-19T16:34:25.393Z"
-                            createdAt: "2023-06-19T16:34:25.393Z"
+                    example: Checkout created successfully
         "400":
-          description: If member tried to retrive the data
+          description: If Invalid ticketsId, Ticket does not exist
           content:
             application/json:
               schema:
@@ -2037,9 +1813,9 @@ paths:
                 properties:
                   message:
                     type: string
-                    example: Data not found
+                    example: Invalid ticketsId, Ticket does not exist
         "500":
-          description: If the server is down or full
+          description: If the server is down or error
           content:
             application/json:
               schema:
@@ -2048,132 +1824,356 @@ paths:
                   message:
                     type: string
                     example: Server Error
-      deprecated: false
-    put:
-      tags:
-        - Checkout
-      parameters:
-        - name: id_checkout
-          in: path
-          schema:
-      requestBody:
-        content:
-          application/x-www-form-urlencoded:
-            encoding: {}
-            schema:
-              required:
-                - name
-                - email
-                - phone
-                - familyName
-                - title
-                - dateofbirth
-                - citizenship
-                - ktppaspor
-                - issuingcountry
-                - expirationdatepass
-              type: object
-              properties:
-                name:
-                  type: string
-                  example: Hapizd
-                email:
-                  type: string
-                  example: "hapizdasari@gmail.com"
-                phone:
-                  type: number
-                  example: 082000000
-                familyName:
-                  type: string
-                  example: "Asari"
-                title:
-                  type: string
-                  example: "Mr."
-                dateofbirth:
-                  type: date
-                  example: "2021-01-01"
-                citizenship:
-                  type: string
-                  example: "Indonesia"
-                ktppaspor:
-                  type: string
-                  example: "29292929"
-                issungcountry:
-                  type: date
-                  example: "2003-03-24"
-        required: false
-      responses:
-        "200":
-          description: If Update Is Successful
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  status:
-                    type: string
-                    example: Success
-                  message:
-                    type: string
-                    example: Update Data Checkout Successfully
-        "422":
-          description:
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  status:
-                    type: string
-                    example: Success
-                  message:
-                    type: string
-                    example: Error
-          headers: {}
-      deprecated: false
-    # delete:
-    #   tags:
-    #     - Checkout
-    #   parameters:
-    #     - name: id_user
-    #       in: path
-    #       required: true
-    #       schema:
-    #         type: string
-    #   responses:
-    #     "200":
-    #       description: Delete Successfully
-    #       content:
-    #         application/json:
-    #           schema:
-    #             type: object
-    #             properties:
-    #               status:
-    #                 type: string
-    #                 example: Success
-    #               message:
-    #                 type: string
-    #                 example: Checkout Data Deleted successfully
-    #     "422":
-    #       description: If Data Not Found
-    #       content:
-    #         application/json:
-    #           schema:
-    #             type: object
-    #             properties:
-    #               message:
-    #                 type: string
-    #                 example: Error
-    #     "500":
-    #       description: If the server is down or full
-    #       content:
-    #         application/json:
-    #           schema:
-    #             type: object
-    #             properties:
-    #               message:
-    #                 type: string
-    #                 example: Server Error
+  # /checkout/:id:
+  #   get:
+  #     tags:
+  #       - Checkout
+  #     parameters: []
+  #     responses:
+  #       "200":
+  #         description: If data successfully retrived
+  #         content:
+  #           application/json:
+  #             schema:
+  #               type: object
+  #               properties:
+  #                 status:
+  #                   type: string
+  #                   example: Get Data Checkout Successfully
+  #                 data:
+  #                   type: object
+  #                   properties:
+  #                     posts:
+  #                       type: array
+  #                       items:
+  #                         type: object
+  #                         properties:
+  #                           id:
+  #                             type: integer
+  #                           name:
+  #                             type: string
+  #                           email:
+  #                             type: string
+  #                           phone:
+  #                             type: number
+  #                           familyName:
+  #                             type: string
+  #                           title:
+  #                             type: string
+  #                           dateofbirth:
+  #                             type: date
+  #                           citizenship:
+  #                             type: string
+  #                           ktppaspor:
+  #                             type: string
+  #                           issuingcountry:
+  #                             type: string
+  #                           expiratinondatepass:
+  #                             type: date
+  #                           createdAt:
+  #                             type: string
+  #                           updatedAt:
+  #                             type: string
+  #                       example:
+  #                         - id: 1
+  #                           name: "Jamal"
+  #                           email: "jamal@gmail.com"
+  #                           phone: 08211111111
+  #                           familyName: "Jamaludin"
+  #                           title: "Mr."
+  #                           dateofbirth: "2023-06-12"
+  #                           citizenship: "Indonesia"
+  #                           ktppaspor: "29292929"
+  #                           issuingcountry: "Indonesia"
+  #                           expirationdatepass: "2003-03-24"
+  #                           createdAt": "2023-06-12T19:03:23.439Z"
+  #                           updatedAt": "2023-06-12T19:03:23.439Z"
+  #       "404":
+  #         description: If Data Not Found
+  #         content:
+  #           application/json:
+  #             schema:
+  #               type: object
+  #               properties:
+  #                 message:
+  #                   type: string
+  #                   example: Data not found
+  #       "500":
+  #         description: If the server is down or full
+  #         content:
+  #           application/json:
+  #             schema:
+  #               type: object
+  #               properties:
+  #                 message:
+  #                   type: string
+  #                   example: Server Error
+  #     deprecated: false
+  # post:
+  #   tags:
+  #     - Checkout
+  #   parameters: []
+  #   requestBody:
+  #     content:
+  #       application/x-www-form-urlencoded:
+  #         encoding: {}
+  #         schema:
+  #           required:
+  #             - ticketsId
+  #             - name
+  #             - email
+  #             - phone
+  #             - familyName
+  #             - title
+  #             - dateofbirth
+  #             - citizenship
+  #             - ktppaspor
+  #             - issuingcountry
+  #             - expirationdatepass
+  #           type: object
+  #           properties:
+  #             ticketsId:
+  #               type: string
+  #               example: d62605a4-60d2-4cc2-8170-f30bb569b2f8
+  #             name:
+  #               type: string
+  #               example: "Jamal"
+  #             email:
+  #               type: string
+  #               example: "jamal@gmail.com"
+  #             phone:
+  #               type: number
+  #               example: 080000
+  #             familyName:
+  #               type: string
+  #               example: "Jamaludin"
+  #             title:
+  #               type: string
+  #               example: "Mr."
+  #             dateofbirth:
+  #               type: date
+  #               example: "2023-06-12"
+  #             citizenship:
+  #               type: string
+  #               example: "Indonesia"
+  #             ktppaspor:
+  #               type: number
+  #               example: "29292929"
+  #             issuingcountry:
+  #               type: string
+  #               example: "Indonesia"
+  #             expirationdatepass:
+  #               type: date
+  #               example: "2003-03-24"
+  #     required: false
+  #   responses:
+  #     "200":
+  #       description: If data successfully retrived
+  #       content:
+  #         application/json:
+  #           schema:
+  #             type: object
+  #             properties:
+  #               status:
+  #                 type: string
+  #                 example: Created Destinasi Favorite Success
+  #               data:
+  #                 type: object
+  #                 properties:
+  #                   posts:
+  #                     type: array
+  #                     items:
+  #                       type: object
+  #                       properties:
+  #                         id:
+  #                           type: integer
+  #                         ticketsId:
+  #                           type: string
+  #                         name:
+  #                           type: string
+  #                         email:
+  #                           type: string
+  #                         phone:
+  #                           type: number
+  #                         familyName:
+  #                           type: string
+  #                         title:
+  #                           type: string
+  #                         dateofbirth:
+  #                           type: date
+  #                         citizenship:
+  #                           type: string
+  #                         ktppaspor:
+  #                           type: number
+  #                         issuingcountry:
+  #                           type: string
+  #                         expirationdatepass:
+  #                           type: date
+  #                         createdAt:
+  #                           type: string
+  #                         updatedAt:
+  #                           type: string
+  #                     example:
+  #                       - id: 1
+  #                         ticketsId: "d62605a4-60d2-4cc2-8170-f30bb569b2f8"
+  #                         name: Jamal
+  #                         email: "jamal@gmail.com"
+  #                         phone: 080000
+  #                         familyName: "Jamaludin"
+  #                         title: "Mr."
+  #                         dateofbirth: "2023-06-12"
+  #                         citizenship: "Indonesia"
+  #                         ktppaspor: 29292929
+  #                         issuingcountry: Indonesia
+  #                         expirationdatepass: "2003-03-24"
+  #                         updatedAt: "2023-06-19T16:34:25.393Z"
+  #                         createdAt: "2023-06-19T16:34:25.393Z"
+  #     "400":
+  #       description: If member tried to retrive the data
+  #       content:
+  #         application/json:
+  #           schema:
+  #             type: object
+  #             properties:
+  #               message:
+  #                 type: string
+  #                 example: Data not found
+  #     "500":
+  #       description: If the server is down or full
+  #       content:
+  #         application/json:
+  #           schema:
+  #             type: object
+  #             properties:
+  #               message:
+  #                 type: string
+  #                 example: Server Error
+  #   deprecated: false
+  # put:
+  #   tags:
+  #     - Checkout
+  #   parameters:
+  #     - name: id_checkout
+  #       in: path
+  #       schema:
+  #   requestBody:
+  #     content:
+  #       application/x-www-form-urlencoded:
+  #         encoding: {}
+  #         schema:
+  #           required:
+  #             - name
+  #             - email
+  #             - phone
+  #             - familyName
+  #             - title
+  #             - dateofbirth
+  #             - citizenship
+  #             - ktppaspor
+  #             - issuingcountry
+  #             - expirationdatepass
+  #           type: object
+  #           properties:
+  #             name:
+  #               type: string
+  #               example: Hapizd
+  #             email:
+  #               type: string
+  #               example: "hapizdasari@gmail.com"
+  #             phone:
+  #               type: number
+  #               example: 082000000
+  #             familyName:
+  #               type: string
+  #               example: "Asari"
+  #             title:
+  #               type: string
+  #               example: "Mr."
+  #             dateofbirth:
+  #               type: date
+  #               example: "2021-01-01"
+  #             citizenship:
+  #               type: string
+  #               example: "Indonesia"
+  #             ktppaspor:
+  #               type: string
+  #               example: "29292929"
+  #             issungcountry:
+  #               type: date
+  #               example: "2003-03-24"
+  #     required: false
+  #   responses:
+  #     "200":
+  #       description: If Update Is Successful
+  #       content:
+  #         application/json:
+  #           schema:
+  #             type: object
+  #             properties:
+  #               status:
+  #                 type: string
+  #                 example: Success
+  #               message:
+  #                 type: string
+  #                 example: Update Data Checkout Successfully
+  #     "422":
+  #       description:
+  #       content:
+  #         application/json:
+  #           schema:
+  #             type: object
+  #             properties:
+  #               status:
+  #                 type: string
+  #                 example: Success
+  #               message:
+  #                 type: string
+  #                 example: Error
+  #       headers: {}
+  #   deprecated: false
+  # delete:
+  #   tags:
+  #     - Checkout
+  #   parameters:
+  #     - name: id_user
+  #       in: path
+  #       required: true
+  #       schema:
+  #         type: string
+  #   responses:
+  #     "200":
+  #       description: Delete Successfully
+  #       content:
+  #         application/json:
+  #           schema:
+  #             type: object
+  #             properties:
+  #               status:
+  #                 type: string
+  #                 example: Success
+  #               message:
+  #                 type: string
+  #                 example: Checkout Data Deleted successfully
+  #     "422":
+  #       description: If Data Not Found
+  #       content:
+  #         application/json:
+  #           schema:
+  #             type: object
+  #             properties:
+  #               message:
+  #                 type: string
+  #                 example: Error
+  #     "500":
+  #       description: If the server is down or full
+  #       content:
+  #         application/json:
+  #           schema:
+  #             type: object
+  #             properties:
+  #               message:
+  #                 type: string
+  #                 example: Server Error
   /payment:
     get:
       tags:
@@ -2247,14 +2247,41 @@ paths:
                     type: string
                     example: Server Error
       deprecated: false
-  /payment/:id:
-    get:
+    post:
       tags:
         - Payment
-      parameters: []
+      parameters:
+        - name: token
+          in: path
+          schema:
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            encoding: {}
+            schema:
+              required:
+                - cardNumber
+                - cardHolderName
+                - cvc
+                - expiration
+              type: object
+              properties:
+                cardNumber:
+                  type: number
+                  example: 448000000000000
+                cardHolderName:
+                  type: string
+                  example: Jamal
+                cvc:
+                  type: number
+                  example: 123
+                expiration:
+                  type: number
+                  example: 07/04
+        required: false
       responses:
-        "200":
-          description: If data successfully retrived
+        "201":
+          description: If Created payment Success
           content:
             application/json:
               schema:
@@ -2262,69 +2289,108 @@ paths:
                 properties:
                   status:
                     type: string
-                    example: Get Data Payment Successfully
-                  data:
-                    type: object
-                    properties:
-                      posts:
-                        type: array
-                        items:
-                          type: object
-                          properties:
-                            id:
-                              type: uuid
-                            cardNumber:
-                              type: string
-                            cardHolderName:
-                              type: string
-                            cvc:
-                              type: number
-                            expiration:
-                              type: number
-                            country:
-                              type: string
-                            status:
-                              type: boolean
-                            createdAt:
-                              type: string
-                            updatedAt:
-                              type: string
-                        example:
-                          - id: 1
-                            cardNumber: "874872872942"
-                            cardHolderName: "Hapizd"
-                            cvc: 345
-                            expiration: 911
-                            country: "Indonesia"
-                            status: true
-                            updatedAt: "2023-06-12T14:12:07.601Z"
-                            createdAt: "2023-06-12T14:12:07.601Z"
-        "404":
-          description: If Data Not Found
+                    example: Success
+                  message:
+                    type: string
+                    example: Created payment Success
+          headers: {}
+        "400":
+          description: If email not found
           content:
             application/json:
               schema:
                 type: object
                 properties:
+                  status:
+                    type: string
+                    example: Error
                   message:
                     type: string
-                    example: Data not found
-        "500":
-          description: If the server is down or full
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  message:
-                    type: string
-                    example: Server Error
+                    example: Token not found
+
+          headers: {}
       deprecated: false
+  # /payment/:id:
+  #   get:
+  #     tags:
+  #       - Payment
+  #     parameters: []
+  #     responses:
+  #       "200":
+  #         description: If data successfully retrived
+  #         content:
+  #           application/json:
+  #             schema:
+  #               type: object
+  #               properties:
+  #                 status:
+  #                   type: string
+  #                   example: Get Data Payment Successfully
+  #                 data:
+  #                   type: object
+  #                   properties:
+  #                     posts:
+  #                       type: array
+  #                       items:
+  #                         type: object
+  #                         properties:
+  #                           id:
+  #                             type: uuid
+  #                           cardNumber:
+  #                             type: string
+  #                           cardHolderName:
+  #                             type: string
+  #                           cvc:
+  #                             type: number
+  #                           expiration:
+  #                             type: number
+  #                           country:
+  #                             type: string
+  #                           status:
+  #                             type: boolean
+  #                           createdAt:
+  #                             type: string
+  #                           updatedAt:
+  #                             type: string
+  #                       example:
+  #                         - id: 1
+  #                           cardNumber: "874872872942"
+  #                           cardHolderName: "Hapizd"
+  #                           cvc: 345
+  #                           expiration: 911
+  #                           country: "Indonesia"
+  #                           status: true
+  #                           updatedAt: "2023-06-12T14:12:07.601Z"
+  #                           createdAt: "2023-06-12T14:12:07.601Z"
+  #       "404":
+  #         description: If Data Not Found
+  #         content:
+  #           application/json:
+  #             schema:
+  #               type: object
+  #               properties:
+  #                 message:
+  #                   type: string
+  #                   example: Data not found
+  #       "500":
+  #         description: If the server is down or full
+  #         content:
+  #           application/json:
+  #             schema:
+  #               type: object
+  #               properties:
+  #                 message:
+  #                   type: string
+  #                   example: Server Error
+  #     deprecated: false
   /transaction:
     get:
       tags:
         - Transaction
-      parameters: []
+      parameters:
+        - name: token
+          in: path
+          schema:
       responses:
         "200":
           description: If data successfully retrived
@@ -2655,256 +2721,256 @@ paths:
     #                 example: Server Error
     #   deprecated: false
 
-  /transaction/:id:
-    get:
-      tags:
-        - Transaction
-      parameters: []
-      responses:
-        "200":
-          description: If data successfully retrived
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  status:
-                    type: string
-                    example: Success
-                  message:
-                    type: string
-                    example: Get Data Transactions Successfully
-                  data:
-                    type: object
-                    properties:
-                      posts:
-                        type: array
-                        items:
-                          type: object
-                          properties:
-                            id:
-                              type: integer
-                            usersId:
-                              type: string
-                            ticketsId:
-                              type: string
-                            amounts:
-                              type: integer
-                            status:
-                              type: boolean
-                            airlines:
-                              type: string
-                            airport_from:
-                              type: string
-                            airport_to:
-                              type: string
-                            information:
-                              type: string
-                            dateTakeoff:
-                              type: date
-                            dateLanding:
-                              type: date
-                            dateDeparture:
-                              type: date
-                            dateEnd:
-                              type: date
-                            type_seat:
-                              type: string
-                            createdAt:
-                              type: string
-                            updatedAt:
-                              type: string
-                        example:
-                          - id: 1
-                            usersId: "59c414a7-e3e2-4005-afcd-7982e224e540"
-                            ticketsId: "731bb06a-f957-4093-8b7e-11fedf8caa13"
-                            amounts: 1783600
-                            status: "Success"
-                            airlines": "Super Air Jet"
-                            airport_from: "Bandar Udara Internasional Kualanamu"
-                            airport_to: "Soekarno-Hatta International"
-                            information: "Baggage 20 kg Cabin baggage 7 kg In Flight Entertainment"
-                            dateTakeoff: 06:45
-                            dateLanding: 09:05
-                            dateDeparture: "2023-06-14"
-                            dateEnd: "2023-06-14"
-                            type_seat: "Economy"
-                            createdAt: "2023-06-14T15:29:28.482Z"
-                            updatedAt: "2023-06-14T15:29:28.482Z"
-        "404":
-          description: If Data Not Found
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  message:
-                    type: string
-                    example: Data not found
-        "500":
-          description: If the server is down or full
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  message:
-                    type: string
-                    example: Server Error
-      deprecated: false
-    # put:
-    #   tags:
-    #     - Transaction
-    #   parameters:
-    #     - name: id_transaction
-    #       in: path
-    #       schema:
-    #   requestBody:
-    #     content:
-    #       application/x-www-form-urlencoded:
-    #         encoding: {}
-    #         schema:
-    #           required:
-    #             - usersId
-    #             - ticketsId
-    #             - quantity
-    #             # - airport_from
-    #             # - airport_to
-    #             # - information
-    #             # - dateTakeoff
-    #             # - dateLanding
-    #             # - dateDeparture
-    #             # - dateReturn
-    #             # - dateEnd
-    #             # - type_seat
-    #             # - booking_code
-    #           type: object
-    #           properties:
-    #             usersId:
-    #               type: string
-    #               example: 59c414a7-e3e2-4005-afcd-7982e224e540
-    #             ticketsId:
-    #               type: string
-    #               example: 731bb06a-f957-4093-8b7e-11fedf8caa13
-    #             quantity:
-    #               type: integer
-    #               example: 1
-    #             airport_from:
-    #               type: string
-    #               example: Soekarno-Hatta International
-    #             airport_to:
-    #               type: string
-    #               example: Singapore Changi
-    #             information:
-    #               type: string
-    #               example: Baggage 20 kg Cabin baggage 7 kg In Flight Entertainment
-    #             dateTakeoff:
-    #               type: date
-    #               example: 06:45
-    #             dateLanding:
-    #               type: date
-    #               example: 09:05
-    #             dateDeparture:
-    #               type: date
-    #               example: 2023-06-13
-    #             dateEnd:
-    #               type: date
-    #               example: 2023-06-13
-    #             type_seat:
-    #               type: string
-    #               example: 2023-06-13
-    #             total_passenger:
-    #               type: integer
-    #               example: Economy
-    #             price:
-    #               type: integer
-    #               example: 994000
-    #             booking_code:
-    #               type: string
-    #               example: k1jox1lmrg
-    #             available:
-    #               type: boolean
-    #               example: true
-    #     required: false
-    #   responses:
-    #     "200":
-    #       description: If Update Is Successful
-    #       content:
-    #         application/json:
-    #           schema:
-    #             type: object
-    #             properties:
-    #               status:
-    #                 type: string
-    #                 example: Success
-    #               message:
-    #                 type: string
-    #                 example: Update Data Transaction Successfully
-    #     "404":
-    #       description: If Data Not Found
-    #       content:
-    #         application/json:
-    #           schema:
-    #             type: object
-    #             properties:
-    #               message:
-    #                 type: string
-    #                 example: Data not found
-    #       headers: {}
-    #     "500":
-    #       description: If the server is down or full
-    #       content:
-    #         application/json:
-    #           schema:
-    #             type: object
-    #             properties:
-    #               message:
-    #                 type: string
-    #                 example: Server Error
-    #   deprecated: false
-    # delete:
-    #   tags:
-    #     - Transaction
-    #   parameters:
-    #     - name: id_user
-    #       in: path
-    #       required: true
-    #       schema:
-    #         type: string
-    #   responses:
-    #     "200":
-    #       description: Delete Successfully
-    #       content:
-    #         application/json:
-    #           schema:
-    #             type: object
-    #             properties:
-    #               status:
-    #                 type: string
-    #                 example: Success
-    #               message:
-    #                 type: string
-    #                 example: Checkout Data Deleted successfully
-    #     "404":
-    #       description: If Data Not Found
-    #       content:
-    #         application/json:
-    #           schema:
-    #             type: object
-    #             properties:
-    #               message:
-    #                 type: string
-    #                 example: Data not found
-    #     "500":
-    #       description: If the server is down or full
-    #       content:
-    #         application/json:
-    #           schema:
-    #             type: object
-    #             properties:
-    #               message:
-    #                 type: string
-    #                 example: Server Error
+  # /transaction/:id:
+  #   get:
+  #     tags:
+  #       - Transaction
+  #     parameters: []
+  #     responses:
+  #       "200":
+  #         description: If data successfully retrived
+  #         content:
+  #           application/json:
+  #             schema:
+  #               type: object
+  #               properties:
+  #                 status:
+  #                   type: string
+  #                   example: Success
+  #                 message:
+  #                   type: string
+  #                   example: Get Data Transactions Successfully
+  #                 data:
+  #                   type: object
+  #                   properties:
+  #                     posts:
+  #                       type: array
+  #                       items:
+  #                         type: object
+  #                         properties:
+  #                           id:
+  #                             type: integer
+  #                           usersId:
+  #                             type: string
+  #                           ticketsId:
+  #                             type: string
+  #                           amounts:
+  #                             type: integer
+  #                           status:
+  #                             type: boolean
+  #                           airlines:
+  #                             type: string
+  #                           airport_from:
+  #                             type: string
+  #                           airport_to:
+  #                             type: string
+  #                           information:
+  #                             type: string
+  #                           dateTakeoff:
+  #                             type: date
+  #                           dateLanding:
+  #                             type: date
+  #                           dateDeparture:
+  #                             type: date
+  #                           dateEnd:
+  #                             type: date
+  #                           type_seat:
+  #                             type: string
+  #                           createdAt:
+  #                             type: string
+  #                           updatedAt:
+  #                             type: string
+  #                       example:
+  #                         - id: 1
+  #                           usersId: "59c414a7-e3e2-4005-afcd-7982e224e540"
+  #                           ticketsId: "731bb06a-f957-4093-8b7e-11fedf8caa13"
+  #                           amounts: 1783600
+  #                           status: "Success"
+  #                           airlines": "Super Air Jet"
+  #                           airport_from: "Bandar Udara Internasional Kualanamu"
+  #                           airport_to: "Soekarno-Hatta International"
+  #                           information: "Baggage 20 kg Cabin baggage 7 kg In Flight Entertainment"
+  #                           dateTakeoff: 06:45
+  #                           dateLanding: 09:05
+  #                           dateDeparture: "2023-06-14"
+  #                           dateEnd: "2023-06-14"
+  #                           type_seat: "Economy"
+  #                           createdAt: "2023-06-14T15:29:28.482Z"
+  #                           updatedAt: "2023-06-14T15:29:28.482Z"
+  #       "404":
+  #         description: If Data Not Found
+  #         content:
+  #           application/json:
+  #             schema:
+  #               type: object
+  #               properties:
+  #                 message:
+  #                   type: string
+  #                   example: Data not found
+  #       "500":
+  #         description: If the server is down or full
+  #         content:
+  #           application/json:
+  #             schema:
+  #               type: object
+  #               properties:
+  #                 message:
+  #                   type: string
+  #                   example: Server Error
+  #     deprecated: false
+  # put:
+  #   tags:
+  #     - Transaction
+  #   parameters:
+  #     - name: id_transaction
+  #       in: path
+  #       schema:
+  #   requestBody:
+  #     content:
+  #       application/x-www-form-urlencoded:
+  #         encoding: {}
+  #         schema:
+  #           required:
+  #             - usersId
+  #             - ticketsId
+  #             - quantity
+  #             # - airport_from
+  #             # - airport_to
+  #             # - information
+  #             # - dateTakeoff
+  #             # - dateLanding
+  #             # - dateDeparture
+  #             # - dateReturn
+  #             # - dateEnd
+  #             # - type_seat
+  #             # - booking_code
+  #           type: object
+  #           properties:
+  #             usersId:
+  #               type: string
+  #               example: 59c414a7-e3e2-4005-afcd-7982e224e540
+  #             ticketsId:
+  #               type: string
+  #               example: 731bb06a-f957-4093-8b7e-11fedf8caa13
+  #             quantity:
+  #               type: integer
+  #               example: 1
+  #             airport_from:
+  #               type: string
+  #               example: Soekarno-Hatta International
+  #             airport_to:
+  #               type: string
+  #               example: Singapore Changi
+  #             information:
+  #               type: string
+  #               example: Baggage 20 kg Cabin baggage 7 kg In Flight Entertainment
+  #             dateTakeoff:
+  #               type: date
+  #               example: 06:45
+  #             dateLanding:
+  #               type: date
+  #               example: 09:05
+  #             dateDeparture:
+  #               type: date
+  #               example: 2023-06-13
+  #             dateEnd:
+  #               type: date
+  #               example: 2023-06-13
+  #             type_seat:
+  #               type: string
+  #               example: 2023-06-13
+  #             total_passenger:
+  #               type: integer
+  #               example: Economy
+  #             price:
+  #               type: integer
+  #               example: 994000
+  #             booking_code:
+  #               type: string
+  #               example: k1jox1lmrg
+  #             available:
+  #               type: boolean
+  #               example: true
+  #     required: false
+  #   responses:
+  #     "200":
+  #       description: If Update Is Successful
+  #       content:
+  #         application/json:
+  #           schema:
+  #             type: object
+  #             properties:
+  #               status:
+  #                 type: string
+  #                 example: Success
+  #               message:
+  #                 type: string
+  #                 example: Update Data Transaction Successfully
+  #     "404":
+  #       description: If Data Not Found
+  #       content:
+  #         application/json:
+  #           schema:
+  #             type: object
+  #             properties:
+  #               message:
+  #                 type: string
+  #                 example: Data not found
+  #       headers: {}
+  #     "500":
+  #       description: If the server is down or full
+  #       content:
+  #         application/json:
+  #           schema:
+  #             type: object
+  #             properties:
+  #               message:
+  #                 type: string
+  #                 example: Server Error
+  #   deprecated: false
+  # delete:
+  #   tags:
+  #     - Transaction
+  #   parameters:
+  #     - name: id_user
+  #       in: path
+  #       required: true
+  #       schema:
+  #         type: string
+  #   responses:
+  #     "200":
+  #       description: Delete Successfully
+  #       content:
+  #         application/json:
+  #           schema:
+  #             type: object
+  #             properties:
+  #               status:
+  #                 type: string
+  #                 example: Success
+  #               message:
+  #                 type: string
+  #                 example: Checkout Data Deleted successfully
+  #     "404":
+  #       description: If Data Not Found
+  #       content:
+  #         application/json:
+  #           schema:
+  #             type: object
+  #             properties:
+  #               message:
+  #                 type: string
+  #                 example: Data not found
+  #     "500":
+  #       description: If the server is down or full
+  #       content:
+  #         application/json:
+  #           schema:
+  #             type: object
+  #             properties:
+  #               message:
+  #                 type: string
+  #                 example: Server Error
 definitions:
   Pet:
     type: object
