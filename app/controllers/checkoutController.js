@@ -136,8 +136,13 @@ module.exports = {
     //     message: error.message,
     //   });
     // }
+
     try {
+      const idUser = req.user.id; // Mengambil ID pengguna dari token
       const checkoutData = await Checkout.findAll({
+        where: {
+          usersId: idUser, // Menggunakan ID pengguna dalam kondisi WHERE
+        },
         include: [
           {
             model: Passenger,
@@ -151,6 +156,15 @@ module.exports = {
         ],
       });
 
+      if (!checkoutData) {
+        // jika transaction tidak ada
+        res.status(404).json({
+          message: "No transaction data found",
+          data: [],
+        });
+        return;
+      }
+
       const formattedCheckoutData = checkoutData.map((checkout) => ({
         id: checkout.id,
         usersId: checkout.usersId,
@@ -159,12 +173,12 @@ module.exports = {
         createdAt: checkout.createdAt,
         updatedAt: checkout.updatedAt,
         ticket: checkout.Ticket,
-        total_price: checkout.total_price,
-        passengers: checkout.Passenger,
+        total_price: checkout.total_price, // Menempatkan properti total_price setelah properti Ticket
+        passengers: checkout.Passengers,
       }));
 
       res.status(200).json({
-        message: "Checkout data retrieved successfully",
+        message: "Transaction data retrieved successfully",
         data: formattedCheckoutData,
       });
     } catch (error) {
