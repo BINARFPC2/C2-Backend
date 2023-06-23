@@ -1470,7 +1470,7 @@ paths:
                     example: Data not Found
 
       deprecated: false
-    /checkout:
+  /checkout:
     #   get:
     #     tags:
     #       - Checkout
