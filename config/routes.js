@@ -134,7 +134,7 @@ router.delete("/api/v1/checkout/:id", deleteCheckout);
 router.delete("/api/v1/checkout", deleteAllDataCheckout);
 
 // Add Payment
-router.post("/api/v1/payment", createPayment);
+router.post("/api/v1/payment", authorize, createPayment);
 
 // Get Payment
 router.get("/api/v1/payment", getAllPaymentData);
