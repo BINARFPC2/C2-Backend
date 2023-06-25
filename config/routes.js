@@ -55,6 +55,7 @@ const {
   resetPassView,
   resetPass,
 } = require("../app/controllers/forgetPasswordController");
+const { deleteAllDataPass } = require("../app/controllers/passengerController");
 
 const router = require("express").Router();
 
@@ -132,6 +133,9 @@ router.delete("/api/v1/checkout/:id", deleteCheckout);
 
 // Delete All Data Transaction
 router.delete("/api/v1/checkout", deleteAllDataCheckout);
+
+// Delete All Data Passengers
+router.delete("/api/v1/passenger", deleteAllDataPass);
 
 // Add Payment
 router.post("/api/v1/payment", authorize, createPayment);
