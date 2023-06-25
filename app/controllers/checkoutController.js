@@ -26,11 +26,16 @@ module.exports = {
         });
         return;
       }
+
+      // Calculate the total price
+      const totalPrice = total_passenger * ticket.price;
+
       // Create a new checkout
       const checkout = await Checkout.create({
         id: uuid(),
         ticketsId,
         total_passenger,
+        total_price: totalPrice,
         usersId, // Tambahkan userId ke dalam pembuatan checkout
       });
 
@@ -52,6 +57,7 @@ module.exports = {
           expirationdatepass: passengerData.expirationdatepass,
         });
       }
+
       res.status(201).json({
         status: "Success",
         message: "Checkout created successfully",
