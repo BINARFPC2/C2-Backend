@@ -1,6 +1,7 @@
 const { Checkout } = require("../models");
 const { Passenger } = require("../models");
 const { Ticket } = require("../models");
+const { Payment } = require("../models");
 const { v4: uuid } = require("uuid");
 const { Op } = require("sequelize");
 
@@ -85,6 +86,12 @@ module.exports = {
             model: Ticket,
             where: {
               id: { [Op.col]: "Checkout.ticketsId" },
+            },
+          },
+          {
+            model: Payment,
+            where: {
+              usersId: { [Op.col]: "Checkout.usersId" },
             },
           },
         ],
