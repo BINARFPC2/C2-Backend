@@ -1,4 +1,5 @@
 const { Payment } = require("../models");
+const { Notif } = require("../models");
 const { v4: uuid } = require("uuid");
 
 module.exports = {
@@ -15,6 +16,16 @@ module.exports = {
         expiration: expiration,
         country: country,
         status: "Success",
+      });
+
+      // create notification
+      const message = `Pembayaran ticket berhasil! Selamat menikmati perjalanan Anda`;
+
+      const notif = await Notif.create({
+        id: uuid(),
+        message: message,
+        usersId: usersId,
+        read: false,
       });
 
       res.status(201).json({

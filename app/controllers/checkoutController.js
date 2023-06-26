@@ -1,7 +1,6 @@
 const { Checkout } = require("../models");
 const { Passenger } = require("../models");
 const { Ticket } = require("../models");
-const { Notif } = require("../models");
 const { v4: uuid } = require("uuid");
 const { Op } = require("sequelize");
 
@@ -58,14 +57,6 @@ module.exports = {
           expirationdatepass: passengerData.expirationdatepass,
         });
       }
-
-      // create notification
-      const message = `Checkout ticket berhasil! Selamat menikmati perjalanan Anda`;
-      const notif = await Notif.create({
-        id: uuid(),
-        message: message,
-        read: false,
-      });
 
       res.status(201).json({
         status: "Success",
