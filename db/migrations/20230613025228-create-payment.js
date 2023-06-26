@@ -13,6 +13,7 @@ module.exports = {
       usersId: {
         defaultValue: Sequelize.UUIDV4,
         allowNull: false,
+        primaryKey: true,
         type: Sequelize.UUID,
       },
       cardNumber: {
