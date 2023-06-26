@@ -41,6 +41,7 @@ const {
   createPayment,
   getAllPaymentData,
   getPaymentById,
+  deleteAllDataPayment,
 } = require("../app/controllers/paymentController");
 const {
   createTransaction,
@@ -156,12 +157,8 @@ router.get("/api/v1/payment", getAllPaymentData);
 // Get PAyment by Id
 router.get("/api/v1/payment/:id", getPaymentById);
 
-// Post Transaction
-
-router.post("/api/v1/transaction", createTransaction);
-
-// Get All Data Transaction
-// router.get("/api/v1/transaction", getAllTransactionData);
+// Delete All Notif
+router.delete("/api/v1/payment", deleteAllDataPayment);
 
 // Get Data Transaction By Id
 // router.get("/api/v1/transaction/:id", getDataTransactionById);

@@ -15,7 +15,7 @@ module.exports = {
         cvc: cvc,
         expiration: expiration,
         country: country,
-        status: "Success",
+        status: true,
       });
 
       // create notification
@@ -96,5 +96,18 @@ module.exports = {
         data: {},
       });
     }
+  },
+
+  async deleteAllDataPayment(req, res) {
+    Payment.destroy({ truncate: true })
+      .then(() => {
+        res.status(200).json({
+          status: "Success",
+          message: "Payment Data deleted successfully",
+        });
+      })
+      .catch((error) => {
+        res.status(422).json(error);
+      });
   },
 };

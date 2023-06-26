@@ -19,7 +19,7 @@ module.exports = (sequelize, DataTypes) => {
       cardHolderName: DataTypes.STRING,
       cvc: DataTypes.INTEGER,
       expiration: DataTypes.STRING,
-      status: DataTypes.STRING,
+      status: DataTypes.BOOLEAN,
     },
     {
       sequelize,
