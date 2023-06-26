@@ -221,7 +221,7 @@ module.exports = {
           id: checkout.id,
           usersId: checkout.usersId,
           departureTicketsId: checkout.departureTicketsId,
-          returnTicketsId: checkout.departureTicketsId,
+          returnTicketsId: checkout.returnTicketsId,
           total_passenger: checkout.total_passenger,
           createdAt: checkout.createdAt,
           updatedAt: checkout.updatedAt,
