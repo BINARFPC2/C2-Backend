@@ -2032,12 +2032,13 @@ paths:
                     example:
                       - id: "03bb8d98-213e-4077-abf5-4332c1bfa2be"
                         usersId: "59c414a7-e3e2-4005-afcd-7982e224e540"
-                        ticketsId: "731bb06a-f957-4093-8b7e-11fedf8caa13"
+                        departureTicketsId: "a30c37d1-7700-40bb-ba37-c218a4cc17de"
+                        returnTicketsId: "86da83ae-3e0a-4d8d-baf1-ca49cbcad1cd"
                         total_passenger: 2
                         createdAt: "2023-06-14T15:29:28.482Z"
                         updatedAt: "2023-06-14T15:29:28.482Z"
-                        ticket:
-                          id: "e051939f-6378-4514-abf3-63c79ca8f85f"
+                        departureTicket:
+                          id: "a30c37d1-7700-40bb-ba37-c218a4cc17de"
                           city_from: "Jakarta"
                           city_to: "Medan"
                           airlines: "Super Air Jet"
@@ -2056,11 +2057,32 @@ paths:
                           available: true,
                           createdAt: "2023-06-22T15:45:51.601Z"
                           updatedAt: "2023-06-22T15:45:51.601Z"
-                        total_price: 1783600
+                        returnTicket:
+                          id: "86da83ae-3e0a-4d8d-baf1-ca49cbcad1cd"
+                          city_from: "Medan"
+                          city_to: "Jakarta"
+                          airlines: "Super Air Jet"
+                          code: "IU-454"
+                          airport_from: "Soekarno-Hatta International"
+                          airport_to: "Bandar Udara Internasional Kualanamu"
+                          information: "Baggage 20 kg Cabin baggage 7 kg In Flight Entertainment"
+                          dateTakeoff: "06:45"
+                          dateLanding: "09:05"
+                          dateDeparture: "2023-06-20"
+                          dateEnd: "2023-06-20"
+                          dateReturn: "2023-06-21"
+                          type_seat: "Economy"
+                          price: 891800
+                          booking_code: "ptzc5c9ala"
+                          available: true,
+                          createdAt: "2023-06-22T15:45:51.601Z"
+                          updatedAt: "2023-06-22T15:45:51.601Z"
+                        total_price: 5539940
                         passengers:
                           - id: "8cc64a65-b234-4745-bb60-925aba9c95ca"
                             checkoutsId: "03bb8d98-213e-4077-abf5-4332c1bfa2be"
-                            ticketsId: "e051939f-6378-4514-abf3-63c79ca8f85f"
+                            departureTicketsId: "a30c37d1-7700-40bb-ba37-c218a4cc17de"
+                            returnTicketsId: "86da83ae-3e0a-4d8d-baf1-ca49cbcad1cd"
                             name: "fikar"
                             email: "fikar@gmail.com"
                             phone: "67890"
@@ -2947,9 +2969,12 @@ definitions:
     type: object
     required:
     properties:
-      ticketsId:
+      departureTicketsId:
         type: string
         example: 7d359d13-a5a3-427e-b977-2bc6183ac730
+      returnTicketsId:
+        type: string
+        example: 86da83ae-3e0a-4d8d-baf1-ca49cbcad1cd
       passenger:
         type: array
         xml:
