@@ -14,10 +14,14 @@ module.exports = {
         defaultValue: Sequelize.UUIDV4,
         allowNull: false,
       },
-      ticketsId: {
+      departureTicketsId: {
         type: Sequelize.UUID,
         defaultValue: Sequelize.UUIDV4,
-        allowNull: false,
+        allowNull: true,
+      },
+      returnTicketsId: {
+        type: Sequelize.UUID,
+        allowNull: true,
       },
       name: {
         type: Sequelize.STRING,

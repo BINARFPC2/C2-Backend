@@ -1,26 +1,76 @@
 const { Checkout } = require("../models");
 const { Passenger } = require("../models");
 const { Ticket } = require("../models");
-const { Payment } = require("../models");
+const { Notif } = require("../models");
 const { v4: uuid } = require("uuid");
 const { Op } = require("sequelize");
 
 module.exports = {
+  // async createCheckout(req, res) {
+  //   try {
+  //     const {
+  //       ticketsId,
+  //       name,
+  //       email,
+  //       phone,
+  //       familyName,
+  //       title,
+  //       dateofbirth,
+  //       citizenship,
+  //       ktppaspor,
+  //       issuingcountry,
+  //       expirationdatepass,
+  //       total_passenger,
+  //     } = req.body;
+
+  //     //   create checkout
+  //     const userCheckout = await Checkout.create({
+  //       id: uuid(),
+  //       ticketsId: ticketsId,
+  //       name: name,
+  //       email: email,
+  //       phone: phone,
+  //       familyName: familyName,
+  //       title: title,
+  //       dateofbirth: dateofbirth,
+  //       citizenship: citizenship,
+  //       ktppaspor: ktppaspor,
+  //       issuingcountry: issuingcountry,
+  //       expirationdatepass: expirationdatepass,
+  //       total_passenger: total_passenger,
+  //     });
+  //     res.status(201).json({
+  //       status: "Success",
+  //       message: "Checkout Success",
+  //       data: userCheckout,
+  //     });
+  //   } catch (error) {
+  //     res.status(400).json({
+  //       status: "Failed",
+  //       message: error.message,
+  //     });
+  //   }
+  // },
   async createCheckout(req, res) {
     try {
-      const { ticketsId, total_passenger, passengers } = req.body;
+      const {
+        departureTicketsId,
+        returnTicketsId,
+        total_passenger,
+        passengers,
+      } = req.body;
 
       // Get the current authenticated user ID
       const usersId = req.user.id; // Ganti `req.user.id` dengan cara yang sesuai untuk mengakses ID pengguna saat ini
 
       // check if the provided ticketsId exists in the Ticket Table
-      const ticket = await Ticket.findOne({
+      const departureTicket = await Ticket.findOne({
         where: {
-          id: ticketsId,
+          id: departureTicketsId,
         },
       });
 
-      if (!ticket) {
+      if (!departureTicket) {
         res.status(400).json({
           status: "Failed",
           message: "Invalid ticketsId, Ticket does not exist",
@@ -28,24 +78,48 @@ module.exports = {
         return;
       }
 
-      // Calculate the total price
-      const totalPrice = total_passenger * ticket.price;
+      let returnTotalPrice = 0;
 
-      // Create a new checkout
+      if (returnTicketsId !== undefined && returnTicketsId !== null) {
+        // check if the provided returnTicketsId exists in the Ticket Table
+        const returnTicket = await Ticket.findOne({
+          where: {
+            id: returnTicketsId,
+          },
+        });
+
+        if (!returnTicket) {
+          res.status(400).json({
+            status: "Failed",
+            message: "Invalid returnTicketsId, Ticket does not exist",
+          });
+          return;
+        }
+
+        // Calculate the total price for return tickets
+        returnTotalPrice = total_passenger * returnTicket.price;
+      }
+
+      // Calculate the total price for departure tickets
+      const departureTotalPrice = total_passenger * departureTicket.price;
+
+      // Create departure checkout
       const checkout = await Checkout.create({
         id: uuid(),
-        ticketsId,
+        departureTicketsId: departureTicketsId,
+        returnTicketsId: returnTicketsId,
         total_passenger,
-        total_price: totalPrice,
-        usersId, // Tambahkan userId ke dalam pembuatan checkout
+        total_price: departureTotalPrice + returnTotalPrice,
+        usersId,
       });
 
-      // Create passengers for the ticket
+      // Create passengers for departure ticket
       for (const passengerData of passengers) {
         await Passenger.create({
           id: uuid(),
           checkoutsId: checkout.id,
-          ticketsId: ticketsId,
+          departureTicketsId: departureTicketsId,
+          returnTicketsId: returnTicketsId,
           name: passengerData.name,
           email: passengerData.email,
           phone: passengerData.phone,
@@ -72,6 +146,29 @@ module.exports = {
   },
 
   async getAllCheckoutData(req, res) {
+    // const findCheckoutAll = () => {
+    //   return Checkout.findAll();
+    // };
+    // try {
+    //   const dataCheckout = await findCheckoutAll();
+    //   if (!dataCheckout) {
+    //     res.status(404).json({
+    //       status: "failed",
+    //       message: "Data Checkout not found",
+    //     });
+    //   }
+    //   res.status(200).json({
+    //     status: "Success",
+    //     message: "Get All Data Checkout Success",
+    //     data: dataCheckout,
+    //   });
+    // } catch (error) {
+    //   res.status(500).json({
+    //     status: "Erro",
+    //     message: error.message,
+    //   });
+    // }
+
     try {
       const idUser = req.user.id; // Mengambil ID pengguna dari token
       const checkoutData = await Checkout.findAll({
@@ -84,21 +181,24 @@ module.exports = {
           },
           {
             model: Ticket,
+            as: "DepartureTicket",
             where: {
-              id: { [Op.col]: "Checkout.ticketsId" },
+              id: { [Op.col]: "Checkout.departureTicketsId" },
             },
           },
-          // {
-          //   model: Payment,
-          //   where: {
-          //     usersId: { [Op.col]: "Checkout.usersId" },
-          //   },
-          // },
+          {
+            model: Ticket,
+            as: "ReturnTicket",
+            where: {
+              id: { [Op.col]: "Checkout.returnTicketsId" },
+            },
+            required: false,
+          },
         ],
       });
 
-      // jika transaction tidak ada
       if (checkoutData.length === 0) {
+        // jika transaction tidak ada
         res.status(404).json({
           message: "No transaction data found",
           data: [],
@@ -106,17 +206,31 @@ module.exports = {
         return;
       }
 
-      const formattedCheckoutData = checkoutData.map((checkout) => ({
-        id: checkout.id,
-        usersId: checkout.usersId,
-        ticketsId: checkout.ticketsId,
-        total_passenger: checkout.total_passenger,
-        createdAt: checkout.createdAt,
-        updatedAt: checkout.updatedAt,
-        ticket: checkout.Ticket,
-        total_price: checkout.total_price, // Menempatkan properti total_price setelah properti Ticket
-        passengers: checkout.Passengers,
-      }));
+      const formattedCheckoutData = checkoutData.map((checkout) => {
+        const departureTicketPrice = checkout.DepartureTicket
+          ? checkout.DepartureTicket.price
+          : 0;
+        const returnTicketPrice = checkout.ReturnTicket
+          ? checkout.ReturnTicket.price
+          : 0;
+        const totalPassenger = checkout.total_passenger;
+        const totalPrice =
+          (departureTicketPrice + returnTicketPrice) * totalPassenger;
+
+        return {
+          id: checkout.id,
+          usersId: checkout.usersId,
+          departureTicketsId: checkout.departureTicketsId,
+          returnTicketsId: checkout.departureTicketsId,
+          total_passenger: checkout.total_passenger,
+          createdAt: checkout.createdAt,
+          updatedAt: checkout.updatedAt,
+          departureTicket: checkout.DepartureTicket,
+          returnTicket: checkout.ReturnTicket,
+          total_price: totalPrice,
+          passengers: checkout.Passengers,
+        };
+      });
 
       res.status(200).json({
         message: "Transaction data retrieved successfully",
@@ -153,7 +267,6 @@ module.exports = {
       };
 
       const dataCheckoutId = await findDataCheckoutId();
-
       if (!dataCheckoutId) {
         res.status(404).json({
           status: "Failed",

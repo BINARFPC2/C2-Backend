@@ -12,22 +12,34 @@ module.exports = (sequelize, DataTypes) => {
       this.hasMany(models.Transaction, { foreignKey: "checkoutsId" });
       this.hasMany(models.Transaction, { foreignKey: "usersId" });
       this.hasMany(models.Passenger, { foreignKey: "checkoutsId" });
-      this.belongsTo(models.Ticket, { foreignKey: "ticketsId" }); // Perbarui foreign key
-      // this.belongsTo(models.Payment, { foreignKey: "usersId" }); //
+      this.belongsTo(models.Ticket, {
+        foreignKey: "departureTicketsId",
+        as: "DepartureTicket",
+      }); // Perbarui foreign key
+      this.belongsTo(models.Ticket, {
+        foreignKey: "returnTicketsId",
+        as: "ReturnTicket",
+      });
+      // this.hasMany(models.Ticket, {
+      //   foreignKey: "ticketsId",
+      // });
     }
   }
   Checkout.init(
     {
       usersId: DataTypes.UUID,
-      ticketsId: DataTypes.UUID,
+      departureTicketsId: DataTypes.UUID,
+      returnTicketsId: DataTypes.UUID,
       total_passenger: DataTypes.INTEGER,
       total_price: {
         type: DataTypes.INTEGER,
         allowNull: false,
-        defaultValue: 0, // Menetapkan nilai default sebagai 0 jika tidak ada perhitungan yang valid
+        defaultValue: 0,
         get() {
           const passengersCount = this.getDataValue("total_passenger");
-          const ticketPrice = this.Ticket ? this.Ticket.price : 0;
+          const ticketPrice = this.Ticket
+            ? this.Ticket.getDataValue("price")
+            : 0;
           return passengersCount * ticketPrice;
         },
       },

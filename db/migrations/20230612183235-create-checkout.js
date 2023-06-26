@@ -15,11 +15,15 @@ module.exports = {
         defaultValue: Sequelize.UUIDV4,
         allowNull: false,
       },
-      ticketsId: {
+      departureTicketsId: {
         type: Sequelize.UUID,
         defaultValue: Sequelize.UUIDV4,
-        allowNull: false,
+        allowNull: true,
         primaryKey: true,
+      },
+      returnTicketsId: {
+        type: Sequelize.UUID,
+        allowNull: true,
       },
       total_passenger: {
         type: Sequelize.INTEGER,
