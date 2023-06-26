@@ -56,6 +56,10 @@ const {
   resetPass,
 } = require("../app/controllers/forgetPasswordController");
 const { deleteAllDataPass } = require("../app/controllers/passengerController");
+const {
+  getNotif,
+  deleteAllDataNotif,
+} = require("../app/controllers/notifController");
 
 const router = require("express").Router();
 
@@ -133,6 +137,12 @@ router.delete("/api/v1/checkout/:id", deleteCheckout);
 
 // Delete All Data Transaction
 router.delete("/api/v1/checkout", deleteAllDataCheckout);
+
+// Get Notifikasi By Token
+router.get("/api/v1/notif", authorize, getNotif);
+
+// Delete All Notif
+router.delete("/api/v1/notif", deleteAllDataNotif);
 
 // Delete All Data Passengers
 router.delete("/api/v1/passenger", deleteAllDataPass);
