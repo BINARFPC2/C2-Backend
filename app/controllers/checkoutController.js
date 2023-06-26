@@ -88,12 +88,12 @@ module.exports = {
               id: { [Op.col]: "Checkout.ticketsId" },
             },
           },
-          {
-            model: Payment,
-            where: {
-              usersId: { [Op.col]: "Checkout.usersId" },
-            },
-          },
+          // {
+          //   model: Payment,
+          //   where: {
+          //     usersId: { [Op.col]: "Checkout.usersId" },
+          //   },
+          // },
         ],
       });
 
