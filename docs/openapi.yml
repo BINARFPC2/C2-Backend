@@ -1318,7 +1318,7 @@ paths:
     post:
       tags:
         - Checkout
-      summary: Add Checkout With Token
+      summary: One Way & Two Way
       description: ""
       operationId: addPet
       consumes:
@@ -1330,10 +1330,17 @@ paths:
           in: path
           # example: "12jsdhf3724y2rb23r2307"
         - in: body
-          name: body
+          name: TwoWay
+          summary: Two Way
           required: true
           schema:
-            $ref: "#/definitions/Pet"
+            $ref: "#/definitions/Tickettwoway"
+        - in: body
+          name: OneWay
+          required: true
+          summary: One Way
+          schema:
+            $ref: "#/definitions/Ticketoneway"
       responses:
         # "200":
         #   description: If data successfully retrived
@@ -1445,6 +1452,27 @@ paths:
                   message:
                     type: string
                     example: Server Error
+  # /Checkout:
+  #   post:
+  #     tags:
+  #       - Checkout
+  #     summary: One Way
+  #     description: ""
+  #     operationId: addPet
+  #     consumes:
+  #       - application/json
+  #     produces:
+  #       - application/json
+  #     parameters:
+  #       - name: token
+  #         in: path
+  #         # example: "12jsdhf3724y2rb23r2307"
+  #       - in: body
+  #         name: body
+  #         required: true
+  #         schema:
+  #           $ref: "#/definitions/Ticketoneway"
+  #     responses:
   # /checkout/:id:
   #   get:
   #     tags:
@@ -2965,7 +2993,7 @@ paths:
 
       deprecated: false
 definitions:
-  Pet:
+  Tickettwoway:
     type: object
     required:
     properties:
@@ -3060,6 +3088,98 @@ definitions:
         example: 24/12
     xml:
       name: Tag
+  Ticketoneway:
+    type: object
+    required:
+    properties:
+      departureTicketsId:
+        type: string
+        example: 7d359d13-a5a3-427e-b977-2bc6183ac730
+      passenger:
+        type: array
+        xml:
+          wrapped: true
+        items:
+          xml:
+            name: tag
+          anyOf:
+            - $ref: "#/definitions/oneway"
+            - $ref: "#/definitions/oneway1"
+      total_passenger:
+        type: number
+        example: 2
+    xml:
+      name: Pet
+  oneway:
+    type: object
+    properties:
+      name:
+        type: string
+        example: teuku
+      email:
+        type: string
+        example: teukudr@gmail.com
+      phone:
+        type: number
+        example: "12345"
+      familyName:
+        type: string
+        example: teukufamily
+      title:
+        type: string
+        example: Mr
+      dateofbirth:
+        type: boolean
+        example: "2023-12-11"
+      citizenship:
+        type: string
+        example: INDONESIA
+      ktppaspor:
+        type: string
+        example: "12121213"
+      issuingcountry:
+        type: string
+        example: INDONESIA
+      expirationdatepass:
+        type: number
+        example: 24/12
+    xml:
+      name: Tag
+  oneway1:
+    type: object
+    properties:
+      name:
+        type: string
+        example: hapizd
+      email:
+        type: string
+        example: hapizdasari@gmail.com
+      phone:
+        type: number
+        example: "12345"
+      familyName:
+        type: string
+        example: hapizdfamily
+      title:
+        type: string
+        example: Mr
+      dateofbirth:
+        type: number
+        example: "2023-12-11"
+      citizenship:
+        type: string
+        example: INDONESIA
+      ktppaspor:
+        type: string
+        example: "12121213"
+      issuingcountry:
+        type: string
+        example: INDONESIA
+      expirationdatepass:
+        type: number
+        example: 24/12
+    xml:
+      name: oneway1
 externalDocs:
   description: Find out more about Swagger
   url: http://swagger.io
