@@ -166,7 +166,7 @@ module.exports = {
 
       res.status(200).json({
         status: "Success",
-        message: "Transaction data retrieved successfully",
+        message: "Checkout data retrieved successfully",
         data: formattedCheckoutData,
       });
     } catch (error) {
@@ -242,7 +242,7 @@ module.exports = {
       });
 
       res.status(200).json({
-        message: "Transaction data retrieved successfully",
+        message: "Checkout data by id retrieved successfully",
         data: formattedCheckoutData,
       });
     } catch (error) {
