@@ -246,42 +246,76 @@ module.exports = {
 
   async getDataCheckoutById(req, res) {
     try {
-      const idCheckout = req.params.id;
-      const findDataCheckoutId = () => {
-        return Checkout.findOne({
-          where: {
-            usersId: idCheckout,
+      const idCheckout = req.params.id; // Mengambil ID pengguna dari token
+      const checkoutData = await Checkout.findAll({
+        where: {
+          id: idCheckout, // Menggunakan ID pengguna dalam kondisi WHERE
+        },
+        include: [
+          {
+            model: Passenger,
           },
-          include: [
-            {
-              model: Passenger,
+          {
+            model: Ticket,
+            as: "DepartureTicket",
+            where: {
+              id: { [Op.col]: "Checkout.departureTicketsId" },
             },
-            {
-              model: Ticket,
-              where: {
-                id: { [Op.col]: "Checkout.ticketsId" },
-              },
+          },
+          {
+            model: Ticket,
+            as: "ReturnTicket",
+            where: {
+              id: { [Op.col]: "Checkout.returnTicketsId" },
             },
-          ],
-        });
-      };
+            required: false,
+          },
+        ],
+      });
 
-      const dataCheckoutId = await findDataCheckoutId();
-      if (!dataCheckoutId) {
+      if (checkoutData.length === 0) {
+        // jika transaction tidak ada
         res.status(404).json({
-          status: "Failed",
-          message: "Data not found",
+          message: "No transaction data found",
+          data: [],
         });
+        return;
       }
+
+      const formattedCheckoutData = checkoutData.map((checkout) => {
+        const departureTicketPrice = checkout.DepartureTicket
+          ? checkout.DepartureTicket.price
+          : 0;
+        const returnTicketPrice = checkout.ReturnTicket
+          ? checkout.ReturnTicket.price
+          : 0;
+        const totalPassenger = checkout.total_passenger;
+        const totalPrice =
+          (departureTicketPrice + returnTicketPrice) * totalPassenger;
+
+        return {
+          id: checkout.id,
+          usersId: checkout.usersId,
+          departureTicketsId: checkout.departureTicketsId,
+          returnTicketsId: checkout.returnTicketsId,
+          total_passenger: checkout.total_passenger,
+          createdAt: checkout.createdAt,
+          updatedAt: checkout.updatedAt,
+          departureTicket: checkout.DepartureTicket,
+          returnTicket: checkout.ReturnTicket,
+          total_price: totalPrice,
+          passengers: checkout.Passengers,
+        };
+      });
+
       res.status(200).json({
-        status: "Success",
-        message: "Get Checkout Data By Id Successfully",
-        data: dataCheckoutId,
+        message: "Transaction data retrieved successfully",
+        data: formattedCheckoutData,
       });
     } catch (error) {
+      console.log(error);
       res.status(500).json({
-        status: "Error",
-        message: error.message,
+        message: error,
       });
     }
   },
