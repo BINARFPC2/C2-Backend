@@ -6,51 +6,6 @@ const { v4: uuid } = require("uuid");
 const { Op } = require("sequelize");
 
 module.exports = {
-  // async createCheckout(req, res) {
-  //   try {
-  //     const {
-  //       ticketsId,
-  //       name,
-  //       email,
-  //       phone,
-  //       familyName,
-  //       title,
-  //       dateofbirth,
-  //       citizenship,
-  //       ktppaspor,
-  //       issuingcountry,
-  //       expirationdatepass,
-  //       total_passenger,
-  //     } = req.body;
-
-  //     //   create checkout
-  //     const userCheckout = await Checkout.create({
-  //       id: uuid(),
-  //       ticketsId: ticketsId,
-  //       name: name,
-  //       email: email,
-  //       phone: phone,
-  //       familyName: familyName,
-  //       title: title,
-  //       dateofbirth: dateofbirth,
-  //       citizenship: citizenship,
-  //       ktppaspor: ktppaspor,
-  //       issuingcountry: issuingcountry,
-  //       expirationdatepass: expirationdatepass,
-  //       total_passenger: total_passenger,
-  //     });
-  //     res.status(201).json({
-  //       status: "Success",
-  //       message: "Checkout Success",
-  //       data: userCheckout,
-  //     });
-  //   } catch (error) {
-  //     res.status(400).json({
-  //       status: "Failed",
-  //       message: error.message,
-  //     });
-  //   }
-  // },
   async createCheckout(req, res) {
     try {
       const {
@@ -146,29 +101,6 @@ module.exports = {
   },
 
   async getAllCheckoutData(req, res) {
-    // const findCheckoutAll = () => {
-    //   return Checkout.findAll();
-    // };
-    // try {
-    //   const dataCheckout = await findCheckoutAll();
-    //   if (!dataCheckout) {
-    //     res.status(404).json({
-    //       status: "failed",
-    //       message: "Data Checkout not found",
-    //     });
-    //   }
-    //   res.status(200).json({
-    //     status: "Success",
-    //     message: "Get All Data Checkout Success",
-    //     data: dataCheckout,
-    //   });
-    // } catch (error) {
-    //   res.status(500).json({
-    //     status: "Erro",
-    //     message: error.message,
-    //   });
-    // }
-
     try {
       const idUser = req.user.id; // Mengambil ID pengguna dari token
       const checkoutData = await Checkout.findAll({
@@ -233,6 +165,7 @@ module.exports = {
       });
 
       res.status(200).json({
+        status: "Success",
         message: "Transaction data retrieved successfully",
         data: formattedCheckoutData,
       });

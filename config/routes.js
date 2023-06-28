@@ -124,7 +124,7 @@ router.delete("/api/v1/destfavorite/:id", deleteDestFav);
 // Post Checkout
 router.post("/api/v1/checkout", authorize, createCheckout);
 
-// Post Checkout
+// get All checkout
 router.get("/api/v1/checkout", authorize, getAllCheckoutData);
 
 // Get Data Checkout By Id
@@ -136,7 +136,7 @@ router.put("/api/v1/checkout/:id", updateCheckoutData);
 // Delete Data Checkout
 router.delete("/api/v1/checkout/:id", deleteCheckout);
 
-// Get All Data Checkout
+// Get All Data Transaction
 router.get("/api/v1/transaction", authorize, getAllCheckoutData);
 
 // Delete All Data Transaction

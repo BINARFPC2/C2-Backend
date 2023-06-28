@@ -5,110 +5,84 @@ const { user } = require("../models");
 const { v4: uuid } = require("uuid");
 
 module.exports = {
-  async createTransaction(req, res) {
-    try {
-      // Mengambil data user dari model User berdasarkan ID user
-      const iduser = await user.findByPk(req.body.userId);
-
-      // Mengambil data tiket dari model Ticket berdasarkan ID tiket
-      const idTicket = await Ticket.findByPk(req.body.ticketId);
-
-      // mengambil total_passenger dari model checkouts
-      const idCheckout = await Checkout.findByPk(req.body.checkoutId);
-
-      // Menghitung total amount berdasarkan price tiket dan quantity
-      const amount = idTicket.price * idCheckout.total_passenger;
-
-      // const amount = ticket.price * adult_price;
-
-      // const booking_code = ticket.booking_code;
-      // const airport_from = ticket.airport_from;
-      // const airport_to = ticket.airport_to;
-      // const dateTakeoff = ticket.dateTakeoff;
-      // const dateLanding = ticket.dateLanding;
-      // const dateDeparture = ticket.dateDeparture;
-      // const dateEnd = ticket.dateEnd;
-      // const type_seat = ticket.type_seat;
-      // const information = ticket.information;
-      // const airlines = ticket.airlines;
-
-      // Membuat transaksi baru dengan data yang diambil
-      const transaction = await Transaction.create({
-        id: uuid(),
-        usersId: iduser.id,
-        ticketsId: idTicket.id,
-        amounts: amount,
-        date: new Date(),
-        status: "Success",
-        // Setel nilai-nilai kolom lainnya yang diperlukan
-      });
-
-      res.status(200).json({
-        status: "Success",
-        message: "Transaciton created successfully",
-        data: transaction,
-      });
-    } catch (error) {
-      res.status(500).json({
-        status: "Error",
-        message: error.message,
-      });
-    }
-  },
-
   async getAllTransactionData(req, res) {
-    const findAll = () => {
-      return Transaction.findAll();
-    };
     try {
-      const dataTransaction = await findAll();
-      if (!dataTransaction) {
+      const idUser = req.user.id; // Mengambil ID pengguna dari token
+      const checkoutData = await Checkout.findAll({
+        where: {
+          usersId: idUser, // Menggunakan ID pengguna dalam kondisi WHERE
+        },
+        include: [
+          {
+            model: Passenger,
+          },
+          {
+            model: Ticket,
+            as: "DepartureTicket",
+            where: {
+              id: { [Op.col]: "Checkout.departureTicketsId" },
+            },
+          },
+          {
+            model: Ticket,
+            as: "ReturnTicket",
+            where: {
+              id: { [Op.col]: "Checkout.returnTicketsId" },
+            },
+            required: false,
+          },
+        ],
+      });
+
+      if (checkoutData.length === 0) {
+        // jika transaction tidak ada
         res.status(404).json({
-          status: "Failed",
-          message: "Data not found",
+          message: "No transaction data found",
+          data: [],
         });
+        return;
       }
+
+      const formattedCheckoutData = checkoutData.map((checkout) => {
+        const departureTicketPrice = checkout.DepartureTicket
+          ? checkout.DepartureTicket.price
+          : 0;
+        const returnTicketPrice = checkout.ReturnTicket
+          ? checkout.ReturnTicket.price
+          : 0;
+        const totalPassenger = checkout.total_passenger;
+        const totalPrice =
+          (departureTicketPrice + returnTicketPrice) * totalPassenger;
+
+        return {
+          id: checkout.id,
+          usersId: checkout.usersId,
+          departureTicketsId: checkout.departureTicketsId,
+          returnTicketsId: checkout.returnTicketsId,
+          total_passenger: checkout.total_passenger,
+          createdAt: checkout.createdAt,
+          updatedAt: checkout.updatedAt,
+          departureTicket: checkout.DepartureTicket,
+          returnTicket: checkout.ReturnTicket,
+          total_price: totalPrice,
+          passengers: checkout.Passengers,
+        };
+      });
+
       res.status(200).json({
         status: "Success",
-        message: "Get All Data Transactions Success",
-        data: dataTransaction,
+        message: "Transaction data retrieved successfully",
+        data: formattedCheckoutData,
       });
     } catch (error) {
+      console.log(error);
       res.status(500).json({
-        status: "Error",
-        message: error.message,
+        message: error,
       });
     }
   },
 
   async getDataTransactionById(req, res) {
-    // try {
-    //   const idDataTrans = req.params.id;
-    //   const findDataTransById = () => {
-    //     return Transaction.findOne({
-    //       where: {
-    //         id: idDataTrans,
-    //       },
-    //     });
-    //   };
-    //   const dataTransId = await findDataTransById();
-    //   if (!dataTransId) {
-    //     res.status(404).json({
-    //       status: "Failed",
-    //       message: "Data Transaction not found",
-    //     });
-    //   }
-    //   res.status(200).json({
-    //     status: "Success",
-    //     message: "Get Data Transactions Successfully",
-    //     data: dataTransId,
-    //   });
-    // } catch (error) {
-    //   res.status(500).json({
-    //     status: "Error",
-    //     message: error.message,
-    //   });
-    // }
     try {
       const usersId = req.user.id; // Menggunakan ID pengguna saat ini
 
