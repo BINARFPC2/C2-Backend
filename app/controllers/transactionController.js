@@ -3,6 +3,7 @@ const { Transaction } = require("../models");
 const { Checkout } = require("../models");
 const { Passenger } = require("../models");
 const { user } = require("../models");
+const { Op } = require("sequelize");
 const { v4: uuid } = require("uuid");
 
 module.exports = {
