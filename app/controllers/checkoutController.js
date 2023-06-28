@@ -132,7 +132,7 @@ module.exports = {
       if (checkoutData.length === 0) {
         // jika transaction tidak ada
         res.status(404).json({
-          message: "No transaction data found",
+          message: "No Checkout data found",
           data: [],
         });
         return;
@@ -209,7 +209,7 @@ module.exports = {
       if (checkoutData.length === 0) {
         // jika transaction tidak ada
         res.status(404).json({
-          message: "No transaction data found",
+          message: "No checkout data found",
           data: [],
         });
         return;
