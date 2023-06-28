@@ -42,7 +42,7 @@ module.exports = {
         dateDeparture: "2023-06-19",
         dateReturn: "2023-06-20",
         dateEnd: "2023-06-19",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1590587,
         booking_code: "m68en7m8ia",
         available: true,
@@ -106,7 +106,7 @@ module.exports = {
         dateDeparture: "2023-06-20",
         dateReturn: "2023-06-21",
         dateEnd: "2023-06-20",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1590587,
         booking_code: "ko2pieiz3i",
         available: true,
@@ -170,7 +170,7 @@ module.exports = {
         dateDeparture: "2023-06-21",
         dateReturn: "2023-06-22",
         dateEnd: "2023-06-21",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1590587,
         booking_code: "56soa2qgv0",
         available: true,
@@ -234,7 +234,7 @@ module.exports = {
         dateDeparture: "2023-06-22",
         dateReturn: "2023-06-23",
         dateEnd: "2023-06-22",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1590587,
         booking_code: "1l62ome7bk",
         available: true,
@@ -298,7 +298,7 @@ module.exports = {
         dateDeparture: "2023-06-23",
         dateReturn: "2023-06-24", // req body
         dateEnd: "2023-06-23",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1590587,
         booking_code: "timy50p3sa",
         available: true,
@@ -362,7 +362,7 @@ module.exports = {
         dateDeparture: "2023-06-23",
         dateReturn: "2023-06-24", // req body
         dateEnd: "2023-06-23",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1590587,
         booking_code: "jcugajezrc",
         available: true,
@@ -426,7 +426,7 @@ module.exports = {
         dateDeparture: "2023-06-24",
         dateReturn: "2023-06-25", // req body
         dateEnd: "2023-06-24",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1590587,
         booking_code: "g2uagmf1yk",
         available: true,
@@ -490,7 +490,7 @@ module.exports = {
         dateDeparture: "2023-06-25",
         dateReturn: "2023-06-26", // req body
         dateEnd: "2023-06-25",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1590587,
         booking_code: "5en6m4tp9c",
         available: true,
@@ -554,7 +554,7 @@ module.exports = {
         dateDeparture: "2023-06-26",
         dateReturn: "2023-06-27", // req body
         dateEnd: "2023-06-26",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1590587,
         booking_code: "u1vrk5drfw",
         available: true,
@@ -618,7 +618,7 @@ module.exports = {
         dateDeparture: "2023-06-27 ",
         dateReturn: "2023-06-28", // req body
         dateEnd: "2023-06-27",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1590587,
         booking_code: "6j3yxeczem",
         available: true,
@@ -682,7 +682,7 @@ module.exports = {
         dateDeparture: "2023-06-28",
         dateReturn: "2023-06-29", // req body
         dateEnd: "2023-06-28",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1590587,
         booking_code: "rydb0e5nki",
         available: true,
@@ -746,7 +746,7 @@ module.exports = {
         dateDeparture: "2023-06-29",
         dateReturn: "2023-06-30", // req body
         dateEnd: "2023-06-29",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1590587,
         booking_code: "4hoo8ava48",
         available: true,
@@ -873,7 +873,7 @@ module.exports = {
         dateDeparture: "2023-07-01",
         dateReturn: "2023-07-02", // req body
         dateEnd: "2023-07-01",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1590587,
         booking_code: "5a18twx454",
         available: true,
@@ -937,7 +937,7 @@ module.exports = {
         dateDeparture: "2023-07-02",
         dateReturn: "2023-07-03", // req body
         dateEnd: "2023-07-02",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1590587,
         booking_code: "o8q5hq0ku3",
         available: true,
@@ -1001,7 +1001,7 @@ module.exports = {
         dateDeparture: "2023-07-03",
         dateReturn: "2023-07-04", // req body
         dateEnd: "2023-07-03",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1590587,
         booking_code: "idlx4wxuih",
         available: true,
@@ -1065,7 +1065,7 @@ module.exports = {
         dateDeparture: "2023-07-04",
         dateReturn: "2023-07-05", // req body
         dateEnd: "2023-07-04",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1590587,
         booking_code: "tto199nxeo",
         available: true,
@@ -1129,7 +1129,7 @@ module.exports = {
         dateDeparture: "2023-07-05",
         dateReturn: "2023-07-06", // req body
         dateEnd: "2023-07-05",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1590587,
         booking_code: "ger3tw4660",
         available: true,
@@ -1193,7 +1193,7 @@ module.exports = {
         dateDeparture: "2023-07-06",
         dateReturn: "2023-07-07", // req body
         dateEnd: "2023-07-06",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1590587,
         booking_code: "ck75dheepz",
         available: true,
@@ -1257,7 +1257,7 @@ module.exports = {
         dateDeparture: "2023-07-08",
         dateReturn: "2023-07-09", // req body
         dateEnd: "2023-07-08",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1590587,
         booking_code: "5d16p7tgfl",
         available: true,
@@ -1321,7 +1321,7 @@ module.exports = {
         dateDeparture: "2023-07-09",
         dateReturn: "2023-07-10", // req body
         dateEnd: "2023-07-09",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1590587,
         booking_code: "1idz2lmmtz",
         available: true,
@@ -1385,7 +1385,7 @@ module.exports = {
         dateDeparture: "2023-07-09",
         dateReturn: "2023-07-10", // req body
         dateEnd: "2023-07-09",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1590587,
         booking_code: "x33gsowyuk",
         available: true,
@@ -1449,7 +1449,7 @@ module.exports = {
         dateDeparture: "2023-07-10",
         dateReturn: "2023-07-11", // req body
         dateEnd: "2023-07-10",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1590587,
         booking_code: "0z5fx8184s",
         available: true,
@@ -1478,7 +1478,6 @@ module.exports = {
         createdAt: new Date(),
         updatedAt: new Date(),
       },
-
       {
         id: uuid(),
         city_from: "Jakarta",
@@ -2837,7 +2836,7 @@ module.exports = {
         dateDeparture: "2023-07-10",
         dateReturn: "2023-07-11", // req body
         dateEnd: "2023-07-10",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1289088,
         booking_code: "ooi1ksesx8",
         available: true,
@@ -2879,7 +2878,7 @@ module.exports = {
         dateDeparture: "2023-06-19",
         dateReturn: "2023-06-20",
         dateEnd: "2023-06-19",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1289088,
         booking_code: "s52dxy2842",
         available: true,
@@ -2942,7 +2941,7 @@ module.exports = {
         dateDeparture: "2023-06-20",
         dateReturn: "2023-06-21",
         dateEnd: "2023-06-20",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1289088,
         booking_code: "zsz9dgcplc",
         available: true,
@@ -3005,7 +3004,7 @@ module.exports = {
         dateDeparture: "2023-06-21",
         dateReturn: "2023-06-22",
         dateEnd: "2023-06-21",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1289088,
         booking_code: "jqdr2z0xfh",
         available: true,
@@ -3068,7 +3067,7 @@ module.exports = {
         dateDeparture: "2023-06-22",
         dateReturn: "2023-06-23",
         dateEnd: "2023-06-22",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1289088,
         booking_code: "jxzfvlz23s",
         available: true,
@@ -3131,7 +3130,7 @@ module.exports = {
         dateDeparture: "2023-06-23",
         dateReturn: "2023-06-24", // req body
         dateEnd: "2023-06-23",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1289088,
         booking_code: "c2khqbkyzk",
         available: true,
@@ -3194,7 +3193,7 @@ module.exports = {
         dateDeparture: "2023-06-24",
         dateReturn: "2023-06-25", // req body
         dateEnd: "2023-06-24",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1289088,
         booking_code: "0ushxg7hzx",
         available: true,
@@ -3257,7 +3256,7 @@ module.exports = {
         dateDeparture: "2023-06-25",
         dateReturn: "2023-06-26", // req body
         dateEnd: "2023-06-25",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1289088,
         booking_code: "pbx5x6pjej",
         available: true,
@@ -3320,7 +3319,7 @@ module.exports = {
         dateDeparture: "2023-06-26",
         dateReturn: "2023-06-27", // req body
         dateEnd: "2023-06-26",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1289088,
         booking_code: "9qs531fslh",
         available: true,
@@ -3383,7 +3382,7 @@ module.exports = {
         dateDeparture: "2023-06-27 ",
         dateReturn: "2023-06-28", // req body
         dateEnd: "2023-06-27",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1289088,
         booking_code: "g9j2lxjqat",
         available: true,
@@ -3446,7 +3445,7 @@ module.exports = {
         dateDeparture: "2023-06-28",
         dateReturn: "2023-06-29", // req body
         dateEnd: "2023-06-28",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1289088,
         booking_code: "qfvn7apvlc",
         available: true,
@@ -3509,7 +3508,7 @@ module.exports = {
         dateDeparture: "2023-06-29",
         dateReturn: "2023-06-30", // req body
         dateEnd: "2023-06-29",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1289088,
         booking_code: "sd392dfj26",
         available: true,
@@ -3572,7 +3571,7 @@ module.exports = {
         dateDeparture: "2023-06-30",
         dateReturn: "2023-07-01", // req body
         dateEnd: "2023-06-30",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1289088,
         booking_code: "zu45s2g1ci",
         available: true,
@@ -3635,7 +3634,7 @@ module.exports = {
         dateDeparture: "2023-07-01",
         dateReturn: "2023-07-02", // req body
         dateEnd: "2023-07-01",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1289088,
         booking_code: "7r3jo1lw7l",
         available: true,
@@ -3698,7 +3697,7 @@ module.exports = {
         dateDeparture: "2023-07-02",
         dateReturn: "2023-07-03", // req body
         dateEnd: "2023-07-02",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1289088,
         booking_code: "hp1exg4a4e",
         available: true,
@@ -3761,7 +3760,7 @@ module.exports = {
         dateDeparture: "2023-07-03",
         dateReturn: "2023-07-04", // req body
         dateEnd: "2023-07-03",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1289088,
         booking_code: "qpinpgwnjq",
         available: true,
@@ -3824,7 +3823,7 @@ module.exports = {
         dateDeparture: "2023-07-04",
         dateReturn: "2023-07-05", // req body
         dateEnd: "2023-07-04",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1289088,
         booking_code: "1fqka7p60q",
         available: true,
@@ -3887,7 +3886,7 @@ module.exports = {
         dateDeparture: "2023-07-05",
         dateReturn: "2023-07-06", // req body
         dateEnd: "2023-07-05",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1289088,
         booking_code: "8jej2aopmu",
         available: true,
@@ -3950,7 +3949,7 @@ module.exports = {
         dateDeparture: "2023-07-06",
         dateReturn: "2023-07-07", // req body
         dateEnd: "2023-07-06",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1289088,
         booking_code: "n8was3thyt",
         available: true,
@@ -4013,7 +4012,7 @@ module.exports = {
         dateDeparture: "2023-07-07",
         dateReturn: "2023-07-08", // req body
         dateEnd: "2023-07-07",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1289088,
         booking_code: "besg68crwt",
         available: true,
@@ -4076,7 +4075,7 @@ module.exports = {
         dateDeparture: "2023-07-08",
         dateReturn: "2023-07-09", // req body
         dateEnd: "2023-07-08",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1289088,
         booking_code: "qkm3ybx33o",
         available: true,
@@ -4139,7 +4138,7 @@ module.exports = {
         dateDeparture: "2023-07-09",
         dateReturn: "2023-07-10", // req body
         dateEnd: "2023-07-09",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1289088,
         booking_code: "rfyq6fl3v3",
         available: true,
@@ -4202,7 +4201,7 @@ module.exports = {
         dateDeparture: "2023-07-10",
         dateReturn: "2023-07-11", // req body
         dateEnd: "2023-07-10",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1289088,
         booking_code: "4k5nvrvl11",
         available: true,
@@ -4274,8 +4273,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_from: "Jakarta",
-        city_to: "Singapore",
+        city_to: "Jakarta",
+        city_from: "Singapore",
         airlines: "Garuda Indonesia",
         code: "GA-909",
         airport_from: "Soekarno-Hatta International",
@@ -4296,8 +4295,8 @@ module.exports = {
 
       {
         id: uuid(),
-        city_from: "Jakarta",
-        city_to: "Singapore",
+        city_to: "Jakarta",
+        city_from: "Singapore",
         airlines: "Batik Air",
         code: "ID-495",
         airport_from: "Soekarno-Hatta International",
@@ -4338,8 +4337,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_from: "Jakarta",
-        city_to: "Singapore",
+        city_to: "Jakarta",
+        city_from: "Singapore",
         airlines: "Garuda Indonesia",
         code: "GA-984",
         airport_from: "Soekarno-Hatta International",
@@ -4360,8 +4359,8 @@ module.exports = {
 
       {
         id: uuid(),
-        city_from: "Jakarta",
-        city_to: "Singapore",
+        city_to: "Jakarta",
+        city_from: "Singapore",
         airlines: "Batik Air",
         code: "ID-495",
         airport_from: "Soekarno-Hatta International",
@@ -4402,8 +4401,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_from: "Jakarta",
-        city_to: "Singapore",
+        city_to: "Jakarta",
+        city_from: "Singapore",
         airlines: "Garuda Indonesia",
         code: "GA-865",
         airport_from: "Soekarno-Hatta International",
@@ -4423,8 +4422,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_from: "Jakarta",
-        city_to: "Singapore",
+        city_to: "Jakarta",
+        city_from: "Singapore",
         airlines: "Batik Air",
         code: "ID-495",
         airport_from: "Soekarno-Hatta International",
@@ -4465,8 +4464,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_from: "Jakarta",
-        city_to: "Singapore",
+        city_to: "Jakarta",
+        city_from: "Singapore",
         airlines: "Garuda Indonesia",
         code: "GA-636",
         airport_from: "Soekarno-Hatta International",
@@ -4487,8 +4486,8 @@ module.exports = {
 
       {
         id: uuid(),
-        city_from: "Jakarta",
-        city_to: "Singapore",
+        city_to: "Jakarta",
+        city_from: "Singapore",
         airlines: "Batik Air",
         code: "ID-495",
         airport_from: "Soekarno-Hatta International",
@@ -4529,8 +4528,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_from: "Jakarta",
-        city_to: "Singapore",
+        city_to: "Jakarta",
+        city_from: "Singapore",
         airlines: "Garuda Indonesia",
         code: "GA-334",
         airport_from: "Soekarno-Hatta International",
@@ -4551,8 +4550,8 @@ module.exports = {
 
       {
         id: uuid(),
-        city_from: "Jakarta",
-        city_to: "Singapore",
+        city_to: "Jakarta",
+        city_from: "Singapore",
         airlines: "Batik Air",
         code: "ID-495",
         airport_from: "Soekarno-Hatta International",
@@ -4572,8 +4571,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_from: "Jakarta",
-        city_to: "Singapore",
+        city_to: "Jakarta",
+        city_from: "Singapore",
         airlines: "Lion Air",
         code: "JT-122",
         airport_from: "Soekarno-Hatta International",
@@ -4593,8 +4592,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_from: "Jakarta",
-        city_to: "Singapore",
+        city_to: "Jakarta",
+        city_from: "Singapore",
         airlines: "Garuda Indonesia",
         code: "GA-770",
         airport_from: "Soekarno-Hatta International",
@@ -4614,8 +4613,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_from: "Jakarta",
-        city_to: "Singapore",
+        city_to: "Jakarta",
+        city_from: "Singapore",
         airlines: "Batik Air",
         code: "ID-495",
         airport_from: "Soekarno-Hatta International",
@@ -4656,8 +4655,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_from: "Jakarta",
-        city_to: "Singapore",
+        city_to: "Jakarta",
+        city_from: "Singapore",
         airlines: "Garuda Indonesia",
         code: "GA-997",
         airport_from: "Soekarno-Hatta International",
@@ -4678,8 +4677,8 @@ module.exports = {
 
       {
         id: uuid(),
-        city_from: "Jakarta",
-        city_to: "Singapore",
+        city_to: "Jakarta",
+        city_from: "Singapore",
         airlines: "Batik Air",
         code: "ID-495",
         airport_from: "Soekarno-Hatta International",
@@ -4720,8 +4719,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_from: "Jakarta",
-        city_to: "Singapore",
+        city_to: "Jakarta",
+        city_from: "Singapore",
         airlines: "Garuda Indonesia",
         code: "GA-651",
         airport_from: "Soekarno-Hatta International",
@@ -4742,8 +4741,8 @@ module.exports = {
 
       {
         id: uuid(),
-        city_from: "Jakarta",
-        city_to: "Singapore",
+        city_to: "Jakarta",
+        city_from: "Singapore",
         airlines: "Batik Air",
         code: "ID-495",
         airport_from: "Soekarno-Hatta International",
@@ -4784,8 +4783,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_from: "Jakarta",
-        city_to: "Singapore",
+        city_to: "Jakarta",
+        city_from: "Singapore",
         airlines: "Garuda Indonesia",
         code: "GA-877",
         airport_from: "Soekarno-Hatta International",
@@ -4806,8 +4805,8 @@ module.exports = {
 
       {
         id: uuid(),
-        city_from: "Jakarta",
-        city_to: "Singapore",
+        city_to: "Jakarta",
+        city_from: "Singapore",
         airlines: "Batik Air",
         code: "ID-495",
         airport_from: "Soekarno-Hatta International",
@@ -4848,8 +4847,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_from: "Jakarta",
-        city_to: "Singapore",
+        city_to: "Jakarta",
+        city_from: "Singapore",
         airlines: "Garuda Indonesia",
         code: "GA-972",
         airport_from: "Soekarno-Hatta International",
@@ -4870,8 +4869,8 @@ module.exports = {
 
       {
         id: uuid(),
-        city_from: "Jakarta",
-        city_to: "Singapore",
+        city_to: "Jakarta",
+        city_from: "Singapore",
         airlines: "Batik Air",
         code: "ID-495",
         airport_from: "Soekarno-Hatta International",
@@ -4912,8 +4911,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_from: "Jakarta",
-        city_to: "Singapore",
+        city_to: "Jakarta",
+        city_from: "Singapore",
         airlines: "Garuda Indonesia",
         code: "GA-679",
         airport_from: "Soekarno-Hatta International",
@@ -4934,8 +4933,8 @@ module.exports = {
 
       {
         id: uuid(),
-        city_from: "Jakarta",
-        city_to: "Singapore",
+        city_to: "Jakarta",
+        city_from: "Singapore",
         airlines: "Batik Air",
         code: "ID-495",
         airport_from: "Soekarno-Hatta International",
@@ -4976,8 +4975,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_from: "Jakarta",
-        city_to: "Singapore",
+        city_to: "Jakarta",
+        city_from: "Singapore",
         airlines: "Garuda Indonesia",
         code: "GA-256",
         airport_from: "Soekarno-Hatta International",
@@ -4998,8 +4997,8 @@ module.exports = {
 
       {
         id: uuid(),
-        city_from: "Jakarta",
-        city_to: "Singapore",
+        city_to: "Jakarta",
+        city_from: "Singapore",
         airlines: "Batik Air",
         code: "ID-495",
         airport_from: "Soekarno-Hatta International",
@@ -5040,8 +5039,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_from: "Jakarta",
-        city_to: "Singapore",
+        city_to: "Jakarta",
+        city_from: "Singapore",
         airlines: "Garuda Indonesia",
         code: "GA-974",
         airport_from: "Soekarno-Hatta International",
@@ -5062,8 +5061,8 @@ module.exports = {
 
       {
         id: uuid(),
-        city_from: "Jakarta",
-        city_to: "Singapore",
+        city_to: "Jakarta",
+        city_from: "Singapore",
         airlines: "Batik Air",
         code: "ID-495",
         airport_from: "Soekarno-Hatta International",
@@ -5104,8 +5103,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_from: "Jakarta",
-        city_to: "Singapore",
+        city_to: "Jakarta",
+        city_from: "Singapore",
         airlines: "Garuda Indonesia",
         code: "GA-516",
         airport_from: "Soekarno-Hatta International",
@@ -5126,8 +5125,8 @@ module.exports = {
 
       {
         id: uuid(),
-        city_from: "Jakarta",
-        city_to: "Singapore",
+        city_to: "Jakarta",
+        city_from: "Singapore",
         airlines: "Batik Air",
         code: "ID-495",
         airport_from: "Soekarno-Hatta International",
@@ -5168,8 +5167,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_from: "Jakarta",
-        city_to: "Singapore",
+        city_to: "Jakarta",
+        city_from: "Singapore",
         airlines: "Garuda Indonesia",
         code: "GA-566",
         airport_from: "Soekarno-Hatta International",
@@ -5190,8 +5189,8 @@ module.exports = {
 
       {
         id: uuid(),
-        city_from: "Jakarta",
-        city_to: "Singapore",
+        city_to: "Jakarta",
+        city_from: "Singapore",
         airlines: "Batik Air",
         code: "ID-495",
         airport_from: "Soekarno-Hatta International",
@@ -5232,8 +5231,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_from: "Jakarta",
-        city_to: "Singapore",
+        city_to: "Jakarta",
+        city_from: "Singapore",
         airlines: "Garuda Indonesia",
         code: "GA-166",
         airport_from: "Soekarno-Hatta International",
@@ -5254,8 +5253,8 @@ module.exports = {
 
       {
         id: uuid(),
-        city_from: "Jakarta",
-        city_to: "Singapore",
+        city_to: "Jakarta",
+        city_from: "Singapore",
         airlines: "Batik Air",
         code: "ID-495",
         airport_from: "Soekarno-Hatta International",
@@ -5296,8 +5295,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_from: "Jakarta",
-        city_to: "Singapore",
+        city_to: "Jakarta",
+        city_from: "Singapore",
         airlines: "Garuda Indonesia",
         code: "GA-641",
         airport_from: "Soekarno-Hatta International",
@@ -5318,8 +5317,8 @@ module.exports = {
 
       {
         id: uuid(),
-        city_from: "Jakarta",
-        city_to: "Singapore",
+        city_to: "Jakarta",
+        city_from: "Singapore",
         airlines: "Batik Air",
         code: "ID-495",
         airport_from: "Soekarno-Hatta International",
@@ -5360,8 +5359,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_from: "Jakarta",
-        city_to: "Singapore",
+        city_to: "Jakarta",
+        city_from: "Singapore",
         airlines: "Garuda Indonesia",
         code: "GA-561",
         airport_from: "Soekarno-Hatta International",
@@ -5382,8 +5381,8 @@ module.exports = {
 
       {
         id: uuid(),
-        city_from: "Jakarta",
-        city_to: "Singapore",
+        city_to: "Jakarta",
+        city_from: "Singapore",
         airlines: "Batik Air",
         code: "ID-495",
         airport_from: "Soekarno-Hatta International",
@@ -5424,8 +5423,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_from: "Jakarta",
-        city_to: "Singapore",
+        city_to: "Jakarta",
+        city_from: "Singapore",
         airlines: "Garuda Indonesia",
         code: "GA-742",
         airport_from: "Soekarno-Hatta International",
@@ -5446,8 +5445,8 @@ module.exports = {
 
       {
         id: uuid(),
-        city_from: "Jakarta",
-        city_to: "Singapore",
+        city_to: "Jakarta",
+        city_from: "Singapore",
         airlines: "Batik Air",
         code: "ID-495",
         airport_from: "Soekarno-Hatta International",
@@ -5488,8 +5487,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_from: "Jakarta",
-        city_to: "Singapore",
+        city_to: "Jakarta",
+        city_from: "Singapore",
         airlines: "Garuda Indonesia",
         code: "GA-231",
         airport_from: "Soekarno-Hatta International",
@@ -5510,8 +5509,8 @@ module.exports = {
 
       {
         id: uuid(),
-        city_from: "Jakarta",
-        city_to: "Singapore",
+        city_to: "Jakarta",
+        city_from: "Singapore",
         airlines: "Batik Air",
         code: "ID-495",
         airport_from: "Soekarno-Hatta International",
@@ -5552,8 +5551,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_from: "Jakarta",
-        city_to: "Singapore",
+        city_to: "Jakarta",
+        city_from: "Singapore",
         airlines: "Garuda Indonesia",
         code: "GA-564",
         airport_from: "Soekarno-Hatta International",
@@ -5574,8 +5573,8 @@ module.exports = {
 
       {
         id: uuid(),
-        city_from: "Jakarta",
-        city_to: "Singapore",
+        city_to: "Jakarta",
+        city_from: "Singapore",
         airlines: "Batik Air",
         code: "ID-495",
         airport_from: "Soekarno-Hatta International",
@@ -5616,8 +5615,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_from: "Jakarta",
-        city_to: "Singapore",
+        city_to: "Jakarta",
+        city_from: "Singapore",
         airlines: "Garuda Indonesia",
         code: "GA-840",
         airport_from: "Soekarno-Hatta International",
@@ -5638,8 +5637,8 @@ module.exports = {
 
       {
         id: uuid(),
-        city_from: "Jakarta",
-        city_to: "Singapore",
+        city_to: "Jakarta",
+        city_from: "Singapore",
         airlines: "Batik Air",
         code: "ID-495",
         airport_from: "Soekarno-Hatta International",
@@ -5671,7 +5670,7 @@ module.exports = {
         dateDeparture: "2023-06-19",
         dateReturn: "2023-06-20",
         dateEnd: "2023-06-19",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1384985,
         booking_code: "ly9x12aog1",
         available: true,
@@ -5692,7 +5691,7 @@ module.exports = {
         dateDeparture: "2023-06-20",
         dateReturn: "2023-06-21",
         dateEnd: "2023-06-20",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1384985,
         booking_code: "k1jirktxid",
         available: true,
@@ -5713,7 +5712,7 @@ module.exports = {
         dateDeparture: "2023-06-21",
         dateReturn: "2023-06-22",
         dateEnd: "2023-06-21",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1384985,
         booking_code: "z3kb0ahbka",
         available: true,
@@ -5734,7 +5733,7 @@ module.exports = {
         dateDeparture: "2023-06-22",
         dateReturn: "2023-06-23",
         dateEnd: "2023-06-22",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1384985,
         booking_code: "8ybyunf8n5",
         available: true,
@@ -5755,7 +5754,7 @@ module.exports = {
         dateDeparture: "2023-06-23",
         dateReturn: "2023-06-24", // req body
         dateEnd: "2023-06-23",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1384985,
         booking_code: "o4zqkoy1c6",
         available: true,
@@ -5776,7 +5775,7 @@ module.exports = {
         dateDeparture: "2023-06-24",
         dateReturn: "2023-06-25", // req body
         dateEnd: "2023-06-24",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1384985,
         booking_code: "r44kdydddw",
         available: true,
@@ -5797,7 +5796,7 @@ module.exports = {
         dateDeparture: "2023-06-25",
         dateReturn: "2023-06-26", // req body
         dateEnd: "2023-06-25",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1384985,
         booking_code: "wn9rs46zqt",
         available: true,
@@ -5818,7 +5817,7 @@ module.exports = {
         dateDeparture: "2023-06-26",
         dateReturn: "2023-06-27", // req body
         dateEnd: "2023-06-26",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1384985,
         booking_code: "6te5wz3ek1",
         available: true,
@@ -5839,7 +5838,7 @@ module.exports = {
         dateDeparture: "2023-06-27 ",
         dateReturn: "2023-06-28", // req body
         dateEnd: "2023-06-27",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1384985,
         booking_code: "d04n8nq13g",
         available: true,
@@ -5860,7 +5859,7 @@ module.exports = {
         dateDeparture: "2023-06-28",
         dateReturn: "2023-06-29", // req body
         dateEnd: "2023-06-28",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1384985,
         booking_code: "gydlt5e0xr",
         available: true,
@@ -5881,7 +5880,7 @@ module.exports = {
         dateDeparture: "2023-06-29",
         dateReturn: "2023-06-30", // req body
         dateEnd: "2023-06-29",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1384985,
         booking_code: "pibcrclyyc",
         available: true,
@@ -5902,7 +5901,7 @@ module.exports = {
         dateDeparture: "2023-06-30",
         dateReturn: "2023-07-01", // req body
         dateEnd: "2023-06-30",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1384985,
         booking_code: "482eyfpnoz",
         available: true,
@@ -5923,7 +5922,7 @@ module.exports = {
         dateDeparture: "2023-07-01",
         dateReturn: "2023-07-02", // req body
         dateEnd: "2023-07-01",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1384985,
         booking_code: "tu7u0b1lpb",
         available: true,
@@ -5944,7 +5943,7 @@ module.exports = {
         dateDeparture: "2023-07-02",
         dateReturn: "2023-07-03", // req body
         dateEnd: "2023-07-02",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1384985,
         booking_code: "mhtjp35uc3",
         available: true,
@@ -5965,7 +5964,7 @@ module.exports = {
         dateDeparture: "2023-07-03",
         dateReturn: "2023-07-04", // req body
         dateEnd: "2023-07-03",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1384985,
         booking_code: "xg1c399lgj",
         available: true,
@@ -5986,7 +5985,7 @@ module.exports = {
         dateDeparture: "2023-07-04",
         dateReturn: "2023-07-05", // req body
         dateEnd: "2023-07-04",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1384985,
         booking_code: "sb5lawe4kp",
         available: true,
@@ -6007,7 +6006,7 @@ module.exports = {
         dateDeparture: "2023-07-05",
         dateReturn: "2023-07-06", // req body
         dateEnd: "2023-07-05",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1384985,
         booking_code: "vhkzv94yic",
         available: true,
@@ -6028,7 +6027,7 @@ module.exports = {
         dateDeparture: "2023-07-06",
         dateReturn: "2023-07-07", // req body
         dateEnd: "2023-07-06",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1384985,
         booking_code: "mj8bmxbgvf",
         available: true,
@@ -6049,7 +6048,7 @@ module.exports = {
         dateDeparture: "2023-07-07",
         dateReturn: "2023-07-08", // req body
         dateEnd: "2023-07-07",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1384985,
         booking_code: "kzy4okse4o",
         available: true,
@@ -6070,7 +6069,7 @@ module.exports = {
         dateDeparture: "2023-07-08",
         dateReturn: "2023-07-09", // req body
         dateEnd: "2023-07-08",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1384985,
         booking_code: "wnirz2qix7",
         available: true,
@@ -6091,7 +6090,7 @@ module.exports = {
         dateDeparture: "2023-07-09",
         dateReturn: "2023-07-10", // req body
         dateEnd: "2023-07-09",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1384985,
         booking_code: "uxhbl6140e",
         available: true,
@@ -6112,7 +6111,7 @@ module.exports = {
         dateDeparture: "2023-07-10",
         dateReturn: "2023-07-11", // req body
         dateEnd: "2023-07-10",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1384985,
         booking_code: "53wtqnzf39",
         available: true,
@@ -6133,7 +6132,7 @@ module.exports = {
         dateDeparture: "2023-06-19",
         dateReturn: "2023-06-20",
         dateEnd: "2023-06-19",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1384985,
         booking_code: "cexr73192n",
         available: true,
@@ -6175,7 +6174,7 @@ module.exports = {
         dateDeparture: "2023-06-20",
         dateReturn: "2023-06-21",
         dateEnd: "2023-06-20",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1384985,
         booking_code: "wc5ejriz53",
         available: true,
@@ -6217,7 +6216,7 @@ module.exports = {
         dateDeparture: "2023-06-21",
         dateReturn: "2023-06-22",
         dateEnd: "2023-06-21",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1384985,
         booking_code: "vmt61c8ws2",
         available: true,
@@ -6259,7 +6258,7 @@ module.exports = {
         dateDeparture: "2023-06-22",
         dateReturn: "2023-06-23",
         dateEnd: "2023-06-22",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1384985,
         booking_code: "z442nhf2gi",
         available: true,
@@ -6301,7 +6300,7 @@ module.exports = {
         dateDeparture: "2023-06-23",
         dateReturn: "2023-06-24", // req body
         dateEnd: "2023-06-23",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1384985,
         booking_code: "nrnafz1ei4",
         available: true,
@@ -6343,7 +6342,7 @@ module.exports = {
         dateDeparture: "2023-06-24",
         dateReturn: "2023-06-25", // req body
         dateEnd: "2023-06-24",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1384985,
         booking_code: "92qdi0gvog",
         available: true,
@@ -6385,7 +6384,7 @@ module.exports = {
         dateDeparture: "2023-06-25",
         dateReturn: "2023-06-26", // req body
         dateEnd: "2023-06-25",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1384985,
         booking_code: "j7xgp5w82w",
         available: true,
@@ -6427,7 +6426,7 @@ module.exports = {
         dateDeparture: "2023-06-26",
         dateReturn: "2023-06-27", // req body
         dateEnd: "2023-06-26",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1384985,
         booking_code: "2gpzoeyv2n",
         available: true,
@@ -6469,7 +6468,7 @@ module.exports = {
         dateDeparture: "2023-06-27 ",
         dateReturn: "2023-06-28", // req body
         dateEnd: "2023-06-27",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1384985,
         booking_code: "boocnqlnz8",
         available: true,
@@ -6511,7 +6510,7 @@ module.exports = {
         dateDeparture: "2023-06-28",
         dateReturn: "2023-06-29", // req body
         dateEnd: "2023-06-28",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1384985,
         booking_code: "kxlo49fddz",
         available: true,
@@ -6553,7 +6552,7 @@ module.exports = {
         dateDeparture: "2023-06-29",
         dateReturn: "2023-06-30", // req body
         dateEnd: "2023-06-29",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1384985,
         booking_code: "s8t1774z7n",
         available: true,
@@ -6595,7 +6594,7 @@ module.exports = {
         dateDeparture: "2023-06-30",
         dateReturn: "2023-07-01", // req body
         dateEnd: "2023-06-30",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1384985,
         booking_code: "2y8mkodzjt",
         available: true,
@@ -6637,7 +6636,7 @@ module.exports = {
         dateDeparture: "2023-07-01",
         dateReturn: "2023-07-02", // req body
         dateEnd: "2023-07-01",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1384985,
         booking_code: "xcxoqsmhib",
         available: true,
@@ -6679,7 +6678,7 @@ module.exports = {
         dateDeparture: "2023-07-02",
         dateReturn: "2023-07-03", // req body
         dateEnd: "2023-07-02",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1384985,
         booking_code: "hrbwxf070p",
         available: true,
@@ -6721,7 +6720,7 @@ module.exports = {
         dateDeparture: "2023-07-03",
         dateReturn: "2023-07-04", // req body
         dateEnd: "2023-07-03",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1384985,
         booking_code: "p7g9iqo15l",
         available: true,
@@ -6763,7 +6762,7 @@ module.exports = {
         dateDeparture: "2023-07-04",
         dateReturn: "2023-07-05", // req body
         dateEnd: "2023-07-04",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1384985,
         booking_code: "cs6d1cbxss",
         available: true,
@@ -6805,7 +6804,7 @@ module.exports = {
         dateDeparture: "2023-07-05",
         dateReturn: "2023-07-06", // req body
         dateEnd: "2023-07-05",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1384985,
         booking_code: "s0mzn5ndsd",
         available: true,
@@ -6847,7 +6846,7 @@ module.exports = {
         dateDeparture: "2023-07-06",
         dateReturn: "2023-07-07", // req body
         dateEnd: "2023-07-06",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1384985,
         booking_code: "5rxabfx3yp",
         available: true,
@@ -6889,7 +6888,7 @@ module.exports = {
         dateDeparture: "2023-07-07",
         dateReturn: "2023-07-08", // req body
         dateEnd: "2023-07-07",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1384985,
         booking_code: "2f2sso4cm8",
         available: true,
@@ -6931,7 +6930,7 @@ module.exports = {
         dateDeparture: "2023-07-08",
         dateReturn: "2023-07-09", // req body
         dateEnd: "2023-07-08",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1384985,
         booking_code: "s8gcomn7tb",
         available: true,
@@ -6973,7 +6972,7 @@ module.exports = {
         dateDeparture: "2023-07-09",
         dateReturn: "2023-07-10", // req body
         dateEnd: "2023-07-09",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1384985,
         booking_code: "s8gcomn7tb",
         available: true,
@@ -7015,7 +7014,7 @@ module.exports = {
         dateDeparture: "2023-07-10",
         dateReturn: "2023-07-11", // req body
         dateEnd: "2023-07-10",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1384985,
         booking_code: "zxuyic3c6d",
         available: true,
@@ -8884,7 +8883,7 @@ module.exports = {
         dateDeparture: "2023-06-19",
         dateReturn: "2023-06-20",
         dateEnd: "2023-06-19",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1225000,
         booking_code: "mack8cogtp",
         available: true,
@@ -8926,7 +8925,7 @@ module.exports = {
         dateDeparture: "2023-06-20",
         dateReturn: "2023-06-21",
         dateEnd: "2023-06-20",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1225000,
         booking_code: "40sukmkrbt",
         available: true,
@@ -8968,7 +8967,7 @@ module.exports = {
         dateDeparture: "2023-06-21",
         dateReturn: "2023-06-22",
         dateEnd: "2023-06-21",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1225000,
         booking_code: "w7t4q6v3fb",
         available: true,
@@ -9010,7 +9009,7 @@ module.exports = {
         dateDeparture: "2023-06-22",
         dateReturn: "2023-06-23",
         dateEnd: "2023-06-22",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1225000,
         booking_code: "muhyzomc0b",
         available: true,
@@ -9052,7 +9051,7 @@ module.exports = {
         dateDeparture: "2023-06-23",
         dateReturn: "2023-06-24", // req body
         dateEnd: "2023-06-23",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1225000,
         booking_code: "r6y6fjemla",
         available: true,
@@ -9094,7 +9093,7 @@ module.exports = {
         dateDeparture: "2023-06-24",
         dateReturn: "2023-06-25", // req body
         dateEnd: "2023-06-24",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1225000,
         booking_code: "91bye11x1s",
         available: true,
@@ -9136,7 +9135,7 @@ module.exports = {
         dateDeparture: "2023-06-25",
         dateReturn: "2023-06-26", // req body
         dateEnd: "2023-06-25",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1225000,
         booking_code: "wci226801f",
         available: true,
@@ -9178,7 +9177,7 @@ module.exports = {
         dateDeparture: "2023-06-26",
         dateReturn: "2023-06-27", // req body
         dateEnd: "2023-06-26",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1225000,
         booking_code: "5m0i62j92e",
         available: true,
@@ -9220,7 +9219,7 @@ module.exports = {
         dateDeparture: "2023-06-27 ",
         dateReturn: "2023-06-28", // req body
         dateEnd: "2023-06-27",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1225000,
         booking_code: "llapqocmql",
         available: true,
@@ -9262,7 +9261,7 @@ module.exports = {
         dateDeparture: "2023-06-28",
         dateReturn: "2023-06-29", // req body
         dateEnd: "2023-06-28",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1225000,
         booking_code: "b9hd3bxl6r",
         available: true,
@@ -9304,7 +9303,7 @@ module.exports = {
         dateDeparture: "2023-06-29",
         dateReturn: "2023-06-30", // req body
         dateEnd: "2023-06-29",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1225000,
         booking_code: "wltnsalthg",
         available: true,
@@ -9346,7 +9345,7 @@ module.exports = {
         dateDeparture: "2023-06-30",
         dateReturn: "2023-07-01", // req body
         dateEnd: "2023-06-30",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1225000,
         booking_code: "arzaoagyig",
         available: true,
@@ -9388,7 +9387,7 @@ module.exports = {
         dateDeparture: "2023-07-01",
         dateReturn: "2023-07-02", // req body
         dateEnd: "2023-07-01",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1225000,
         booking_code: "ig310a0g6u",
         available: true,
@@ -9430,7 +9429,7 @@ module.exports = {
         dateDeparture: "2023-07-02",
         dateReturn: "2023-07-03", // req body
         dateEnd: "2023-07-02",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1225000,
         booking_code: "sgtx4zwrle",
         available: true,
@@ -9472,7 +9471,7 @@ module.exports = {
         dateDeparture: "2023-07-03",
         dateReturn: "2023-07-04", // req body
         dateEnd: "2023-07-03",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1225000,
         booking_code: "sv9j8rhlcf",
         available: true,
@@ -9514,7 +9513,7 @@ module.exports = {
         dateDeparture: "2023-07-04",
         dateReturn: "2023-07-05", // req body
         dateEnd: "2023-07-04",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1225000,
         booking_code: "xffe3wkz56",
         available: true,
@@ -9556,7 +9555,7 @@ module.exports = {
         dateDeparture: "2023-07-05",
         dateReturn: "2023-07-06", // req body
         dateEnd: "2023-07-05",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1225000,
         booking_code: "qff82r7967",
         available: true,
@@ -9598,7 +9597,7 @@ module.exports = {
         dateDeparture: "2023-07-06",
         dateReturn: "2023-07-07", // req body
         dateEnd: "2023-07-06",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1225000,
         booking_code: "60glrtf09w",
         available: true,
@@ -9640,7 +9639,7 @@ module.exports = {
         dateDeparture: "2023-07-07",
         dateReturn: "2023-07-08", // req body
         dateEnd: "2023-07-07",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1225000,
         booking_code: "trh0yqmbef",
         available: true,
@@ -9682,7 +9681,7 @@ module.exports = {
         dateDeparture: "2023-07-08",
         dateReturn: "2023-07-09", // req body
         dateEnd: "2023-07-08",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1225000,
         booking_code: "lehycc2c8t",
         available: true,
@@ -9724,7 +9723,7 @@ module.exports = {
         dateDeparture: "2023-07-09",
         dateReturn: "2023-07-10", // req body
         dateEnd: "2023-07-09",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1225000,
         booking_code: "ckcpv1i3qd",
         available: true,
@@ -9766,7 +9765,7 @@ module.exports = {
         dateDeparture: "2023-07-10",
         dateReturn: "2023-07-11", // req body
         dateEnd: "2023-07-10",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1225000,
         booking_code: "5mdmgkk71m",
         available: true,
@@ -11635,7 +11634,7 @@ module.exports = {
         dateDeparture: "2023-06-19",
         dateReturn: "2023-06-20",
         dateEnd: "2023-06-19",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 592600,
         booking_code: "3k8r39sxzx",
         available: true,
@@ -11677,7 +11676,7 @@ module.exports = {
         dateDeparture: "2023-06-20",
         dateReturn: "2023-06-21",
         dateEnd: "2023-06-20",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 592600,
         booking_code: "qwm4ahjhb1",
         available: true,
@@ -11719,7 +11718,7 @@ module.exports = {
         dateDeparture: "2023-06-21",
         dateReturn: "2023-06-22",
         dateEnd: "2023-06-21",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 592600,
         booking_code: "crl2bwy8st",
         available: true,
@@ -11761,7 +11760,7 @@ module.exports = {
         dateDeparture: "2023-06-22",
         dateReturn: "2023-06-23",
         dateEnd: "2023-06-22",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 592600,
         booking_code: "po3wb6wq7g",
         available: true,
@@ -11804,7 +11803,7 @@ module.exports = {
         dateDeparture: "2023-06-23",
         dateReturn: "2023-06-24", // req body
         dateEnd: "2023-06-23",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 592600,
         booking_code: "iwo5bm45mr",
         available: true,
@@ -11846,7 +11845,7 @@ module.exports = {
         dateDeparture: "2023-06-24",
         dateReturn: "2023-06-25", // req body
         dateEnd: "2023-06-24",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 592600,
         booking_code: "01k8fbp1dw",
         available: true,
@@ -11888,7 +11887,7 @@ module.exports = {
         dateDeparture: "2023-06-25",
         dateReturn: "2023-06-26", // req body
         dateEnd: "2023-06-25",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 592600,
         booking_code: "9p5uvp7dcw",
         available: true,
@@ -11930,7 +11929,7 @@ module.exports = {
         dateDeparture: "2023-06-26",
         dateReturn: "2023-06-27", // req body
         dateEnd: "2023-06-26",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 592600,
         booking_code: "w4tv52oxzb",
         available: true,
@@ -11972,7 +11971,7 @@ module.exports = {
         dateDeparture: "2023-06-27 ",
         dateReturn: "2023-06-28", // req body
         dateEnd: "2023-06-27",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 592600,
         booking_code: "l8b0jq607w",
         available: true,
@@ -12014,7 +12013,7 @@ module.exports = {
         dateDeparture: "2023-06-28",
         dateReturn: "2023-06-29", // req body
         dateEnd: "2023-06-28",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 592600,
         booking_code: "c5g3ym12wy",
         available: true,
@@ -12056,7 +12055,7 @@ module.exports = {
         dateDeparture: "2023-06-30",
         dateReturn: "2023-07-01", // req body
         dateEnd: "2023-06-30",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 592600,
         booking_code: "xws0g8mok1",
         available: true,
@@ -12098,7 +12097,7 @@ module.exports = {
         dateDeparture: "2023-07-01",
         dateReturn: "2023-07-02", // req body
         dateEnd: "2023-07-01",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 592600,
         booking_code: "5qkogk08ec",
         available: true,
@@ -12140,7 +12139,7 @@ module.exports = {
         dateDeparture: "2023-07-02",
         dateReturn: "2023-07-03", // req body
         dateEnd: "2023-07-02",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 592600,
         booking_code: "nuzxhjvzss",
         available: true,
@@ -12181,7 +12180,7 @@ module.exports = {
         dateDeparture: "2023-07-03",
         dateReturn: "2023-07-04", // req body
         dateEnd: "2023-07-03",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 592600,
         booking_code: "3dorohbjdo",
         available: true,
@@ -12223,7 +12222,7 @@ module.exports = {
         dateDeparture: "2023-07-04",
         dateReturn: "2023-07-05", // req body
         dateEnd: "2023-07-04",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 592600,
         booking_code: "l9r09qfg3x",
         available: true,
@@ -12265,7 +12264,7 @@ module.exports = {
         dateDeparture: "2023-07-05",
         dateReturn: "2023-07-06", // req body
         dateEnd: "2023-07-05",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 592600,
         booking_code: "rq24gdrvuh",
         available: true,
@@ -12307,7 +12306,7 @@ module.exports = {
         dateDeparture: "2023-07-06",
         dateReturn: "2023-07-07", // req body
         dateEnd: "2023-07-06",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 592600,
         booking_code: "anek137u25",
         available: true,
@@ -12349,7 +12348,7 @@ module.exports = {
         dateDeparture: "2023-07-07",
         dateReturn: "2023-07-08", // req body
         dateEnd: "2023-07-07",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 592600,
         booking_code: "kti8au46gm",
         available: true,
@@ -12391,7 +12390,7 @@ module.exports = {
         dateDeparture: "2023-07-08",
         dateReturn: "2023-07-09", // req body
         dateEnd: "2023-07-08",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 592600,
         booking_code: "tlvv2egwzs",
         available: true,
@@ -12433,7 +12432,7 @@ module.exports = {
         dateDeparture: "2023-07-09",
         dateReturn: "2023-07-10", // req body
         dateEnd: "2023-07-09",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 592600,
         booking_code: "e5ws5ikhps",
         available: true,
@@ -12475,7 +12474,7 @@ module.exports = {
         dateDeparture: "2023-07-10",
         dateReturn: "2023-07-11", // req body
         dateEnd: "2023-07-10",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 592600,
         booking_code: "tgmd2xddf3",
         available: true,
@@ -12517,7 +12516,7 @@ module.exports = {
         dateDeparture: "2023-06-19",
         dateReturn: "2023-06-20",
         dateEnd: "2023-06-19",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 5586630,
         booking_code: "whvte3z6x7",
         available: true,
@@ -12559,7 +12558,7 @@ module.exports = {
         dateDeparture: "2023-06-20",
         dateReturn: "2023-06-21",
         dateEnd: "2023-06-20",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 5586630,
         booking_code: "jdigpbgvge",
         available: true,
@@ -12601,7 +12600,7 @@ module.exports = {
         dateDeparture: "2023-06-21",
         dateReturn: "2023-06-22",
         dateEnd: "2023-06-21",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 5586630,
         booking_code: "wvz8nr60sc",
         available: true,
@@ -12643,7 +12642,7 @@ module.exports = {
         dateDeparture: "2023-06-22",
         dateReturn: "2023-06-23",
         dateEnd: "2023-06-22",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 5586630,
         booking_code: "20ssnnu9ix",
         available: true,
@@ -12685,7 +12684,7 @@ module.exports = {
         dateDeparture: "2023-06-23",
         dateReturn: "2023-06-24", // req body
         dateEnd: "2023-06-23",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 5586630,
         booking_code: "p2g04i1han",
         available: true,
@@ -12727,7 +12726,7 @@ module.exports = {
         dateDeparture: "2023-06-24",
         dateReturn: "2023-06-25", // req body
         dateEnd: "2023-06-24",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 5586630,
         booking_code: "0fsnxxfs68",
         available: true,
@@ -12769,7 +12768,7 @@ module.exports = {
         dateDeparture: "2023-06-25",
         dateReturn: "2023-06-26", // req body
         dateEnd: "2023-06-25",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 5586630,
         booking_code: "qrtx3x8iw0",
         available: true,
@@ -12811,7 +12810,7 @@ module.exports = {
         dateDeparture: "2023-06-26",
         dateReturn: "2023-06-27", // req body
         dateEnd: "2023-06-26",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 5586630,
         booking_code: "h2cbxny5tu",
         available: true,
@@ -12853,7 +12852,7 @@ module.exports = {
         dateDeparture: "2023-06-27 ",
         dateReturn: "2023-06-28", // req body
         dateEnd: "2023-06-27",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 5586630,
         booking_code: "zfv0tq3sfu",
         available: true,
@@ -12895,7 +12894,7 @@ module.exports = {
         dateDeparture: "2023-06-28",
         dateReturn: "2023-06-29", // req body
         dateEnd: "2023-06-28",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 5586630,
         booking_code: "sxfheo79zp",
         available: true,
@@ -12937,7 +12936,7 @@ module.exports = {
         dateDeparture: "2023-06-29",
         dateReturn: "2023-06-30", // req body
         dateEnd: "2023-06-29",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 5586630,
         booking_code: "mk81sr552c",
         available: true,
@@ -12979,7 +12978,7 @@ module.exports = {
         dateDeparture: "2023-06-30",
         dateReturn: "2023-07-01", // req body
         dateEnd: "2023-06-30",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 5586630,
         booking_code: "8jm3sj276o",
         available: true,
@@ -13021,7 +13020,7 @@ module.exports = {
         dateDeparture: "2023-07-01",
         dateReturn: "2023-07-02", // req body
         dateEnd: "2023-07-01",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 5586630,
         booking_code: "eg51u3xmjy",
         available: true,
@@ -13063,7 +13062,7 @@ module.exports = {
         dateDeparture: "2023-07-02",
         dateReturn: "2023-07-03", // req body
         dateEnd: "2023-07-02",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 5586630,
         booking_code: "fwqqmlnvgb",
         available: true,
@@ -13105,7 +13104,7 @@ module.exports = {
         dateDeparture: "2023-07-04",
         dateReturn: "2023-07-05", // req body
         dateEnd: "2023-07-04",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 5586630,
         booking_code: "uid9a86e2o",
         available: true,
@@ -13147,7 +13146,7 @@ module.exports = {
         dateDeparture: "2023-07-05",
         dateReturn: "2023-07-06", // req body
         dateEnd: "2023-07-05",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 5586630,
         booking_code: "yfgp3evoj8",
         available: true,
@@ -13189,7 +13188,7 @@ module.exports = {
         dateDeparture: "2023-07-06",
         dateReturn: "2023-07-07", // req body
         dateEnd: "2023-07-06",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 5586630,
         booking_code: "asr451o1q9",
         available: true,
@@ -13231,7 +13230,7 @@ module.exports = {
         dateDeparture: "2023-07-07",
         dateReturn: "2023-07-08", // req body
         dateEnd: "2023-07-07",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 5586630,
         booking_code: "kjhnwjkyhd",
         available: true,
@@ -13273,7 +13272,7 @@ module.exports = {
         dateDeparture: "2023-07-08",
         dateReturn: "2023-07-09", // req body
         dateEnd: "2023-07-08",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 5586630,
         booking_code: "qc3g18uggy",
         available: true,
@@ -13315,7 +13314,7 @@ module.exports = {
         dateDeparture: "2023-07-09",
         dateReturn: "2023-07-10", // req body
         dateEnd: "2023-07-09",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 5586630,
         booking_code: "w25ph9mlom",
         available: true,
@@ -13357,7 +13356,7 @@ module.exports = {
         dateDeparture: "2023-07-10",
         dateReturn: "2023-07-11", // req body
         dateEnd: "2023-07-10",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 5586630,
         booking_code: "n8wf98xq5x",
         available: true,
@@ -13399,7 +13398,7 @@ module.exports = {
         dateDeparture: "2023-07-03",
         dateReturn: "2023-07-04", // req body
         dateEnd: "2023-07-03",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 5586630,
         booking_code: "hdtz8v9759",
         available: true,
@@ -14386,7 +14385,7 @@ module.exports = {
         dateDeparture: "2023-06-19",
         dateReturn: "2023-06-20",
         dateEnd: "2023-06-19",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 5586630,
         booking_code: "9xrjk9sxe6",
         available: true,
@@ -14428,7 +14427,7 @@ module.exports = {
         dateDeparture: "2023-06-20",
         dateReturn: "2023-06-21",
         dateEnd: "2023-06-20",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 5586630,
         booking_code: "tr3k1v1hto",
         available: true,
@@ -14470,7 +14469,7 @@ module.exports = {
         dateDeparture: "2023-06-21",
         dateReturn: "2023-06-22",
         dateEnd: "2023-06-21",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 5586630,
         booking_code: "nh5xpagrl7",
         available: true,
@@ -14512,7 +14511,7 @@ module.exports = {
         dateDeparture: "2023-06-22",
         dateReturn: "2023-06-23",
         dateEnd: "2023-06-22",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 5586630,
         booking_code: "59ce14pths",
         available: true,
@@ -14554,7 +14553,7 @@ module.exports = {
         dateDeparture: "2023-06-23",
         dateReturn: "2023-06-24", // req body
         dateEnd: "2023-06-23",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 5586630,
         booking_code: "221rdkr2e4",
         available: true,
@@ -14596,7 +14595,7 @@ module.exports = {
         dateDeparture: "2023-06-24",
         dateReturn: "2023-06-25", // req body
         dateEnd: "2023-06-24",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 5586630,
         booking_code: "89sn7fqk4q",
         available: true,
@@ -14638,7 +14637,7 @@ module.exports = {
         dateDeparture: "2023-06-25",
         dateReturn: "2023-06-26", // req body
         dateEnd: "2023-06-25",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 5586630,
         booking_code: "39ikvtuexo",
         available: true,
@@ -14680,7 +14679,7 @@ module.exports = {
         dateDeparture: "2023-06-26",
         dateReturn: "2023-06-27", // req body
         dateEnd: "2023-06-26",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 5586630,
         booking_code: "qa8ls7gbha",
         available: true,
@@ -14722,7 +14721,7 @@ module.exports = {
         dateDeparture: "2023-06-27 ",
         dateReturn: "2023-06-28", // req body
         dateEnd: "2023-06-27",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 5586630,
         booking_code: "7n708gh6ko",
         available: true,
@@ -14764,7 +14763,7 @@ module.exports = {
         dateDeparture: "2023-06-28",
         dateReturn: "2023-06-29", // req body
         dateEnd: "2023-06-28",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 5586630,
         booking_code: "cfvg098qxq",
         available: true,
@@ -14806,7 +14805,7 @@ module.exports = {
         dateDeparture: "2023-06-29",
         dateReturn: "2023-06-30", // req body
         dateEnd: "2023-06-29",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 5586630,
         booking_code: "yst301wtzg",
         available: true,
@@ -14848,7 +14847,7 @@ module.exports = {
         dateDeparture: "2023-06-30",
         dateReturn: "2023-07-01", // req body
         dateEnd: "2023-06-30",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 5586630,
         booking_code: "9z909y0xz7",
         available: true,
@@ -14890,7 +14889,7 @@ module.exports = {
         dateDeparture: "2023-07-01",
         dateReturn: "2023-07-02", // req body
         dateEnd: "2023-07-01",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 5586630,
         booking_code: "ufyzg5y51q",
         available: true,
@@ -14932,7 +14931,7 @@ module.exports = {
         dateDeparture: "2023-07-02",
         dateReturn: "2023-07-03", // req body
         dateEnd: "2023-07-02",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 5586630,
         booking_code: "1915snqzo8",
         available: true,
@@ -14974,7 +14973,7 @@ module.exports = {
         dateDeparture: "2023-07-03",
         dateReturn: "2023-07-04", // req body
         dateEnd: "2023-07-03",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 5586630,
         booking_code: "pre8vaqlu7",
         available: true,
@@ -15016,7 +15015,7 @@ module.exports = {
         dateDeparture: "2023-07-04",
         dateReturn: "2023-07-05", // req body
         dateEnd: "2023-07-04",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 5586630,
         booking_code: "92qwxcyohn",
         available: true,
@@ -15058,7 +15057,7 @@ module.exports = {
         dateDeparture: "2023-07-05",
         dateReturn: "2023-07-06", // req body
         dateEnd: "2023-07-05",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 5586630,
         booking_code: "6lig2uq7e2",
         available: true,
@@ -15100,7 +15099,7 @@ module.exports = {
         dateDeparture: "2023-07-06",
         dateReturn: "2023-07-07", // req body
         dateEnd: "2023-07-06",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 5586630,
         booking_code: "2w1xn6hlis",
         available: true,
@@ -15142,7 +15141,7 @@ module.exports = {
         dateDeparture: "2023-07-07",
         dateReturn: "2023-07-08", // req body
         dateEnd: "2023-07-07",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 5586630,
         booking_code: "8qgzbcsw9f",
         available: true,
@@ -15184,7 +15183,7 @@ module.exports = {
         dateDeparture: "2023-07-08",
         dateReturn: "2023-07-09", // req body
         dateEnd: "2023-07-08",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 5586630,
         booking_code: "fdoakjjjex",
         available: true,
@@ -15226,7 +15225,7 @@ module.exports = {
         dateDeparture: "2023-07-09",
         dateReturn: "2023-07-10", // req body
         dateEnd: "2023-07-09",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 5586630,
         booking_code: "bs4oka7q0m",
         available: true,
@@ -15268,7 +15267,7 @@ module.exports = {
         dateDeparture: "2023-07-10",
         dateReturn: "2023-07-11", // req body
         dateEnd: "2023-07-10",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 5586630,
         booking_code: "y0z9rq0qyk",
         available: true,
@@ -16234,7 +16233,7 @@ module.exports = {
         dateDeparture: "2023-06-19",
         dateReturn: "2023-06-20",
         dateEnd: "2023-06-19",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 891800,
         booking_code: "s4axlsaeiv",
         available: true,
@@ -16276,7 +16275,7 @@ module.exports = {
         dateDeparture: "2023-06-20",
         dateReturn: "2023-06-21",
         dateEnd: "2023-06-20",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 891800,
         booking_code: "i1q5c952bt",
         available: true,
@@ -16318,7 +16317,7 @@ module.exports = {
         dateDeparture: "2023-06-21",
         dateReturn: "2023-06-22",
         dateEnd: "2023-06-21",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 891800,
         booking_code: "lcbksn3kr1",
         available: true,
@@ -16360,7 +16359,7 @@ module.exports = {
         dateDeparture: "2023-06-22",
         dateReturn: "2023-06-23",
         dateEnd: "2023-06-22",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 891800,
         booking_code: "2rfpg9n5r9",
         available: true,
@@ -16402,7 +16401,7 @@ module.exports = {
         dateDeparture: "2023-06-23",
         dateReturn: "2023-06-24", // req body
         dateEnd: "2023-06-23",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 891800,
         booking_code: "gxi7prxnci",
         available: true,
@@ -16444,7 +16443,7 @@ module.exports = {
         dateDeparture: "2023-06-24",
         dateReturn: "2023-06-25", // req body
         dateEnd: "2023-06-24",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 891800,
         booking_code: "99j86jzumh",
         available: true,
@@ -16486,7 +16485,7 @@ module.exports = {
         dateDeparture: "2023-06-25",
         dateReturn: "2023-06-26", // req body
         dateEnd: "2023-06-25",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 891800,
         booking_code: "nl6zak2ht2",
         available: true,
@@ -16528,7 +16527,7 @@ module.exports = {
         dateDeparture: "2023-06-26",
         dateReturn: "2023-06-27", // req body
         dateEnd: "2023-06-26",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 891800,
         booking_code: "4kigs15gdc",
         available: true,
@@ -16570,7 +16569,7 @@ module.exports = {
         dateDeparture: "2023-06-27 ",
         dateReturn: "2023-06-28", // req body
         dateEnd: "2023-06-27",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 891800,
         booking_code: "uf4qh9ittf",
         available: true,
@@ -16612,7 +16611,7 @@ module.exports = {
         dateDeparture: "2023-06-28",
         dateReturn: "2023-06-29", // req body
         dateEnd: "2023-06-28",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 891800,
         booking_code: "ex8jtrxdgk",
         available: true,
@@ -16654,7 +16653,7 @@ module.exports = {
         dateDeparture: "2023-06-29",
         dateReturn: "2023-06-30", // req body
         dateEnd: "2023-06-29",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 891800,
         booking_code: "v70zyqh72j",
         available: true,
@@ -16696,7 +16695,7 @@ module.exports = {
         dateDeparture: "2023-06-30",
         dateReturn: "2023-07-01", // req body
         dateEnd: "2023-06-30",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 891800,
         booking_code: "7yy1mv5x2g",
         available: true,
@@ -16738,7 +16737,7 @@ module.exports = {
         dateDeparture: "2023-07-01",
         dateReturn: "2023-07-02", // req body
         dateEnd: "2023-07-01",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 891800,
         booking_code: "bs8rwyycqi",
         available: true,
@@ -16780,7 +16779,7 @@ module.exports = {
         dateDeparture: "2023-07-02",
         dateReturn: "2023-07-03", // req body
         dateEnd: "2023-07-02",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 891800,
         booking_code: "o5t3rwgjm9",
         available: true,
@@ -16822,7 +16821,7 @@ module.exports = {
         dateDeparture: "2023-07-03",
         dateReturn: "2023-07-04", // req body
         dateEnd: "2023-07-03",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 891800,
         booking_code: "8yfbigp7ac",
         available: true,
@@ -16864,7 +16863,7 @@ module.exports = {
         dateDeparture: "2023-07-04",
         dateReturn: "2023-07-05", // req body
         dateEnd: "2023-07-04",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 891800,
         booking_code: "89zwcl1i5o",
         available: true,
@@ -16906,7 +16905,7 @@ module.exports = {
         dateDeparture: "2023-07-05",
         dateReturn: "2023-07-06", // req body
         dateEnd: "2023-07-05",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 891800,
         booking_code: "sez0wvmcu3",
         available: true,
@@ -16948,7 +16947,7 @@ module.exports = {
         dateDeparture: "2023-07-06",
         dateReturn: "2023-07-07", // req body
         dateEnd: "2023-07-06",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 891800,
         booking_code: "rm97oo8ic5",
         available: true,
@@ -16990,7 +16989,7 @@ module.exports = {
         dateDeparture: "2023-07-07",
         dateReturn: "2023-07-08", // req body
         dateEnd: "2023-07-07",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 891800,
         booking_code: "cn7awpkq6x",
         available: true,
@@ -17032,7 +17031,7 @@ module.exports = {
         dateDeparture: "2023-07-08",
         dateReturn: "2023-07-09", // req body
         dateEnd: "2023-07-08",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 891800,
         booking_code: "bs67ezi559",
         available: true,
@@ -17074,7 +17073,7 @@ module.exports = {
         dateDeparture: "2023-07-09",
         dateReturn: "2023-07-10", // req body
         dateEnd: "2023-07-09",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 891800,
         booking_code: "s9ute2arc4",
         available: true,
@@ -17116,7 +17115,7 @@ module.exports = {
         dateDeparture: "2023-07-10",
         dateReturn: "2023-07-11", // req body
         dateEnd: "2023-07-10",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 891800,
         booking_code: "4s36kq6zbz",
         available: true,
@@ -17137,7 +17136,7 @@ module.exports = {
         dateDeparture: "2023-06-19",
         dateReturn: "2023-06-20",
         dateEnd: "2023-06-19",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 955100,
         booking_code: "thuvr8uqz8",
         available: true,
@@ -17158,7 +17157,7 @@ module.exports = {
         dateDeparture: "2023-06-19",
         dateReturn: "2023-06-20",
         dateEnd: "2023-06-19",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 1255100,
         booking_code: "zkd8abn90j",
         available: true,
@@ -17179,7 +17178,7 @@ module.exports = {
         dateDeparture: "2023-06-20",
         dateReturn: "2023-06-21",
         dateEnd: "2023-06-20",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 955100,
         booking_code: "cdkg85y57q",
         available: true,
@@ -17200,7 +17199,7 @@ module.exports = {
         dateDeparture: "2023-06-20",
         dateReturn: "2023-06-21",
         dateEnd: "2023-06-20",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 1255100,
         booking_code: "tyn4ycrk4m",
         available: true,
@@ -17221,7 +17220,7 @@ module.exports = {
         dateDeparture: "2023-06-21",
         dateReturn: "2023-06-22",
         dateEnd: "2023-06-21",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 955100,
         booking_code: "cfwgpjqkqk",
         available: true,
@@ -17242,7 +17241,7 @@ module.exports = {
         dateDeparture: "2023-06-21",
         dateReturn: "2023-06-22",
         dateEnd: "2023-06-21",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 1255100,
         booking_code: "8xbsaxhnsg",
         available: true,
@@ -17263,7 +17262,7 @@ module.exports = {
         dateDeparture: "2023-06-22",
         dateReturn: "2023-06-23",
         dateEnd: "2023-06-22",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 955100,
         booking_code: "94q9f31go5",
         available: true,
@@ -17284,7 +17283,7 @@ module.exports = {
         dateDeparture: "2023-06-22",
         dateReturn: "2023-06-23",
         dateEnd: "2023-06-22",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 1255100,
         booking_code: "v6uknwginc",
         available: true,
@@ -17305,7 +17304,7 @@ module.exports = {
         dateDeparture: "2023-06-23",
         dateReturn: "2023-06-24", // req body
         dateEnd: "2023-06-23",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 955100,
         booking_code: "9cq0c1l2a4",
         available: true,
@@ -17326,7 +17325,7 @@ module.exports = {
         dateDeparture: "2023-06-23",
         dateReturn: "2023-06-24", // req body
         dateEnd: "2023-06-23",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 1255100,
         booking_code: "b9fqnzo4ru",
         available: true,
@@ -17347,7 +17346,7 @@ module.exports = {
         dateDeparture: "2023-06-24",
         dateReturn: "2023-06-25", // req body
         dateEnd: "2023-06-24",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 955100,
         booking_code: "9gwybczvvr",
         available: true,
@@ -17368,7 +17367,7 @@ module.exports = {
         dateDeparture: "2023-06-24",
         dateReturn: "2023-06-25", // req body
         dateEnd: "2023-06-24",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 1255100,
         booking_code: "i1nkhgl0jl",
         available: true,
@@ -17389,7 +17388,7 @@ module.exports = {
         dateDeparture: "2023-06-25",
         dateReturn: "2023-06-26", // req body
         dateEnd: "2023-06-25",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 955100,
         booking_code: "u3n9v4dr22",
         available: true,
@@ -17410,7 +17409,7 @@ module.exports = {
         dateDeparture: "2023-06-25",
         dateReturn: "2023-06-26", // req body
         dateEnd: "2023-06-25",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 1255100,
         booking_code: "8bzl4ukhs1",
         available: true,
@@ -17431,7 +17430,7 @@ module.exports = {
         dateDeparture: "2023-06-26",
         dateReturn: "2023-06-27", // req body
         dateEnd: "2023-06-26",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 955100,
         booking_code: "09f95kfyfe",
         available: true,
@@ -17452,7 +17451,7 @@ module.exports = {
         dateDeparture: "2023-06-27 ",
         dateReturn: "2023-06-28", // req body
         dateEnd: "2023-06-27",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 1255100,
         booking_code: "mn7mifgkyb",
         available: true,
@@ -17473,7 +17472,7 @@ module.exports = {
         dateDeparture: "2023-06-27 ",
         dateReturn: "2023-06-28", // req body
         dateEnd: "2023-06-27",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 955100,
         booking_code: "4apequvx8l",
         available: true,
@@ -17494,7 +17493,7 @@ module.exports = {
         dateDeparture: "2023-06-28",
         dateReturn: "2023-06-29", // req body
         dateEnd: "2023-06-28",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 1255100,
         booking_code: "qg51u8wuah",
         available: true,
@@ -17515,7 +17514,7 @@ module.exports = {
         dateDeparture: "2023-06-29",
         dateReturn: "2023-06-30", // req body
         dateEnd: "2023-06-29",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 955100,
         booking_code: "rajz042y4a",
         available: true,
@@ -17536,7 +17535,7 @@ module.exports = {
         dateDeparture: "2023-06-30",
         dateReturn: "2023-07-01", // req body
         dateEnd: "2023-06-30",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 1255100,
         booking_code: "wykrggs68i",
         available: true,
@@ -17557,7 +17556,7 @@ module.exports = {
         dateDeparture: "2023-07-01",
         dateReturn: "2023-07-02", // req body
         dateEnd: "2023-07-01",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 955100,
         booking_code: "co2upa3sez",
         available: true,
@@ -17578,7 +17577,7 @@ module.exports = {
         dateDeparture: "2023-07-01",
         dateReturn: "2023-07-02", // req body
         dateEnd: "2023-07-01",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 1255100,
         booking_code: "8k5130ug87",
         available: true,
@@ -17599,7 +17598,7 @@ module.exports = {
         dateDeparture: "2023-07-02",
         dateReturn: "2023-07-03", // req body
         dateEnd: "2023-07-02",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 955100,
         booking_code: "0l83kouev5",
         available: true,
@@ -17620,7 +17619,7 @@ module.exports = {
         dateDeparture: "2023-07-02",
         dateReturn: "2023-07-03", // req body
         dateEnd: "2023-07-02",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 1255100,
         booking_code: "x8xbwuo3if",
         available: true,
@@ -17641,7 +17640,7 @@ module.exports = {
         dateDeparture: "2023-07-03",
         dateReturn: "2023-07-04", // req body
         dateEnd: "2023-07-03",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 955100,
         booking_code: "i707oaqii4",
         available: true,
@@ -17662,7 +17661,7 @@ module.exports = {
         dateDeparture: "2023-07-03",
         dateReturn: "2023-07-04", // req body
         dateEnd: "2023-07-03",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 1255100,
         booking_code: "ag0bu2eqb1",
         available: true,
@@ -17683,7 +17682,7 @@ module.exports = {
         dateDeparture: "2023-07-04",
         dateReturn: "2023-07-05", // req body
         dateEnd: "2023-07-04",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 955100,
         booking_code: "zh3yjmpts2",
         available: true,
@@ -17704,7 +17703,7 @@ module.exports = {
         dateDeparture: "2023-07-04",
         dateReturn: "2023-07-05", // req body
         dateEnd: "2023-07-04",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 1255100,
         booking_code: "yfujwpl0su",
         available: true,
@@ -17725,7 +17724,7 @@ module.exports = {
         dateDeparture: "2023-07-05",
         dateReturn: "2023-07-06", // req body
         dateEnd: "2023-07-05",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 955100,
         booking_code: "8skz613ghc",
         available: true,
@@ -17746,7 +17745,7 @@ module.exports = {
         dateDeparture: "2023-07-05",
         dateReturn: "2023-07-06", // req body
         dateEnd: "2023-07-05",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 1255100,
         booking_code: "6hsuclm5ba",
         available: true,
@@ -17767,7 +17766,7 @@ module.exports = {
         dateDeparture: "2023-07-06",
         dateReturn: "2023-07-07", // req body
         dateEnd: "2023-07-06",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 955100,
         booking_code: "rayner2o1m",
         available: true,
@@ -17788,7 +17787,7 @@ module.exports = {
         dateDeparture: "2023-07-06",
         dateReturn: "2023-07-07", // req body
         dateEnd: "2023-07-06",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 1255100,
         booking_code: "qllyt89o6l",
         available: true,
@@ -17809,7 +17808,7 @@ module.exports = {
         dateDeparture: "2023-07-07",
         dateReturn: "2023-07-08", // req body
         dateEnd: "2023-07-07",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 955100,
         booking_code: "rhuw6ua9yy",
         available: true,
@@ -17830,7 +17829,7 @@ module.exports = {
         dateDeparture: "2023-07-07",
         dateReturn: "2023-07-08", // req body
         dateEnd: "2023-07-07",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 1255100,
         booking_code: "vcj6gtwff2",
         available: true,
@@ -17851,7 +17850,7 @@ module.exports = {
         dateDeparture: "2023-07-08",
         dateReturn: "2023-07-09", // req body
         dateEnd: "2023-07-08",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 955100,
         booking_code: "28foa1v8kq",
         available: true,
@@ -17872,7 +17871,7 @@ module.exports = {
         dateDeparture: "2023-07-08",
         dateReturn: "2023-07-09", // req body
         dateEnd: "2023-07-08",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 1255100,
         booking_code: "5uvxgmyq4u",
         available: true,
@@ -17893,7 +17892,7 @@ module.exports = {
         dateDeparture: "2023-07-09",
         dateReturn: "2023-07-10", // req body
         dateEnd: "2023-07-09",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 955100,
         booking_code: "hd4irrd8j3",
         available: true,
@@ -17914,7 +17913,7 @@ module.exports = {
         dateDeparture: "2023-07-09",
         dateReturn: "2023-07-10", // req body
         dateEnd: "2023-07-09",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 1255100,
         booking_code: "mfd6r8ytw5",
         available: true,
@@ -17935,7 +17934,7 @@ module.exports = {
         dateDeparture: "2023-07-10",
         dateReturn: "2023-07-11", // req body
         dateEnd: "2023-07-10",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 955100,
         booking_code: "3o0127i9ur",
         available: true,
@@ -17956,7 +17955,7 @@ module.exports = {
         dateDeparture: "2023-07-10",
         dateReturn: "2023-07-11", // req body
         dateEnd: "2023-07-10",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 1255100,
         booking_code: "hy4gak15cy",
         available: true,
@@ -17977,7 +17976,7 @@ module.exports = {
         dateDeparture: "2023-06-28",
         dateReturn: "2023-06-29", // req body
         dateEnd: "2023-06-28",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 955100,
         booking_code: "5n65bs2uip",
         available: true,
@@ -17998,7 +17997,7 @@ module.exports = {
         dateDeparture: "2023-06-29",
         dateReturn: "2023-06-30", // req body
         dateEnd: "2023-06-29",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 1255100,
         booking_code: "74kzhubfvr",
         available: true,
@@ -18019,7 +18018,7 @@ module.exports = {
         dateDeparture: "2023-06-30",
         dateReturn: "2023-07-01", // req body
         dateEnd: "2023-06-30",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 955100,
         booking_code: "xwskg50bv8",
         available: true,
@@ -18040,7 +18039,7 @@ module.exports = {
         dateDeparture: "2023-06-26",
         dateReturn: "2023-06-27", // req body
         dateEnd: "2023-06-26",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 1255100,
         booking_code: "ospw7ytq11",
         available: true,
@@ -18082,7 +18081,7 @@ module.exports = {
         dateDeparture: "2023-06-19",
         dateReturn: "2023-06-20",
         dateEnd: "2023-06-19",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1845100,
         booking_code: "u8q02crxcv",
         available: true,
@@ -18124,7 +18123,7 @@ module.exports = {
         dateDeparture: "2023-06-20",
         dateReturn: "2023-06-21",
         dateEnd: "2023-06-20",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1845100,
         booking_code: "uu5zawowa2",
         available: true,
@@ -18166,7 +18165,7 @@ module.exports = {
         dateDeparture: "2023-06-21",
         dateReturn: "2023-06-22",
         dateEnd: "2023-06-21",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1845100,
         booking_code: "r06debsk9i",
         available: true,
@@ -18208,7 +18207,7 @@ module.exports = {
         dateDeparture: "2023-06-22",
         dateReturn: "2023-06-23",
         dateEnd: "2023-06-22",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1845100,
         booking_code: "8umgmbuybv",
         available: true,
@@ -18250,7 +18249,7 @@ module.exports = {
         dateDeparture: "2023-06-23",
         dateReturn: "2023-06-24", // req body
         dateEnd: "2023-06-23",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1845100,
         booking_code: "ycv511yw4u",
         available: true,
@@ -18292,7 +18291,7 @@ module.exports = {
         dateDeparture: "2023-06-24",
         dateReturn: "2023-06-25", // req body
         dateEnd: "2023-06-24",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1845100,
         booking_code: "xjbot9gpw8",
         available: true,
@@ -18334,7 +18333,7 @@ module.exports = {
         dateDeparture: "2023-06-25",
         dateReturn: "2023-06-26", // req body
         dateEnd: "2023-06-25",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1845100,
         booking_code: "tww0ylp1ce",
         available: true,
@@ -18376,7 +18375,7 @@ module.exports = {
         dateDeparture: "2023-06-26",
         dateReturn: "2023-06-27", // req body
         dateEnd: "2023-06-26",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1845100,
         booking_code: "euwz249voe",
         available: true,
@@ -18418,7 +18417,7 @@ module.exports = {
         dateDeparture: "2023-06-27 ",
         dateReturn: "2023-06-28", // req body
         dateEnd: "2023-06-27",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1845100,
         booking_code: "azici0fzo4",
         available: true,
@@ -18460,7 +18459,7 @@ module.exports = {
         dateDeparture: "2023-06-29",
         dateReturn: "2023-06-30", // req body
         dateEnd: "2023-06-29",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1845100,
         booking_code: "j50pmaysw2",
         available: true,
@@ -18502,7 +18501,7 @@ module.exports = {
         dateDeparture: "2023-06-30",
         dateReturn: "2023-07-01", // req body
         dateEnd: "2023-06-30",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1845100,
         booking_code: "nepjlx8fry",
         available: true,
@@ -18544,7 +18543,7 @@ module.exports = {
         dateDeparture: "2023-07-01",
         dateReturn: "2023-07-02", // req body
         dateEnd: "2023-07-01",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1845100,
         booking_code: "w2dxurgrfq",
         available: true,
@@ -18586,7 +18585,7 @@ module.exports = {
         dateDeparture: "2023-07-02",
         dateReturn: "2023-07-03", // req body
         dateEnd: "2023-07-02",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1845100,
         booking_code: "l53bj5d57u",
         available: true,
@@ -18628,7 +18627,7 @@ module.exports = {
         dateDeparture: "2023-07-03",
         dateReturn: "2023-07-04", // req body
         dateEnd: "2023-07-03",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1845100,
         booking_code: "95cvkpjzrx",
         available: true,
@@ -18670,7 +18669,7 @@ module.exports = {
         dateDeparture: "2023-07-04",
         dateReturn: "2023-07-05", // req body
         dateEnd: "2023-07-04",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1845100,
         booking_code: "ukbvhqejxi",
         available: true,
@@ -18712,7 +18711,7 @@ module.exports = {
         dateDeparture: "2023-07-05",
         dateReturn: "2023-07-06", // req body
         dateEnd: "2023-07-05",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1845100,
         booking_code: "0cebpfabrh",
         available: true,
@@ -18754,7 +18753,7 @@ module.exports = {
         dateDeparture: "2023-07-06",
         dateReturn: "2023-07-07", // req body
         dateEnd: "2023-07-06",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1845100,
         booking_code: "glmsbunu7e",
         available: true,
@@ -18796,7 +18795,7 @@ module.exports = {
         dateDeparture: "2023-07-07",
         dateReturn: "2023-07-08", // req body
         dateEnd: "2023-07-07",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1845100,
         booking_code: "j3ng58z6a8",
         available: true,
@@ -18838,7 +18837,7 @@ module.exports = {
         dateDeparture: "2023-07-08",
         dateReturn: "2023-07-09", // req body
         dateEnd: "2023-07-08",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1845100,
         booking_code: "hd9031opq4",
         available: true,
@@ -18880,7 +18879,7 @@ module.exports = {
         dateDeparture: "2023-07-09",
         dateReturn: "2023-07-10", // req body
         dateEnd: "2023-07-09",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1845100,
         booking_code: "orfxd1s0b7",
         available: true,
@@ -18922,7 +18921,7 @@ module.exports = {
         dateDeparture: "2023-07-10",
         dateReturn: "2023-07-11", // req body
         dateEnd: "2023-07-10",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1845100,
         booking_code: "3l1jwz8d43",
         available: true,
@@ -18964,7 +18963,7 @@ module.exports = {
         dateDeparture: "2023-06-28",
         dateReturn: "2023-06-29", // req body
         dateEnd: "2023-06-28",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 1845100,
         booking_code: "cfj585ajr1",
         available: true,
@@ -18985,7 +18984,7 @@ module.exports = {
         dateDeparture: "2023-06-19",
         dateReturn: "2023-06-20",
         dateEnd: "2023-06-19",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 1891800,
         booking_code: "tt5edzpt8t",
         available: true,
@@ -19006,7 +19005,7 @@ module.exports = {
         dateDeparture: "2023-06-19",
         dateReturn: "2023-06-20",
         dateEnd: "2023-06-19",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 1891800,
         booking_code: "ob2r3pveeu",
         available: true,
@@ -19027,7 +19026,7 @@ module.exports = {
         dateDeparture: "2023-06-20",
         dateReturn: "2023-06-21",
         dateEnd: "2023-06-20",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 1891800,
         booking_code: "7dqdzoyk6s",
         available: true,
@@ -19048,7 +19047,7 @@ module.exports = {
         dateDeparture: "2023-06-20",
         dateReturn: "2023-06-21",
         dateEnd: "2023-06-20",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 1891800,
         booking_code: "5ub2x1xvqw",
         available: true,
@@ -19069,7 +19068,7 @@ module.exports = {
         dateDeparture: "2023-06-21",
         dateReturn: "2023-06-22",
         dateEnd: "2023-06-21",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 1891800,
         booking_code: "49goaalqa4",
         available: true,
@@ -19090,7 +19089,7 @@ module.exports = {
         dateDeparture: "2023-06-21",
         dateReturn: "2023-06-22",
         dateEnd: "2023-06-21",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 1891800,
         booking_code: "xqkjo03dbu",
         available: true,
@@ -19111,7 +19110,7 @@ module.exports = {
         dateDeparture: "2023-06-22",
         dateReturn: "2023-06-23",
         dateEnd: "2023-06-22",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 1891800,
         booking_code: "xfn9ta2536",
         available: true,
@@ -19132,7 +19131,7 @@ module.exports = {
         dateDeparture: "2023-06-22",
         dateReturn: "2023-06-23",
         dateEnd: "2023-06-22",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 1891800,
         booking_code: "qj9i9cqphm",
         available: true,
@@ -19153,7 +19152,7 @@ module.exports = {
         dateDeparture: "2023-06-23",
         dateReturn: "2023-06-24", // req body
         dateEnd: "2023-06-23",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 1891800,
         booking_code: "q3tti9tlyn",
         available: true,
@@ -19174,7 +19173,7 @@ module.exports = {
         dateDeparture: "2023-06-23",
         dateReturn: "2023-06-24", // req body
         dateEnd: "2023-06-23",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 1891800,
         booking_code: "onxctbvz74",
         available: true,
@@ -19195,7 +19194,7 @@ module.exports = {
         dateDeparture: "2023-06-24",
         dateReturn: "2023-06-25", // req body
         dateEnd: "2023-06-24",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 1891800,
         booking_code: "w7ht4vmhfw",
         available: true,
@@ -19216,7 +19215,7 @@ module.exports = {
         dateDeparture: "2023-06-24",
         dateReturn: "2023-06-25", // req body
         dateEnd: "2023-06-24",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 1891800,
         booking_code: "jwkec67j2p",
         available: true,
@@ -19237,7 +19236,7 @@ module.exports = {
         dateDeparture: "2023-06-25",
         dateReturn: "2023-06-26", // req body
         dateEnd: "2023-06-25",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 1891800,
         booking_code: "i89ttbhe1u",
         available: true,
@@ -19258,7 +19257,7 @@ module.exports = {
         dateDeparture: "2023-06-25",
         dateReturn: "2023-06-26", // req body
         dateEnd: "2023-06-25",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 1891800,
         booking_code: "zv451i4ucd",
         available: true,
@@ -19279,7 +19278,7 @@ module.exports = {
         dateDeparture: "2023-06-26",
         dateReturn: "2023-06-27", // req body
         dateEnd: "2023-06-26",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 1891800,
         booking_code: "41s6s93ukp",
         available: true,
@@ -19300,7 +19299,7 @@ module.exports = {
         dateDeparture: "2023-06-26",
         dateReturn: "2023-06-27", // req body
         dateEnd: "2023-06-26",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 1891800,
         booking_code: "9ku9xbd3xe",
         available: true,
@@ -19321,7 +19320,7 @@ module.exports = {
         dateDeparture: "2023-06-27 ",
         dateReturn: "2023-06-28", // req body
         dateEnd: "2023-06-27",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 1891800,
         booking_code: "dmlagc2oya",
         available: true,
@@ -19342,7 +19341,7 @@ module.exports = {
         dateDeparture: "2023-06-27 ",
         dateReturn: "2023-06-28", // req body
         dateEnd: "2023-06-27",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 1891800,
         booking_code: "vq7btsp9la",
         available: true,
@@ -19363,7 +19362,7 @@ module.exports = {
         dateDeparture: "2023-06-28",
         dateReturn: "2023-06-29", // req body
         dateEnd: "2023-06-28",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 1891800,
         booking_code: "mfz1543ke2",
         available: true,
@@ -19384,7 +19383,7 @@ module.exports = {
         dateDeparture: "2023-06-28",
         dateReturn: "2023-06-29", // req body
         dateEnd: "2023-06-28",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 1891800,
         booking_code: "3oih1zykoz",
         available: true,
@@ -19405,7 +19404,7 @@ module.exports = {
         dateDeparture: "2023-06-29",
         dateReturn: "2023-06-30", // req body
         dateEnd: "2023-06-29",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 1891800,
         booking_code: "gvaoc6u3v9",
         available: true,
@@ -19426,7 +19425,7 @@ module.exports = {
         dateDeparture: "2023-06-29",
         dateReturn: "2023-06-30", // req body
         dateEnd: "2023-06-29",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 1891800,
         booking_code: "6kc3vomjmz",
         available: true,
@@ -19447,7 +19446,7 @@ module.exports = {
         dateDeparture: "2023-06-30",
         dateReturn: "2023-07-01", // req body
         dateEnd: "2023-06-30",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 1891800,
         booking_code: "4z0c71hegp",
         available: true,
@@ -19468,7 +19467,7 @@ module.exports = {
         dateDeparture: "2023-06-30",
         dateReturn: "2023-07-01", // req body
         dateEnd: "2023-06-30",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 1891800,
         booking_code: "deep5s2wl3",
         available: true,
@@ -19489,7 +19488,7 @@ module.exports = {
         dateDeparture: "2023-07-01",
         dateReturn: "2023-07-02", // req body
         dateEnd: "2023-07-01",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 1891800,
         booking_code: "k0odigan9b",
         available: true,
@@ -19510,7 +19509,7 @@ module.exports = {
         dateDeparture: "2023-07-01",
         dateReturn: "2023-07-02", // req body
         dateEnd: "2023-07-01",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 1891800,
         booking_code: "pa4s0zvmur",
         available: true,
@@ -19531,7 +19530,7 @@ module.exports = {
         dateDeparture: "2023-07-02",
         dateReturn: "2023-07-03", // req body
         dateEnd: "2023-07-02",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 1891800,
         booking_code: "yx1f5776a7",
         available: true,
@@ -19552,7 +19551,7 @@ module.exports = {
         dateDeparture: "2023-07-02",
         dateReturn: "2023-07-03", // req body
         dateEnd: "2023-07-02",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 1891800,
         booking_code: "3gms5kiw6z",
         available: true,
@@ -19573,7 +19572,7 @@ module.exports = {
         dateDeparture: "2023-07-03",
         dateReturn: "2023-07-04", // req body
         dateEnd: "2023-07-03",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 1891800,
         booking_code: "zs6v2rc6v7",
         available: true,
@@ -19594,7 +19593,7 @@ module.exports = {
         dateDeparture: "2023-07-03",
         dateReturn: "2023-07-04", // req body
         dateEnd: "2023-07-03",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 1891800,
         booking_code: "5d6i0me5ky",
         available: true,
@@ -19615,7 +19614,7 @@ module.exports = {
         dateDeparture: "2023-07-04",
         dateReturn: "2023-07-05", // req body
         dateEnd: "2023-07-04",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 1891800,
         booking_code: "lq1d6vyq7q",
         available: true,
@@ -19636,7 +19635,7 @@ module.exports = {
         dateDeparture: "2023-07-04",
         dateReturn: "2023-07-05", // req body
         dateEnd: "2023-07-04",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 1891800,
         booking_code: "fze6eg9f8r",
         available: true,
@@ -19657,7 +19656,7 @@ module.exports = {
         dateDeparture: "2023-07-05",
         dateReturn: "2023-07-06", // req body
         dateEnd: "2023-07-05",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 1891800,
         booking_code: "y8y77e1qly",
         available: true,
@@ -19678,7 +19677,7 @@ module.exports = {
         dateDeparture: "2023-07-05",
         dateReturn: "2023-07-06", // req body
         dateEnd: "2023-07-05",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 1891800,
         booking_code: "9fjjfm8eyq",
         available: true,
@@ -19699,7 +19698,7 @@ module.exports = {
         dateDeparture: "2023-07-06",
         dateReturn: "2023-07-07", // req body
         dateEnd: "2023-07-06",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 1891800,
         booking_code: "uomdxfevim",
         available: true,
@@ -19720,7 +19719,7 @@ module.exports = {
         dateDeparture: "2023-07-06",
         dateReturn: "2023-07-07", // req body
         dateEnd: "2023-07-06",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 1891800,
         booking_code: "rskaiyo74x",
         available: true,
@@ -19741,7 +19740,7 @@ module.exports = {
         dateDeparture: "2023-07-07",
         dateReturn: "2023-07-08", // req body
         dateEnd: "2023-07-07",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 1891800,
         booking_code: "yp55buuvgv",
         available: true,
@@ -19762,7 +19761,7 @@ module.exports = {
         dateDeparture: "2023-07-07",
         dateReturn: "2023-07-08", // req body
         dateEnd: "2023-07-07",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 1891800,
         booking_code: "p2o41jqcjo",
         available: true,
@@ -19783,7 +19782,7 @@ module.exports = {
         dateDeparture: "2023-07-08",
         dateReturn: "2023-07-09", // req body
         dateEnd: "2023-07-08",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 1891800,
         booking_code: "wj8kd046hh",
         available: true,
@@ -19804,7 +19803,7 @@ module.exports = {
         dateDeparture: "2023-07-08",
         dateReturn: "2023-07-09", // req body
         dateEnd: "2023-07-08",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 1891800,
         booking_code: "fl75phkycv",
         available: true,
@@ -19825,7 +19824,7 @@ module.exports = {
         dateDeparture: "2023-07-09",
         dateReturn: "2023-07-10", // req body
         dateEnd: "2023-07-09",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 1891800,
         booking_code: "kemmh1ie13",
         available: true,
@@ -19846,7 +19845,7 @@ module.exports = {
         dateDeparture: "2023-07-09",
         dateReturn: "2023-07-10", // req body
         dateEnd: "2023-07-09",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 1891800,
         booking_code: "ijaemocwot",
         available: true,
@@ -19867,7 +19866,7 @@ module.exports = {
         dateDeparture: "2023-07-10",
         dateReturn: "2023-07-11", // req body
         dateEnd: "2023-07-10",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 1891800,
         booking_code: "oddqfccjzj",
         available: true,
@@ -19888,7 +19887,7 @@ module.exports = {
         dateDeparture: "2023-07-10",
         dateReturn: "2023-07-11", // req body
         dateEnd: "2023-07-10",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 1891800,
         booking_code: "5rknkcblx3",
         available: true,
@@ -19909,7 +19908,7 @@ module.exports = {
         dateDeparture: "2023-06-19",
         dateReturn: "2023-06-20",
         dateEnd: "2023-06-19",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 13805100,
         booking_code: "osn44s5cbd",
         available: true,
@@ -19951,7 +19950,7 @@ module.exports = {
         dateDeparture: "2023-06-20",
         dateReturn: "2023-06-21",
         dateEnd: "2023-06-20",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 13805100,
         booking_code: "eddhmd0bbn",
         available: true,
@@ -19993,7 +19992,7 @@ module.exports = {
         dateDeparture: "2023-06-21",
         dateReturn: "2023-06-22",
         dateEnd: "2023-06-21",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 13805100,
         booking_code: "fkytvv5jvf",
         available: true,
@@ -20035,7 +20034,7 @@ module.exports = {
         dateDeparture: "2023-06-22",
         dateReturn: "2023-06-23",
         dateEnd: "2023-06-22",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 13805100,
         booking_code: "5mtgwr299b",
         available: true,
@@ -20077,7 +20076,7 @@ module.exports = {
         dateDeparture: "2023-06-23",
         dateReturn: "2023-06-24", // req body
         dateEnd: "2023-06-23",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 13805100,
         booking_code: "p2opqtgrqo",
         available: true,
@@ -20119,7 +20118,7 @@ module.exports = {
         dateDeparture: "2023-06-24",
         dateReturn: "2023-06-25", // req body
         dateEnd: "2023-06-24",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 13805100,
         booking_code: "nd7wvt0hxx",
         available: true,
@@ -20161,7 +20160,7 @@ module.exports = {
         dateDeparture: "2023-06-25",
         dateReturn: "2023-06-26", // req body
         dateEnd: "2023-06-25",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 13805100,
         booking_code: "pmn1u8qq88",
         available: true,
@@ -20203,7 +20202,7 @@ module.exports = {
         dateDeparture: "2023-06-26",
         dateReturn: "2023-06-27", // req body
         dateEnd: "2023-06-26",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 13805100,
         booking_code: "k1adjf78n7",
         available: true,
@@ -20245,7 +20244,7 @@ module.exports = {
         dateDeparture: "2023-06-27 ",
         dateReturn: "2023-06-28", // req body
         dateEnd: "2023-06-27",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 13805100,
         booking_code: "u5r8i6xzpa",
         available: true,
@@ -20287,7 +20286,7 @@ module.exports = {
         dateDeparture: "2023-06-28",
         dateReturn: "2023-06-29", // req body
         dateEnd: "2023-06-28",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 13805100,
         booking_code: "vg4f7wsjfd",
         available: true,
@@ -20329,7 +20328,7 @@ module.exports = {
         dateDeparture: "2023-06-29",
         dateReturn: "2023-06-30", // req body
         dateEnd: "2023-06-29",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 13805100,
         booking_code: "neiluo1057",
         available: true,
@@ -20371,7 +20370,7 @@ module.exports = {
         dateDeparture: "2023-06-30",
         dateReturn: "2023-07-01", // req body
         dateEnd: "2023-06-30",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 13805100,
         booking_code: "2hszwodogn",
         available: true,
@@ -20413,7 +20412,7 @@ module.exports = {
         dateDeparture: "2023-07-01",
         dateReturn: "2023-07-02", // req body
         dateEnd: "2023-07-01",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 13805100,
         booking_code: "189mn0kx9v",
         available: true,
@@ -20455,7 +20454,7 @@ module.exports = {
         dateDeparture: "2023-07-02",
         dateReturn: "2023-07-03", // req body
         dateEnd: "2023-07-02",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 13805100,
         booking_code: "tfu5rhxzne",
         available: true,
@@ -20497,7 +20496,7 @@ module.exports = {
         dateDeparture: "2023-07-03",
         dateReturn: "2023-07-04", // req body
         dateEnd: "2023-07-03",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 13805100,
         booking_code: "jyzbczkk2g",
         available: true,
@@ -20539,7 +20538,7 @@ module.exports = {
         dateDeparture: "2023-07-04",
         dateReturn: "2023-07-05", // req body
         dateEnd: "2023-07-04",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 13805100,
         booking_code: "j34nacn0xm",
         available: true,
@@ -20581,7 +20580,7 @@ module.exports = {
         dateDeparture: "2023-07-05",
         dateReturn: "2023-07-06", // req body
         dateEnd: "2023-07-05",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 13805100,
         booking_code: "r3ioqjwtxc",
         available: true,
@@ -20623,7 +20622,7 @@ module.exports = {
         dateDeparture: "2023-07-06",
         dateReturn: "2023-07-07", // req body
         dateEnd: "2023-07-06",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 13805100,
         booking_code: "28gbdpobp5",
         available: true,
@@ -20665,7 +20664,7 @@ module.exports = {
         dateDeparture: "2023-07-07",
         dateReturn: "2023-07-08", // req body
         dateEnd: "2023-07-07",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 13805100,
         booking_code: "s8agxudjq0",
         available: true,
@@ -20707,7 +20706,7 @@ module.exports = {
         dateDeparture: "2023-07-08",
         dateReturn: "2023-07-09", // req body
         dateEnd: "2023-07-08",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 13805100,
         booking_code: "f83uy4xbkc",
         available: true,
@@ -20749,7 +20748,7 @@ module.exports = {
         dateDeparture: "2023-07-09",
         dateReturn: "2023-07-10", // req body
         dateEnd: "2023-07-09",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 13805100,
         booking_code: "y56b25phio",
         available: true,
@@ -20791,7 +20790,7 @@ module.exports = {
         dateDeparture: "2023-07-10",
         dateReturn: "2023-07-11", // req body
         dateEnd: "2023-07-10",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 13805100,
         booking_code: "8f5omcd7i9",
         available: true,
@@ -21757,7 +21756,7 @@ module.exports = {
         dateDeparture: "2023-06-19",
         dateReturn: "2023-06-20",
         dateEnd: "2023-06-19",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 13805100,
         booking_code: "w04lz3oa29",
         available: true,
@@ -21778,7 +21777,7 @@ module.exports = {
         dateDeparture: "2023-06-19",
         dateReturn: "2023-06-20",
         dateEnd: "2023-06-19",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 7584985,
         booking_code: "65q66wj4oz",
         available: true,
@@ -21799,7 +21798,7 @@ module.exports = {
         dateDeparture: "2023-06-20",
         dateReturn: "2023-06-21",
         dateEnd: "2023-06-20",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 13805100,
         booking_code: "9t042q69hs",
         available: true,
@@ -21820,7 +21819,7 @@ module.exports = {
         dateDeparture: "2023-06-20",
         dateReturn: "2023-06-21",
         dateEnd: "2023-06-20",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 7584985,
         booking_code: "uykplkhtlq",
         available: true,
@@ -21841,7 +21840,7 @@ module.exports = {
         dateDeparture: "2023-06-21",
         dateReturn: "2023-06-22",
         dateEnd: "2023-06-21",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 13805100,
         booking_code: "i8tr9yqbfw",
         available: true,
@@ -21862,7 +21861,7 @@ module.exports = {
         dateDeparture: "2023-06-21",
         dateReturn: "2023-06-22",
         dateEnd: "2023-06-21",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 7584985,
         booking_code: "pfmk4d8ysv",
         available: true,
@@ -21883,7 +21882,7 @@ module.exports = {
         dateDeparture: "2023-06-22",
         dateReturn: "2023-06-23",
         dateEnd: "2023-06-22",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 13805100,
         booking_code: "i8o7kqfq38",
         available: true,
@@ -21904,7 +21903,7 @@ module.exports = {
         dateDeparture: "2023-06-22",
         dateReturn: "2023-06-23",
         dateEnd: "2023-06-22",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 7584985,
         booking_code: "7abtzke0qe",
         available: true,
@@ -21925,7 +21924,7 @@ module.exports = {
         dateDeparture: "2023-06-23",
         dateReturn: "2023-06-24", // req body
         dateEnd: "2023-06-23",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 13805100,
         booking_code: "2a2jdis724",
         available: true,
@@ -21946,7 +21945,7 @@ module.exports = {
         dateDeparture: "2023-06-23",
         dateReturn: "2023-06-24", // req body
         dateEnd: "2023-06-23",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 7584985,
         booking_code: "ekinvz0xjl",
         available: true,
@@ -21967,7 +21966,7 @@ module.exports = {
         dateDeparture: "2023-06-24",
         dateReturn: "2023-06-25", // req body
         dateEnd: "2023-06-24",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 13805100,
         booking_code: "eevljkjftn",
         available: true,
@@ -21988,7 +21987,7 @@ module.exports = {
         dateDeparture: "2023-06-24",
         dateReturn: "2023-06-25", // req body
         dateEnd: "2023-06-24",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 7584985,
         booking_code: "rjg8kxcpql",
         available: true,
@@ -22009,7 +22008,7 @@ module.exports = {
         dateDeparture: "2023-06-25",
         dateReturn: "2023-06-26", // req body
         dateEnd: "2023-06-25",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 13805100,
         booking_code: "7o33ft6h4u",
         available: true,
@@ -22030,7 +22029,7 @@ module.exports = {
         dateDeparture: "2023-06-25",
         dateReturn: "2023-06-26", // req body
         dateEnd: "2023-06-25",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 7584985,
         booking_code: "39hao7zghm",
         available: true,
@@ -22051,7 +22050,7 @@ module.exports = {
         dateDeparture: "2023-06-26",
         dateReturn: "2023-06-27", // req body
         dateEnd: "2023-06-26",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 13805100,
         booking_code: "ym7oyjxdbh",
         available: true,
@@ -22072,7 +22071,7 @@ module.exports = {
         dateDeparture: "2023-06-26",
         dateReturn: "2023-06-27", // req body
         dateEnd: "2023-06-26",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 7584985,
         booking_code: "3hmfu41b0x",
         available: true,
@@ -22093,7 +22092,7 @@ module.exports = {
         dateDeparture: "2023-06-27 ",
         dateReturn: "2023-06-28", // req body
         dateEnd: "2023-06-27",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 13805100,
         booking_code: "hcz39my6fu",
         available: true,
@@ -22114,7 +22113,7 @@ module.exports = {
         dateDeparture: "2023-06-27 ",
         dateReturn: "2023-06-28", // req body
         dateEnd: "2023-06-27",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 7584985,
         booking_code: "cvk361s1hr",
         available: true,
@@ -22135,7 +22134,7 @@ module.exports = {
         dateDeparture: "2023-06-28",
         dateReturn: "2023-06-29", // req body
         dateEnd: "2023-06-28",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 13805100,
         booking_code: "nhww5pbvph",
         available: true,
@@ -22156,7 +22155,7 @@ module.exports = {
         dateDeparture: "2023-06-28",
         dateReturn: "2023-06-29", // req body
         dateEnd: "2023-06-28",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 7584985,
         booking_code: "gv3sdoc2xz",
         available: true,
@@ -22177,7 +22176,7 @@ module.exports = {
         dateDeparture: "2023-06-29",
         dateReturn: "2023-06-30", // req body
         dateEnd: "2023-06-29",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 13805100,
         booking_code: "sabccv71jh",
         available: true,
@@ -22198,7 +22197,7 @@ module.exports = {
         dateDeparture: "2023-06-29",
         dateReturn: "2023-06-30", // req body
         dateEnd: "2023-06-29",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 7584985,
         booking_code: "7v4x4kuhlx",
         available: true,
@@ -22219,7 +22218,7 @@ module.exports = {
         dateDeparture: "2023-06-30",
         dateReturn: "2023-07-01", // req body
         dateEnd: "2023-06-30",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 13805100,
         booking_code: "s908ip0ecv",
         available: true,
@@ -22240,7 +22239,7 @@ module.exports = {
         dateDeparture: "2023-06-30",
         dateReturn: "2023-07-01", // req body
         dateEnd: "2023-06-30",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 7584985,
         booking_code: "2gg4yhgjwd",
         available: true,
@@ -22261,7 +22260,7 @@ module.exports = {
         dateDeparture: "2023-07-01",
         dateReturn: "2023-07-02", // req body
         dateEnd: "2023-07-01",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 13805100,
         booking_code: "yxgfsr4pmf",
         available: true,
@@ -22282,7 +22281,7 @@ module.exports = {
         dateDeparture: "2023-07-01",
         dateReturn: "2023-07-02", // req body
         dateEnd: "2023-07-01",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 7584985,
         booking_code: "8bda0glgad",
         available: true,
@@ -22303,7 +22302,7 @@ module.exports = {
         dateDeparture: "2023-07-02",
         dateReturn: "2023-07-03", // req body
         dateEnd: "2023-07-02",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 13805100,
         booking_code: "a76bqv7no2",
         available: true,
@@ -22324,7 +22323,7 @@ module.exports = {
         dateDeparture: "2023-07-02",
         dateReturn: "2023-07-03", // req body
         dateEnd: "2023-07-02",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 7584985,
         booking_code: "tgp31h01xb",
         available: true,
@@ -22345,7 +22344,7 @@ module.exports = {
         dateDeparture: "2023-07-03",
         dateReturn: "2023-07-04", // req body
         dateEnd: "2023-07-03",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 13805100,
         booking_code: "bcebhfzre0",
         available: true,
@@ -22366,7 +22365,7 @@ module.exports = {
         dateDeparture: "2023-07-03",
         dateReturn: "2023-07-04", // req body
         dateEnd: "2023-07-03",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 7584985,
         booking_code: "d0qjj8nc1h",
         available: true,
@@ -22387,7 +22386,7 @@ module.exports = {
         dateDeparture: "2023-07-04",
         dateReturn: "2023-07-05", // req body
         dateEnd: "2023-07-04",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 13805100,
         booking_code: "ww0w5vwcx0",
         available: true,
@@ -22408,7 +22407,7 @@ module.exports = {
         dateDeparture: "2023-07-04",
         dateReturn: "2023-07-05", // req body
         dateEnd: "2023-07-04",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 7584985,
         booking_code: "44iroasaef",
         available: true,
@@ -22429,7 +22428,7 @@ module.exports = {
         dateDeparture: "2023-07-05",
         dateReturn: "2023-07-06", // req body
         dateEnd: "2023-07-05",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 13805100,
         booking_code: "09454ev54d",
         available: true,
@@ -22450,7 +22449,7 @@ module.exports = {
         dateDeparture: "2023-07-05",
         dateReturn: "2023-07-06", // req body
         dateEnd: "2023-07-05",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 7584985,
         booking_code: "egi7roautt",
         available: true,
@@ -22471,7 +22470,7 @@ module.exports = {
         dateDeparture: "2023-07-06",
         dateReturn: "2023-07-07", // req body
         dateEnd: "2023-07-06",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 13805100,
         booking_code: "basc5eq21x",
         available: true,
@@ -22492,7 +22491,7 @@ module.exports = {
         dateDeparture: "2023-07-06",
         dateReturn: "2023-07-07", // req body
         dateEnd: "2023-07-06",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 7584985,
         booking_code: "nzgzovtmp1",
         available: true,
@@ -22513,7 +22512,7 @@ module.exports = {
         dateDeparture: "2023-07-07",
         dateReturn: "2023-07-08", // req body
         dateEnd: "2023-07-07",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 13805100,
         booking_code: "42c5ch90rl",
         available: true,
@@ -22534,7 +22533,7 @@ module.exports = {
         dateDeparture: "2023-07-07",
         dateReturn: "2023-07-08", // req body
         dateEnd: "2023-07-07",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 7584985,
         booking_code: "19b0dd1vh3",
         available: true,
@@ -22555,7 +22554,7 @@ module.exports = {
         dateDeparture: "2023-07-08",
         dateReturn: "2023-07-09", // req body
         dateEnd: "2023-07-08",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 13805100,
         booking_code: "m3f1t9ls2v",
         available: true,
@@ -22576,7 +22575,7 @@ module.exports = {
         dateDeparture: "2023-07-08",
         dateReturn: "2023-07-09", // req body
         dateEnd: "2023-07-08",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 7584985,
         booking_code: "2l6pfhqfso",
         available: true,
@@ -22597,7 +22596,7 @@ module.exports = {
         dateDeparture: "2023-07-09",
         dateReturn: "2023-07-10", // req body
         dateEnd: "2023-07-09",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 13805100,
         booking_code: "pnqve0s8m6",
         available: true,
@@ -22618,7 +22617,7 @@ module.exports = {
         dateDeparture: "2023-07-09",
         dateReturn: "2023-07-10", // req body
         dateEnd: "2023-07-09",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 7584985,
         booking_code: "y63whvcdh1",
         available: true,
@@ -22639,7 +22638,7 @@ module.exports = {
         dateDeparture: "2023-07-10",
         dateReturn: "2023-07-11", // req body
         dateEnd: "2023-07-10",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 13805100,
         booking_code: "vcwxyy7148",
         available: true,
@@ -22660,7 +22659,7 @@ module.exports = {
         dateDeparture: "2023-07-10",
         dateReturn: "2023-07-11", // req body
         dateEnd: "2023-07-10",
-        type_seat: "Bussines",
+        type_seat: "Business",
         price: 7584985,
         booking_code: "hsbqvmyb69",
         available: true,
@@ -22681,7 +22680,7 @@ module.exports = {
         dateDeparture: "2023-06-19",
         dateReturn: "2023-06-20",
         dateEnd: "2023-06-19",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 4584985,
         booking_code: "r7v0tnf6s6",
         available: true,
@@ -22723,7 +22722,7 @@ module.exports = {
         dateDeparture: "2023-06-20",
         dateReturn: "2023-06-21",
         dateEnd: "2023-06-20",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 4584985,
         booking_code: "x5qpw1f41d",
         available: true,
@@ -22765,7 +22764,7 @@ module.exports = {
         dateDeparture: "2023-06-21",
         dateReturn: "2023-06-22",
         dateEnd: "2023-06-21",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 4584985,
         booking_code: "3d4ekl87wa",
         available: true,
@@ -22807,7 +22806,7 @@ module.exports = {
         dateDeparture: "2023-06-22",
         dateReturn: "2023-06-23",
         dateEnd: "2023-06-22",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 4584985,
         booking_code: "w88pnwtg3g",
         available: true,
@@ -22849,7 +22848,7 @@ module.exports = {
         dateDeparture: "2023-06-23",
         dateReturn: "2023-06-24", // req body
         dateEnd: "2023-06-23",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 4584985,
         booking_code: "tcphan5bz1",
         available: true,
@@ -22891,7 +22890,7 @@ module.exports = {
         dateDeparture: "2023-06-24",
         dateReturn: "2023-06-25", // req body
         dateEnd: "2023-06-24",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 4584985,
         booking_code: "81dnvy21iu",
         available: true,
@@ -22933,7 +22932,7 @@ module.exports = {
         dateDeparture: "2023-06-25",
         dateReturn: "2023-06-26", // req body
         dateEnd: "2023-06-25",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 4584985,
         booking_code: "u0c2c4nyk8",
         available: true,
@@ -22975,7 +22974,7 @@ module.exports = {
         dateDeparture: "2023-06-26",
         dateReturn: "2023-06-27", // req body
         dateEnd: "2023-06-26",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 4584985,
         booking_code: "8pkru044hc",
         available: true,
@@ -23017,7 +23016,7 @@ module.exports = {
         dateDeparture: "2023-06-27 ",
         dateReturn: "2023-06-28", // req body
         dateEnd: "2023-06-27",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 4584985,
         booking_code: "ulisbtmvfg",
         available: true,
@@ -23059,7 +23058,7 @@ module.exports = {
         dateDeparture: "2023-06-28",
         dateReturn: "2023-06-29", // req body
         dateEnd: "2023-06-28",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 4584985,
         booking_code: "es4be1tlxt",
         available: true,
@@ -23101,7 +23100,7 @@ module.exports = {
         dateDeparture: "2023-06-29",
         dateReturn: "2023-06-30", // req body
         dateEnd: "2023-06-29",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 4584985,
         booking_code: "k7crgm5px2",
         available: true,
@@ -23143,7 +23142,7 @@ module.exports = {
         dateDeparture: "2023-06-30",
         dateReturn: "2023-07-01", // req body
         dateEnd: "2023-06-30",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 4584985,
         booking_code: "f29y7pjd53",
         available: true,
@@ -23185,7 +23184,7 @@ module.exports = {
         dateDeparture: "2023-07-01",
         dateReturn: "2023-07-02", // req body
         dateEnd: "2023-07-01",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 4584985,
         booking_code: "mkif0e07e0",
         available: true,
@@ -23227,7 +23226,7 @@ module.exports = {
         dateDeparture: "2023-07-02",
         dateReturn: "2023-07-03", // req body
         dateEnd: "2023-07-02",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 4584985,
         booking_code: "5t94qqhix4",
         available: true,
@@ -23269,7 +23268,7 @@ module.exports = {
         dateDeparture: "2023-07-03",
         dateReturn: "2023-07-04", // req body
         dateEnd: "2023-07-03",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 4584985,
         booking_code: "z0vb8g8a05",
         available: true,
@@ -23311,7 +23310,7 @@ module.exports = {
         dateDeparture: "2023-07-04",
         dateReturn: "2023-07-05", // req body
         dateEnd: "2023-07-04",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 4584985,
         booking_code: "b64cxfu0bp",
         available: true,
@@ -23353,7 +23352,7 @@ module.exports = {
         dateDeparture: "2023-07-05",
         dateReturn: "2023-07-06", // req body
         dateEnd: "2023-07-05",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 4584985,
         booking_code: "k54ya13k58",
         available: true,
@@ -23395,7 +23394,7 @@ module.exports = {
         dateDeparture: "2023-07-06",
         dateReturn: "2023-07-07", // req body
         dateEnd: "2023-07-06",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 4584985,
         booking_code: "vhvjo2bm9j",
         available: true,
@@ -23437,7 +23436,7 @@ module.exports = {
         dateDeparture: "2023-07-07",
         dateReturn: "2023-07-08", // req body
         dateEnd: "2023-07-07",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 4584985,
         booking_code: "6tds1xllwi",
         available: true,
@@ -23479,7 +23478,7 @@ module.exports = {
         dateDeparture: "2023-07-08",
         dateReturn: "2023-07-09", // req body
         dateEnd: "2023-07-08",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 4584985,
         booking_code: "fw8trcexc8",
         available: true,
@@ -23521,7 +23520,7 @@ module.exports = {
         dateDeparture: "2023-07-09",
         dateReturn: "2023-07-10", // req body
         dateEnd: "2023-07-09",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 4584985,
         booking_code: "fpy6afofzy",
         available: true,
@@ -23563,7 +23562,7 @@ module.exports = {
         dateDeparture: "2023-07-10",
         dateReturn: "2023-07-11", // req body
         dateEnd: "2023-07-10",
-        type_seat: "Economy",
+        type_seat: "Business",
         price: 4584985,
         booking_code: "bsu5g5h8qc",
         available: true,
@@ -23593,7 +23592,6 @@ module.exports = {
       },
     ]);
   },
-
   async down(queryInterface, Sequelize) {
     await queryInterface.bulkDelete("Tickets", null, {});
   },
