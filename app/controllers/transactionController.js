@@ -1,6 +1,7 @@
 const { Ticket } = require("../models");
 const { Transaction } = require("../models");
 const { Checkout } = require("../models");
+const { Passenger } = require("../models");
 const { user } = require("../models");
 const { v4: uuid } = require("uuid");
 
