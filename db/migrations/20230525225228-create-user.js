@@ -25,6 +25,9 @@ module.exports = {
       phone: {
         type: Sequelize.STRING,
       },
+      role: {
+        type: Sequelize.STRING
+      },
       image_profile: {
         type: Sequelize.STRING,
       },

@@ -1,6 +1,10 @@
+const { 
+  roleauthorize 
+} = require('../app/middleware/authorize');
 const {
   login,
   register,
+  registeradmin,
   authorize,
   whoAmI,
   updateUserWithToken,
@@ -175,5 +179,8 @@ router.delete("/api/v1/transaction/:id", deleteDataTrans);
 
 // Delete All Data Transaction
 router.delete("/api/v1/transaction", deleteAllDataTrans);
+
+// add admin by superadmin
+router.post('/api/v1/admin',roleauthorize, registeradmin);
 
 module.exports = router;

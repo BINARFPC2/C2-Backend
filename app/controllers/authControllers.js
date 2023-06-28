@@ -88,6 +88,62 @@ module.exports = {
       });
     }
   },
+  
+  async registeradmin(req, res) {
+    try {
+      const password = await encryptPassword(req.body.password);
+      const { name, email, phone} = req.body;
+
+      // check email and password is not empty
+      if (!email || !password) {
+        return res.status(400).json({
+          status: "error",
+          message: "Email and password is required",
+        });
+      }
+
+      // validator email format using regex
+      const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+      if (!emailRegex.test(email)) {
+        return res.status(400).json({
+          status: "error",
+          message: "Email format is invalid",
+        });
+      }
+
+      // check if email already exist
+      const emailUser = await findEmail(email);
+      if (emailUser) {
+        return res.status(400).json({
+          status: "Error",
+          message: "Email already Exist",
+          data: {},
+        });
+      }
+      const userForm = await user.create({
+        id: uuid(),
+        name: name,
+        password: password,
+        email: email,
+        phone: phone,
+        verified: "false",
+        role: "Admin",
+        image_profile:
+          "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png",
+      });
+
+      res.status(201).json({
+        status: "Success",
+        message: "Created User Success",
+        data: userForm,
+      });
+    } catch (error) {
+      res.status(400).json({
+        status: "Failed",
+        message: error.message,
+      });
+    }
+  },
 
   async login(req, res) {
     try {
