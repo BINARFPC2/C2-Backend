@@ -5125,8 +5125,8 @@ module.exports = {
 
       {
         id: uuid(),
-        city_to: "Jakarta",
-        city_from: "Singapore",
+        city_from: "Jakarta",
+        city_to: "Singapore",
         airlines: "Batik Air",
         code: "ID-495",
         airport_from: "Soekarno-Hatta International",
@@ -5167,8 +5167,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
-        city_from: "Singapore",
+        city_from: "Jakarta",
+        city_to: "Singapore",
         airlines: "Garuda Indonesia",
         code: "GA-566",
         airport_from: "Soekarno-Hatta International",
@@ -5189,8 +5189,8 @@ module.exports = {
 
       {
         id: uuid(),
-        city_to: "Jakarta",
-        city_from: "Singapore",
+        city_from: "Jakarta",
+        city_to: "Singapore",
         airlines: "Batik Air",
         code: "ID-495",
         airport_from: "Soekarno-Hatta International",
@@ -5231,8 +5231,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
-        city_from: "Singapore",
+        city_from: "Jakarta",
+        city_to: "Singapore",
         airlines: "Garuda Indonesia",
         code: "GA-166",
         airport_from: "Soekarno-Hatta International",
@@ -5253,8 +5253,8 @@ module.exports = {
 
       {
         id: uuid(),
-        city_to: "Jakarta",
-        city_from: "Singapore",
+        city_from: "Jakarta",
+        city_to: "Singapore",
         airlines: "Batik Air",
         code: "ID-495",
         airport_from: "Soekarno-Hatta International",
@@ -5295,8 +5295,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
-        city_from: "Singapore",
+        city_from: "Jakarta",
+        city_to: "Singapore",
         airlines: "Garuda Indonesia",
         code: "GA-641",
         airport_from: "Soekarno-Hatta International",
@@ -5317,8 +5317,8 @@ module.exports = {
 
       {
         id: uuid(),
-        city_to: "Jakarta",
-        city_from: "Singapore",
+        city_from: "Jakarta",
+        city_to: "Singapore",
         airlines: "Batik Air",
         code: "ID-495",
         airport_from: "Soekarno-Hatta International",
@@ -10698,8 +10698,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Super Air Jet",
         code: "IU-479",
         airport_to: "Soekarno-Hatta International",
@@ -10719,8 +10719,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Batik Air",
         code: "ID-745",
         airport_to: "Soekarno-Hatta International",
@@ -10740,8 +10740,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Super Air Jet",
         code: "IU-479",
         airport_to: "Soekarno-Hatta International",
@@ -10761,8 +10761,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Batik Air",
         code: "ID-745",
         airport_to: "Soekarno-Hatta International",
@@ -10782,8 +10782,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Super Air Jet",
         code: "IU-479",
         airport_to: "Soekarno-Hatta International",
@@ -10803,8 +10803,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Batik Air",
         code: "ID-745",
         airport_to: "Soekarno-Hatta International",
@@ -10824,8 +10824,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Super Air Jet",
         code: "IU-479",
         airport_to: "Soekarno-Hatta International",
@@ -10845,8 +10845,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Batik Air",
         code: "ID-745",
         airport_to: "Soekarno-Hatta International",
@@ -10866,8 +10866,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Super Air Jet",
         code: "IU-479",
         airport_to: "Soekarno-Hatta International",
@@ -10887,8 +10887,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Batik Air",
         code: "ID-745",
         airport_to: "Soekarno-Hatta International",
@@ -10908,8 +10908,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Super Air Jet",
         code: "IU-479",
         airport_to: "Soekarno-Hatta International",
@@ -10929,8 +10929,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Batik Air",
         code: "ID-745",
         airport_to: "Soekarno-Hatta International",
@@ -10950,8 +10950,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Super Air Jet",
         code: "IU-479",
         airport_to: "Soekarno-Hatta International",
@@ -10971,8 +10971,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Batik Air",
         code: "ID-745",
         airport_to: "Soekarno-Hatta International",
@@ -10992,8 +10992,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Super Air Jet",
         code: "IU-479",
         airport_to: "Soekarno-Hatta International",
@@ -11013,8 +11013,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Batik Air",
         code: "ID-745",
         airport_to: "Soekarno-Hatta International",
@@ -11034,8 +11034,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Super Air Jet",
         code: "IU-479",
         airport_to: "Soekarno-Hatta International",
@@ -11055,8 +11055,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Batik Air",
         code: "ID-745",
         airport_to: "Soekarno-Hatta International",
@@ -11076,8 +11076,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Super Air Jet",
         code: "IU-479",
         airport_to: "Soekarno-Hatta International",
@@ -11097,8 +11097,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Batik Air",
         code: "ID-745",
         airport_to: "Soekarno-Hatta International",
@@ -11118,8 +11118,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Super Air Jet",
         code: "IU-479",
         airport_to: "Soekarno-Hatta International",
@@ -11139,8 +11139,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Batik Air",
         code: "ID-745",
         airport_to: "Soekarno-Hatta International",
@@ -11160,8 +11160,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Super Air Jet",
         code: "IU-479",
         airport_to: "Soekarno-Hatta International",
@@ -11181,8 +11181,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Batik Air",
         code: "ID-745",
         airport_to: "Soekarno-Hatta International",
@@ -11202,8 +11202,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Super Air Jet",
         code: "IU-479",
         airport_to: "Soekarno-Hatta International",
@@ -11223,8 +11223,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Batik Air",
         code: "ID-745",
         airport_to: "Soekarno-Hatta International",
@@ -11244,8 +11244,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Super Air Jet",
         code: "IU-479",
         airport_to: "Soekarno-Hatta International",
@@ -11265,8 +11265,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Batik Air",
         code: "ID-745",
         airport_to: "Soekarno-Hatta International",
@@ -11286,8 +11286,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Super Air Jet",
         code: "IU-479",
         airport_to: "Soekarno-Hatta International",
@@ -11307,8 +11307,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Batik Air",
         code: "ID-745",
         airport_to: "Soekarno-Hatta International",
@@ -11328,8 +11328,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Super Air Jet",
         code: "IU-479",
         airport_to: "Soekarno-Hatta International",
@@ -11349,8 +11349,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Batik Air",
         code: "ID-745",
         airport_to: "Soekarno-Hatta International",
@@ -11370,8 +11370,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Super Air Jet",
         code: "IU-479",
         airport_to: "Soekarno-Hatta International",
@@ -11391,8 +11391,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Batik Air",
         code: "ID-745",
         airport_to: "Soekarno-Hatta International",
@@ -11412,8 +11412,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Super Air Jet",
         code: "IU-479",
         airport_to: "Soekarno-Hatta International",
@@ -11433,8 +11433,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Batik Air",
         code: "ID-745",
         airport_to: "Soekarno-Hatta International",
@@ -11454,8 +11454,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Super Air Jet",
         code: "IU-479",
         airport_to: "Soekarno-Hatta International",
@@ -11475,8 +11475,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Batik Air",
         code: "ID-745",
         airport_to: "Soekarno-Hatta International",
@@ -11496,8 +11496,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Super Air Jet",
         code: "IU-479",
         airport_to: "Soekarno-Hatta International",
@@ -11517,8 +11517,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Batik Air",
         code: "ID-745",
         airport_to: "Soekarno-Hatta International",
@@ -11538,8 +11538,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Super Air Jet",
         code: "IU-479",
         airport_to: "Soekarno-Hatta International",
@@ -11559,8 +11559,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Batik Air",
         code: "ID-745",
         airport_to: "Soekarno-Hatta International",
@@ -11580,8 +11580,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Super Air Jet",
         code: "IU-479",
         airport_to: "Soekarno-Hatta International",
@@ -11601,8 +11601,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Batik Air",
         code: "ID-745",
         airport_to: "Soekarno-Hatta International",
@@ -11622,8 +11622,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Garuda Indonesia",
         code: "GA-952",
         airport_to: "Soekarno-Hatta International",
@@ -11643,8 +11643,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Lion Air",
         code: "JT-564",
         airport_to: "Soekarno-Hatta International",
@@ -11664,8 +11664,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Garuda Indonesia",
         code: "GA-952",
         airport_to: "Soekarno-Hatta International",
@@ -11685,8 +11685,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Lion Air",
         code: "JT-564",
         airport_to: "Soekarno-Hatta International",
@@ -11706,8 +11706,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Garuda Indonesia",
         code: "GA-952",
         airport_to: "Soekarno-Hatta International",
@@ -11727,8 +11727,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Lion Air",
         code: "JT-564",
         airport_to: "Soekarno-Hatta International",
@@ -11748,8 +11748,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Garuda Indonesia",
         code: "GA-952",
         airport_to: "Soekarno-Hatta International",
@@ -11769,8 +11769,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Lion Air",
         code: "JT-564",
         airport_to: "Soekarno-Hatta International",
@@ -11791,8 +11791,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Garuda Indonesia",
         code: "GA-952",
         airport_to: "Soekarno-Hatta International",
@@ -11812,8 +11812,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Lion Air",
         code: "JT-564",
         airport_to: "Soekarno-Hatta International",
@@ -11833,8 +11833,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Garuda Indonesia",
         code: "GA-952",
         airport_to: "Soekarno-Hatta International",
@@ -11854,8 +11854,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Lion Air",
         code: "JT-564",
         airport_to: "Soekarno-Hatta International",
@@ -11875,8 +11875,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Garuda Indonesia",
         code: "GA-952",
         airport_to: "Soekarno-Hatta International",
@@ -11896,8 +11896,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Lion Air",
         code: "JT-564",
         airport_to: "Soekarno-Hatta International",
@@ -11917,8 +11917,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Garuda Indonesia",
         code: "GA-952",
         airport_to: "Soekarno-Hatta International",
@@ -11938,8 +11938,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Lion Air",
         code: "JT-564",
         airport_to: "Soekarno-Hatta International",
@@ -11959,8 +11959,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Garuda Indonesia",
         code: "GA-952",
         airport_to: "Soekarno-Hatta International",
@@ -11980,8 +11980,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Lion Air",
         code: "JT-564",
         airport_to: "Soekarno-Hatta International",
@@ -12001,8 +12001,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Garuda Indonesia",
         code: "GA-952",
         airport_to: "Soekarno-Hatta International",
@@ -12022,8 +12022,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Lion Air",
         code: "JT-564",
         airport_to: "Soekarno-Hatta International",
@@ -12043,8 +12043,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Garuda Indonesia",
         code: "GA-952",
         airport_to: "Soekarno-Hatta International",
@@ -12064,8 +12064,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Lion Air",
         code: "JT-564",
         airport_to: "Soekarno-Hatta International",
@@ -12085,8 +12085,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Garuda Indonesia",
         code: "GA-952",
         airport_to: "Soekarno-Hatta International",
@@ -12106,8 +12106,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Lion Air",
         code: "JT-564",
         airport_to: "Soekarno-Hatta International",
@@ -12127,8 +12127,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Garuda Indonesia",
         code: "GA-952",
         airport_to: "Soekarno-Hatta International",
@@ -12148,8 +12148,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Lion Air",
         code: "JT-564",
         airport_to: "Soekarno-Hatta International",
@@ -12168,8 +12168,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Garuda Indonesia",
         code: "GA-952",
         airport_to: "Soekarno-Hatta International",
@@ -12189,8 +12189,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Lion Air",
         code: "JT-564",
         airport_to: "Soekarno-Hatta International",
@@ -12210,8 +12210,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Garuda Indonesia",
         code: "GA-952",
         airport_to: "Soekarno-Hatta International",
@@ -12231,8 +12231,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Lion Air",
         code: "JT-564",
         airport_to: "Soekarno-Hatta International",
@@ -12252,8 +12252,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Garuda Indonesia",
         code: "GA-952",
         airport_to: "Soekarno-Hatta International",
@@ -12273,8 +12273,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Lion Air",
         code: "JT-564",
         airport_to: "Soekarno-Hatta International",
@@ -12294,8 +12294,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Garuda Indonesia",
         code: "GA-952",
         airport_to: "Soekarno-Hatta International",
@@ -12315,8 +12315,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Lion Air",
         code: "JT-564",
         airport_to: "Soekarno-Hatta International",
@@ -12336,8 +12336,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Garuda Indonesia",
         code: "GA-952",
         airport_to: "Soekarno-Hatta International",
@@ -12357,8 +12357,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Lion Air",
         code: "JT-564",
         airport_to: "Soekarno-Hatta International",
@@ -12378,8 +12378,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Garuda Indonesia",
         code: "GA-952",
         airport_to: "Soekarno-Hatta International",
@@ -12399,8 +12399,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Lion Air",
         code: "JT-564",
         airport_to: "Soekarno-Hatta International",
@@ -12420,8 +12420,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Garuda Indonesia",
         code: "GA-952",
         airport_to: "Soekarno-Hatta International",
@@ -12441,8 +12441,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Lion Air",
         code: "JT-564",
         airport_to: "Soekarno-Hatta International",
@@ -12462,8 +12462,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Garuda Indonesia",
         code: "GA-952",
         airport_to: "Soekarno-Hatta International",
@@ -12483,8 +12483,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Jakarta",
         city_from: "Bali",
+        city_to: "Jakarta",
         airlines: "Lion Air",
         code: "JT-564",
         airport_to: "Soekarno-Hatta International",
@@ -14352,8 +14352,8 @@ module.exports = {
       },
       {
         id: uuid(),
-        city_to: "Surabaya",
         city_from: "Tokyo",
+        city_to: "Surabaya",
         airlines: "Lion Air",
         code: "JT-540",
         airport_from: "Juanda International Airport",
