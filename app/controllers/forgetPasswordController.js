@@ -92,7 +92,7 @@ module.exports = {
                 margin: 4px 2px;color: white;
                 padding: 16px 32px;
                 transition-duration: 0.4s;" 
-                href='http://localhost:3000/reset?token=${token}' target="_blank" rel="reset">Reset Password</a>
+                href='https://ticketgo.vercel.app/reset?token=${token}' target="_blank" rel="reset">Reset Password</a>
               </button>
             <center>
                     `,
