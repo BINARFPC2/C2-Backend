@@ -28,6 +28,12 @@ module.exports = {
       image_profile: {
         type: Sequelize.STRING,
       },
+      otp: {
+        type: Sequelize.STRING,
+      },
+      otpExpiration: {
+        type: Sequelize.DATE,
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,

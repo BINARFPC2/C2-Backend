@@ -4,6 +4,7 @@ const {
   authorize,
   whoAmI,
   updateUserWithToken,
+  verifyUser,
 } = require("../app/controllers/authControllers");
 const handleGetRoot = require("../app/controllers/root");
 const {
@@ -68,6 +69,9 @@ router.get("/", handleGetRoot);
 
 // Register User
 router.post("/api/v1/register", register);
+
+// verify User
+router.put("/api/v1/verify-user", verifyUser);
 
 // Login User
 router.post("/api/v1/login", login);

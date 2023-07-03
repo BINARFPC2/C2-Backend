@@ -2,6 +2,7 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const { user } = require("../models");
 const { v4: uuid } = require("uuid");
+const nodemailer = require("nodemailer");
 const { findEmail } = require("./emailVerification");
 const salt = 10;
 
@@ -33,7 +34,97 @@ function createToken(payload) {
   return jwt.sign(payload, process.env.JWT_SIGNATURE_KEY || "Rahasia");
 }
 
+// Generate OTP
+function generateOTP() {
+  const digits = "0123456789";
+  let OTP = "";
+  for (let i = 0; i < 6; i++) {
+    OTP += digits[Math.floor(Math.random() * 10)];
+  }
+  return OTP;
+}
+
 module.exports = {
+  async sendOTPByEmail(email, otp) {
+    try {
+      // configure nodemailer transporter
+      const transporter = nodemailer.createTransport({
+        // host: "smtp.gmail.com",
+        // port: 465,
+        // secure: true,
+        service: "gmail",
+        auth: {
+          user: "backendproject010101@gmail.com",
+          pass: "fzkeehrkmvvsaaao",
+        },
+      });
+
+      // compose email message
+      const mailOptions = {
+        from: "backendproject010101@gmail.com",
+        to: email,
+        subject: "OTP Verification",
+        text: `Your OTP for registraton: ${otp}`,
+      };
+
+      // send email
+      await transporter.sendMail(mailOptions);
+    } catch (error) {
+      console.error(error);
+    }
+  },
+
+  async verifyUser(req, res) {
+    try {
+      const { otp } = req.body;
+
+      if (!otp) {
+        return res.status(400).json({
+          status: "error",
+          message: "OTP is required",
+        });
+      }
+
+      const findUser = await user.findOne({
+        where: {
+          otp: otp,
+        },
+      });
+
+      if (!findUser) {
+        return res.status(404).json({
+          status: "error",
+          message: "Invalid OTP",
+        });
+      }
+
+      // check if OTP has expired
+      const currentDateTime = new Date();
+      const otpExpiration = new Date(findUser.otpExpiration);
+
+      if (currentDateTime > otpExpiration) {
+        res.status(400).json({
+          status: "error",
+          message: "OTP has expired",
+        });
+      }
+
+      findUser.verified = true;
+      await findUser.save();
+
+      res.status(200).json({
+        status: "Success",
+        message: "User verified successfully",
+        data: findUser,
+      });
+    } catch (error) {
+      res.status(400).json({
+        status: "Failed",
+        message: error.message,
+      });
+    }
+  },
+
   async register(req, res) {
     try {
       const password = await encryptPassword(req.body.password);
@@ -65,20 +156,34 @@ module.exports = {
           data: {},
         });
       }
+
+      // Generate otp
+      const otp = generateOTP();
+      const otpExpirationValidity = 15; // Menentukan validitas kedaluwarsa OTP dalam menit
+      const otpExpiration = new Date();
+      otpExpiration.setMinutes(
+        otpExpiration.getMinutes() + otpExpirationValidity
+      ); // Menambahkan waktu kedaluwarsa OTP dalam menit
+
       const userForm = await user.create({
         id: uuid(),
         name: name,
         password: password,
         email: email,
         phone: phone,
-        verified: "false",
+        otp,
+        otpExpiration: otpExpiration.toISOString(), // Mengubah format tanggal dan waktu menjadi ISO 8601
+        verified: false,
         image_profile:
           "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png",
       });
 
+      // Send OTP to user's email
+      module.exports.sendOTPByEmail(userForm.email, userForm.otp);
+
       res.status(201).json({
         status: "Success",
-        message: "Created User Success",
+        message: "Verification Link Sent, please check email!",
         data: userForm,
       });
     } catch (error) {
