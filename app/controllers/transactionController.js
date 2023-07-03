@@ -34,12 +34,13 @@ module.exports = {
             required: false,
           },
         ],
+        order: [["createdAt", "DESC"]], // Menambahkan pengurutan berdasarkan createdAt secara menurun (data terbaru)
       });
 
       if (checkoutData.length === 0) {
-        // jika transaction tidak ada
+        // jika transaksi tidak ada
         res.status(404).json({
-          message: "No transaction data found",
+          message: "Tidak ada data transaksi ditemukan",
           data: [],
         });
         return;
@@ -72,8 +73,8 @@ module.exports = {
       });
 
       res.status(200).json({
-        status: "Success",
-        message: "Transaction data retrieved successfully",
+        status: "Sukses",
+        message: "Data transaksi berhasil diperoleh",
         data: formattedCheckoutData,
       });
     } catch (error) {
