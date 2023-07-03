@@ -159,7 +159,7 @@ module.exports = {
 
       // Generate otp
       const otp = generateOTP();
-      const otpExpirationValidity = 15; // Menentukan validitas kedaluwarsa OTP dalam menit
+      const otpExpirationValidity = 1; // Menentukan validitas kedaluwarsa OTP dalam menit
       const otpExpiration = new Date();
       otpExpiration.setMinutes(
         otpExpiration.getMinutes() + otpExpirationValidity
@@ -180,6 +180,11 @@ module.exports = {
 
       // Send OTP to user's email
       module.exports.sendOTPByEmail(userForm.email, userForm.otp);
+
+      // Delay 60 detik sebelum mengirim ulang OTP
+      setTimeout(() => {
+        module.exports.sendOTPByEmail(userForm.email, userForm.otp);
+      }, 60000);
 
       res.status(201).json({
         status: "Success",
