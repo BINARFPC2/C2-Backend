@@ -77,7 +77,6 @@ module.exports = {
   async verifyUser(req, res) {
     try {
       const { otp } = req.body;
-
       if (!otp) {
         return res.status(400).json({
           status: "error",
