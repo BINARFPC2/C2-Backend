@@ -296,7 +296,7 @@ module.exports = {
       // melakukan update pada data user
       userData.name = req.body.name;
       userData.phone = req.body.phone;
-      userData.email = req.body.email;
+      // userData.email = req.body.email;
 
       await userData.save();
 
