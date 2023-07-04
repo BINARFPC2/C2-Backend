@@ -110,4 +110,94 @@ module.exports = {
       });
     }
   },
+
+  async cetakTicketById(req, res) {
+    try {
+      const idUser = req.user.id; // Mengambil ID pengguna dari token
+      const checkoutId = req.body.checkoutId;
+
+      const checkoutData = await Checkout.findOne({
+        where: {
+          id: checkoutId,
+          usersId: idUser, // Menggunakan ID pengguna dalam kondisi WHERE
+        },
+        include: [
+          {
+            model: Passenger,
+          },
+          {
+            model: Ticket,
+            as: "DepartureTicket",
+            where: {
+              id: { [Op.col]: "Checkout.departureTicketsId" },
+            },
+          },
+          {
+            model: Ticket,
+            as: "ReturnTicket",
+            where: {
+              id: { [Op.col]: "Checkout.returnTicketsId" },
+            },
+            required: false,
+          },
+        ],
+      });
+
+      if (!checkoutData) {
+        // Jika data checkout tidak ditemukan
+        res.status(404).json({
+          message: "Checkout data not found",
+        });
+        return;
+      }
+
+      const formattedCheckoutData = {
+        id: checkoutData.id,
+        usersId: checkoutData.usersId,
+        departureTicketsId: checkoutData.departureTicketsId,
+        returnTicketsId: checkoutData.returnTicketsId,
+        total_passenger: checkoutData.total_passenger,
+        createdAt: checkoutData.createdAt,
+        updatedAt: checkoutData.updatedAt,
+        departureTicket: checkoutData.DepartureTicket,
+        returnTicket: checkoutData.ReturnTicket,
+        passengers: checkoutData.Passengers,
+      };
+
+      const htmlData = `
+      <h1 style="text-align: center; font-family: Arial, sans-serif;">E-Ticket</h1>
+      <table style="width: 100%; border-collapse: collapse; margin-top: 20px;">
+        <tr style="background-color: #f2f2f2;">
+          <th style="padding: 10px; text-align: left; font-family: Arial, sans-serif;">Passenger</th>
+          <th style="padding: 10px; text-align: left; font-family: Arial, sans-serif;">Booking Code</th>
+          <th style="padding: 10px; text-align: left; font-family: Arial, sans-serif;">Date</th>
+        </tr>
+        <tr>
+          <td style="padding: 10px; font-family: Arial, sans-serif;">${formattedCheckoutData.passengers
+            .map((passenger) => passenger.name)
+            .join("<br>")}</td>
+          <td style="padding: 10px; font-family: Arial, sans-serif;">${
+            formattedCheckoutData.departureTicket.booking_code
+          }</td>
+          <td style="padding: 10px; font-family: Arial, sans-serif;">${new Date(
+            formattedCheckoutData.createdAt
+          ).toLocaleString()}</td>
+        </tr>
+      </table>`;
+
+      // Kirim data transaksi terbaru dalam bentuk HTML ke email pengguna
+      await sendTransactionDataByEmail(req.user.email, htmlData);
+
+      res.status(200).json({
+        status: "Success",
+        message: "E-Ticket data successfully obtained",
+        data: formattedCheckoutData,
+      });
+    } catch (error) {
+      console.log(error);
+      res.status(500).json({
+        message: error,
+      });
+    }
+  },
 };
