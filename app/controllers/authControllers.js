@@ -160,7 +160,7 @@ module.exports = {
       const resendOTPEvery60Seconds = (email, otp) => {
         setTimeout(async () => {
           // Cek apakah pengguna sudah terverifikasi
-          const user = await getUserByEmail(email);
+          const user = await findEmail(email);
           if (user && user.verified) {
             return;
           }
