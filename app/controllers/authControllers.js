@@ -158,7 +158,13 @@ module.exports = {
 
       // Kirim ulang OTP setiap 60 detik
       const resendOTPEvery60Seconds = (email, otp) => {
-        setTimeout(() => {
+        setTimeout(async () => {
+          // Cek apakah pengguna sudah terverifikasi
+          const user = await getUserByEmail(email);
+          if (user && user.verified) {
+            return;
+          }
+
           module.exports.sendOTPByEmail(email, otp);
           resendOTPEvery60Seconds(email, otp);
         }, 60000);
