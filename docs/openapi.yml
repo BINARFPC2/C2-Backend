@@ -1325,7 +1325,7 @@ paths:
                     example: Success
                   message:
                     type: string
-                    example: Get All Data Transactions Success
+                    example: Get Data E-Ticket Success
                   data:
                     type: array
                     items:
