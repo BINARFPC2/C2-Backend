@@ -4,5 +4,4 @@ const handleGetRoot = (req, res) => {
     message: "API is up and running!!",
   });
 };
-
 module.exports = handleGetRoot;
