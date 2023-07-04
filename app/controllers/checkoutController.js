@@ -176,7 +176,6 @@ module.exports = {
       });
     }
   },
-
   async getDataCheckoutById(req, res) {
     try {
       const idCheckout = req.params.id; // Mengambil ID pengguna dari token
