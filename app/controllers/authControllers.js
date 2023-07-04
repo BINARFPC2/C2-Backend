@@ -156,6 +156,14 @@ module.exports = {
         });
       }
 
+      // Kirim ulang OTP setiap 60 detik
+      const resendOTPEvery60Seconds = (email, otp) => {
+        setTimeout(() => {
+          module.exports.sendOTPByEmail(email, otp);
+          resendOTPEvery60Seconds(email, otp);
+        }, 60000);
+      };
+
       // Generate otp
       const otp = generateOTP();
       const otpExpirationValidity = 1; // Menentukan validitas kedaluwarsa OTP dalam menit
@@ -180,10 +188,8 @@ module.exports = {
       // Send OTP to user's email
       module.exports.sendOTPByEmail(userForm.email, userForm.otp);
 
-      // Delay 60 detik sebelum mengirim ulang OTP
-      setTimeout(() => {
-        module.exports.sendOTPByEmail(userForm.email, userForm.otp);
-      }, 60000);
+      // Mulai mengirim ulang OTP setiap 60 detik
+      resendOTPEvery60Seconds(userForm.email, userForm.otp);
 
       res.status(201).json({
         status: "Success",
