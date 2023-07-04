@@ -1423,6 +1423,136 @@ paths:
                   message:
                     type: string
                     example: Server Error
+    post:
+      tags:
+        - E-Ticket
+      summary: Get E-Ticket With Token & Id
+      parameters:
+        - name: token
+          in: path
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            encoding: {}
+            schema:
+              required:
+                - checkoutId
+              type: object
+              properties:
+                checkoutId:
+                  type: string
+                  example: 18f750f1-ee6a-441d-ac3d-07e2a38bfae4
+        required: false
+      responses:
+        "200":
+          description: If data successfully retrived
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: Success
+                  message:
+                    type: string
+                    example: Get Data E-Ticket Success
+                  data:
+                    type: array
+                    items:
+                      type: object
+                    properties:
+                    example:
+                      - id: "03bb8d98-213e-4077-abf5-4332c1bfa2be"
+                        usersId: "59c414a7-e3e2-4005-afcd-7982e224e540"
+                        departureTicketsId: "a30c37d1-7700-40bb-ba37-c218a4cc17de"
+                        returnTicketsId: "86da83ae-3e0a-4d8d-baf1-ca49cbcad1cd"
+                        total_passenger: 2
+                        createdAt: "2023-06-14T15:29:28.482Z"
+                        updatedAt: "2023-06-14T15:29:28.482Z"
+                        departureTicket:
+                          id: "a30c37d1-7700-40bb-ba37-c218a4cc17de"
+                          city_from: "Jakarta"
+                          city_to: "Medan"
+                          airlines: "Super Air Jet"
+                          code: "IU-454"
+                          airport_from: "Soekarno-Hatta International"
+                          airport_to: "Bandar Udara Internasional Kualanamu"
+                          information: "Baggage 20 kg Cabin baggage 7 kg In Flight Entertainment"
+                          dateTakeoff: "06:45"
+                          dateLanding: "09:05"
+                          dateDeparture: "2023-06-20"
+                          dateEnd: "2023-06-20"
+                          dateReturn: "2023-06-21"
+                          type_seat: "Economy"
+                          price: 891800
+                          booking_code: "ptzc5c9ala"
+                          available: true,
+                          createdAt: "2023-06-22T15:45:51.601Z"
+                          updatedAt: "2023-06-22T15:45:51.601Z"
+                        returnTicket:
+                          id: "86da83ae-3e0a-4d8d-baf1-ca49cbcad1cd"
+                          city_from: "Medan"
+                          city_to: "Jakarta"
+                          airlines: "Super Air Jet"
+                          code: "IU-454"
+                          airport_from: "Soekarno-Hatta International"
+                          airport_to: "Bandar Udara Internasional Kualanamu"
+                          information: "Baggage 20 kg Cabin baggage 7 kg In Flight Entertainment"
+                          dateTakeoff: "06:45"
+                          dateLanding: "09:05"
+                          dateDeparture: "2023-06-20"
+                          dateEnd: "2023-06-20"
+                          dateReturn: "2023-06-21"
+                          type_seat: "Economy"
+                          price: 891800
+                          booking_code: "ptzc5c9ala"
+                          available: true,
+                          createdAt: "2023-06-22T15:45:51.601Z"
+                          updatedAt: "2023-06-22T15:45:51.601Z"
+                        total_price: 5539940
+                        passengers:
+                          - id: "8cc64a65-b234-4745-bb60-925aba9c95ca"
+                            checkoutsId: "03bb8d98-213e-4077-abf5-4332c1bfa2be"
+                            departureTicketsId: "a30c37d1-7700-40bb-ba37-c218a4cc17de"
+                            returnTicketsId: "86da83ae-3e0a-4d8d-baf1-ca49cbcad1cd"
+                            name: "fikar"
+                            email: "fikar@gmail.com"
+                            phone: "67890"
+                            familyName: "fikarfamily"
+                            title: "Mr"
+                            dateofbirth: null
+                            citizenship: null
+                            ktppaspor: null
+                            issuingcountry: null
+                            expirationdatepass: null
+                            createdAt: "2023-06-22T15:47:31.588Z"
+                            updatedAt: "2023-06-22T15:47:31.588Z"
+                          - id: "d353c788-3891-45d2-9f9d-be1ee74509a9"
+                            checkoutsId: "03bb8d98-213e-4077-abf5-4332c1bfa2be"
+                            ticketsId: "e051939f-6378-4514-abf3-63c79ca8f85f"
+                            name: "mata"
+                            email: "mata@gmail.com"
+                            phone: "12345"
+                            familyName: "matafamily"
+                            title: "Mr"
+                            dateofbirth: null
+                            citizenship: null
+                            ktppaspor: null
+                            issuingcountry: null
+                            expirationdatepass: null
+                            createdAt: "2023-06-22T15:47:31.588Z"
+                            updatedAt: "2023-06-22T15:47:31.588Z"
+        "500":
+          description: If the server is down or error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Server Error
   /notif:
     get:
       tags:
