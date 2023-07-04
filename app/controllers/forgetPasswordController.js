@@ -101,7 +101,7 @@ module.exports = {
       await transporter.sendMail(mailOptions);
 
       res.status(200).send({
-        status: "success",
+        status: "Success",
         message: "Check your email to reset password",
       });
     } catch (error) {
@@ -142,7 +142,7 @@ module.exports = {
         return;
       }
       res.status(200).json({
-        status: "success",
+        status: "Success",
         message: "reset password view",
         data: userData,
         token,
