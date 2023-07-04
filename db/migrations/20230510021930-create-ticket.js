@@ -21,6 +21,9 @@ module.exports = {
       code: {
         type: Sequelize.STRING,
       },
+      logo: {
+        type: Sequelize.STRING,
+      },
       information: {
         type: Sequelize.STRING,
       },
