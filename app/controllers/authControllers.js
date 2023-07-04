@@ -156,19 +156,25 @@ module.exports = {
         });
       }
 
-      // Kirim ulang OTP setiap 60 detik
+      // Function to resend OTP every 60 seconds
       const resendOTPEvery60Seconds = (email) => {
         setTimeout(async () => {
-          // Cek apakah pengguna sudah terverifikasi
+          // Check if the user is already verified
           const user = await findEmail(email);
           if (user && user.verified) {
             return;
           }
 
-          const newOTP = generateOTP(); // Generate OTP baru
-          user.otp = newOTP; // Perbarui OTP pengguna dalam database
-          module.exports.sendOTPByEmail(email, newOTP); // Kirim OTP baru melalui email
-          resendOTPEvery60Seconds(email); // Lanjutkan pengiriman ulang OTP setiap 60 detik
+          const otp = generateOTP();
+          module.exports.sendOTPByEmail(email, otp);
+
+          // Update OTP and OTP expiration in the database
+          await user.update({
+            otp,
+            otpExpiration: otpExpiration.toISOString(),
+          });
+
+          resendOTPEvery60Seconds(email);
         }, 60000);
       };
 
