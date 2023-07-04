@@ -102,7 +102,7 @@ module.exports = {
       const otpExpiration = new Date(findUser.otpExpiration);
 
       if (currentDateTime > otpExpiration) {
-        res.status(400).json({
+        return res.status(400).json({
           status: "error",
           message: "OTP has expired",
         });
@@ -157,7 +157,7 @@ module.exports = {
       }
 
       // Function to resend OTP every 60 seconds
-      const resendOTPEvery60Seconds = (email) => {
+      const resendOTPEvery60Seconds = async (email) => {
         setTimeout(async () => {
           // Check if the user is already verified
           const user = await findEmail(email);
@@ -168,13 +168,13 @@ module.exports = {
           const otp = generateOTP();
           module.exports.sendOTPByEmail(email, otp);
 
-          // Update OTP and OTP expiration in the database
           await user.update({
             otp,
             otpExpiration: otpExpiration.toISOString(),
           });
 
           await user.save();
+
           resendOTPEvery60Seconds(email);
         }, 60000);
       };
