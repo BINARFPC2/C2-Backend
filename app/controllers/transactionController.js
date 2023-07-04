@@ -40,7 +40,7 @@ module.exports = {
       if (checkoutData.length === 0) {
         // jika transaksi tidak ada
         res.status(404).json({
-          message: "Tidak ada data transaksi ditemukan",
+          message: "No transaction data found",
           data: [],
         });
         return;
@@ -73,8 +73,8 @@ module.exports = {
       });
 
       res.status(200).json({
-        status: "Sukses",
-        message: "Data transaksi berhasil diperoleh",
+        status: "Success",
+        message: "Transaction data successfully obtained",
         data: formattedCheckoutData,
       });
     } catch (error) {

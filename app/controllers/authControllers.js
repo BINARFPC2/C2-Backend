@@ -210,7 +210,7 @@ module.exports = {
       if (!userLogin) {
         return res.status(400).json({
           status: "error",
-          message: "Email tidak ditemukan",
+          message: "Email not found",
         });
       }
 
@@ -233,6 +233,7 @@ module.exports = {
         updatedAt: userLogin.updatedAt,
       });
       res.status(201).json({
+        status: "Success",
         token: token,
         name: userLogin.name,
         createdAt: userLogin.createdAt,

@@ -19,7 +19,7 @@ module.exports = {
       });
 
       // create notification
-      const message = `Pembayaran ticket berhasil! Selamat menikmati perjalanan Anda`;
+      const message = `Ticket payment successful! Enjoy your trip`;
 
       const notif = await Notif.create({
         id: uuid(),
