@@ -174,6 +174,7 @@ module.exports = {
             otpExpiration: otpExpiration.toISOString(),
           });
 
+          await user.save();
           resendOTPEvery60Seconds(email);
         }, 60000);
       };
