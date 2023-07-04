@@ -125,7 +125,6 @@ module.exports = {
   //       res.status(422).json(err);
   //     });
   // },
-
   async deleteUser(req, res) {
     try {
       const idUser = req.params.id;
