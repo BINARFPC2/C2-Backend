@@ -62,6 +62,7 @@ const {
   getNotif,
   deleteAllDataNotif,
 } = require("../app/controllers/notifController");
+const { getETicket } = require("../app/controllers/eTicketController");
 
 const router = require("express").Router();
 
@@ -179,5 +180,8 @@ router.delete("/api/v1/transaction/:id", deleteDataTrans);
 
 // Delete All Data Transaction
 router.delete("/api/v1/transaction", deleteAllDataTrans);
+
+// Get E-Ticket
+router.get("/api/v1/eticket", authorize, getETicket);
 
 module.exports = router;
