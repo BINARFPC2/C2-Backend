@@ -101,7 +101,7 @@ module.exports = {
       res.status(200).json({
         status: "Success",
         message: "E-Ticket data successfully obtained",
-        data: formattedCheckoutData,
+        data: latestCheckoutData,
       });
     } catch (error) {
       console.log(error);
