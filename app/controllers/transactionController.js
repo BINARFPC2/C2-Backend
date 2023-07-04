@@ -5,6 +5,7 @@ const { Passenger } = require("../models");
 const { user } = require("../models");
 const { Op } = require("sequelize");
 const { v4: uuid } = require("uuid");
+const { sendTransactionDataByEmail } = require("./emailController");
 
 module.exports = {
   async getAllTransactionData(req, res) {
@@ -71,6 +72,35 @@ module.exports = {
           passengers: checkout.Passengers,
         };
       });
+
+      const htmlData = `
+      <h1 style="text-align: center; font-family: Arial, sans-serif;">E-Ticket</h1>
+      <table style="width: 100%; border-collapse: collapse; margin-top: 20px;">
+        <tr style="background-color: #f2f2f2;">
+          <th style="padding: 10px; text-align: left; font-family: Arial, sans-serif;">Passenger</th>
+          <th style="padding: 10px; text-align: left; font-family: Arial, sans-serif;">Booking Code</th>
+          <th style="padding: 10px; text-align: left; font-family: Arial, sans-serif;">Date</th>
+        </tr>
+        ${formattedCheckoutData
+          .map(
+            (checkout) => `
+              <tr>
+                <td style="padding: 10px; font-family: Arial, sans-serif;">${checkout.passengers
+                  .map((passenger) => `${passenger.name}`)
+                  .join("<br>")}</td>
+                <td style="padding: 10px; font-family: Arial, sans-serif;">${
+                  checkout.departureTicket.booking_code
+                }</td>
+                <td style="padding: 10px; font-family: Arial, sans-serif;">${new Date(
+                  checkout.createdAt
+                ).toLocaleString()}</td>
+              </tr>`
+          )
+          .join("")}
+      </table>`;
+
+      // Kirim data transaksi dalam bentuk HTML ke email pengguna menggunakan token
+      await sendTransactionDataByEmail(req.user.email, htmlData);
 
       res.status(200).json({
         status: "Success",
