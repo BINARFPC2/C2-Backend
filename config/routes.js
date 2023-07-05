@@ -51,6 +51,7 @@ const {
   updateDataTrans,
   deleteDataTrans,
   deleteAllDataTrans,
+  getAllTransactionDataAdmin,
 } = require("../app/controllers/transactionController");
 const {
   forgetPass,
@@ -148,7 +149,7 @@ router.delete("/api/v1/checkout/:id", deleteCheckout);
 router.get("/api/v1/transaction", authorize, getAllTransactionData);
 
 // Get All Data Transaction without authorize
-router.get("/api/v1/adminTransaction", getAllTransactionData);
+router.get("/api/v1/adminTransaction", getAllTransactionDataAdmin);
 
 // Delete All Data Transaction
 router.delete("/api/v1/checkout", deleteAllDataCheckout);

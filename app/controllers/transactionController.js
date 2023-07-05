@@ -115,6 +115,79 @@ module.exports = {
     }
   },
 
+  async getAllTransactionDataAdmin(req, res) {
+    try {
+      const checkoutData = await Checkout.findAll({
+        include: [
+          {
+            model: Passenger,
+          },
+          {
+            model: Ticket,
+            as: "DepartureTicket",
+            where: {
+              id: { [Op.col]: "Checkout.departureTicketsId" },
+            },
+          },
+          {
+            model: Ticket,
+            as: "ReturnTicket",
+            where: {
+              id: { [Op.col]: "Checkout.returnTicketsId" },
+            },
+            required: false,
+          },
+        ],
+        order: [["createdAt", "DESC"]],
+      });
+
+      if (checkoutData.length === 0) {
+        res.status(404).json({
+          message: "No transaction data found",
+          data: [],
+        });
+        return;
+      }
+
+      const formattedCheckoutData = checkoutData.map((checkout) => {
+        const departureTicketPrice = checkout.DepartureTicket
+          ? checkout.DepartureTicket.price
+          : 0;
+        const returnTicketPrice = checkout.ReturnTicket
+          ? checkout.ReturnTicket.price
+          : 0;
+        const totalPassenger = checkout.total_passenger;
+        const totalPrice =
+          (departureTicketPrice + returnTicketPrice) * totalPassenger;
+
+        return {
+          id: checkout.id,
+          usersId: checkout.usersId,
+          departureTicketsId: checkout.departureTicketsId,
+          returnTicketsId: checkout.returnTicketsId,
+          total_passenger: checkout.total_passenger,
+          createdAt: checkout.createdAt,
+          updatedAt: checkout.updatedAt,
+          departureTicket: checkout.DepartureTicket,
+          returnTicket: checkout.ReturnTicket,
+          total_price: totalPrice,
+          passengers: checkout.Passengers,
+        };
+      });
+
+      res.status(200).json({
+        status: "Success",
+        message: "Transaction data successfully obtained",
+        data: formattedCheckoutData,
+      });
+    } catch (error) {
+      console.log(error);
+      res.status(500).json({
+        message: error,
+      });
+    }
+  },
+
   async updateDataTrans(req, res) {
     try {
       const idDataTrans = req.params.id;
