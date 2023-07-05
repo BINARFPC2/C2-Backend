@@ -70,7 +70,7 @@ module.exports = {
         };
       });
 
-      const latestCheckoutData = formattedCheckoutData.shift(); // Mengambil data checkout terbaru
+      const latestCheckoutData = formattedCheckoutData.pop(); // Mengambil data checkout terbaru
 
       const htmlData = `
       <div style: "justify-content: center;">
