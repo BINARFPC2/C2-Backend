@@ -70,7 +70,8 @@ module.exports = {
         };
       });
 
-      const latestCheckoutData = formattedCheckoutData.pop(); // Mengambil data checkout terbaru
+      const latestCheckoutData =
+        formattedCheckoutData[formattedCheckoutData.length - 1];
 
       const htmlData = `
       <div style: "justify-content: center;">
@@ -204,26 +205,36 @@ module.exports = {
       };
 
       const htmlData = `
-        <div style: "justify-content: center;">
-          <img src="https://i.ibb.co/vw7bv7j/Untitled-design-8-removebg-preview.png" style= "height: 150px;">
+        <div style="justify-content: center;">
+          <img src="https://i.ibb.co/vw7bv7j/Untitled-design-8-removebg-preview.png" style="height: 150px;">
         </div>
-
+  
         <table style="font-size: 17px; width: 100%; border-collapse: collapse; margin-top: 20px;">
-        ${formattedCheckoutData
-          .map(
-            (checkout) => `
-            <tr>
-            <td style="font-family: Arial, sans-serif;">Airlines:   ${checkout.departureTicket.airlines}</td></tr>
-            <tr>
-            <td style="font-family: Arial, sans-serif;">From:        ${checkout.departureTicket.airport_from}</td></tr>
-            <tr>
-            <td style="font-family: Arial, sans-serif;">To:           ${checkout.departureTicket.airport_to}</td></tr>
-            <tr>
-            <td style="font-family: Arial, sans-serif;">Depart Date:  ${checkout.departureTicket.dateDeparture}</td></tr>
-            <tr>
-            <td style="font-family: Arial, sans-serif;">Boarding Time:  ${checkout.departureTicket.dateTakeoff} WIB</td></tr>`
-          )
-          .join("")}
+          <tr>
+            <td style="font-family: Arial, sans-serif;">Airlines: ${
+              formattedCheckoutData.departureTicket.airlines
+            }</td>
+          </tr>
+          <tr>
+            <td style="font-family: Arial, sans-serif;">From: ${
+              formattedCheckoutData.departureTicket.airport_from
+            }</td>
+          </tr>
+          <tr>
+            <td style="font-family: Arial, sans-serif;">To: ${
+              formattedCheckoutData.departureTicket.airport_to
+            }</td>
+          </tr>
+          <tr>
+            <td style="font-family: Arial, sans-serif;">Depart Date: ${
+              formattedCheckoutData.departureTicket.dateDeparture
+            }</td>
+          </tr>
+          <tr>
+            <td style="font-family: Arial, sans-serif;">Boarding Time: ${
+              formattedCheckoutData.departureTicket.dateTakeoff
+            } WIB</td>
+          </tr>
         </table>
   
         <div>
@@ -232,37 +243,32 @@ module.exports = {
           <p style="text-align: left; font-family: Arial, sans-serif;">Cabin baggage 7 kg</p>
           <p style="text-align: left; font-family: Arial, sans-serif;">In Flight Entertainment</p>
         </div>
-
+  
         <table style="width: 100%; border-collapse: collapse; margin-top: 20px;">
-        <tr style="background-color: #DEC9FF;">
-          <th style="padding: 10px; text-align: left; font-family: Arial, sans-serif;">Title</th>
-          <th style="padding: 10px; text-align: left; font-family: Arial, sans-serif;">Passenger</th>
-          <th style="padding: 10px; text-align: left; font-family: Arial, sans-serif;">Booking Code</th>
-          <th style="padding: 10px; text-align: left; font-family: Arial, sans-serif;">Total Price</th>
-          <th style="padding: 10px; text-align: left; font-family: Arial, sans-serif;">Type Seat</th>
-        </tr>
-        ${formattedCheckoutData
-          .map(
-            (checkout) => `
-              <tr style="background-color: #f2f2f2;">
-              <td style="padding: 10px; font-family: Arial, sans-serif;">${checkout.passengers
-                .map((passenger) => `${passenger.title}`)
-                .join("<br>")}</td>               
-                <td style="padding: 10px; font-family: Arial, sans-serif;">${checkout.passengers
-                  .map((passenger) => `${passenger.name}`)
-                  .join("<br>")}</td>
-                <td style="padding: 10px; font-family: Arial, sans-serif; font-weight: bold;">${
-                  checkout.departureTicket.booking_code
-                }</td>
-                <td style="padding: 10px; font-family: Arial, sans-serif;">IDR ${
-                  checkout.total_price
-                }</td>
-                <td style="padding: 10px; font-family: Arial, sans-serif;">${
-                  checkout.departureTicket.type_seat
-                }</td>
-              </tr>`
-          )
-          .join("")}
+          <tr style="background-color: #DEC9FF;">
+            <th style="padding: 10px; text-align: left; font-family: Arial, sans-serif;">Title</th>
+            <th style="padding: 10px; text-align: left; font-family: Arial, sans-serif;">Passenger</th>
+            <th style="padding: 10px; text-align: left; font-family: Arial, sans-serif;">Booking Code</th>
+            <th style="padding: 10px; text-align: left; font-family: Arial, sans-serif;">Total Price</th>
+            <th style="padding: 10px; text-align: left; font-family: Arial, sans-serif;">Type Seat</th>
+          </tr>
+          <tr style="background-color: #f2f2f2;">
+            <td style="padding: 10px; font-family: Arial, sans-serif;">${formattedCheckoutData.passengers
+              .map((passenger) => passenger.title)
+              .join("<br>")}</td>
+            <td style="padding: 10px; font-family: Arial, sans-serif;">${formattedCheckoutData.passengers
+              .map((passenger) => passenger.name)
+              .join("<br>")}</td>
+            <td style="padding: 10px; font-family: Arial, sans-serif; font-weight: bold;">${
+              formattedCheckoutData.departureTicket.booking_code
+            }</td>
+            <td style="padding: 10px; font-family: Arial, sans-serif;">IDR ${
+              formattedCheckoutData.total_price
+            }</td>
+            <td style="padding: 10px; font-family: Arial, sans-serif;">${
+              formattedCheckoutData.departureTicket.type_seat
+            }</td>
+          </tr>
         </table>`;
 
       // Kirim data transaksi terbaru dalam bentuk HTML ke email pengguna
