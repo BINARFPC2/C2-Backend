@@ -70,8 +70,7 @@ module.exports = {
         };
       });
 
-      const latestCheckoutData =
-        formattedCheckoutData[formattedCheckoutData.length - 1];
+      const latestCheckoutData = formattedCheckoutData[0];
 
       const htmlData = `
       <div style: "justify-content: center;">
@@ -197,6 +196,7 @@ module.exports = {
         departureTicketsId: checkoutData.departureTicketsId,
         returnTicketsId: checkoutData.returnTicketsId,
         total_passenger: checkoutData.total_passenger,
+        total_price: checkoutData.total_price,
         createdAt: checkoutData.createdAt,
         updatedAt: checkoutData.updatedAt,
         departureTicket: checkoutData.DepartureTicket,
