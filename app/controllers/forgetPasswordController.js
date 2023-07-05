@@ -47,7 +47,7 @@ module.exports = {
         { id: userEmail.id },
         process.env.JWT_SIGNATURE_KEY || "Rahasia",
         {
-          expiresIn: "1h",
+          expiresIn: "60s",
         }
       );
 
@@ -63,38 +63,53 @@ module.exports = {
         },
       });
 
-      // create mail options
       const mailOptions = {
         from: "backendproject010101@gmail.com",
         to: email,
         subject: "Reset Password",
-        html: `   <center> 
-              <p>Click this link to reset your password</p>
-              <button 
-                style=
-                "
-                  border: none;
-                  transition-duration: 0.4s;
-                  cursor: pointer;
-                  background-color: #7126B5;
-                  border-radius: 12px;
-                "
-                type="button"
-              > 
-                <a 
-                style=
-                "
-                text-decoration: none;
-                text-align: center;
-                text-decoration: none;
-                display: inline-block;
-                font-size: 16px;
-                margin: 4px 2px;color: white;
-                padding: 16px 32px;
-                transition-duration: 0.4s;" 
-                href='https://ticketgo.vercel.app/reset?token=${token}' target="_blank" rel="reset">Reset Password</a>
-              </button>
-            <center>
+        html: `   <center style="background-color: #F1F1F1; padding-top: 15px; padding-bottom: 15px;">
+            <table style="background-color: white; text-color:black; border-radius: 5px;  padding-left:25px; padding-right:25px; padding-bottom:25px;"> 
+              <div>
+                <img src="https://i.ibb.co/vw7bv7j/Untitled-design-8-removebg-preview.png" style= "width:120; height: 100px; margin-top:5px;">
+              </div>
+                <p style="color: black; margin-bottom: 15px; font-size: 17px; font-family: Arial, sans-serif"><b>Reset Password</p>
+                <p style="color: black; margin-bottom: 15px; font-size: 15px; font-family: Arial, sans-serif">You have just requested to reset your password. "Press the button below to continue"</p>
+                  <center>
+                    <button 
+                      style=
+                      "
+                        border: none;
+                        transition-duration: 0.4s;
+                        cursor: pointer;
+                        background-color: #7126B5;
+                        border-radius: 12px;
+                        margin-top: 20px;
+                        margin-bottom: 20px;
+                      "
+                      type="button"> 
+
+                      <a 
+                        style=
+                          "
+                            text-decoration: none;
+                            text-align: center;
+                            text-decoration: none;
+                            display: inline-block;
+                            font-size: 16px;
+                            margin: 2px 2px; color: white;
+                            padding: 7px 6px;
+                            transition-duration: 0.4s;" 
+                            href='https://ticketgo.vercel.app/reset?token=${token}' target="_blank" rel="reset">Reset Password</a>
+                    </button>
+                  </center>
+              <p style="font-size: 17px; color:black;font-weight: bold; text-align: left; font-family: Arial, sans-serif">Note:</p>
+                <ul type="circle">
+                  <li style="padding: 10px; color:black; font-size: 15px; text-align: left; font-family: Arial, sans-serif">The code is only valid for 60 seconds.</li>
+                  <li style="padding: 10px; color:black; font-size: 15px; text-align: left; font-family: Arial, sans-serif">If you didn't request this code, you can ignore this message.</li>
+                </ul>
+                
+            </table> 
+          <center>
                     `,
       };
 

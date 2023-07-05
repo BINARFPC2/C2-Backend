@@ -64,7 +64,15 @@ module.exports = {
         from: "backendproject010101@gmail.com",
         to: email,
         subject: "OTP Verification",
-        text: `Your OTP for registraton: ${otp}`,
+        html: ` 
+        <div style: "justify-content: center;">
+        <img src="https://i.ibb.co/vw7bv7j/Untitled-design-8-removebg-preview.png" style= "height: 150px;">
+        </div>
+        <center>
+        <h1 style="text-align: center; font-family: Arial, sans-serif; background-color: #DEC9FF;">Verification Code</h1>
+        <p style="font-size: 17px; text-align: left; font-family: Arial, sans-serif";">To verify your account, enter this code below:</p>
+        <p style="font-size: 26px; font-weight: bold; text-align: center; font-family: Arial, sans-serif;">${otp}</p>
+        </center>`,
       };
 
       // send email
@@ -157,27 +165,27 @@ module.exports = {
       }
 
       // Function to resend OTP every 60 seconds
-      const resendOTPEvery60Seconds = (email) => {
-        setTimeout(async () => {
-          // Check if the user is already verified
-          const user = await findEmail(email);
-          if (user && user.verified) {
-            return;
-          }
+      // const resendOTPEvery60Seconds = (email) => {
+      //   setTimeout(async () => {
+      //     // Check if the user is already verified
+      //     const user = await findEmail(email);
+      //     if (user && user.verified) {
+      //       return;
+      //     }
 
-          const otp = generateOTP();
-          module.exports.sendOTPByEmail(email, otp);
+      //     const otp = generateOTP();
+      //     module.exports.sendOTPByEmail(email, otp);
 
-          // Update OTP and OTP expiration in the database
-          await user.update({
-            otp,
-            otpExpiration: otpExpiration.toISOString(),
-          });
+      //     // Update OTP and OTP expiration in the database
+      //     await user.update({
+      //       otp,
+      //       otpExpiration: otpExpiration.toISOString(),
+      //     });
 
-          await user.save();
-          resendOTPEvery60Seconds(email);
-        }, 60000);
-      };
+      //     await user.save();
+      //     resendOTPEvery60Seconds(email);
+      //   }, 60000);
+      // };
 
       // Generate otp
       const otp = generateOTP();
@@ -204,7 +212,7 @@ module.exports = {
       module.exports.sendOTPByEmail(userForm.email, userForm.otp);
 
       // Mulai mengirim ulang OTP setiap 60 detik
-      resendOTPEvery60Seconds(userForm.email, userForm.otp);
+      // resendOTPEvery60Seconds(userForm.email, userForm.otp);
 
       res.status(201).json({
         status: "Success",
