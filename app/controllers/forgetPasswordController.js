@@ -47,7 +47,7 @@ module.exports = {
         { id: userEmail.id },
         process.env.JWT_SIGNATURE_KEY || "Rahasia",
         {
-          expiresIn: "60s",
+          expiresIn: "1h",
         }
       );
 
